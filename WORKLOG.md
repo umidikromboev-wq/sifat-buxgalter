@@ -1,5 +1,10 @@
 # Sifat Buxgalter — рабочий журнал
 
+## 2026-09-25 — отчёт Умиду + инцидент git_upload
+Сделано: страница-отчёт https://claude.ai/artifact/L4Vuh8BjyJbS4VLrZAqWfm (разбор прототипа, вопросы).
+Грабли: `git_upload.sh .` резолвит путь относительно ~/Downloads/Проекты → создал там .git (1,9 ГБ индекс, 0 коммитов) и .gitignore; пуш не ушёл (нашёл токен). Передавать только имя папки.
+Осталось: [ ] «да» Умида на удаление ~/Downloads/Проекты/.git и .gitignore
+
 ## 2026-09-25 — v1 продающего сайта (UZ+RU)
 Сделано: Next.js 16 App Router, `/uz` `/ru` (SSG), `/api/lead` → Telegram (zod, honeypot, лимит 5/10 мин), robots/sitemap, JSON-LD AccountingService, защитные заголовки.
 Источники: TG-группа -5536290420, чат @bybatirovna7 (интервью docx, Zoom 23.09 → research/source), PDF услуг, прототип Василы sifat-buxgalter.vercel.app.
