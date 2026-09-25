@@ -1,0 +1,20 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+.vercel/
+.turbo/
+coverage/
+
+# секреты — никогда в репозиторий
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+.DS_Store
+*.log
+.cache/
