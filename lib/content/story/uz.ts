@@ -7,13 +7,13 @@ export const storyUz: Story = {
     description:
       "Bosh buxgalter Ibrohimning tadbirkorlarga xati: buxgalteriyadagi xato qanday qilib ikki yil sezilmay, uchinchi yili katta jarimaga aylanadi va bu xavfni qanday oʻz zimmamizga olamiz.",
   },
-  top: { cta: "Uchrashuvga yozilish", switchTo: "RU" },
+  top: { cta: "10 daqiqalik qoʻngʻiroq", switchTo: "RU" },
   callout: "Yillik aylanmasi 1 milliard soʻmdan oshgan MCHJ egalari uchun",
   h1: "Buxgalteriyadagi xato ikki yil jim turadi. Uchinchi yili u 2 milliard soʻm boʻlib qaytishi mumkin.",
   sub: "Bu xatda — bu qanday sodir boʻlishi, nega arzon buxgalter uni koʻrmasligi va **biz bu xavfni qanday oʻz zimmamizga olishimiz** haqida.",
   readTime: "Oʻqish — 7 daqiqa",
   byline: { name: "Ibrohim", role: "Bosh buxgalter, 2016-yildan" },
-  cta: { label: "Ofisda uchrashuvga yozilish", note: "Bekzod 10 daqiqa ichida qoʻngʻiroq qiladi" },
+  cta: { label: "Bepul 10 daqiqalik qoʻngʻiroq", note: "Hech qayerga borish shart emas. Bekzod odatda 10 daqiqada qoʻngʻiroq qiladi" },
   greeting: "Hurmatli tadbirkor,",
   opening: {
     id: "tanish",
@@ -24,7 +24,7 @@ export const storyUz: Story = {
       { p: "Javob **toʻrt soatdan keyin** keladi. Bank allaqachon yopilgan." },
       { p: "Keyin qoʻshningiz bilan gaplashib qolasiz. Uning firmasi sizniki bilan deyarli bir xil. Lekin u soliqqa sizdan kam toʻlaydi. Nega — hech kim tushuntirib bermaydi." },
       { p: "Bir kuni Instagram’da videoni koʻrasiz: yangi imtiyoz chiqibdi, sizning sohangizga ham toʻgʻri keladi. Buxgalteringiz bu haqda **bir ogʻiz ham aytmagan**." },
-      { p: "Bizga murojaat qilgan tadbirkorlar birinchi uchrashuvda deyarli soʻzma-soʻz bir xil gapni aytadi:" },
+      { p: "Bizga murojaat qilgan tadbirkorlar birinchi suhbatda deyarli soʻzma-soʻz bir xil gapni aytadi:" },
       { quote: "Buxgalterim kechikyapti." },
       { quote: "Soliqdagi yangi oʻzgarishlarni bilmaydi." },
       { quote: "Men kamroq soliq toʻlashni xohlayman — qonuniy yoʻl bilan." },
@@ -36,7 +36,7 @@ export const storyUz: Story = {
     num: "II",
     title: "Men buni ichidan koʻrdim",
     blocks: [
-      { p: "Ismim Ibrohim. 2016-yildan beri buxgalteriyada ishlayman. Hozir yirik maishiy texnika kompaniyasida bosh buxgalterman. Shu yillar ichida 20 ga yaqin kompaniyaning hisobini yuritganman." },
+      { p: "Ismim Ibrohim. 2016-yildan beri buxgalteriyada ishlayman. Shu yillar ichida 20 ga yaqin kompaniyaning hisobini yuritganman. Sizning hisobingizni stajyorlarga emas, shaxsan oʻzim yuritaman." },
       { p: "Bir vaqtlar uch oy autsorsing firmasining ichida ishladim. U yerda koʻrganimni bir soʻz bilan aytaman: **tartibsizlik**. Bitta buxgalterda oʻnlab firma. Soliq oxirgi kuni toʻlanadi. Tadbirkorning savoli ertasiga javob oladi." },
       { p: "Keyin bitta kompaniyani ketayotgan buxgalterdan qabul qilib oldim. 1C oxirigacha kiritilmagan edi. Hisobning bir qismi — Excel’da, bir qismi — hech qayerda." },
       { p: "Bu dangasalik emas. **Bu arifmetika.**" },
@@ -65,7 +65,7 @@ export const storyUz: Story = {
         text: "Tekshiruv oldingi ikki yilni koʻtaradi. Hujjat bilan ombor mos kelmaydi. Endi buni toʻgʻrilab boʻlmaydi — faqat toʻlash mumkin.",
       },
     ],
-    sumLabel: "Ikki yillik aylanma 10 mlrd soʻm boʻlsa, 20% jarima",
+    sumLabel: "Hisob-kitob misoli: ikki yilda 10 mlrd yashirilgan aylanma × 20%",
     sum: "2 000 000 000",
     sumNote: "soʻm",
     outro: "Bu raqamni oʻylab topmadim — tekshiruvlarda shunday hisoblanadi. Va eng yomoni: **birinchi ikki yil davomida buxgalteringiz sizga «hammasi joyida» deb aytgan boʻladi.** U yolgʻon gapirmagan. U shunchaki tekshirishga ulgurmagan.",
@@ -99,11 +99,11 @@ export const storyUz: Story = {
     items: [
       {
         think: "Hujjatlarimni begonalarga berib boʻlmaydi.",
-        truth: "Bizda ofis bor — Yangi Sergeli, 7/2. Birinchi uchrashuv oʻsha yerda, koʻzma-koʻz. **Soʻrasangiz, maxfiylik shartnomasi (NDA) tuzamiz.** Litsenziyali 1C, Didox, soliq kabineti — hammasi rasmiy.",
+        truth: "Bizda ofis bor — Yangi Sergeli, 7/2: istalgan vaqtda kelib, hisobingizni kim yuritishini koʻrishingiz mumkin. **Soʻrasangiz, maxfiylik shartnomasi (NDA) tuzamiz.** Litsenziyali 1C, Didox, soliq kabineti — hammasi rasmiy.",
       },
       {
         think: "Bu men uchun qimmat.",
-        truth: "Hozirgi buxgalteringiz bizdan arzonroq boʻlishi mumkin. Endi solishtiring: bitta kechikkan hisobot uchun jarima — bir necha million. Bitta audit — **aylanmaning 20 foizigacha**. Qonuniy optimizatsiya esa odatda xizmat narxidan koʻproq tejaydi — va bizda u uchun alohida foiz yoʻq.",
+        truth: "Hozirgi buxgalteringiz bizdan arzonroq boʻlishi mumkin. Endi solishtiring: bitta kechikkan hisobot uchun jarima — bir necha million. Yashirin aylanmani topgan bitta tekshiruv — **aylanmadan hisoblanadigan jarima, bizning misolda 2 mlrd**. Qonuniy optimizatsiya esa odatda xizmat narxidan koʻproq tejaydi — va bizda u uchun alohida foiz yoʻq.",
       },
       {
         think: "Mening hisobim chalkash, hech kim tuzatolmaydi.",
@@ -125,7 +125,7 @@ export const storyUz: Story = {
       { what: "Oylik hisobot sizga", detail: "Qancha soliq chiqdi, nega, keyingi oy nimaga tayyorlanish kerak." },
       { what: "Maxfiylik shartnomasi", detail: "Soʻrovingiz boʻyicha." },
     ],
-    note: "Xizmat qiymati aylanmaga emas, **ish hajmiga** bogʻliq: 4 ta mijozga sotadigan 25 milliardlik firma 1000 ta mijozga sotadigan 5 milliardlik firmadan kamroq ish talab qilishi mumkin. Shuning uchun qiymatni uchrashuvda, vaziyatingizni koʻrib aytamiz.",
+    note: "Xizmat qiymati aylanmaga emas, **ish hajmiga** bogʻliq: 4 ta mijozga sotadigan 25 milliardlik firma 1000 ta mijozga sotadigan 5 milliardlik firmadan kamroq ish talab qilishi mumkin. Shuning uchun qiymatni qoʻngʻiroqdan keyin, vaziyatingizni tushunib aytamiz.",
   },
   guarantee: {
     num: "VII",
@@ -150,8 +150,8 @@ export const storyUz: Story = {
     title: "Keyingi qadam",
     steps: [
       { title: "Ariza qoldirasiz", text: "Ism va telefon. Bir daqiqa." },
-      { title: "Bekzod qoʻngʻiroq qiladi", text: "10 daqiqa ichida, eng koʻpi bilan bir soatda. Qulay vaqtni kelishasiz." },
-      { title: "Ofisda uchrashamiz", text: "Vaziyatingizni tinglaymiz va nimani tekshirish kerakligini aytamiz." },
+      { title: "10 daqiqalik suhbat", text: "Bekzod bir soat ichida, odatda 10 daqiqada qoʻngʻiroq qiladi. Vaziyatni tinglab, birinchi navbatda nimani tekshirishni aytamiz." },
+      { title: "Uchrashuv — xohlasangiz", text: "Ofisda yoki Zoomda, oʻzingiz vaqti keldi deb hisoblaganingizda." },
       { title: "Kirish auditi va shartnoma", text: "Faqat shundan keyin — javobgarlik bizga oʻtadi." },
     ],
   },

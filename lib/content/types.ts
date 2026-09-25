@@ -43,6 +43,7 @@ export type Content = {
     invalid: string;
     privacy: string;
     orCall: string;
+    orTelegram: string;
   };
   footer: { addressLabel: string; address: string; landmark: string; mapLink: string; contacts: string; hours: string; rights: string };
 };

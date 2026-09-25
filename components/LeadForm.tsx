@@ -70,10 +70,10 @@ export function LeadForm({ t, lang }: { t: Content["form"]; lang: Locale }) {
           </label>
         ))}
       </fieldset>
-      <label className={s.hp} aria-hidden="true">
-        website
+      {/* Ловушка для ботов: людям не видна и не читается экранным диктором */}
+      <div className={s.hp} aria-hidden="true">
         <input name="website" tabIndex={-1} autoComplete="off" />
-      </label>
+      </div>
       <button className={`btn btn-gold ${s.submit}`} type="submit" disabled={status === "sending"}>
         {status === "sending" ? t.sending : t.submit}
       </button>

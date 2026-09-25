@@ -6,14 +6,14 @@ export const uz: Content = {
     description:
       "Buxgalteriya va soliq hisobini 2016-yildan ishlayotgan bosh buxgalter yuritadi. Savolga 10 daqiqada javob, hisobotlar muddatida, xatomiz sabab jarima chiqsa — oʻzimiz toʻlaymiz.",
   },
-  nav: { services: "Xizmatlar", team: "Jamoa", faq: "Savollar", cta: "Uchrashuvga yozilish", langLabel: "Til" },
+  nav: { services: "Xizmatlar", team: "Jamoa", faq: "Savollar", cta: "10 daqiqalik qoʻngʻiroq", langLabel: "Til" },
   hero: {
     kicker: "Buxgalteriya autsorsingi · Toshkent",
     h1: "Buxgalteriyani bizga topshiring — soliq xavfini biz koʻtaramiz",
     sub: "Buxgalteringiz, ehtimol, allaqachon bor va hisobotlar vaqtida ketyapti. Biz tadbirkor aslida nima uchun pul toʻlashini qoʻshamiz: 10 daqiqada javob, soliqni qonuniy kamaytirish va javobgarlik — xatomiz sabab jarima chiqsa, oʻzimiz toʻlaymiz. Ishni 2016-yildan beri ishlayotgan bosh buxgalter olib boradi.",
-    cta: "Bepul uchrashuvga yozilish",
+    cta: "Bepul 10 daqiqalik qoʻngʻiroq",
     ctaAlt: "Telegramda yozish",
-    note: "30 daqiqa, Zoom orqali yoki ofisimizda. Hozirgi hisobingizdagi asosiy xavflarni birga koʻrib chiqamiz.",
+    note: "Hech qayerga borish shart emas. Bekzod qoʻngʻiroq qilib, hisobingiz haqida bir-ikki savol beradi va asosiy xavf odatda qayerda yashirinishini aytadi.",
     sheet: {
       tag: "Namuna",
       title: "Oylik hisobot · sentabr",
@@ -57,17 +57,17 @@ export const uz: Content = {
     steps: [
       "Ombor Excelda, sotuvning bir qismi cheksiz",
       "Uchinchi yili tekshiruv keladi va oldingi ikki yilni koʻtaradi",
-      "Yashirilgan aylanmaga 20% jarima hisoblanadi",
+      "Soliq va jarima qoʻshimcha hisoblanadi — bizning misolda yashirilgan aylanmaning 20%",
     ],
     total: "2 000 000 000",
-    totalLabel: "soʻm jarima — 10 mlrd soʻm aylanmada",
+    totalLabel: "soʻm — hisob-kitob misoli: ikki yilda 10 mlrd soʻm yashirilgan aylanma × 20%",
     answer:
-      "Shuning uchun mijozni qabul qilishdan oldin oxirgi davrni tekshiramiz. Javobgarlik bizga oʻtadi — demak, xavfni avval oʻzimiz koʻrishimiz kerak.",
+      "Haqiqiy summa qoidabuzarlikka bogʻliq va uni oldindan hisoblash mumkin. Shuning uchun mijozni qabul qilishdan oldin oxirgi davrni tekshiramiz. Javobgarlik bizga oʻtadi — demak, xavfni avval oʻzimiz koʻrishimiz kerak.",
   },
   services: {
     kicker: "Xizmatlar",
     h2: "Buxgalteriyaning hammasi — bitta shartnomada",
-    sub: "Roʻyxat shartnomaga kiritiladi. Undan tashqarida nima qolishini birinchi uchrashuvda ochiq aytamiz.",
+    sub: "Roʻyxat shartnomaga kiritiladi. Undan tashqarida nima qolishini birinchi qoʻngʻiroqda ochiq aytamiz.",
     groups: [
       {
         title: "Hisob va hisobotlar",
@@ -137,7 +137,7 @@ export const uz: Content = {
       { k: "Dekret, pensiya, ishdan ketish", now: "Hisob yarim yoʻlda qoladi, ishni topshiradigan odam yoʻq", us: "Hisob bitta xodimga bogʻliq emas" },
       { k: "Bitta buxgalterda nechta firma", now: "Koʻpincha bir nechta — tekshirishga vaqt yetmaydi", us: "Kam kompaniya olamiz — har birini oxirigacha tekshirish uchun" },
     ],
-    note: "Uchrashuvga oxirgi hisobotingizni olib keling — birinchi navbatda nimani tekshirishimizni koʻrsatamiz.",
+    note: "Qoʻngʻiroqda omboringiz qanday yuritilishini ayting — birinchi navbatda nimani tekshirish kerakligini aytamiz.",
   },
   fit: {
     kicker: "Kim bilan ishlaymiz",
@@ -160,7 +160,7 @@ export const uz: Content = {
       {
         name: "Ibrohim",
         role: "Bosh buxgalter",
-        facts: ["Buxgalteriyada 2016-yildan", "Maishiy texnika kompaniyasi Avangardda bosh buxgalter", "20 ga yaqin kompaniya hisobini yuritgan"],
+        facts: ["Buxgalteriyada 2016-yildan", "Har bir mijoz hisobini shaxsan yuritadi", "20 ga yaqin kompaniya hisobini yuritgan"],
       },
       {
         name: "Bekzod",
@@ -189,20 +189,21 @@ export const uz: Content = {
   },
   form: {
     kicker: "Birinchi qadam",
-    h2: "Bepul uchrashuvga yoziling",
-    sub: "Bekzod 1 soat ichida, odatda 10 daqiqada qoʻngʻiroq qiladi va qulay vaqtni kelishadi.",
+    h2: "Bepul 10 daqiqalik qoʻngʻiroq",
+    sub: "Telefoningizni qoldiring — Bekzod 1 soat ichida, odatda 10 daqiqada qoʻngʻiroq qiladi. Hech qayerga borish shart emas: ofisda uchrashuvni faqat oʻzingiz xohlasangiz belgilaymiz.",
     name: "Ismingiz",
     phone: "Telefon",
     company: "Kompaniya nomi (ixtiyoriy)",
     turnover: "Yillik aylanma",
     turnoverOpts: ["1 mlrd soʻmgacha", "1–5 mlrd soʻm", "5–20 mlrd soʻm", "20 mlrd soʻmdan ortiq"],
-    submit: "Uchrashuvga yozilish",
+    submit: "Qoʻngʻiroqni kutaman",
     sending: "Yuborilmoqda…",
     ok: "Qabul qildik. Bekzod tez orada qoʻngʻiroq qiladi.",
     err: "Yuborib boʻlmadi. Iltimos, qoʻngʻiroq qiling:",
     invalid: "Ism va telefon raqamini toʻldiring.",
     privacy: "Maʼlumotlaringiz faqat siz bilan bogʻlanish uchun ishlatiladi.",
     orCall: "Yoki hoziroq qoʻngʻiroq qiling",
+    orTelegram: "Yozishmani afzal koʻrasizmi? Bekzodga Telegramda yozing",
   },
   footer: {
     addressLabel: "Ofis",

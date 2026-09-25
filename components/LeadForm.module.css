@@ -140,10 +140,37 @@
 
 .hp {
   position: absolute;
-  left: -9999px;
   width: 1px;
   height: 1px;
   overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tg {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+  min-height: 44px;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+.tg:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--paper);
+}
+.tg:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
 }
 
 .submit {
