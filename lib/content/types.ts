@@ -22,8 +22,7 @@ export type Content = {
   risk: { kicker: string; h2: string; lead: string; steps: string[]; total: string; totalLabel: string; answer: string };
   services: { kicker: string; h2: string; sub: string; groups: { title: string; items: string[] }[] };
   clauses: { kicker: string; h2: string; sub: string; items: { title: string; text: string }[] };
-  compare: { kicker: string; h2: string; cols: [string, string, string]; rows: [string, string, string, string][] };
-  steps: { kicker: string; h2: string; items: { title: string; text: string }[] };
+  compare: { kicker: string; h2: string; sub: string; cols: [string, string]; rows: { k: string; now: string; us: string }[]; note: string };
   fit: { kicker: string; h2: string; yesTitle: string; yes: string[]; noTitle: string; no: string[]; note: string };
   team: { kicker: string; h2: string; people: { name: string; role: string; facts: string[] }[] };
   clients: { kicker: string; h2: string; sub: string };

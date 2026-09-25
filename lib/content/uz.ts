@@ -10,7 +10,7 @@ export const uz: Content = {
   hero: {
     kicker: "Buxgalteriya autsorsingi · Toshkent",
     h1: "Buxgalteriyani bizga topshiring — soliq xavfini biz koʻtaramiz",
-    sub: "Yillik aylanmasi 1 mlrd soʻmdan ortiq MChJlar uchun toʻliq buxgalteriya va soliq hisobi. Ishni 2016-yildan beri ishlayotgan bosh buxgalter olib boradi: savolga 10 daqiqada javob, hisobotlar muddatida, bizning xatomiz sabab jarima chiqsa — oʻzimiz toʻlaymiz.",
+    sub: "Buxgalteringiz, ehtimol, allaqachon bor va hisobotlar vaqtida ketyapti. Biz tadbirkor aslida nima uchun pul toʻlashini qoʻshamiz: 10 daqiqada javob, soliqni qonuniy kamaytirish va javobgarlik — xatomiz sabab jarima chiqsa, oʻzimiz toʻlaymiz. Ishni 2016-yildan beri ishlayotgan bosh buxgalter olib boradi.",
     cta: "Bepul uchrashuvga yozilish",
     ctaAlt: "Telegramda yozish",
     note: "30 daqiqa, Zoom orqali yoki ofisimizda. Hozirgi hisobingizdagi asosiy xavflarni birga koʻrib chiqamiz.",
@@ -39,7 +39,7 @@ export const uz: Content = {
   },
   triggers: {
     kicker: "Qachon murojaat qilishadi",
-    h2: "Odatda bizga shu paytda yozishadi",
+    h2: "Odatda hozirgi buxgalter bilan nimadir joyida boʻlmaganda yozishadi",
     items: [
       "Buxgalter ketyapti — dekret, nafaqa yoki boshqa ish — va ishni topshiradigan odam yoʻq",
       "Soliq idorasidan talabnoma yoki tekshiruv dalolatnomasi keldi",
@@ -115,7 +115,7 @@ export const uz: Content = {
     items: [
       { title: "Javob — 10 daqiqagacha", text: "Siz bilan umumiy Telegram-guruh ochamiz. Haftada 7 kun aloqadamiz, shanba kuni ham." },
       { title: "Xato bizniki — jarima ham bizniki", text: "Bizning aybimiz bilan jarima chiqsa, uni oʻzimiz toʻlaymiz. Shart bitta: ombor hisobi halol yuritilsin." },
-      { title: "Soliq optimallashtirish — narx ichida", text: "Soliqni qonuniy kamaytirganimiz uchun foiz olmaymiz. Bozorda bu xizmatga tejalgan summaning 5–10 foizi olinadi." },
+      { title: "Soliq optimallashtirish — foizsiz", text: "Soliqni qonuniy kamaytirish ishimiz ichida. Tejalgan summadan alohida foiz olmaymiz." },
       { title: "Buxgalter ofisingizda — oyiga 3 marta", text: "Hujjatlarni joyida koʻramiz, savollaringizga yuzma-yuz javob beramiz." },
       { title: "Maxfiylik — NDA bilan", text: "Soʻrovingiz boʻyicha maxfiylik shartnomasini imzolaymiz. Chet ellik taʼsischisi bor korxonalar uchun ayniqsa muhim." },
       { title: "Faqat litsenziyali dasturlar", text: "1C, Didox, soliq toʻlovchining shaxsiy kabineti — hammasi rasmiy." },
@@ -124,25 +124,20 @@ export const uz: Content = {
   },
   compare: {
     kicker: "Solishtiring",
-    h2: "Buxgalteriya uchun uch yoʻl",
-    cols: ["Shtatdagi buxgalter", "Arzon autsorsing", "Sifat Buxgalter"],
+    h2: "Buxgalteringiz allaqachon bor. Mana nima oʻzgaradi",
+    sub: "Biz «yana bitta buxgalter» taklif qilmaymiz. Siz aslida nima uchun pul toʻlayotgan boʻlsangiz, oʻshani oʻzgartiramiz: xavf, tezlik va hozir soliqqa ketayotgan pul.",
+    cols: ["Hozir, buxgalteringiz bilan", "Sifat Buxgalter bilan"],
     rows: [
-      ["Taʼtil, dekret, ishdan ketish", "Ish toʻxtaydi", "Buxgalter almashadi, tarix yoʻqoladi", "Jamoa ishlaydi, ish toʻxtamaydi"],
-      ["Xato uchun jarima", "Siz toʻlaysiz", "Siz toʻlaysiz", "Xato bizniki boʻlsa — biz toʻlaymiz"],
-      ["Soliq optimallashtirish", "Buxgalter bilimiga bogʻliq", "Alohida, tejalganning 5–10%", "Narx ichida, 0%"],
-      ["Javob tezligi", "Ish vaqtida", "Navbatga qarab", "10 daqiqagacha, haftada 7 kun"],
+      { k: "Javob tezligi", now: "Baʼzan javob bir necha soatdan keyin keladi — bank allaqachon yopilgan", us: "10 daqiqagacha, haftada 7 kun. Shoshilinch toʻlov — 5 daqiqa" },
+      { k: "Yangi qonunlar va imtiyozlar", now: "Ular haqida oʻzingiz bilib olasiz — Instagramdan yoki qoʻshningizdan", us: "Birinchi boʻlib aytamiz va 70 ga yaqin imtiyozdan sizga moslarini qoʻllaymiz" },
+      { k: "Soliqni qonuniy kamaytirish", now: "Buxgalterning majburiyatiga kirmaydi — odatda hech kim qilmaydi", us: "Ishimiz ichida. Tejalgan summadan alohida foiz olmaymiz" },
+      { k: "Siz nimani koʻrasiz", now: "«Hisobot joʻnatildi» — vassalom", us: "Har oy: qancha soliq chiqdi, nega va nimaga tayyorlanish kerak" },
+      { k: "Ombor va hujjatlar", now: "Tekshiruv kelmaguncha hech kim solishtirmaydi", us: "Shartnomadan oldin kirish tekshiruvida va keyin har oy solishtiramiz" },
+      { k: "Buxgalter xatosi uchun jarima", now: "Kompaniya toʻlaydi", us: "Xato bizniki boʻlsa — jarimani biz toʻlaymiz. Shartnomada yozilgan" },
+      { k: "Dekret, pensiya, ishdan ketish", now: "Hisob yarim yoʻlda qoladi, ishni topshiradigan odam yoʻq", us: "Hisob bitta xodimga bogʻliq emas" },
+      { k: "Bitta buxgalterda nechta firma", now: "Koʻpincha bir nechta — tekshirishga vaqt yetmaydi", us: "Kam kompaniya olamiz — har birini oxirigacha tekshirish uchun" },
     ],
-  },
-  steps: {
-    kicker: "Qanday boshlaymiz",
-    h2: "Birinchi uchrashuvdan birinchi hisobotgacha",
-    items: [
-      { title: "Tanishuv", text: "Zoom orqali yoki ofisimizda, 30 daqiqa. Biznesingiz va hozirgi hisob haqida gaplashamiz." },
-      { title: "Kirish tekshiruvi", text: "Oxirgi davr hujjatlarini koʻramiz va xavflarni yozma roʻyxat qilib beramiz." },
-      { title: "Shartnoma va NDA", text: "Majburiyatlar, narx va xizmatlar roʻyxati — qogʻozda." },
-      { title: "Ishni qabul qilish", text: "Oldingi buxgalterdan hujjatlar, 1C bazasi va kirish huquqlarini oʻzimiz olamiz." },
-      { title: "Har oy", text: "Hisobotlar muddatida, guruhda oylik hisobot, oyiga 3 marta ofisingizda." },
-    ],
+    note: "Uchrashuvga oxirgi hisobotingizni olib keling — birinchi navbatda nimani tekshirishimizni koʻrsatamiz.",
   },
   fit: {
     kicker: "Kim bilan ishlaymiz",
@@ -170,7 +165,7 @@ export const uz: Content = {
       {
         name: "Bekzod",
         role: "Mijozlar bilan ishlash",
-        facts: ["Birinchi uchrashuv, narx va shartnoma", "Arizaga 1 soat ichida, odatda 10 daqiqada qoʻngʻiroq qiladi", "Telegram: @Davronbekov_Bekzod"],
+        facts: ["Birinchi uchrashuv va shartnoma", "Arizaga 1 soat ichida, odatda 10 daqiqada qoʻngʻiroq qiladi", "Telegram: @Davronbekov_Bekzod"],
       },
     ],
   },
@@ -183,7 +178,8 @@ export const uz: Content = {
     kicker: "Savollar",
     h2: "Koʻp soʻraladi",
     items: [
-      ["Nega arzon autsorsingdan qimmatroq?", "Narx ichida javobgarlik, tezlik va soliq optimallashtirish bor. Arzon xizmatda jarima xavfi sizda qoladi. Bizda esa xato bizniki boʻlsa, jarimani oʻzimiz toʻlaymiz."],
+      ["Buxgalterim bor. Nega nimanidir oʻzgartirishim kerak?", "Hisobotni vaqtida topshirish — bu minimum. Biz odatda yoʻq narsani qoʻshamiz: 10 daqiqada javob, soliqni qonuniy kamaytirish, sizga oylik hisobot va bizning xatomiz uchun jarimani oʻzimiz toʻlashimiz."],
+      ["Hozirgi buxgalterim bilan nima qilamiz?", "Ishni qabul qilishni oʻz zimmamizga olamiz: siz bilan birga hujjatlar, 1C bazasi va kirish huquqlarini olamiz, kirish tekshiruvida esa nima yopilmay qolganini koʻramiz."],
       ["Oldingi buxgalterning xatolari bilan nima boʻladi?", "Kirish tekshiruvida topamiz va tuzatish rejasini beramiz. Oldingi davr uchun javobgarlikni tekshiruvdan keyin alohida kelishamiz."],
       ["Hujjatlarimiz xavfsizmi?", "Soʻrovingiz boʻyicha NDA imzolaymiz. Faqat litsenziyali 1C va Didoxda ishlaymiz."],
       ["Ofisimizga kelasizlarmi?", "Ha, buxgalter oyiga 3 marta ofisingizga keladi. Uchrashuvlar — ofisimizda yoki Zoomda."],

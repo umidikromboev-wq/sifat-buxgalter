@@ -57,60 +57,61 @@ export function Clauses({ t }: { t: Content["clauses"] }) {
   );
 }
 
+function CmpIcon({ ok }: { ok: boolean }) {
+  return (
+    <svg className={ok ? s.icoOk : s.icoNo} viewBox="0 0 16 16" aria-hidden="true">
+      {ok ? (
+        <path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+      ) : (
+        <path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      )}
+    </svg>
+  );
+}
+
+// Покупатель уже платит бухгалтеру — сравниваем не «три способа», а «сейчас против нас» по его же критериям.
 export function Compare({ t }: { t: Content["compare"] }) {
+  const [nowLabel, usLabel] = t.cols;
   return (
     <section className="section" aria-labelledby="cmp-h">
       <div className="wrap">
         <p className="kicker">{t.kicker}</p>
-        <h2 id="cmp-h" className="h2">
+        <h2 id="cmp-h" className={`h2 ${s.cmpH}`}>
           {t.h2}
         </h2>
-        <div className={s.tableWrap} tabIndex={0} role="region" aria-labelledby="cmp-h">
-          <table className={s.table}>
-            <thead>
-              <tr>
-                <td />
-                {t.cols.map((c, i) => (
-                  <th key={c} scope="col" className={i === 2 ? s.us : undefined}>
-                    {c}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {t.rows.map(([label, a, b, c]) => (
-                <tr key={label}>
-                  <th scope="row">{label}</th>
-                  <td>{a}</td>
-                  <td>{b}</td>
-                  <td className={s.us}>{c}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function Steps({ t }: { t: Content["steps"] }) {
-  return (
-    <section className={`section ${s.stepsSec}`} aria-labelledby="st-h">
-      <div className="wrap">
-        <p className="kicker">{t.kicker}</p>
-        <h2 id="st-h" className="h2">
-          {t.h2}
-        </h2>
-        <ol className={s.steps}>
-          {t.items.map((st, i) => (
-            <li key={st.title} className={`${s.step} reveal`}>
-              <span className={`${s.stepN} num`}>{String(i + 1).padStart(2, "0")}</span>
-              <h3 className={s.stepT}>{st.title}</h3>
-              <p className={s.stepX}>{st.text}</p>
-            </li>
+        <p className="lead">{t.sub}</p>
+        <div className={s.cmp} role="table" aria-labelledby="cmp-h">
+          <div className={s.cmpHead} role="row">
+            <span role="columnheader" />
+            <span role="columnheader" className={s.cmpNowH}>
+              {nowLabel}
+            </span>
+            <span role="columnheader" className={s.cmpUsH}>
+              {usLabel}
+            </span>
+          </div>
+          {t.rows.map((r) => (
+            <div key={r.k} className={`${s.cmpRow} reveal`} role="row">
+              <span role="rowheader" className={s.cmpK}>
+                {r.k}
+              </span>
+              <span role="cell" className={s.cmpNow} data-label={nowLabel}>
+                <CmpIcon ok={false} />
+                {r.now}
+              </span>
+              <span role="cell" className={s.cmpUs} data-label={usLabel}>
+                <CmpIcon ok />
+                {r.us}
+              </span>
+            </div>
           ))}
-        </ol>
+        </div>
+        <p className={s.cmpNote}>
+          {t.note}{" "}
+          <a href="#ariza" className={s.cmpLink}>
+            →
+          </a>
+        </p>
       </div>
     </section>
   );
