@@ -1,0 +1,134 @@
+.split {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .split {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 4rem;
+  }
+  .side {
+    position: sticky;
+    top: 110px;
+    align-self: start;
+  }
+}
+
+.list {
+  border-top: 1px solid var(--ink);
+}
+
+.item {
+  position: relative;
+  padding: 1.15rem 0 1.15rem 2.25rem;
+  border-bottom: 1px solid var(--line);
+  font-size: clamp(1.02rem, 0.96rem + 0.3vw, 1.2rem);
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.85rem;
+  width: 1.1rem;
+  height: 2px;
+  background: var(--gold);
+}
+
+.after {
+  margin-top: 1.75rem;
+  font-family: var(--serif);
+  font-size: var(--h3);
+  line-height: 1.3;
+  max-width: 34ch;
+}
+
+/* Тёмный блок риска */
+.risk {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.kickerDark {
+  color: color-mix(in srgb, var(--paper) 60%, transparent);
+}
+
+.kickerDark::before {
+  background: var(--gold-lit);
+}
+
+.riskH {
+  max-width: 20ch;
+}
+
+.riskLead {
+  margin-top: 1.25rem;
+  max-width: 60ch;
+  color: color-mix(in srgb, var(--paper) 72%, transparent);
+}
+
+.chain {
+  display: grid;
+  gap: 0;
+  margin: clamp(2.5rem, 2rem + 2vw, 4rem) 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid color-mix(in srgb, var(--paper) 22%, transparent);
+}
+
+@media (min-width: 900px) {
+  .chain {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .link + .link {
+    border-left: 1px solid color-mix(in srgb, var(--paper) 22%, transparent);
+  }
+}
+
+.link {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--paper) 22%, transparent);
+}
+
+@media (min-width: 900px) {
+  .link + .link {
+    padding-left: 1.5rem;
+  }
+}
+
+.linkN {
+  font-family: var(--serif);
+  color: var(--gold-lit);
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.total {
+  margin-top: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+}
+
+.totalN {
+  font-family: var(--serif);
+  font-size: var(--huge);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--gold-lit);
+  overflow-wrap: anywhere;
+}
+
+.totalL {
+  margin-top: 0.75rem;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.3rem);
+  color: color-mix(in srgb, var(--paper) 80%, transparent);
+}
+
+.answer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gold-lit);
+  max-width: 62ch;
+  font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.25rem);
+}

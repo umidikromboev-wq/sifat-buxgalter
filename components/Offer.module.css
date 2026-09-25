@@ -1,0 +1,209 @@
+/* Услуги — как разворот гроссбуха: раздел слева, строки справа */
+.ledger {
+  margin-top: clamp(2.5rem, 2rem + 2vw, 4rem);
+  border-top: 2px solid var(--ink);
+}
+
+.group {
+  display: grid;
+  gap: 0.75rem;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+@media (min-width: 900px) {
+  .group {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: 2rem;
+  }
+}
+
+.groupT {
+  font-size: var(--h3);
+}
+
+.groupL {
+  display: grid;
+  gap: 0.2rem 2rem;
+  color: var(--muted);
+}
+
+@media (min-width: 640px) {
+  .groupL {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.groupL li {
+  padding-block: 0.3rem;
+}
+
+/* Пункты договора */
+.clausesSec {
+  background: var(--paper-2);
+  border-block: 1px solid var(--line);
+}
+
+.clHead {
+  display: grid;
+  gap: 1.25rem;
+  align-items: end;
+}
+
+@media (min-width: 900px) {
+  .clHead {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  }
+}
+
+.clSub {
+  color: var(--muted);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--h3);
+  line-height: 1.35;
+}
+
+.clauses {
+  margin: clamp(2.5rem, 2rem + 2vw, 4rem) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0 3rem;
+}
+
+@media (min-width: 900px) {
+  .clauses {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* Первый пункт — главный обещанный критерий, шире остальных */
+  .clause:first-child {
+    grid-column: 1 / -1;
+  }
+  .clause:first-child .clT {
+    font-size: var(--h2);
+  }
+}
+
+.clause {
+  display: grid;
+  grid-template-columns: 3.25rem 1fr;
+  gap: 0.75rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--ink);
+}
+
+.par {
+  font-family: var(--serif);
+  color: var(--gold);
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.clT {
+  font-size: var(--h3);
+  line-height: 1.2;
+}
+
+.clX {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+/* Сравнение */
+.tableWrap {
+  margin-top: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  overflow-x: auto;
+  border-top: 2px solid var(--ink);
+}
+
+.table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: 0.97rem;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 1rem 1.25rem 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.table thead th {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.15rem;
+  padding-top: 1.25rem;
+}
+
+.table tbody th {
+  font-weight: 600;
+  width: 22%;
+}
+
+.table td {
+  color: var(--muted);
+}
+
+.table .us {
+  background: var(--sheet);
+  color: var(--ink);
+  font-weight: 600;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+.table thead .us {
+  box-shadow: inset 0 3px 0 var(--gold);
+}
+
+/* Шаги — настоящая последовательность, поэтому номера */
+.stepsSec {
+  padding-top: 0;
+}
+
+.steps {
+  margin: clamp(2.5rem, 2rem + 2vw, 4rem) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0;
+  counter-reset: none;
+}
+
+@media (min-width: 1024px) {
+  .steps {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .step + .step {
+    border-left: 1px solid var(--line);
+    padding-left: 1.25rem;
+  }
+}
+
+.step {
+  padding: 1.5rem 1.25rem 1.5rem 0;
+  border-top: 2px solid var(--ink);
+}
+
+.stepN {
+  font-family: var(--serif);
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+.stepT {
+  margin-top: 1.75rem;
+  font-size: 1.3rem;
+}
+
+.stepX {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}

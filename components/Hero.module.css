@@ -1,0 +1,207 @@
+.hero {
+  padding-top: clamp(2.5rem, 1.5rem + 4vw, 5.5rem);
+  padding-bottom: clamp(2.5rem, 2rem + 2vw, 4rem);
+}
+
+.grid {
+  display: grid;
+  gap: clamp(2.5rem, 1rem + 4vw, 4.5rem);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  }
+}
+
+.h1 {
+  font-size: var(--h1);
+  margin-top: 1.25rem;
+  line-height: 1.03;
+  max-width: 15ch;
+}
+
+.sub {
+  margin-top: 1.5rem;
+  max-width: 58ch;
+  color: var(--muted);
+  font-size: clamp(1.02rem, 0.95rem + 0.3vw, 1.18rem);
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: var(--small);
+  color: var(--dim);
+  max-width: 52ch;
+}
+
+/* Лист отчёта */
+.sheet {
+  position: relative;
+  margin: 0;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: var(--r-doc);
+  padding: clamp(1.25rem, 0.9rem + 1.4vw, 2rem);
+  transform: rotate(1.2deg);
+  box-shadow:
+    0 1px 0 var(--line),
+    8px 10px 0 -1px var(--paper-2),
+    8px 10px 0 0 var(--line);
+  max-width: 520px;
+  justify-self: center;
+  width: 100%;
+}
+
+.sheetTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.sheetTitle {
+  font-family: var(--serif);
+  font-size: var(--h3);
+}
+
+.tag {
+  font-size: var(--tiny);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  border: 1px solid var(--line);
+  padding: 0.2rem 0.5rem;
+}
+
+.rows {
+  margin-top: 0.5rem;
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding-block: 0.8rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+  animation: rowIn 700ms var(--ease) both;
+  animation-delay: calc(250ms + var(--i) * 140ms);
+}
+
+.dots {
+  flex: 1;
+  min-width: 1rem;
+  border-bottom: 1px dotted var(--dim);
+  transform: translateY(-4px);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--ok);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.check {
+  width: 15px;
+  height: 15px;
+}
+
+.sheetFoot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.25rem 0 0;
+  padding-right: clamp(3rem, 2rem + 3vw, 5rem);
+}
+
+.sheetFoot dt {
+  font-size: var(--tiny);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.sheetFoot dd {
+  margin: 0.25rem 0 0;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+}
+
+.stamp {
+  position: absolute;
+  width: clamp(110px, 8rem + 2vw, 150px);
+  right: -8px;
+  bottom: -56px;
+  color: var(--gold);
+  opacity: 0.85;
+  mix-blend-mode: multiply;
+  animation: stampIn 520ms var(--ease) both;
+  animation-delay: 1.3s;
+}
+
+@keyframes rowIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes stampIn {
+  from {
+    opacity: 0;
+    transform: scale(1.6) rotate(-30deg);
+  }
+  to {
+    transform: rotate(-14deg);
+  }
+}
+
+/* Факты под первым экраном */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: clamp(3rem, 2rem + 3vw, 5rem) 0 0;
+  border-top: 1px solid var(--ink);
+}
+
+@media (min-width: 768px) {
+  .facts {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.fact {
+  padding: 1.25rem 1rem 0 0;
+}
+
+.factK {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 1.3rem + 1.8vw, 2.8rem);
+  line-height: 1;
+}
+
+.factV {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: var(--small);
+}
+
+@media (min-width: 1024px) {
+  .stamp {
+    right: -34px;
+  }
+}
