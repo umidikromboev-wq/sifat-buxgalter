@@ -4,14 +4,14 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Clauses, Compare, Services, Steps } from "@/components/Offer";
-import { Fit, Pricing } from "@/components/Pricing";
+import { Fit } from "@/components/Pricing";
 import { Risk, Triggers } from "@/components/Problem";
 import { Clients, Faq, Team } from "@/components/Trust";
 import { isLocale } from "@/lib/content/types";
 import { getContent, SITE } from "@/lib/site";
 
 // Порядок блоков — по канону NMT communication §8:
-// one-liner → контекст/триггер → проблема текущего решения → Jobs → ценность в критериях → сравнение → путь → цена → страхи → CTA.
+// one-liner → контекст/триггер → проблема текущего решения → Jobs → ценность в критериях → сравнение → путь → страхи (цены на сайте не пишем — решение Умида 25.09) → CTA.
 export default async function Page({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
@@ -48,7 +48,6 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
         <Clauses t={t.clauses} />
         <Compare t={t.compare} />
         <Steps t={t.steps} />
-        <Pricing t={t.pricing} />
         <Fit t={t.fit} />
         <Team t={t.team} />
         <Clients t={t.clients} />

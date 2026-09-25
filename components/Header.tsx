@@ -15,7 +15,6 @@ export function Header({ lang, t }: Props) {
         </Link>
         <nav aria-label={lang === "uz" ? "Asosiy menyu" : "Главное меню"} className="hdr-nav">
           <a href="#xizmatlar">{t.services}</a>
-          <a href="#narxlar">{t.pricing}</a>
           <a href="#jamoa">{t.team}</a>
           <a href="#savollar">{t.faq}</a>
         </nav>

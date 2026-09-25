@@ -6,7 +6,7 @@ export const uz: Content = {
     description:
       "Buxgalteriya va soliq hisobini 2016-yildan ishlayotgan bosh buxgalter yuritadi. Savolga 10 daqiqada javob, hisobotlar muddatida, xatomiz sabab jarima chiqsa — oʻzimiz toʻlaymiz.",
   },
-  nav: { services: "Xizmatlar", pricing: "Narxlar", team: "Jamoa", faq: "Savollar", cta: "Uchrashuvga yozilish", langLabel: "Til" },
+  nav: { services: "Xizmatlar", team: "Jamoa", faq: "Savollar", cta: "Uchrashuvga yozilish", langLabel: "Til" },
   hero: {
     kicker: "Buxgalteriya autsorsingi · Toshkent",
     h1: "Buxgalteriyani bizga topshiring — soliq xavfini biz koʻtaramiz",
@@ -127,7 +127,6 @@ export const uz: Content = {
     h2: "Buxgalteriya uchun uch yoʻl",
     cols: ["Shtatdagi buxgalter", "Arzon autsorsing", "Sifat Buxgalter"],
     rows: [
-      ["Oylik xarajat", "Maosh, soliqlar, ish joyi, dastur", "Oyiga ~1 mln soʻmdan", "Oyiga 5 mln soʻmdan, dasturlar ichida"],
       ["Taʼtil, dekret, ishdan ketish", "Ish toʻxtaydi", "Buxgalter almashadi, tarix yoʻqoladi", "Jamoa ishlaydi, ish toʻxtamaydi"],
       ["Xato uchun jarima", "Siz toʻlaysiz", "Siz toʻlaysiz", "Xato bizniki boʻlsa — biz toʻlaymiz"],
       ["Soliq optimallashtirish", "Buxgalter bilimiga bogʻliq", "Alohida, tejalganning 5–10%", "Narx ichida, 0%"],
@@ -144,49 +143,6 @@ export const uz: Content = {
       { title: "Ishni qabul qilish", text: "Oldingi buxgalterdan hujjatlar, 1C bazasi va kirish huquqlarini oʻzimiz olamiz." },
       { title: "Har oy", text: "Hisobotlar muddatida, guruhda oylik hisobot, oyiga 3 marta ofisingizda." },
     ],
-  },
-  pricing: {
-    kicker: "Narxlar",
-    h2: "Narx aylanmaga emas, ish hajmiga bogʻliq",
-    sub: "Hajm — bu operatsiyalar, xodimlar va hujjatlar soni. Aniq summani kirish tekshiruvidan keyin yozma aytamiz.",
-    perMonth: "oyiga",
-    featured: "Koʻp tanlanadi",
-    plans: [
-      {
-        name: "Standart",
-        price: "5 mln soʻmdan",
-        for: "Bitta faoliyat turi, oz sonli xodim",
-        items: ["Toʻliq buxgalteriya va soliq hisobi", "Barcha hisobotlar muddatida", "Ish haqi va kadrlar", "Telegram-guruh, 10 daqiqada javob", "Oyiga 3 marta tashrif"],
-      },
-      {
-        name: "Gold",
-        price: "Hajmga qarab",
-        for: "Import-eksport, ulgurji savdo, bir nechta ombor",
-        items: ["Standartdagi hammasi", "Import va eksport shartnomalari", "Kontragentlarni muntazam tekshirish", "Soliq xavflari boʻyicha chorak hisoboti"],
-      },
-      {
-        name: "VIP",
-        price: "Hajmga qarab",
-        for: "Katta aylanma, chet ellik taʼsischilar",
-        items: ["Golddagi hammasi", "Tekshiruv va nizolarda himoya", "Yuridik qoʻllab-quvvatlash", "NDA va alohida bosh buxgalter"],
-      },
-    ],
-    cta: "Hajmni hisoblatish",
-    onceTitle: "Bir martalik tekshiruvlar",
-    once: [
-      { name: "Ekspress-tekshiruv", price: "10 mln soʻmdan", text: "Asosiy soliq xavflarini tez aniqlash" },
-      { name: "Bir yillik tekshiruv", price: "70 mln soʻmdan", text: "Butun yil hujjatlari va hisobotlari" },
-      { name: "Uch yillik chuqur audit", price: "Kelishiladi", text: "Tekshiruvga tayyorgarlik uchun" },
-    ],
-    why: {
-      h3: "«Nega qimmat?» — eng koʻp beriladigan savol",
-      lines: [
-        ["Arzon buxgalter, bir yil", "12 mln soʻm"],
-        ["Bitta tekshiruv jarimasi, 10 mlrd aylanmada", "2 000 mln soʻm"],
-        ["Xatomiz uchun jarima bizda, optimallashtirish foizsiz", "0 soʻm ustama"],
-      ],
-      result: "Siz buxgalterga emas — xavf yoʻqligiga toʻlaysiz.",
-    },
   },
   fit: {
     kicker: "Kim bilan ishlaymiz",
