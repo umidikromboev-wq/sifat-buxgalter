@@ -40,7 +40,7 @@ export function serviceIdFromSlug(locale: Locale, slug: string): ServiceId | nul
   return entry ? entry[0] : null;
 }
 
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://sifat-buxgalter-site.vercel.app").replace(/\/$/, "");
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://sifat-buxgalter.vercel.app").replace(/\/$/, "");
 
 export function homePath(locale: Locale) {
   return `/${locale}`;
