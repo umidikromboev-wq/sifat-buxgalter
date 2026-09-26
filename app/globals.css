@@ -245,3 +245,29 @@ section { padding: 72px 0; }
 .logos .logo-img:hover img { filter: none; opacity: 1; }
 .brand { display: inline-flex; align-items: center; gap: 8px; }
 .brand img { height: 26px; width: auto; }
+
+/* paper report card */
+.paper { position: relative; background: #fbf8f0; color: var(--ink); border: 1px solid #e3dcc8; border-radius: 6px; padding: 28px 28px 24px; transform: rotate(-1.2deg); box-shadow: 0 1px 0 #e3dcc8, 0 24px 48px -28px rgba(0,0,0,.45), 6px 6px 0 -1px #efe9da, 6px 6px 0 0 #e3dcc8; }
+.paper-head { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 14px; border-bottom: 2px solid var(--ink); margin-bottom: 6px; }
+.paper-title { font-family: Georgia, "Times New Roman", serif; font-size: 24px; font-weight: 600; letter-spacing: -.01em; }
+.paper-period { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.paper-badge { border: 1px solid var(--muted); color: var(--muted); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; padding: 4px 9px; border-radius: 3px; margin-top: 4px; }
+.paper-rows { list-style: none; padding: 0; margin: 0; }
+.paper-rows li { display: flex; align-items: baseline; gap: 8px; padding: 10px 0; border-bottom: 1px solid #e8e2d2; font-size: 15px; margin: 0; }
+.paper-rows li:last-child { border-bottom: 0; }
+.paper-rows .k { white-space: nowrap; }
+.paper-rows .dots { flex: 1; border-bottom: 1px dotted #b9b19c; transform: translateY(-4px); }
+.paper-rows .v { color: var(--ok); font-weight: 700; white-space: nowrap; display: inline-flex; align-items: center; gap: 5px; }
+.paper-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-right: 110px; margin-top: 18px; padding-top: 14px; border-top: 1px solid #e8e2d2; }
+.paper-stats small { display: block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.paper-stats strong { font-family: Georgia, "Times New Roman", serif; font-size: 22px; font-weight: 600; }
+.paper-sign { margin-top: 14px; font-size: 12px; color: var(--muted); font-style: italic; }
+.seal { position: absolute; right: 10px; bottom: -14px; color: var(--gold); opacity: .9; transform: rotate(-12deg); mix-blend-mode: multiply; }
+@media (max-width: 480px) { .paper { padding: 20px 18px 24px; } .paper-rows li { font-size: 13.5px; } .paper-rows .k { white-space: normal; } .seal { width: 90px; } .seal svg { width: 90px; height: 90px; } }
+
+/* 3 questions v2 */
+.check ol li { margin: .9em 0; }
+.check ol li .why { display: block; color: #cfc8b8; font-size: 14px; margin-top: 4px; font-weight: 400; }
+.check ol li > span:first-child { font-weight: 600; }
+.check .outro-yes { color: #cfc8b8; font-size: 15px; margin-top: 14px; }
+.check .outro-no { color: #fff; font-size: 16px; font-weight: 600; margin-top: 8px; }

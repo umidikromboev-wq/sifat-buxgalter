@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ClientLogos from "@/components/ClientLogos";
 import CtaSection from "@/components/CtaSection";
+import ReportCard from "@/components/ReportCard";
 import JsonLd, { faqLd } from "@/components/JsonLd";
 import { home } from "@/content/home";
 import { homePath, isLocale, sectionPath, servicePath, siteUrl } from "@/content/routes";
@@ -50,34 +51,9 @@ export default async function HomePage({ params }: Props) {
             </div>
             <p className="note">{h.hero.note}</p>
           </div>
-          <div className="sample" aria-hidden="true">
-            <div className="sample-head">
-              <span>{h.hero.sample.title}</span>
-              <span className="badge">{h.hero.sample.badge}</span>
-            </div>
-            {h.hero.sample.rows.map(([k, v]) => (
-              <div className="sample-row" key={k}>
-                <span>{k}</span>
-                <span className="ok">{v}</span>
-              </div>
-            ))}
-            <div className="sample-stats">
-              <div>
-                {h.hero.sample.stat1[0]}
-                <strong>{h.hero.sample.stat1[1]}</strong>
-              </div>
-              <div>
-                {h.hero.sample.stat2[0]}
-                <strong>{h.hero.sample.stat2[1]}</strong>
-              </div>
-            </div>
-          </div>
+          <ReportCard s={h.hero.sample} />
         </div>
       </section>
-
-      <div className="ticker" aria-hidden="true">
-        {Array(6).fill("SIFAT BUXGALTER · " + (locale === "uz" ? "TEKSHIRILDI" : "ПРОВЕРЕНО") + " · ").join("")}
-      </div>
 
       <div className="wrap stats">
         {h.stats.map(([n, l]) => (
@@ -109,11 +85,15 @@ export default async function HomePage({ params }: Props) {
             <div>
               <ol>
                 {h.check.questions.map((q) => (
-                  <li key={q}>{q}</li>
+                  <li key={q.q}>
+                    <span>{q.q}</span>
+                    <span className="why">{q.why}</span>
+                  </li>
                 ))}
               </ol>
-              <p className="outro">
-                {h.check.outro} <a href="#ariza">{h.check.link}</a>
+              <p className="outro-yes">{h.check.outroYes}</p>
+              <p className="outro-no">
+                {h.check.outroNo} <a href="#ariza">{h.check.link}</a>
               </p>
             </div>
           </div>

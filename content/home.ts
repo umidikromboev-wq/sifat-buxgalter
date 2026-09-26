@@ -9,11 +9,11 @@ export type HomeContent = {
     cta: string;
     telegram: string;
     note: string;
-    sample: { title: string; badge: string; rows: [string, string][]; stat1: [string, string]; stat2: [string, string] };
+    sample: { title: string; period: string; badge: string; rows: [string, string][]; stat1: [string, string]; stat2: [string, string]; stamp: string; signed: string };
   };
   stats: [string, string][];
   triggers: { eyebrow: string; h2: string; items: string[]; note: string };
-  check: { title: string; intro: string; questions: string[]; outro: string; link: string };
+  check: { title: string; intro: string; questions: { q: string; why: string }[]; outroYes: string; outroNo: string; link: string };
   compare: {
     eyebrow: string;
     h2: string;
@@ -75,22 +75,27 @@ export const home: Record<Locale, HomeContent> = {
       note:
         "Hech qayerga borish shart emas. Bekzod qoʻngʻiroq qiladi, hisobingiz haqida ikki-uch savol beradi va ortiqcha toʻlov odatda qayerda yashirinishini aytadi.",
       sample: {
-        title: "Oylik hisobot · sentabr",
+        title: "Oylik hisobot",
+        period: "sentabr 2026",
         badge: "Namuna",
         rows: [
-          ["QQS deklaratsiyasi", "Topshirildi"],
-          ["JShDS va ijtimoiy soliq", "Topshirildi"],
-          ["Ish haqi va tabel", "Hisoblandi"],
-          ["Kontragentlar tekshiruvi", "Xavf yoʻq"],
+          ["QQS deklaratsiyasi", "Topshirildi · 18-sent"],
+          ["JShDS va ijtimoiy soliq", "Topshirildi · 15-sent"],
+          ["Ish haqi va tabel", "Hisoblandi · 12 xodim"],
+          ["Ombor ↔ 1C solishtiruvi", "Farq yoʻq"],
+          ["Kontragentlar tekshiruvi", "31 ta · xavf yoʻq"],
+          ["Qoʻllangan imtiyoz", "1 ta · tejaldi 4,2 mln"],
           ["Soliqdan talabnomalar", "0"],
         ],
         stat1: ["Savolga javob", "10 daqiqagacha"],
         stat2: ["Ofisingizga tashrif", "oyiga 3 marta"],
+        stamp: "SIFAT BUXGALTER · TEKSHIRILDI · ",
+        signed: "Bosh buxgalter tekshirdi",
       },
     },
     stats: [
       ["2016", "yildan buxgalteriyada"],
-      ["~20", "kompaniya hisobini yuritgan"],
+      ["200+", "kompaniya bilan ishlagan"],
       ["10 daq.", "savolga javob"],
       ["7 kun", "haftada aloqada"],
     ],
@@ -109,15 +114,16 @@ export const home: Record<Locale, HomeContent> = {
       note: "Qaysi holat boʻlmasin, ishni bitta qadamdan boshlaymiz — kirish tekshiruvidan.",
     },
     check: {
-      title: "Buxgalteringizga 3 savol",
-      intro: "Buxgalteringizga uchta savol bering. Javob 10 daqiqada kelmasa — bu birinchi javob.",
+      title: "Buxgalteringizga 3 savol bering — bugun",
+      intro: "Bu savollar uchun buxgalter boʻlish shart emas. Telegramda yozing. Javob 10 daqiqada kelmasa — bu allaqachon birinchi javob.",
       questions: [
-        "Oʻtgan chorakda qaysi soliq imtiyozini qoʻlladingiz va u qancha tejadi?",
-        "Ombor qoldigʻi 1C bilan bugun mos keladimi?",
-        "Oxirgi ikki yilda ortiqcha toʻlangan soliq qaytarib olindimi?",
+        { q: "Oʻtgan chorakda qaysi soliq imtiyozi qoʻllandi va u qancha tejadi?", why: "Aniq raqam yoʻq — imtiyoz qoʻllanmagan. Oʻzbekistonda 70 ga yaqin imtiyoz bor, har oy ortiqcha toʻlayapsiz." },
+        { q: "Ombordagi haqiqiy qoldiq bugun 1C dagi raqam bilan mos keladimi?", why: "«Tekshirib koʻrish kerak» — demak, hech qachon solishtirilmagan. Tekshiruvda aynan shu farq jarimaga aylanadi." },
+        { q: "Oxirgi ikki yilda ortiqcha toʻlangan soliq qaytarib olindimi?", why: "«Ortiqcha toʻlov yoʻq» — buni hech kim tekshirmagan. Muddat oʻtsa, bu pul qaytmaydi." },
       ],
-      outro: "Uchalasiga aniq javob boʻlsa — sizga biz kerak emasmiz. Boʻlmasa, qoʻngʻiroqda qaysi biridan boshlashni aytamiz.",
-      link: "Qoʻngʻiroqqa yozilish →",
+      outroYes: "Uchalasiga aniq javob bor? Buxgalteringiz kuchli — sizga biz kerak emasmiz, shunday deymiz.",
+      outroNo: "Bittasiga ham javob yoʻqmi? Bu pul allaqachon yoʻqolayotgan joy. 10 daqiqalik qoʻngʻiroqda qaysi biridan boshlashni aytamiz — bepul.",
+      link: "Bepul qoʻngʻiroqqa yozilish →",
     },
     compare: {
       eyebrow: "Solishtiring",
@@ -135,8 +141,9 @@ export const home: Record<Locale, HomeContent> = {
         ["Buxgalter xatosi uchun jarima", "Kompaniya toʻlaydi", "Xato bizniki boʻlsa — jarimani biz toʻlaymiz. Shartnomada yozilgan"],
         ["Dekret, pensiya, ishdan ketish", "Hisob yarim yoʻlda qoladi, ishni topshiradigan odam yoʻq", "Hisob bitta xodimga bogʻliq emas"],
         ["Bitta buxgalterda nechta firma", "Koʻpincha bir nechta — tekshirishga vaqt yetmaydi", "Kam kompaniya olamiz — har birini oxirigacha tekshirish uchun"],
+        ["Soliq tekshiruvi kelganda", "Siz oʻzingiz javob berasiz — buxgalter «bilmayman» deydi yoki allaqachon ketgan", "Hujjatlar, eʼtiroz, soliq idorasi bilan muloqot — hammasi bizda"],
         // TASDIQLASH: narx anchor — mijoz rozi boʻlmasa shu qatorni oʻchiring
-        ["Oylik narx", "1–2 mln soʻm — lekin bitta odam 5 ta firmani yuritadi", "4–5 mln soʻmdan — hisobingizni oxirigacha tekshiradigan bosh buxgalter"],
+        ["Oylik narx", "1–2 mln soʻm + qoʻllanmagan imtiyozlar + kechikkan hisobot jarimasi (4–5 mln)", "4–5 mln soʻmdan — hammasi ichida. Oldini olingan bitta jarima narxni qoplaydi"],
       ],
       note: "Qoʻngʻiroqda omboringiz qanday yuritilishini ayting — birinchi navbatda nimani tekshirish kerakligini aytamiz.",
     },
@@ -201,13 +208,14 @@ export const home: Record<Locale, HomeContent> = {
       yesTitle: "Mos keladi",
       yes: [
         "Yillik aylanmasi 1 mlrd soʻmdan, xodimlari 5 nafardan ortiq MChJ",
+        "Buxgalteri bor, lekin uning ishini hech kim tashqaridan tekshirmagan kompaniyalar",
         "Import-eksport, ulgurji savdo, turizm, oʻquv markazlari",
         "Toshkent shahri va Toshkent viloyati",
         "Soliqni qonuniy yoʻl bilan kamaytirmoqchi boʻlgan egalar",
       ],
       noTitle: "Olmaymiz",
       no: ["Faqat naqd pulda ishlaydigan biznes", "Alkogol va tamaki", "Naqd pulda ishlaydigan qurilish"],
-      note: "Javobgarlikni oʻz boʻynimizga olganimiz uchun faqat halol hisobni qabul qilamiz.",
+      note: "Javobgarlikni oʻz boʻynimizga olganimiz uchun faqat halol hisobni qabul qilamiz. Bu sizni ham himoya qiladi: bir buxgalterda «kulrang» firma boʻlsa, tekshiruv uning barcha mijozlariga keladi.",
     },
     team: {
       eyebrow: "Jamoa",
@@ -222,7 +230,7 @@ export const home: Record<Locale, HomeContent> = {
             // TASDIQLASH: mijoz rozi boʻlmasa shu qatorni oʻchiring
             "Hozir — Avangard (maishiy texnika) bosh buxgalteri",
             "Har bir mijoz hisobini shaxsan yuritadi",
-            "20 ga yaqin kompaniya hisobini yuritgan",
+            "200 dan ortiq kompaniya bilan ishlagan — savdo, import-eksport, xizmat",
           ],
         },
         {
@@ -268,22 +276,27 @@ export const home: Record<Locale, HomeContent> = {
       telegram: "Написать в Telegram",
       note: "Никуда ехать не нужно. Бекзод перезвонит, задаст два-три вопроса о вашем учёте и скажет, где обычно прячется переплата.",
       sample: {
-        title: "Отчёт за месяц · сентябрь",
+        title: "Отчёт за месяц",
+        period: "сентябрь 2026",
         badge: "Образец",
         rows: [
-          ["Декларация по НДС", "Сдана"],
-          ["НДФЛ и соцналог", "Сданы"],
-          ["Зарплата и табель", "Начислены"],
-          ["Проверка контрагентов", "Рисков нет"],
+          ["Декларация по НДС", "Сдана · 18 сент"],
+          ["НДФЛ и соцналог", "Сданы · 15 сент"],
+          ["Зарплата и табель", "Начислены · 12 сотр."],
+          ["Сверка склад ↔ 1С", "Расхождений нет"],
+          ["Проверка контрагентов", "31 · рисков нет"],
+          ["Применённая льгота", "1 · экономия 4,2 млн"],
           ["Требования налоговой", "0"],
         ],
         stat1: ["Ответ на вопрос", "до 10 минут"],
         stat2: ["Выезд к вам в офис", "3 раза в месяц"],
+        stamp: "SIFAT BUXGALTER · ПРОВЕРЕНО · ",
+        signed: "Проверил главный бухгалтер",
       },
     },
     stats: [
       ["2016", "года в бухгалтерии"],
-      ["~20", "компаний на обслуживании"],
+      ["200+", "компаний в опыте команды"],
       ["10 мин", "ответ на вопрос"],
       ["7 дней", "в неделю на связи"],
     ],
@@ -302,15 +315,16 @@ export const home: Record<Locale, HomeContent> = {
       note: "В любом случае начинаем с одного шага — входной проверки.",
     },
     check: {
-      title: "3 вопроса вашему бухгалтеру",
-      intro: "Задайте бухгалтеру три вопроса. Если ответ не пришёл за 10 минут — это уже первый ответ.",
+      title: "Задайте бухгалтеру 3 вопроса — сегодня",
+      intro: "Для этих вопросов не нужно разбираться в учёте. Напишите в Telegram. Если ответ не пришёл за 10 минут — это уже первый ответ.",
       questions: [
-        "Какую налоговую льготу вы применили в прошлом квартале и сколько она сэкономила?",
-        "Остаток на складе сегодня сходится с 1С?",
-        "За последние два года переплаченные налоги были возвращены?",
+        { q: "Какая налоговая льгота применена в прошлом квартале и сколько она сэкономила?", why: "Нет точной цифры — льгота не применялась. В Узбекистане около 70 льгот, вы переплачиваете каждый месяц." },
+        { q: "Реальный остаток на складе сегодня сходится с цифрой в 1С?", why: "«Надо проверить» — значит, не сверяли никогда. При проверке именно это расхождение превращается в штраф." },
+        { q: "За последние два года переплаченные налоги были возвращены?", why: "«Переплаты нет» — этого никто не проверял. Истечёт срок — деньги не вернутся." },
       ],
-      outro: "Если на все три есть чёткий ответ — мы вам не нужны. Если нет, на звонке скажем, с какого начать.",
-      link: "Записаться на звонок →",
+      outroYes: "На все три есть чёткий ответ? У вас сильный бухгалтер — мы вам не нужны, так и скажем.",
+      outroNo: "Нет ответа хотя бы на один? Это место, где деньги уже теряются. За 10 минут на звонке скажем, с какого начать — бесплатно.",
+      link: "Записаться на бесплатный звонок →",
     },
     compare: {
       eyebrow: "Сравните",
@@ -327,8 +341,9 @@ export const home: Record<Locale, HomeContent> = {
         ["Штраф за ошибку бухгалтера", "Платит компания", "Ошибка наша — штраф платим мы. Прописано в договоре"],
         ["Декрет, пенсия, увольнение", "Учёт остаётся на полпути, дела передать некому", "Учёт не зависит от одного сотрудника"],
         ["Сколько фирм на одном бухгалтере", "Часто несколько сразу — на проверку не хватает времени", "Берём мало компаний, чтобы каждую проверять до конца"],
+        ["Когда приходит налоговая проверка", "Отвечаете вы сами — бухгалтер говорит «не знаю» или уже ушёл", "Документы, возражение, общение с налоговой — всё на нас"],
         // ПОДТВЕРДИТЬ: ценовой якорь — удалите строку, если клиент против
-        ["Цена в месяц", "1–2 млн сум — но один человек ведёт 5 фирм", "От 4–5 млн сум — главный бухгалтер, который проверяет ваш учёт до конца"],
+        ["Цена в месяц", "1–2 млн сум + неприменённые льготы + штраф за просроченный отчёт (4–5 млн)", "От 4–5 млн сум — всё включено. Один предотвращённый штраф окупает месяц"],
       ],
       note: "На звонке расскажите, как у вас ведётся склад, — скажем, что проверить первым.",
     },
@@ -388,10 +403,10 @@ export const home: Record<Locale, HomeContent> = {
       eyebrow: "С кем работаем",
       h2: "Берём не всех — и это защищает вас",
       yesTitle: "Подходит",
-      yes: ["ООО с годовым оборотом от 1 млрд сум и штатом от 5 человек", "ВЭД, оптовая торговля, туризм, учебные центры", "Ташкент и Ташкентская область", "Собственники, которые хотят платить меньше налогов законно"],
+      yes: ["ООО с годовым оборотом от 1 млрд сум и штатом от 5 человек", "Компании, у которых есть бухгалтер, но его работу никто не проверял со стороны", "ВЭД, оптовая торговля, туризм, учебные центры", "Ташкент и Ташкентская область", "Собственники, которые хотят платить меньше налогов законно"],
       noTitle: "Не берём",
       no: ["Бизнес только на наличных", "Алкоголь и табак", "Стройка на наличных"],
-      note: "Мы берём ответственность на себя, поэтому принимаем только честный учёт.",
+      note: "Мы берём ответственность на себя, поэтому принимаем только честный учёт. Это защищает и вас: если у бухгалтера есть «серая» фирма, проверка приходит ко всем его клиентам.",
     },
     team: {
       eyebrow: "Команда",
@@ -406,7 +421,7 @@ export const home: Record<Locale, HomeContent> = {
             // ПОДТВЕРДИТЬ: удалите строку, если клиент против
             "Сейчас — главный бухгалтер Avangard (бытовая техника)",
             "Лично ведёт учёт каждого клиента",
-            "Вёл учёт около 20 компаний",
+            "Опыт работы с более чем 200 компаниями — торговля, ВЭД, услуги",
           ],
         },
         { initial: "Б", role: "Работа с клиентами", name: "Бекзод", facts: ["Первая встреча и договор", "Перезванивает в течение часа, обычно за 10 минут", "Telegram: @Davronbekov_Bekzod"] },
