@@ -40,8 +40,8 @@ export default function ReportCard({ s }: { s: HomeContent["hero"]["sample"] }) 
           </defs>
           <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" strokeWidth="2.5" />
           <circle cx="60" cy="60" r="34" fill="none" stroke="currentColor" strokeWidth="1.2" />
-          <text fontSize="10.5" fontWeight="700" letterSpacing="2.2" fill="currentColor">
-            <textPath href="#sealPath">{s.stamp + s.stamp}</textPath>
+          <text fontSize="10" fontWeight="700" fill="currentColor" textLength="272" lengthAdjust="spacing">
+            <textPath href="#sealPath" textLength="272" lengthAdjust="spacing">{s.stamp}</textPath>
           </text>
           <image href="/mark.png" x="44" y="44" width="32" height="33" />
         </svg>

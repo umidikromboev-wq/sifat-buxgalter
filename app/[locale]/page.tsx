@@ -55,15 +55,6 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      <div className="wrap stats">
-        {h.stats.map(([n, l]) => (
-          <div className="stat" key={n}>
-            <strong>{n}</strong>
-            <span>{l}</span>
-          </div>
-        ))}
-      </div>
-
       {/* TRIGGERS + 3 QUESTIONS */}
       <section id="holatlar">
         <div className="wrap">
@@ -130,6 +121,17 @@ export default async function HomePage({ params }: Props) {
               →
             </a>
           </p>
+        </div>
+      </section>
+
+      <section className="stats-band" style={{ paddingTop: 0 }}>
+        <div className="wrap stats">
+          {h.stats.map(([n, l]) => (
+            <div className="stat" key={n}>
+              <strong>{n}</strong>
+              <span>{l}</span>
+            </div>
+          ))}
         </div>
       </section>
 
