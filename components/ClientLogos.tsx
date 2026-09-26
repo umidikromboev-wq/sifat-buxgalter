@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-import Image from "next/image";
 import { clients } from "@/content/site";
 
 /** Renders logo images when public/clients/<file>.webp|png|svg exists, otherwise a text chip. */
@@ -13,7 +12,7 @@ export default function ClientLogos() {
         if (!ext) return <span key={c.name}>{c.name}</span>;
         return (
           <span key={c.name} className="logo-img" title={c.name}>
-            <Image src={`/clients/${c.file}.${ext}`} alt={c.name} width={160} height={56} unoptimized={ext === "svg"} />
+            <img src={`/clients/${c.file}.${ext}`} alt={c.name} loading="lazy" />
           </span>
         );
       })}

@@ -240,9 +240,9 @@ section { padding: 72px 0; }
 .prose p { max-width: 760px; }
 
 /* client logos as images */
-.logos .logo-img { padding: 10px 18px; display: inline-flex; align-items: center; height: 64px; }
-.logos .logo-img img { height: 36px; width: auto; max-width: 150px; object-fit: contain; filter: grayscale(1) contrast(1.05); opacity: .8; transition: filter .15s, opacity .15s; }
-.logos .logo-img:hover img { filter: none; opacity: 1; }
+.logos .logo-img { padding: 8px 16px; display: inline-flex; align-items: center; height: 76px; background: #fff; }
+.logos .logo-img img { height: 56px; width: auto; max-width: 170px; object-fit: contain; border-radius: 8px; }
+
 .brand { display: inline-flex; align-items: center; gap: 8px; }
 .brand img { height: 26px; width: auto; }
 
