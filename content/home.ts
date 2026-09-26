@@ -69,11 +69,11 @@ export const home: Record<Locale, HomeContent> = {
       eyebrow: "Buxgalteriya autsorsingi · Toshkent",
       h1: "Buxgalteringiz bor. Soliq xavfi esa — hali ham sizda",
       lead:
-        "Hisobot vaqtida ketyapti — bu minimum. Biz uch narsa uchun kerakmiz: 10 daqiqada javob, soliqni qonuniy kamaytirish va shartnomadagi javobgarlik — xatomiz sabab jarima chiqsa, oʻzimiz toʻlaymiz. Ishni 2016-yildan beri ishlayotgan bosh buxgalter olib boradi.",
+        "Hisobotlar muddatida topshirilishi — bu minimum. Biz uch narsani qoʻshamiz: har savolga 10 daqiqada javob, soliqni qonuniy kamaytirish va shartnomada yozilgan javobgarlik — xatomiz sabab jarima chiqsa, uni oʻzimiz toʻlaymiz. Hisobni 2016-yildan beri ishlayotgan bosh buxgalter shaxsan yuritadi.",
       cta: "Bepul 10 daqiqalik qoʻngʻiroq",
       telegram: "Telegramda yozish",
       note:
-        "Hech qayerga borish shart emas. Bekzod qoʻngʻiroq qiladi, hisobingiz haqida ikki-uch savol beradi va qayerda ortiqcha toʻlayotgan boʻlishingiz mumkinligini aytadi.",
+        "Hech qayerga borish shart emas. Bekzod qoʻngʻiroq qiladi, hisobingiz haqida ikki-uch savol beradi va ortiqcha toʻlov odatda qayerda yashirinishini aytadi.",
       sample: {
         title: "Oylik hisobot · sentabr",
         badge: "Namuna",
@@ -98,11 +98,11 @@ export const home: Record<Locale, HomeContent> = {
       eyebrow: "Qachon murojaat qilishadi",
       h2: "Odatda ikki holatda yozishadi: buxgalter bilan muammo chiqqanda — yoki hammasi joyida koʻringanda",
       items: [
-        "Hammasi joyida koʻrinadi — lekin qancha ortiqcha soliq toʻlayotganingizni hech kim hisoblab bermagan",
+        "Hammasi joyida koʻrinadi — lekin qancha ortiqcha soliq toʻlayotganingizni hech kim hisoblab koʻrmagan",
         "Buxgalter ketyapti — dekret, nafaqa yoki boshqa ish — va ishni topshiradigan odam yoʻq",
         "Soliq idorasidan talabnoma yoki tekshiruv dalolatnomasi keldi",
         "Bank hisob raqamingizni blokladi",
-        "Buxgalter nima qilayotganini koʻrmaysiz: hisobot bermaydi, savolga kechikib javob beradi",
+        "Buxgalter nima qilayotganini koʻrmaysiz: sizga hisobot bermaydi, savolga soatlab javob yoʻq",
         "Aylanma oʻsdi, soliq ham oʻsdi — qonuniy kamaytirish yoʻlini hech kim koʻrsatmayapti",
         "Yangi qonunlarni kuzatishga vaqtingiz yoʻq",
       ],
@@ -127,10 +127,10 @@ export const home: Record<Locale, HomeContent> = {
       colNow: "Hozir, buxgalteringiz bilan",
       colUs: "Sifat Buxgalter bilan",
       rows: [
-        ["Javob tezligi", "Baʼzan javob bir necha soatdan keyin keladi — bank allaqachon yopilgan", "10 daqiqagacha, haftada 7 kun. Shoshilinch toʻlov — 5 daqiqa"],
+        ["Javob tezligi", "Javob bir necha soatdan keyin keladi — bank allaqachon yopilgan", "10 daqiqagacha, haftada 7 kun. Shoshilinch toʻlov — 5 daqiqa"],
         ["Yangi qonunlar va imtiyozlar", "Ular haqida oʻzingiz bilib olasiz — Instagramdan yoki qoʻshningizdan", "Birinchi boʻlib aytamiz va 70 ga yaqin imtiyozdan sizga moslarini qoʻllaymiz"],
         ["Soliqni qonuniy kamaytirish", "Buxgalterning majburiyatiga kirmaydi — odatda hech kim qilmaydi", "Ishimiz ichida. Tejalgan summadan alohida foiz olmaymiz"],
-        ["Siz nimani koʻrasiz", "«Hisobot joʻnatildi» — vassalom", "Har oy: qancha soliq chiqdi, nega va nimaga tayyorlanish kerak"],
+        ["Siz nimani koʻrasiz", "«Hisobot joʻnatildi» — boshqa hech narsa", "Har oy: qancha soliq chiqdi, nega va nimaga tayyorlanish kerak"],
         ["Ombor va hujjatlar", "Tekshiruv kelmaguncha hech kim solishtirmaydi", "Shartnomadan oldin kirish tekshiruvida va keyin har oy solishtiramiz"],
         ["Buxgalter xatosi uchun jarima", "Kompaniya toʻlaydi", "Xato bizniki boʻlsa — jarimani biz toʻlaymiz. Shartnomada yozilgan"],
         ["Dekret, pensiya, ishdan ketish", "Hisob yarim yoʻlda qoladi, ishni topshiradigan odam yoʻq", "Hisob bitta xodimga bogʻliq emas"],
@@ -144,7 +144,7 @@ export const home: Record<Locale, HomeContent> = {
       eyebrow: "Yashirin xavf",
       h2: "Eng qimmat xato hisobotda koʻrinmaydi",
       intro:
-        "Hisobot muddatida topshirilgan — bu xato yoʻq degani emas. Ikki narsa hisobotda koʻrinmaydi: ortiqcha toʻlangan soliq va tekshiruv kelganda chiqadigan eski xato.",
+        "Hisobot muddatida topshirilgani — xato yoʻq degani emas. Hisobotda ikki narsa koʻrinmaydi: ortiqcha toʻlangan soliq va tekshiruv kelganda yuzaga chiqadigan eski xato.",
       steps: [
         "Buxgalter hisobotni topshiradi. Imtiyozni qoʻllamadi yoki ombor bilan solishtirmadi — hech kim sezmaydi",
         "Ikki yil davomida shu xato har oy takrorlanadi",
@@ -171,7 +171,7 @@ export const home: Record<Locale, HomeContent> = {
     promises: {
       eyebrow: "Majburiyatlar",
       h2: "Shartnomaga yozadigan vaʼdalarimiz",
-      lead: "Sifat — bizning nomimiz. Uni oʻlchab boʻladigan qilib yozamiz.",
+      lead: "Sifat — bizning nomimiz. Shartnomada uni oʻlchab boʻladigan raqamlar bilan yozamiz.",
       items: [
         { title: "Javob — 10 daqiqagacha", text: "Siz bilan umumiy Telegram-guruh ochamiz. Haftada 7 kun aloqadamiz, shanba kuni ham." },
         { title: "Xato bizniki — jarima ham bizniki", text: "Bizning aybimiz bilan jarima chiqsa, uni oʻzimiz toʻlaymiz. Shart bitta: ombor hisobi halol yuritilsin." },
@@ -186,12 +186,12 @@ export const home: Record<Locale, HomeContent> = {
       eyebrow: "Narx",
       h2: "Narx aylanmaga emas, ishning hajmiga bogʻliq",
       intro:
-        "Tayyor tarif yoʻq — va bu ataylab. 25 mlrd aylanmali, 4 ta mijozli firma 5 mlrd aylanmali, 1000 ta mijozli firmadan arzon boʻlishi mumkin. Narxni hujjat hajmi belgilaydi, oborot emas.",
+        "Tayyor tarif yoʻq — va bu ataylab. Aylanmasi 25 mlrd, mijozi 4 ta boʻlgan firma aylanmasi 5 mlrd, mijozi 1000 ta boʻlgan firmadan arzonroq boʻlishi mumkin. Narxni aylanma emas, hujjat hajmi belgilaydi.",
       cards: [
         { title: "Nimaga qarab", text: "Oyiga nechta hisob-faktura, toʻlov, xodim va kontragent — shunga qarab buxgalterning vaqti, vaqtga qarab narx." },
         { title: "Nima kirmaydi", text: "Tejalgan soliqdan foiz olmaymiz. Yashirin toʻlovlar yoʻq: shartnomada nima yozilgan boʻlsa, shu." },
-        { title: "Nima uchun shtatdagidan qimmat", text: "Shtat buxgalteri 1–2 mln oladi, lekin koʻpincha yonboshida yana 4–5 ta firmani yuritadi. Biz kam firma olamiz va har birini oxirigacha tekshiramiz — shu vaqt uchun toʻlaysiz." },
-        { title: "Aniq raqam qachon", text: "Birinchi qoʻngʻiroqda, hujjat hajmini eshitgandan keyin. Shartnomagacha narx oʻzgarmaydi." },
+        { title: "Nima uchun shtatdagidan qimmat", text: "Shtat buxgalteri 1–2 mln oladi, lekin koʻpincha yonboshida yana 4–5 ta firmani yuritadi. Biz kam kompaniya olamiz va har birini oxirigacha tekshiramiz — siz aynan shu vaqt uchun toʻlaysiz." },
+        { title: "Aniq narx qachon aytiladi", text: "Birinchi qoʻngʻiroqda, hujjat hajmini eshitgandan keyin. Shartnomagacha narx oʻzgarmaydi." },
       ],
       cta: "Hujjat hajmini ayting — narxni shu qoʻngʻiroqda aytamiz →",
     },
@@ -263,10 +263,10 @@ export const home: Record<Locale, HomeContent> = {
       eyebrow: "Аутсорсинг бухгалтерии · Ташкент",
       h1: "Бухгалтер у вас есть. Налоговый риск — всё ещё на вас",
       lead:
-        "Отчёты уходят вовремя — это минимум. Мы нужны для трёх вещей: ответ за 10 минут, законное снижение налогов и ответственность в договоре — штраф по нашей ошибке платим сами. Ведёт главный бухгалтер, который работает с 2016 года.",
+        "Отчёты сдаются в срок — это минимум. Мы добавляем три вещи: ответ на любой вопрос за 10 минут, законное снижение налогов и ответственность, прописанную в договоре, — штраф по нашей ошибке платим сами. Учёт лично ведёт главный бухгалтер с опытом с 2016 года.",
       cta: "Бесплатный звонок на 10 минут",
       telegram: "Написать в Telegram",
-      note: "Никуда ехать не нужно. Бекзод перезвонит, задаст два-три вопроса о вашем учёте и скажет, где вы, возможно, переплачиваете.",
+      note: "Никуда ехать не нужно. Бекзод перезвонит, задаст два-три вопроса о вашем учёте и скажет, где обычно прячется переплата.",
       sample: {
         title: "Отчёт за месяц · сентябрь",
         badge: "Образец",
@@ -295,7 +295,7 @@ export const home: Record<Locale, HomeContent> = {
         "Бухгалтер уходит — декрет, пенсия, другая работа — и дела передать некому",
         "Пришло требование или акт проверки из налоговой",
         "Банк заблокировал расчётный счёт",
-        "Вы не видите, что делает бухгалтер: отчётов нет, ответы с опозданием",
+        "Вы не видите, что делает бухгалтер: отчёта вам нет, ответа на вопрос — часами",
         "Оборот вырос, налоги тоже — а законный способ платить меньше никто не показывает",
         "Нет времени следить за новыми законами",
       ],
@@ -319,7 +319,7 @@ export const home: Record<Locale, HomeContent> = {
       colNow: "Сейчас, с вашим бухгалтером",
       colUs: "С Sifat Buxgalter",
       rows: [
-        ["Скорость ответа", "Бывает, ответ приходит через несколько часов — банк уже закрыт", "До 10 минут, 7 дней в неделю. Срочный платёж — 5 минут"],
+        ["Скорость ответа", "Ответ приходит через несколько часов — банк уже закрыт", "До 10 минут, 7 дней в неделю. Срочный платёж — 5 минут"],
         ["Новые законы и льготы", "Вы узнаёте о них сами — из Instagram или от соседа", "Сообщаем первыми и применяем те из ~70 льгот, что подходят вам"],
         ["Законное снижение налогов", "Не входит в обязанности бухгалтера — обычно его никто не делает", "Входит в нашу работу. Отдельный процент от экономии не берём"],
         ["Что вы видите", "«Отчёт отправлен» — и всё", "Каждый месяц: сколько налогов вышло, почему и к чему готовиться"],
@@ -361,7 +361,7 @@ export const home: Record<Locale, HomeContent> = {
     promises: {
       eyebrow: "Обязательства",
       h2: "Что мы прописываем в договоре",
-      lead: "Sifat значит «качество». Мы делаем его измеримым.",
+      lead: "Sifat значит «качество». В договоре мы записываем его измеримыми цифрами.",
       items: [
         { title: "Ответ — до 10 минут", text: "Открываем с вами общую группу в Telegram. На связи 7 дней в неделю, в субботу тоже." },
         { title: "Наша ошибка — наш штраф", text: "Если штраф возник по нашей вине, платим его сами. Условие одно: склад ведётся честно." },
@@ -380,7 +380,7 @@ export const home: Record<Locale, HomeContent> = {
         { title: "От чего зависит", text: "Сколько счетов-фактур, платежей, сотрудников и контрагентов в месяц — от этого время бухгалтера, от времени — цена." },
         { title: "Чего нет", text: "Процент от сэкономленных налогов не берём. Скрытых платежей нет: что в договоре, то и платите." },
         { title: "Почему дороже штатного", text: "Штатный бухгалтер получает 1–2 млн, но часто ведёт ещё 4–5 фирм на стороне. Мы берём мало компаний и проверяем каждую до конца — вы платите за это время." },
-        { title: "Когда точная цифра", text: "На первом звонке, после того как узнаем объём документов. До договора цена не меняется." },
+        { title: "Когда назовём точную цену", text: "На первом звонке, после того как узнаем объём документов. До договора цена не меняется." },
       ],
       cta: "Назовите объём документов — цену скажем на этом же звонке →",
     },

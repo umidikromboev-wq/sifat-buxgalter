@@ -24,7 +24,7 @@ export default function Header({ locale }: { locale: Locale }) {
     <header className="header">
       <div className="wrap">
         <Link href={homePath(locale)} className="brand">
-          <span>SIFAT</span>BUXGALTER
+          <img src="/mark.png" alt="" width={26} height={27} /> <span>SIFAT</span>BUXGALTER
         </Link>
         <nav className="nav" aria-label="Main">
           {links.map(([href, label]) => (

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ClientLogos from "@/components/ClientLogos";
 import CtaSection from "@/components/CtaSection";
 import JsonLd, { breadcrumbLd, faqLd } from "@/components/JsonLd";
 import { home } from "@/content/home";
@@ -80,7 +81,8 @@ export default async function SectionPage({ params }: Props) {
                   <div className="eyebrow" style={{ marginBottom: 8 }}>
                     {s.eyebrow}
                   </div>
-                  <h3>{s.h1}</h3>
+                  <h3>{s.title.split(/ — |: |, /)[0].trim()}</h3>
+                  <p style={{ margin: "0 0 8px", fontWeight: 600 }}>{s.h1}</p>
                   <p style={{ margin: 0, color: "var(--ink-2)", fontSize: 15 }}>{s.lead.split(". ")[0]}.</p>
                   <div className="more">{t.readMore}</div>
                 </Link>
@@ -185,11 +187,7 @@ export default async function SectionPage({ params }: Props) {
               <div className="eyebrow">{h.clients.eyebrow}</div>
               <h2>{h.clients.h2}</h2>
               <p className="lead">{h.clients.lead}</p>
-              <div className="logos">
-                {["Avangard", "Aiwa", "Роллтон", "Klass Export", "Inesis", "Profit Stone", "Poytaxt Aqua Wave", "Oq Tepa Dental", "Bumble", "Жалын Көмір", "TSG", "West Med Group"].map((c) => (
-                  <span key={c}>{c}</span>
-                ))}
-              </div>
+              <ClientLogos />
             </div>
           </div>
         </section>

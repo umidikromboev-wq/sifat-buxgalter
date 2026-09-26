@@ -11,19 +11,19 @@ export const contacts = {
   map: "https://maps.app.goo.gl/pBtkJ7jbAEkg3x3g7",
 };
 
-export const clients = [
-  "Avangard",
-  "Aiwa",
-  "Роллтон",
-  "Klass Export",
-  "Inesis",
-  "Profit Stone",
-  "Poytaxt Aqua Wave",
-  "Oq Tepa Dental",
-  "Bumble",
-  "Жалын Көмір",
-  "TSG",
-  "West Med Group",
+export const clients: { name: string; file: string }[] = [
+  { name: "Avangard", file: "avangard" },
+  { name: "Aiwa", file: "aiwa" },
+  { name: "Роллтон", file: "rollton" },
+  { name: "Klass Export", file: "klass-export" },
+  { name: "Inesis", file: "inesis" },
+  { name: "Profit Stone", file: "profit-stone" },
+  { name: "Poytaxt Aqua Wave", file: "poytaxt" },
+  { name: "Oq Tepa Dental", file: "oq-tepa-dental" },
+  { name: "Bumble", file: "bumble" },
+  { name: "Жалын Көмір", file: "zhalyn-komir" },
+  { name: "TSG", file: "tsg" },
+  { name: "West Med Group", file: "west-med" },
 ];
 
 export type UiStrings = {

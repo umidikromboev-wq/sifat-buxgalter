@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ClientLogos from "@/components/ClientLogos";
 import CtaSection from "@/components/CtaSection";
 import JsonLd, { faqLd } from "@/components/JsonLd";
 import { home } from "@/content/home";
 import { homePath, isLocale, sectionPath, servicePath, siteUrl } from "@/content/routes";
-import { clients, contacts, ui } from "@/content/site";
+import { contacts, ui } from "@/content/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -297,11 +298,7 @@ export default async function HomePage({ params }: Props) {
           <div className="eyebrow">{h.clients.eyebrow}</div>
           <h2>{h.clients.h2}</h2>
           <p className="lead">{h.clients.lead}</p>
-          <div className="logos">
-            {clients.map((c) => (
-              <span key={c}>{c}</span>
-            ))}
-          </div>
+          <ClientLogos />
         </div>
       </section>
 

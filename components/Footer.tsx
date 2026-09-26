@@ -11,7 +11,7 @@ export default function Footer({ locale }: { locale: Locale }) {
     <footer className="footer">
       <div className="wrap">
         <Link href={homePath(locale)} className="brand">
-          <span>SIFAT</span>BUXGALTER
+          <img src="/mark.png" alt="" width={26} height={27} /> <span>SIFAT</span>BUXGALTER
         </Link>
         <div className="muted" style={{ marginTop: 6 }}>
           {t.footer.online}
