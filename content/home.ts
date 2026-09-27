@@ -76,11 +76,11 @@ export const home: Record<Locale, HomeContent> = {
         "Hech qayerga borish shart emas. Bekzod qoʻngʻiroq qiladi, hisobingiz haqida ikki-uch savol beradi va ortiqcha toʻlov odatda qayerda yashirinishini aytadi.",
       sample: {
         title: "Oylik hisobot",
-        period: "sentabr 2026",
+        period: "{month} {year}",
         badge: "Namuna",
         rows: [
-          ["QQS deklaratsiyasi", "Topshirildi · 18-sent"],
-          ["JShDS va ijtimoiy soliq", "Topshirildi · 15-sent"],
+          ["QQS deklaratsiyasi", "Topshirildi · 18-{m}"],
+          ["JShDS va ijtimoiy soliq", "Topshirildi · 15-{m}"],
           ["Ish haqi va tabel", "Hisoblandi · 12 xodim"],
           ["Ombor ↔ 1C solishtiruvi", "Farq yoʻq"],
           ["Kontragentlar tekshiruvi", "31 ta · xavf yoʻq"],
@@ -277,11 +277,11 @@ export const home: Record<Locale, HomeContent> = {
       note: "Никуда ехать не нужно. Бекзод перезвонит, задаст два-три вопроса о вашем учёте и скажет, где обычно прячется переплата.",
       sample: {
         title: "Отчёт за месяц",
-        period: "сентябрь 2026",
+        period: "{month} {year}",
         badge: "Образец",
         rows: [
-          ["Декларация по НДС", "Сдана · 18 сент"],
-          ["НДФЛ и соцналог", "Сданы · 15 сент"],
+          ["Декларация по НДС", "Сдана · 18 {m}"],
+          ["НДФЛ и соцналог", "Сданы · 15 {m}"],
           ["Зарплата и табель", "Начислены · 12 сотр."],
           ["Сверка склад ↔ 1С", "Расхождений нет"],
           ["Проверка контрагентов", "31 · рисков нет"],

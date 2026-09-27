@@ -55,6 +55,12 @@ export default function Header({ locale }: { locale: Locale }) {
           </Link>
         ))}
         <a href={contacts.phone1Href}>{contacts.phone1}</a>
+        <Link href={altPath} hrefLang={locale === "uz" ? "ru" : "uz"} onClick={() => setOpen(false)}>
+          {t.langSwitch}
+        </Link>
+        <Link className="mobile-cta" href={sectionPath(locale, "contact")} onClick={() => setOpen(false)}>
+          {t.headerCta} →
+        </Link>
       </div>
     </header>
   );

@@ -74,6 +74,7 @@ section { padding: 72px 0; }
 .menu-btn { display: none; background: none; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font: inherit; cursor: pointer; }
 .mobile-nav { display: none; border-top: 1px solid var(--line); background: var(--bg); }
 .mobile-nav.open { display: block; }
+.mobile-nav .mobile-cta { color: var(--gold); font-weight: 700; }
 .mobile-nav a { display: block; padding: 14px 20px; text-decoration: none; border-bottom: 1px solid var(--line); font-weight: 500; }
 @media (max-width: 900px) {
   .nav, .header-phone, .header .btn { display: none; }

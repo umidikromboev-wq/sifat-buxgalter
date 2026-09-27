@@ -50,6 +50,7 @@ export type UiStrings = {
     privacy: string;
     privacyLink: string;
     error: string;
+    errorPhone: string;
   };
   footer: { online: string; office: string; address: string; landmark: string; mapLink: string; contact: string; services: string; copyright: string };
   readMore: string;
@@ -82,6 +83,7 @@ export const ui: Record<Locale, UiStrings> = {
       privacy: "Maʼlumotlaringiz faqat siz bilan bogʻlanish uchun ishlatiladi.",
       privacyLink: "Maxfiylik siyosati",
       error: "Yuborilmadi. Iltimos, qoʻngʻiroq qiling yoki Telegramda yozing.",
+      errorPhone: "Telefon raqamini tekshiring: +998 XX XXX XX XX",
     },
     footer: {
       online: "Haftada 7 kun aloqadamiz",
@@ -121,6 +123,7 @@ export const ui: Record<Locale, UiStrings> = {
       privacy: "Данные используем только чтобы связаться с вами.",
       privacyLink: "Политика конфиденциальности",
       error: "Не отправилось. Позвоните или напишите в Telegram.",
+      errorPhone: "Проверьте номер телефона: +998 XX XXX XX XX",
     },
     footer: {
       online: "На связи 7 дней в неделю",

@@ -11,6 +11,9 @@ import { contacts, ui } from "@/content/site";
 
 type Props = { params: Promise<{ locale: string }> };
 
+// Hero hisobot kartasidagi oy nomi yangilanib turishi uchun — kuniga bir marta qayta generatsiya
+export const revalidate = 86400;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
@@ -51,7 +54,7 @@ export default async function HomePage({ params }: Props) {
             </div>
             <p className="note">{h.hero.note}</p>
           </div>
-          <ReportCard s={h.hero.sample} />
+          <ReportCard s={h.hero.sample} locale={locale} />
         </div>
       </section>
 

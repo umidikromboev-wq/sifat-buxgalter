@@ -7,40 +7,73 @@ import type { Locale } from "@/content/services";
 import { ui } from "@/content/site";
 import { sectionPath } from "@/content/routes";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+function phoneLooksValid(v: string) {
+  const d = v.replace(/\D/g, "");
+  return d.length === 9 || (d.length >= 10 && d.length <= 15);
+}
+
 export default function LeadForm({ locale, source }: { locale: Locale; source: string }) {
   const t = ui[locale].form;
   const router = useRouter();
   const [busy, setBusy] = useState(false);
-  const [err, setErr] = useState(false);
+  const [err, setErr] = useState<"" | "phone" | "send">("");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setBusy(true);
-    setErr(false);
     const fd = new FormData(e.currentTarget);
-    const body = Object.fromEntries(fd.entries());
+    const body = Object.fromEntries(fd.entries()) as Record<string, string>;
+    if (!phoneLooksValid(body.phone || "")) {
+      setErr("phone");
+      return;
+    }
+    setBusy(true);
+    setErr("");
     try {
       const r = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...body, locale, source, page: typeof window !== "undefined" ? window.location.pathname : "" }),
       });
-      if (!r.ok) throw new Error("bad");
+      if (!r.ok) {
+        const j = await r.json().catch(() => ({}));
+        setErr(j?.reason === "phone" ? "phone" : "send");
+        setBusy(false);
+        return;
+      }
+      // Google Ads / GA4 konversiya
+      window.gtag?.("event", "generate_lead", { source, locale });
       router.push(sectionPath(locale, "thanks"));
     } catch {
-      setErr(true);
+      setErr("send");
       setBusy(false);
     }
   }
 
   return (
-    <form className="form" onSubmit={onSubmit} id="ariza">
+    <form className="form" onSubmit={onSubmit} id="ariza" noValidate>
       <label htmlFor="name">{t.name}</label>
-      <input id="name" name="name" type="text" required autoComplete="name" />
+      <input id="name" name="name" type="text" required autoComplete="name" maxLength={100} />
       <label htmlFor="phone">{t.phone}</label>
-      <input id="phone" name="phone" type="tel" required autoComplete="tel" placeholder="+998" />
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        required
+        autoComplete="tel"
+        inputMode="tel"
+        placeholder="+998"
+        maxLength={20}
+        aria-invalid={err === "phone" || undefined}
+        onChange={() => err === "phone" && setErr("")}
+      />
       <label htmlFor="company">{t.company}</label>
-      <input id="company" name="company" type="text" autoComplete="organization" />
+      <input id="company" name="company" type="text" autoComplete="organization" maxLength={120} />
       <fieldset>
         <legend>{t.turnover}</legend>
         <div className="radios">
@@ -56,7 +89,16 @@ export default function LeadForm({ locale, source }: { locale: Locale; source: s
       <button className="btn btn-gold" type="submit" disabled={busy}>
         {busy ? t.sending : t.submit}
       </button>
-      {err && <div className="err">{t.error}</div>}
+      {err === "phone" && (
+        <div className="err" role="alert">
+          {t.errorPhone}
+        </div>
+      )}
+      {err === "send" && (
+        <div className="err" role="alert">
+          {t.error}
+        </div>
+      )}
       <div className="privacy">
         {t.privacy} <Link href={sectionPath(locale, "privacy")}>{t.privacyLink}</Link>
       </div>
