@@ -132,10 +132,30 @@
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .ftr-in {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
+}
+
+@media (min-width: 1024px) {
+  .ftr-in {
+    grid-template-columns: 1.3fr 1fr 1.2fr 0.8fr;
+  }
+}
+
+.ftr-addr {
+  margin-top: 2rem;
+}
+
+.ftr-lbl a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ftr-lbl a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .ftr-hours {

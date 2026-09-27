@@ -44,7 +44,7 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
         <Hero t={t.hero} />
         <Triggers t={t.triggers} />
         <Risk t={t.risk} />
-        <Services t={t.services} />
+        <Services t={t.services} lang={lang} />
         <Clauses t={t.clauses} />
         <Compare t={t.compare} />
         <Fit t={t.fit} />
@@ -53,7 +53,7 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
         <Faq t={t.faq} />
         <Contact t={t.form} lang={lang} />
       </main>
-      <Footer t={t.footer} />
+      <Footer t={t.footer} lang={lang} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
     </>
   );

@@ -1,7 +1,13 @@
-import type { Content } from "@/lib/content/types";
+import Link from "next/link";
+import type { Content, Locale } from "@/lib/content/types";
+import { getPages, sectionPath, servicePath } from "@/lib/pages";
 import s from "./Offer.module.css";
 
-export function Services({ t }: { t: Content["services"] }) {
+// Группы услуг на главной по порядку ведут на свои посадочные страницы (lib/pages).
+const GROUP_PAGES = ["autsorsing", "soliq", "tekshiruv", "kadr", "ved"] as const;
+
+export function Services({ t, lang }: { t: Content["services"]; lang: Locale }) {
+  const { copy } = getPages(lang);
   return (
     <section id="xizmatlar" className="section" aria-labelledby="sv-h">
       <div className="wrap">
@@ -11,9 +17,17 @@ export function Services({ t }: { t: Content["services"] }) {
         </h2>
         <p className="lead">{t.sub}</p>
         <div className={s.ledger}>
-          {t.groups.map((g) => (
+          {t.groups.map((g, i) => (
             <div key={g.title} className={`${s.group} reveal`}>
-              <h3 className={s.groupT}>{g.title}</h3>
+              <h3 className={s.groupT}>
+                {GROUP_PAGES[i] ? (
+                  <Link className={s.groupLink} href={servicePath(lang, GROUP_PAGES[i])}>
+                    {g.title} <span aria-hidden="true">→</span>
+                  </Link>
+                ) : (
+                  g.title
+                )}
+              </h3>
               <ul className={s.groupL}>
                 {g.items.map((it) => (
                   <li key={it}>{it}</li>
@@ -22,6 +36,9 @@ export function Services({ t }: { t: Content["services"] }) {
             </div>
           ))}
         </div>
+        <Link className={s.allLink} href={sectionPath(lang, "services")}>
+          {copy.ui.allServices} →
+        </Link>
       </div>
     </section>
   );

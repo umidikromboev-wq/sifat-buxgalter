@@ -51,7 +51,7 @@ export default async function StoryPage({ params }: PageProps<"/[lang]/story">) 
         <Contact t={base.form} lang={lang} />
         <Signature sign={t.sign} ps={t.ps} />
       </main>
-      <Footer t={base.footer} />
+      <Footer t={base.footer} lang={lang} />
       <StickyCta t={t.cta} />
     </>
   );
