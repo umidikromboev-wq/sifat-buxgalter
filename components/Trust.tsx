@@ -5,38 +5,6 @@ import s from "./Trust.module.css";
 
 const LOGO_BOX = 160;
 
-export function Team({ t }: { t: Content["team"] }) {
-  return (
-    <section id="jamoa" className="section" aria-labelledby="tm-h">
-      <div className="wrap">
-        <p className="kicker">{t.kicker}</p>
-        <h2 id="tm-h" className="h2">
-          {t.h2}
-        </h2>
-        <div className={s.team}>
-          {t.people.map((p) => (
-            <article key={p.name} className={`${s.person} reveal`}>
-              {/* Фото Иброхима и Бекзода ещё не прислали — вместо пустой рамки карточка-«удостоверение» с инициалом */}
-              <span className={s.initial} aria-hidden="true">
-                {p.name[0]}
-              </span>
-              <div>
-                <p className={s.role}>{p.role}</p>
-                <h3 className={s.name}>{p.name}</h3>
-                <ul className={s.facts}>
-                  {p.facts.map((f) => (
-                    <li key={f}>{f}</li>
-                  ))}
-                </ul>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function Clients({ t }: { t: Content["clients"] }) {
   return (
     <section className={`section ${s.clientsSec}`} aria-labelledby="cli-h">

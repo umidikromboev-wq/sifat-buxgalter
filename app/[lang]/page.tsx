@@ -4,9 +4,10 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Clauses, Compare, Services } from "@/components/Offer";
+import { Benefits } from "@/components/Benefits";
 import { Fit } from "@/components/Pricing";
 import { Risk, Triggers } from "@/components/Problem";
-import { Clients, Faq, Team } from "@/components/Trust";
+import { Clients, Faq } from "@/components/Trust";
 import { isLocale } from "@/lib/content/types";
 import { getContent, SITE } from "@/lib/site";
 
@@ -47,8 +48,8 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
         <Services t={t.services} lang={lang} />
         <Clauses t={t.clauses} />
         <Compare t={t.compare} />
+        <Benefits t={t.benefits} />
         <Fit t={t.fit} />
-        <Team t={t.team} />
         <Clients t={t.clients} />
         <Faq t={t.faq} />
         <Contact t={t.form} lang={lang} />

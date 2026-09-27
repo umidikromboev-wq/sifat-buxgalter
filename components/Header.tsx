@@ -19,7 +19,6 @@ export function Header({ lang, t, alt }: Props) {
         <nav aria-label={lang === "uz" ? "Asosiy menyu" : "Главное меню"} className="hdr-nav">
           <Link href={sectionPath(lang, "services")}>{t.services}</Link>
           <Link href={sectionPath(lang, "articles")}>{copy.articles.kicker}</Link>
-          <Link href={`/${lang}#jamoa`}>{t.team}</Link>
           <Link href={`/${lang}#savollar`}>{t.faq}</Link>
         </nav>
         <div className="hdr-act">

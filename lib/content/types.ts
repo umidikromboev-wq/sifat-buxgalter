@@ -7,7 +7,7 @@ type Pair = readonly [string, string];
 
 export type Content = {
   meta: { title: string; description: string };
-  nav: { services: string; team: string; faq: string; cta: string; langLabel: string };
+  nav: { services: string; faq: string; cta: string; langLabel: string };
   hero: {
     kicker: string;
     h1: string;
@@ -23,8 +23,8 @@ export type Content = {
   services: { kicker: string; h2: string; sub: string; groups: { title: string; items: string[] }[] };
   clauses: { kicker: string; h2: string; sub: string; items: { title: string; text: string }[] };
   compare: { kicker: string; h2: string; sub: string; cols: [string, string]; rows: { k: string; now: string; us: string }[]; note: string };
+  benefits: { kicker: string; h2: string; sub: string; label: string; spheres: string[]; cta: string; note: string; message: string };
   fit: { kicker: string; h2: string; yesTitle: string; yes: string[]; noTitle: string; no: string[]; note: string };
-  team: { kicker: string; h2: string; people: { name: string; role: string; facts: string[] }[] };
   clients: { kicker: string; h2: string; sub: string };
   faq: { kicker: string; h2: string; items: Pair[] };
   form: {

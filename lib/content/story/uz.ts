@@ -103,7 +103,7 @@ export const storyUz: Story = {
       },
       {
         think: "Bu men uchun qimmat.",
-        truth: "Hozirgi buxgalteringiz bizdan arzonroq boʻlishi mumkin. Endi solishtiring: bitta kechikkan hisobot uchun jarima — bir necha million. Yashirin aylanmani topgan bitta tekshiruv — **aylanmadan hisoblanadigan jarima, bizning misolda 2 mlrd**. Qonuniy optimizatsiya esa odatda xizmat narxidan koʻproq tejaydi — va bizda u uchun alohida foiz yoʻq.",
+        truth: "Hozirgi buxgalteringiz bizdan arzonroq boʻlishi mumkin. Endi solishtiring: kechikkan hisobot uchun rahbar shaxsan jarimaga tortiladi — MJtKning 175-moddasiga koʻra 10 BHMgacha (4,4 mln soʻm), soliq organi esa hisobraqamdagi operatsiyalarni toʻxtatib qoʻyishi mumkin. Yashirin aylanmani topgan bitta tekshiruv — **aylanmadan hisoblanadigan jarima, bizning misolda 2 mlrd**. Qonuniy optimizatsiya esa odatda xizmat narxidan koʻproq tejaydi — va bizda u uchun alohida foiz yoʻq.",
       },
       {
         think: "Mening hisobim chalkash, hech kim tuzatolmaydi.",

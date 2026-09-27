@@ -6,7 +6,7 @@ export const uz: Content = {
     description:
       "Buxgalteriya va soliq hisobini 2016-yildan ishlayotgan bosh buxgalter yuritadi. Savolga 10 daqiqada javob, hisobotlar muddatida, xatomiz sabab jarima chiqsa — oʻzimiz toʻlaymiz.",
   },
-  nav: { services: "Xizmatlar", team: "Jamoa", faq: "Savollar", cta: "10 daqiqalik qoʻngʻiroq", langLabel: "Til" },
+  nav: { services: "Xizmatlar", faq: "Savollar", cta: "10 daqiqalik qoʻngʻiroq", langLabel: "Til" },
   hero: {
     kicker: "Buxgalteriya autsorsingi · Toshkent",
     h1: "Buxgalteriyani bizga topshiring — soliq xavfini biz koʻtaramiz",
@@ -139,6 +139,16 @@ export const uz: Content = {
     ],
     note: "Qoʻngʻiroqda omboringiz qanday yuritilishini ayting — birinchi navbatda nimani tekshirish kerakligini aytamiz.",
   },
+  benefits: {
+    kicker: "Soliq imtiyozlari",
+    h2: "70 ga yaqin imtiyozdan qaysilari sizning kompaniyangizga toʻgʻri keladi",
+    sub: "Hozircha qoʻngʻiroq qilishga tayyor emasmisiz? Sohangizni tanlang — unga toʻgʻri keladigan imtiyozlarni Telegramga yuboramiz. Qoʻngʻiroqsiz va hech qanday majburiyatsiz.",
+    label: "Kompaniyangiz sohasi",
+    spheres: ["Import va eksport", "Ulgurji savdo", "Turizm", "Oʻquv markazi", "Ishlab chiqarish", "Xizmatlar", "Boshqa"],
+    cta: "Roʻyxatni Telegramda olish",
+    note: "70 ga yaqin soliq imtiyozi — bosh buxgalterimiz hisobi. Ularning hammasi ham hammaga toʻgʻri kelmaydi: har bir sohaga oʻzinikilari mos keladi, ayrim sohalarda esa imtiyoz umuman yoʻq — buni ham ochiq aytamiz.",
+    message: "Assalomu alaykum! Kompaniyamiz sohasi: {s}. Bizga qaysi soliq imtiyozlari toʻgʻri kelishini yuborib bera olasizmi?",
+  },
   fit: {
     kicker: "Kim bilan ishlaymiz",
     h2: "Hammani olmaymiz — va bu sizni himoya qiladi",
@@ -152,22 +162,6 @@ export const uz: Content = {
     noTitle: "Olmaymiz",
     no: ["Faqat naqd pulda ishlaydigan biznes", "Alkogol va tamaki", "Naqd pulda ishlaydigan qurilish"],
     note: "Javobgarlikni oʻz boʻynimizga olganimiz uchun faqat halol hisobni qabul qilamiz.",
-  },
-  team: {
-    kicker: "Jamoa",
-    h2: "Hisobingizni kim yuritadi",
-    people: [
-      {
-        name: "Ibrohim",
-        role: "Bosh buxgalter",
-        facts: ["Buxgalteriyada 2016-yildan", "Har bir mijoz hisobini shaxsan yuritadi", "20 ga yaqin kompaniya hisobini yuritgan"],
-      },
-      {
-        name: "Bekzod",
-        role: "Mijozlar bilan ishlash",
-        facts: ["Birinchi uchrashuv va shartnoma", "Arizaga 1 soat ichida, odatda 10 daqiqada qoʻngʻiroq qiladi", "Telegram: @Davronbekov_Bekzod"],
-      },
-    ],
   },
   clients: {
     kicker: "Tajriba",
