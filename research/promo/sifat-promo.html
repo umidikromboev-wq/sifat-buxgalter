@@ -139,6 +139,17 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
 .pin{position:absolute;width:3.6mm;height:3.6mm;background:var(--acc);color:#fff;
   font-family:'JetBrains Mono',monospace;font-size:5.6pt;font-weight:700;
   display:flex;align-items:center;justify-content:center;z-index:3}
+
+/* ---------- shots gallery ---------- */
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4mm 3.5mm}
+.shot{display:flex;flex-direction:column}
+.shot .img{border:1px solid var(--line-2);aspect-ratio:16/10;overflow:hidden;background:var(--panel)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.shot .cap{padding-top:1.6mm}
+.shot .dom{font-family:'JetBrains Mono',monospace;font-size:6.4pt;font-weight:700;letter-spacing:.04em;color:var(--fg)}
+.shot .dom i{font-style:normal;color:var(--fg-3);font-weight:500}
+.shot .why{font-size:6.9pt;line-height:1.35;color:var(--fg-2);margin-top:.6mm}
+.grp-h{display:flex;align-items:baseline;gap:3mm;margin:0 0 2.6mm}
 </style>
 </head>
 <body>
@@ -323,7 +334,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
     <h2>Кто стоит на первом экране</h2>
     <p class="lede" style="max-width:162mm;margin-bottom:5mm">
       Реальная выдача Google из Ташкента по двум главным запросам. По-русски за первый экран дерутся
-      пять рекламодателей, по-узбекски рекламы нет вообще — первым стоит OLX.
+      пять рекламодателей, по-узбекски рекламы нет вообще — первым стоит OLX. Первые экраны 30 сайтов — на следующих трёх полосах.
     </p>
 
     <table style="margin-bottom:3mm">
@@ -364,6 +375,125 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
     </div>
   </div>
   <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">04</span></div>
+</section>
+
+
+<!-- ============ 03 · ПЕРВЫЕ ЭКРАНЫ (1/3) ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker"><span><b>03</b> · Конкуренты · первые экраны</span><span>1440×900 · снято 27.09.2026 · 1/3</span></div>
+    <h2>30 сайтов, которые видит собственник до нас</h2>
+    <p class="sm muted" style="max-width:165mm;margin-bottom:4mm">Первый экран каждого сайта, как его видит клиент на ноутбуке. Под каждым — чем компания пытается продать с первого взгляда.</p>
+<div class="grp-h"><span class="chip chip-acc">Прямые конкуренты · аутсорс бухгалтерии для МСБ</span><span class="xs faint">1—12 из 17</span></div>
+    <div class="shots">
+      <div class="shot"><div class="img"><img src="../shots30/sm/yaran.uz.jpg" alt="Yaran"></div>
+        <div class="cap"><div class="dom">Yaran <i>· yaran.uz</i></div><div class="why">«Бухгалтерские услуги в Ташкенте», 15 лет и 1000+ компаний в подзаголовке. Лидер по отзывам в картах</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/pacholi.uz.jpg" alt="Pacholi Aka"></div>
+        <div class="cap"><div class="dom">Pacholi Aka <i>· pacholi.uz</i></div><div class="why">Стоковая ручка и общее «Бухгалтерские услуги в Ташкенте» — продаёт перечень услуг</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/contab.uz.jpg" alt="Contab"></div>
+        <div class="cap"><div class="dom">Contab <i>· contab.uz</i></div><div class="why">«Свобода от бухгалтерии» — единственный с эмоцией вместо услуги. Главный рекламодатель в Google</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/felixaccountant.uz.jpg" alt="Felix Accountant"></div>
+        <div class="cap"><div class="dom">Felix Accountant <i>· felixaccountant.uz</i></div><div class="why">«Первая компания, внедрившая аутсорс», с 2005 года, 57+ сотрудников, 1032+ клиента — цифры стажа</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/fintax.uz.jpg" alt="FinTax"></div>
+        <div class="cap"><div class="dom">FinTax <i>· fintax.uz</i></div><div class="why">Цена в заголовке: «от 1 500 000 сум», материальная ответственность за ошибки</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/atb-accounting.uz.jpg" alt="ATB Accounting Consult"></div>
+        <div class="cap"><div class="dom">ATB Accounting Consult <i>· atb-accounting.uz</i></div><div class="why">«Бухгалтерию берём на себя», страхование ответственности на 1 млрд сум. Ближе всех к защите собственника</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/tavat.uz.jpg" alt="TA-VAT"></div>
+        <div class="cap"><div class="dom">TA-VAT <i>· tavat.uz</i></div><div class="why">Личный бренд: «Бухгалтерская компания Александры Толмачевой», 2+ млрд экономии, бесплатный экспресс-анализ</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/buxplus.uz.jpg" alt="BuxPlus"></div>
+        <div class="cap"><div class="dom">BuxPlus <i>· buxplus.uz</i></div><div class="why">«Ведёт главный бухгалтер с опытом 10+ лет», первый месяц за 0 сум — вход через бесплатный месяц</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/turanbuh.uz.jpg" alt="TuranOS"></div>
+        <div class="cap"><div class="dom">TuranOS <i>· turanbuh.uz</i></div><div class="why">Общее «Бухгалтерские услуги в Ташкенте» и сток-фото офиса. Ничем не отличается</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/aaafin.uz.jpg" alt="AAA Financier"></div>
+        <div class="cap"><div class="dom">AAA Financier <i>· aaafin.uz</i></div><div class="why">Тёмный слайдер «Полное бухгалтерское обслуживание» без цифр и обещаний</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/legalact.uz.jpg" alt="LegalAct"></div>
+        <div class="cap"><div class="dom">LegalAct <i>· legalact.uz</i></div><div class="why">Живые лица основателей, «организация бизнеса с нуля», бесплатная консультация</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/azma.uz.jpg" alt="Azma"></div>
+        <div class="cap"><div class="dom">Azma <i>· azma.uz</i></div><div class="why">По-узбекски: «онлайн-бухгалтерия для предпринимателей» — продаёт сервис, а не человека</div></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">05</span></div>
+</section>
+
+<!-- ============ 03 · ПЕРВЫЕ ЭКРАНЫ (2/3) ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker"><span><b>03</b> · Конкуренты · первые экраны</span><span>1440×900 · снято 27.09.2026 · 2/3</span></div>
+<div class="grp-h"><span class="chip chip-acc">Прямые конкуренты · продолжение</span><span class="xs faint">13—17</span></div>
+    <div class="shots" style="margin-bottom:5mm">
+      <div class="shot"><div class="img"><img src="../shots30/sm/my-buh.uz.jpg" alt="Моя Бухгалтерия"></div>
+        <div class="cap"><div class="dom">Моя Бухгалтерия <i>· my-buh.uz</i></div><div class="why">«Бухгалтерия для вашего бизнеса» и видео-офис. Экосистема, а не результат</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/buxgalteria.uz.jpg" alt="Бухгалтер (buxgalteria.uz)"></div>
+        <div class="cap"><div class="dom">Бухгалтер (buxgalteria.uz) <i>· buxgalteria.uz</i></div><div class="why">Четыре тарифа прямо на первом экране: Старт, Эконом, Оптима, Про</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/consultingpartners.uz.jpg" alt="Consulting Partners"></div>
+        <div class="cap"><div class="dom">Consulting Partners <i>· consultingpartners.uz</i></div><div class="why">По-узбекски: «бухгалтерия, налоги и право в одних руках» + рейтинг Google на первом экране</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/bestaudit.uz.jpg" alt="Best Audit"></div>
+        <div class="cap"><div class="dom">Best Audit <i>· bestaudit.uz</i></div><div class="why">«Ответьте на 3 вопроса — получите консультацию»: квиз вместо формы</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/buhgalter.com.uz.jpg" alt="Бухгалтер (Фергана)"></div>
+        <div class="cap"><div class="dom">Бухгалтер (Фергана) <i>· buhgalter.com.uz</i></div><div class="why">Сток-пара и общие преимущества; работает на регион, но пишет «по всему Узбекистану»</div></div></div>
+    </div>
+<div class="grp-h"><span class="chip chip-acc">Местный аудит и консалтинг</span><span class="xs faint">1—6 из 7</span></div>
+    <div class="shots">
+      <div class="shot"><div class="img"><img src="../shots30/sm/batautsors.uz.jpg" alt="Business Audit Today"></div>
+        <div class="cap"><div class="dom">Business Audit Today <i>· batautsors.uz</i></div><div class="why">«Аудит в Ташкенте», 3D-логотип; внизу — «первая аудиторская компания», гарантия и страхование на 5 млрд сум</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/ibac.uz.jpg" alt="IBAC"></div>
+        <div class="cap"><div class="dom">IBAC <i>· ibac.uz</i></div><div class="why">«Наша цель — ваш успех» и шахматная доска: образ без обещания</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/auditor.uz.jpg" alt="Auditor.uz"></div>
+        <div class="cap"><div class="dom">Auditor.uz <i>· auditor.uz</i></div><div class="why">На первом экране остался шаблонный текст lorem ipsum</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/femidafinance.uz.jpg" alt="Femida Finance"></div>
+        <div class="cap"><div class="dom">Femida Finance <i>· femidafinance.uz</i></div><div class="why">«Надёжный партнёр» — право и бухгалтерия вместе, кнопка «Бесплатная консультация»</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/almuda.uz.jpg" alt="AlMuda"></div>
+        <div class="cap"><div class="dom">AlMuda <i>· almuda.uz</i></div><div class="why">Для иностранцев: «Ваш путь к бизнесу в Узбекистане», 500+ компаний, 10+ стран</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/ledgers.uz.jpg" alt="Ledgers"></div>
+        <div class="cap"><div class="dom">Ledgers <i>· ledgers.uz</i></div><div class="why">По-английски, market entry и 1С для международных компаний</div></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">06</span></div>
+</section>
+
+<!-- ============ 03 · ПЕРВЫЕ ЭКРАНЫ (3/3) ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker"><span><b>03</b> · Конкуренты · первые экраны</span><span>1440×900 · снято 27.09.2026 · 3/3</span></div>
+<div class="grp-h"><span class="chip chip-acc">Местный аудит и консалтинг · продолжение</span><span class="xs faint">7</span></div>
+    <div class="shots" style="margin-bottom:5mm">
+      <div class="shot"><div class="img"><img src="../shots30/sm/abraucapital.com.jpg" alt="Abrau Capital"></div>
+        <div class="cap"><div class="dom">Abrau Capital <i>· abraucapital.com</i></div><div class="why">«Стратегии роста и устойчивости» — инвестиционный консалтинг, бухгалтерия внутри</div></div></div>
+    </div>
+<div class="grp-h"><span class="chip chip-acc">Международные сети · верх рынка</span><span class="xs faint">6 компаний</span></div>
+    <div class="shots" style="margin-bottom:6mm">
+      <div class="shot"><div class="img"><img src="../shots30/sm/kreston.uz.jpg" alt="Kreston Tashkent"></div>
+        <div class="cap"><div class="dom">Kreston Tashkent <i>· kreston.uz</i></div><div class="why">По-английски: абзац о входе в ТОП-10 рейтинга аудиторов поверх орнамента</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/grantthornton.uz.jpg" alt="Grant Thornton"></div>
+        <div class="cap"><div class="dom">Grant Thornton <i>· grantthornton.uz</i></div><div class="why">«Going beyond business as usual» — глобальный шаблон на английском</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/pkf.uz.jpg" alt="PKF"></div>
+        <div class="cap"><div class="dom">PKF <i>· pkf.uz</i></div><div class="why">«Welcome to our world» — глобальный шаблон сети</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/mazars.uz.jpg" alt="Forvis Mazars"></div>
+        <div class="cap"><div class="dom">Forvis Mazars <i>· mazars.uz</i></div><div class="why">«Forvis Mazars в Узбекистане» на фоне арки — без предложения</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/rsm.uz.jpg" alt="RSM"></div>
+        <div class="cap"><div class="dom">RSM <i>· rsm.uz</i></div><div class="why">Глобальный баннер «Empowering you…»</div></div></div>
+      <div class="shot"><div class="img"><img src="../shots30/sm/kpmg.uz.jpg" alt="KPMG"></div>
+        <div class="cap"><div class="dom">KPMG <i>· kpmg.uz</i></div><div class="why">«KPMG Tech Report 2026» — отчёт вместо услуги</div></div></div>
+    </div>
+
+    <div class="grid g2" style="gap:4mm;margin-top:auto">
+      <div class="box pad3">
+        <div class="label" style="margin-bottom:2mm">Что видно на 30 экранах</div>
+        <ul class="ticks">
+          <li><strong>Почти все</strong> продают услугу, а не результат: «бухгалтерские услуги», «полное обслуживание», «надёжный партнёр»</li>
+          <li><strong>Цену</strong> на первом экране показывают двое (FinTax, buxgalteria.uz); бесплатный первый шаг — частый ход: консультация, экспресс-анализ, месяц за 0 сум</li>
+          <li><strong>По-узбекски</strong> первый экран — только у троих: Azma, Consulting Partners, Best Audit</li>
+          <li><strong>Живое лицо владельца</strong> — у TA-VAT и LegalAct, остальные на стоке</li>
+        </ul>
+      </div>
+      <div class="box pad3" style="border-top:2px solid var(--acc)">
+        <div class="label" style="margin-bottom:2mm">Кто ближе всех к Sifat и чем отличаемся</div>
+        <p class="sm" style="margin-bottom:2mm"><strong>ATB</strong> (страхование на 1 млрд), <strong>BAT</strong> (5 млрд) и <strong>FinTax</strong> (материальная ответственность) уже говорят об ответственности — но в подзаголовке, мелко. <strong>TA-VAT</strong> продаёт через личность основателя.</p>
+        <p class="sm">Sifat соединяет оба хода и выносит их в заголовок: <strong>Иброхим лично + штраф по нашей вине платим мы</strong> — и говорит это по-узбекски, где конкуренции почти нет.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">07</span></div>
 </section>
 
 <!-- ============ 04 · ЭКОНОМИКА ============ -->
@@ -422,7 +552,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
       станет 12—15, а не когда Иброхим перестанет успевать.</p>
     </div>
   </div>
-  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">05</span></div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">08</span></div>
 </section>
 
 <!-- ============ 05 · ПРОГНОЗ ============ -->
@@ -488,7 +618,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
       Без этого любой бюджет сгорит.</p>
     </div>
   </div>
-  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">06</span></div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">09</span></div>
 </section>
 
 <!-- ============ 06 · ВОРОНКА ============ -->
@@ -521,7 +651,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
       <div class="box pad3"><div class="label" style="margin-bottom:1.5mm">Третья дыра</div><p class="xs muted">Клиент ушёл «подумать». Решение — через 2 дня письмо с разбором рисков по его цифрам: коротко, одна страница, с суммой.</p></div>
     </div>
   </div>
-  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">07</span></div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">10</span></div>
 </section>
 
 <!-- ============ 07 · СТРАТЕГИЯ ============ -->
@@ -549,7 +679,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
       05 и 06 идут фоном все 90 дней: они дают органику к 3—6-му месяцу, когда реклама уже окупилась.</p>
     </div>
   </div>
-  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">08</span></div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">11</span></div>
 </section>
 
 <!-- ============ 08 · АУДИТ САЙТА ============ -->
@@ -590,7 +720,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
       для A/B-теста на рекламе: побеждает та, что даст больше встреч, а не больше заявок.</p>
     </div>
   </div>
-  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">09</span></div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">12</span></div>
 </section>
 
 <!-- ============ 09 · ПЛАН 90 ДНЕЙ ============ -->
@@ -653,7 +783,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
       цена встречи известна. День 60 — первый завтрак проведён, 3+ абонента из новых каналов. День 90 — решение: второй бухгалтер и сценарий В или держим Б.</p>
     </div>
   </div>
-  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">10</span></div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">13</span></div>
 </section>
 
 <!-- ============ 10 · РЕКЛАМА ============ -->
@@ -690,7 +820,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
       договор дешевле 1,5 млн. Бекзод отмечает в таблице каждую заявку: источник, дошла ли до встречи, подписан ли договор.</p>
     </div>
   </div>
-  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">11</span></div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">14</span></div>
 </section>
 
 <!-- ============ 11 · ПРОДАЖИ ОФЛАЙН 1 ============ -->
@@ -722,7 +852,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
     </table>
     <p class="xs" style="color:#6B6E77;margin-top:auto">Цены и сроки — оценка для фирмы из 2—3 человек. Вознаграждение партнёрам — только прозрачное, по договору; платить сотрудникам банка лично нельзя, договариваться нужно с банком или через совместные мероприятия.</p>
   </div>
-  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">12</span></div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">15</span></div>
 </section>
 
 <!-- ============ 12 · ПРОДАЖИ ОФЛАЙН 2 ============ -->
@@ -771,7 +901,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
       рекламу в Instagram на холодную аудиторию до появления второго бухгалтера. Каждый из этих ходов забирает время Иброхима — единственный ресурс, который нельзя докупить.</p>
     </div>
   </div>
-  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">13</span></div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">16</span></div>
 </section>
 
 <!-- ============ 13 · МЕТРИКИ ============ -->
@@ -804,7 +934,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
       <div class="box pad3"><div class="label" style="margin-bottom:1.5mm">Стоп-сигналы</div><p class="xs muted">Встреча дороже 800 тыс две недели подряд — меняем запросы и страницу. Ответ дольше 10 минут в 20% заявок — ставим паузу на рекламу, чиним процесс. У Иброхима больше 15 клиентов — ищем второго бухгалтера.</p></div>
     </div>
   </div>
-  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">14</span></div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">17</span></div>
 </section>
 
 <!-- ============ 14 · ДАЛЬШЕ ============ -->
@@ -834,7 +964,7 @@ td.k{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:7.6pt;colo
       <div class="xs faint" style="text-align:right;max-width:80mm">Все оценки спроса, цены клика и конверсий уточняем в кабинетах рекламы в первую неделю и пересчитываем прогноз после 4 недель работы.</div>
     </div>
   </div>
-  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">15</span></div>
+  <div class="foot"><span>Prototype Agency · Sifat Buxgalter</span><span class="n">18</span></div>
 </section>
 
 </body>
