@@ -9,7 +9,7 @@ export const services: Record<string, ServicePage> = {
       "MChJ buxgalteriya va soliq hisobini toʻliq yuritamiz: hisobotlar muddatida, 10 daqiqada javob, buxgalter ofisingizda oyiga 3 marta. Xatomiz sabab jarimani oʻzimiz toʻlaymiz.",
     name: "Buxgalteriya autsorsingi",
     h1: "MChJ uchun buxgalteriya autsorsingi — Toshkent",
-    lead: "Korxonangiz hisobini toʻliq olamiz: birlamchi hujjatlar, soliqlar, hisobotlar, bank, ish haqi. Ishni 2016-yildan beri ishlayotgan bosh buxgalter olib boradi. Savolingizga 10 daqiqada javob va har oy hisobot olasiz. Xatolarimiz uchun shartnoma boʻyicha javob beramiz.",
+    lead: "Korxonangiz hisobini toʻliq olamiz: birlamchi hujjatlar, soliqlar, hisobotlar, bank, ish haqi. Savolingizga 10 daqiqada javob va har oy hisobot olasiz. Xatolarimiz uchun shartnoma boʻyicha javob beramiz.",
     when: {
       h2: "Qachon autsorsingga oʻtishadi",
       items: [

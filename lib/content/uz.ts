@@ -4,13 +4,13 @@ export const uz: Content = {
   meta: {
     title: "Sifat Buxgalter — MChJ uchun buxgalteriya autsorsingi, Toshkent",
     description:
-      "Buxgalteriya va soliq hisobini 2016-yildan ishlayotgan bosh buxgalter yuritadi. Savolga 10 daqiqada javob, hisobotlar muddatida, xatomiz sabab jarima chiqsa — oʻzimiz toʻlaymiz.",
+      "Toshkentdagi MChJlar uchun buxgalteriya va soliq hisobi. Savolga 10 daqiqada javob, hisobotlar muddatida, xatomiz sabab jarima chiqsa — oʻzimiz toʻlaymiz.",
   },
   nav: { services: "Xizmatlar", faq: "Savollar", cta: "10 daqiqalik qoʻngʻiroq", langLabel: "Til" },
   hero: {
     kicker: "Buxgalteriya autsorsingi · Toshkent",
     h1: "Buxgalteriyani bizga topshiring — soliq xavfini biz koʻtaramiz",
-    sub: "Buxgalteringiz, ehtimol, allaqachon bor va hisobotlar vaqtida ketyapti. Biz tadbirkor aslida nima uchun pul toʻlashini qoʻshamiz: 10 daqiqada javob, soliqni qonuniy kamaytirish va javobgarlik — xatomiz sabab jarima chiqsa, oʻzimiz toʻlaymiz. Ishni 2016-yildan beri ishlayotgan bosh buxgalter olib boradi.",
+    sub: "Buxgalteringiz, ehtimol, allaqachon bor va hisobotlar vaqtida ketyapti. Biz tadbirkor aslida nima uchun pul toʻlashini qoʻshamiz: 10 daqiqada javob, soliqni qonuniy kamaytirish va javobgarlik — xatomiz sabab jarima chiqsa, oʻzimiz toʻlaymiz.",
     cta: "Bepul 10 daqiqalik qoʻngʻiroq",
     ctaAlt: "Telegramda yozish",
     note: "Hech qayerga borish shart emas. Bekzod qoʻngʻiroq qilib, hisobingiz haqida bir-ikki savol beradi va asosiy xavf odatda qayerda yashirinishini aytadi.",
@@ -31,7 +31,7 @@ export const uz: Content = {
       stamp: "SIFAT BUXGALTER · TEKSHIRILDI · ",
     },
     facts: [
-      ["2016", "yildan buxgalteriyada"],
+      ["0%", "tejalgan soliqdan olamiz"],
       ["~20", "kompaniya hisobini yuritgan"],
       ["10 daq.", "savolga javob"],
       ["7 kun", "haftada aloqada"],

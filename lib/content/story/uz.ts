@@ -12,7 +12,7 @@ export const storyUz: Story = {
   h1: "Buxgalteriyadagi xato ikki yil jim turadi. Uchinchi yili u 2 milliard soʻm boʻlib qaytishi mumkin.",
   sub: "Bu xatda — bu qanday sodir boʻlishi, nega arzon buxgalter uni koʻrmasligi va **biz bu xavfni qanday oʻz zimmamizga olishimiz** haqida.",
   readTime: "Oʻqish — 7 daqiqa",
-  byline: { name: "Ibrohim", role: "Bosh buxgalter, 2016-yildan" },
+  byline: { name: "Ibrohim", role: "Bosh buxgalter" },
   cta: { label: "Bepul 10 daqiqalik qoʻngʻiroq", note: "Hech qayerga borish shart emas. Bekzod odatda 10 daqiqada qoʻngʻiroq qiladi" },
   greeting: "Hurmatli tadbirkor,",
   opening: {
@@ -36,7 +36,7 @@ export const storyUz: Story = {
     num: "II",
     title: "Men buni ichidan koʻrdim",
     blocks: [
-      { p: "Ismim Ibrohim. 2016-yildan beri buxgalteriyada ishlayman. Shu yillar ichida 20 ga yaqin kompaniyaning hisobini yuritganman. Sizning hisobingizni stajyorlarga emas, shaxsan oʻzim yuritaman." },
+      { p: "Ismim Ibrohim, Sifat Buxgalter bosh buxgalteriman. Shu yillar ichida 20 ga yaqin kompaniyaning hisobini yuritganman." },
       { p: "Bir vaqtlar uch oy autsorsing firmasining ichida ishladim. U yerda koʻrganimni bir soʻz bilan aytaman: **tartibsizlik**. Bitta buxgalterda oʻnlab firma. Soliq oxirgi kuni toʻlanadi. Tadbirkorning savoli ertasiga javob oladi." },
       { p: "Keyin bitta kompaniyani ketayotgan buxgalterdan qabul qilib oldim. 1C oxirigacha kiritilmagan edi. Hisobning bir qismi — Excel’da, bir qismi — hech qayerda." },
       { p: "Bu dangasalik emas. **Bu arifmetika.**" },
