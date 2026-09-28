@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
+/* The research folder holds big HTML reports; their classes aren't ours. */
+@source not "../research";
 
 /* Light and dark themes. next-themes writes `class="dark"` on <html> (from
    the visitor's choice, or their OS setting until they make one), and every

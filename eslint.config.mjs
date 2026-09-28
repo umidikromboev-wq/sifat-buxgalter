@@ -13,6 +13,8 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
     ".flowbite-react/**",
+    // Umid's market research (screenshots, reports, one-off scripts), not site code.
+    "research/**",
   ]),
 ]);
 
