@@ -5,7 +5,7 @@ import ClientLogos from "@/components/ClientLogos";
 import CtaSection from "@/components/CtaSection";
 import JsonLd, { breadcrumbLd, faqLd } from "@/components/JsonLd";
 import { home } from "@/content/home";
-import { pages, privacyText } from "@/content/pages";
+import { contactExtra, pages, pricingIncluded, privacyText, servicesRouter, thanksExtra } from "@/content/pages";
 import { homePath, isLocale, kindFromSection, locales, sectionPath, sections, servicePath, siteUrl, type PageKind } from "@/content/routes";
 import { serviceOrder, services } from "@/content/services";
 import { contacts, ui } from "@/content/site";
@@ -69,10 +69,26 @@ export default async function SectionPage({ params }: Props) {
   ]);
 
   if (kind === "services") {
+    const r = servicesRouter[locale];
     return (
       <>
         <Hero locale={locale} kind={kind} />
         <section className="section-tight">
+          <div className="wrap">
+            <div className="eyebrow">{r.title}</div>
+            <p className="lead" style={{ marginBottom: 20 }}>{r.lead}</p>
+            <div className="router">
+              {r.items.map((it) => (
+                <Link key={it.id} href={servicePath(locale, it.id)} className="router-item">
+                  <span className="router-q">{it.situation}</span>
+                  <span className="router-a">{it.answer}</span>
+                  <span className="more">{t.readMore}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className="section-tight" style={{ paddingTop: 0 }}>
           <div className="wrap grid-3">
             {serviceOrder.map((id) => {
               const s = services[locale][id];
@@ -109,6 +125,15 @@ export default async function SectionPage({ params }: Props) {
                   <p style={{ margin: 0, color: "var(--ink-2)", fontSize: 15 }}>{c.text}</p>
                 </div>
               ))}
+            </div>
+            <div className="included">
+              <h2 style={{ fontSize: 28 }}>{pricingIncluded[locale].title}</h2>
+              <ul className="checklist">
+                {pricingIncluded[locale].items.map((i) => (
+                  <li key={i}>{i}</li>
+                ))}
+              </ul>
+              <p className="muted" style={{ marginTop: 14, fontSize: 15 }}>{pricingIncluded[locale].note}</p>
             </div>
             <table className="compare">
               <thead>
@@ -223,11 +248,26 @@ export default async function SectionPage({ params }: Props) {
   }
 
   if (kind === "contact") {
+    const c = contactExtra[locale];
     return (
       <>
         <Hero locale={locale} kind={kind} />
-        <CtaSection locale={locale} eyebrow={p.eyebrow} title={p.h1} text={p.lead} source="contact" />
+        <CtaSection locale={locale} eyebrow={h.cta.eyebrow} source="contact" />
         <section className="section-tight">
+          <div className="wrap">
+            <h2 style={{ fontSize: 28 }}>{c.title}</h2>
+            <ol className="process">
+              {c.steps.map((st) => (
+                <li key={st.t}>
+                  <h3>{st.t}</h3>
+                  <p>{st.d}</p>
+                </li>
+              ))}
+            </ol>
+            <p className="muted" style={{ marginTop: 16, maxWidth: 720 }}>{c.noSale}</p>
+          </div>
+        </section>
+        <section className="section-tight" style={{ paddingTop: 0 }}>
           <div className="wrap grid-2">
             <div className="card">
               <h3>{t.footer.office}</h3>
@@ -274,11 +314,21 @@ export default async function SectionPage({ params }: Props) {
   }
 
   // thanks
+  const th = thanksExtra[locale];
   return (
     <>
       <Hero locale={locale} kind={kind} />
       <section className="section-tight">
         <div className="wrap">
+          <div className="card" style={{ maxWidth: 640 }}>
+            <h3>{th.title}</h3>
+            <ol className="prep">
+              {th.items.map((i) => (
+                <li key={i}>{i}</li>
+              ))}
+            </ol>
+          </div>
+          <p className="muted" style={{ marginTop: 28, marginBottom: 6 }}>{th.telegram}</p>
           <div className="phones">
             <a href={contacts.phone1Href}>{contacts.phone1}</a>
             <a href={contacts.telegram}>Telegram {contacts.telegramHandle}</a>

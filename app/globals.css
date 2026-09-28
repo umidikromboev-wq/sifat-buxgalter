@@ -326,3 +326,22 @@ section { padding: 72px 0; }
 .check ol li > span:first-child { font-weight: 600; }
 .check .outro-yes { color: #cfc8b8; font-size: 15px; margin-top: 14px; }
 .check .outro-no { color: #fff; font-size: 16px; font-weight: 600; margin-top: 8px; }
+
+/* services router */
+.router { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 900px) { .router { grid-template-columns: 1fr; } }
+.router-item { display: flex; flex-direction: column; gap: 8px; background: var(--dark); color: #fff; border-radius: var(--radius); padding: 24px; text-decoration: none; transition: transform .2s ease; }
+.router-item:hover { transform: translateY(-3px); }
+.router-q { font-size: 19px; font-weight: 600; letter-spacing: -.01em; color: var(--gold-2); }
+.router-a { font-size: 15px; color: #d8d2c2; flex: 1; }
+.router-item .more { color: #fff; font-weight: 600; font-size: 14px; margin-top: 6px; }
+/* pricing included */
+.included { margin: 36px 0 8px; }
+.included .checklist { margin-top: 8px; }
+/* thanks prep */
+.prep { padding-left: 1.3em; font-size: 16.5px; }
+.prep li { margin: .5em 0; }
+/* related */
+.related a { display: flex; flex-direction: column; gap: 4px; }
+.related-name { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.related-h1 { font-weight: 600; font-size: 15.5px; }

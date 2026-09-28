@@ -171,7 +171,8 @@ export default async function ServicePage({ params }: Props) {
           <div className="related">
             {s.related.map((rid) => (
               <Link key={rid} href={servicePath(locale, rid)}>
-                {services[locale][rid].h1}
+                <span className="related-name">{services[locale][rid].title.split(/ — |: |, /)[0].trim()}</span>
+                <span className="related-h1">{services[locale][rid].h1}</span>
               </Link>
             ))}
           </div>
