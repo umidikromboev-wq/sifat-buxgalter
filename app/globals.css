@@ -497,3 +497,12 @@ section { padding: 96px 0; }
 /* scroll reveal (faqat JS bor boʻlsa) */
 html.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
 html.js .reveal.in { opacity: 1; transform: none; }
+
+.process.five { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1000px) { .process.five { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .process.five { grid-template-columns: 1fr; } }
+.team-solo { grid-template-columns: 1fr; }
+.team-solo .person { grid-template-columns: 96px 1fr; }
+.team-solo .avatar { width: 96px; height: 96px; font-size: 38px; }
+.team-solo ul { columns: 2; column-gap: 32px; }
+@media (max-width: 720px) { .team-solo ul { columns: 1; } .team-solo .person { grid-template-columns: 64px 1fr; } .team-solo .avatar { width: 64px; height: 64px; font-size: 26px; } }

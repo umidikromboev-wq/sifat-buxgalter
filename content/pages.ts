@@ -9,7 +9,7 @@ export const pages: Record<Locale, Record<"services" | "pricing" | "team" | "faq
       description: "MChJ uchun buxgalteriya xizmatlari: hisob va hisobotlar, soliqni kamaytirish, tekshiruv va nizolar, kadrlar, tashqi savdo. Bitta shartnoma, 10 daqiqada javob. Toshkent.",
       eyebrow: "Xizmatlar · Toshkent",
       h1: "Buxgalteriyaning hammasi — bitta shartnomada",
-      lead: "Har bir xizmat haqida alohida sahifa: kimga kerak, nima kiradi, qanday ishlaymiz, narx. Nimadan boshlashni bilmasangiz — kirish tekshiruvidan boshlaymiz.",
+      lead: "Har bir xizmat haqida alohida sahifa: kimga kerak, nima kiradi, qanday ishlaymiz, narx. Nimadan boshlashni bilmasangiz — ekspress-auditdan boshlaymiz.",
     },
     pricing: {
       title: "Buxgalteriya xizmati narxi — Toshkent",
@@ -34,7 +34,7 @@ export const pages: Record<Locale, Record<"services" | "pricing" | "team" | "faq
     },
     contact: {
       title: "Aloqa — Sifat Buxgalter, Toshkent",
-      description: "Sifat Buxgalter bilan bogʻlaning: +998 97 732 18 48, Telegram @Davronbekov_Bekzod. Ofis: Toshkent, Yangi Sergeli 7/2. Haftada 7 kun.",
+      description: "Sifat Buxgalter bilan bogʻlaning: +998 97 732 18 48, Telegram @Davronbekov_Bekzod. Ofis: Toshkent, Yakkasaroy, Muqimiy koʻchasi. 24/7.",
       eyebrow: "Aloqa",
       h1: "Bitta qoʻngʻiroq — va siz hisobingizda qayerda pul yoʻqotayotganingizni bilasiz",
       lead: "Bu sotuv qoʻngʻirogʻi emas. Bekzod hisobingiz haqida ikki-uch savol beradi va birinchi navbatda nimani tekshirish kerakligini aytadi. Keyin qaror — sizniki.",
@@ -51,7 +51,7 @@ export const pages: Record<Locale, Record<"services" | "pricing" | "team" | "faq
       description: "Arizangiz qabul qilindi.",
       eyebrow: "Ariza qabul qilindi",
       h1: "Rahmat. Bekzod tez orada qoʻngʻiroq qiladi",
-      lead: "Odatda 10 daqiqada, eng koʻpi bilan 1 soat ichida. Qoʻngʻiroq foydali oʻtishi uchun uchta narsani eslab qoʻying — ular haqida soʻraymiz.",
+      lead: "10 daqiqa ichida bogʻlanamiz. Qoʻngʻiroq foydali oʻtishi uchun uchta narsani eslab qoʻying — ular haqida soʻraymiz.",
     },
   },
   ru: {
@@ -60,7 +60,7 @@ export const pages: Record<Locale, Record<"services" | "pricing" | "team" | "faq
       description: "Бухгалтерские услуги для ООО: учёт и отчётность, снижение налогов, проверки и споры, кадры, ВЭД. Один договор, ответ за 10 минут. Ташкент.",
       eyebrow: "Услуги · Ташкент",
       h1: "Вся бухгалтерия — в одном договоре",
-      lead: "По каждой услуге отдельная страница: кому нужно, что входит, как работаем, цена. Не знаете, с чего начать — начнём с входной проверки.",
+      lead: "По каждой услуге отдельная страница: кому нужно, что входит, как работаем, цена. Не знаете, с чего начать — начнём с экспресс-аудита.",
     },
     pricing: {
       title: "Стоимость бухгалтерских услуг — Ташкент",
@@ -85,7 +85,7 @@ export const pages: Record<Locale, Record<"services" | "pricing" | "team" | "faq
     },
     contact: {
       title: "Контакты — Sifat Buxgalter, Ташкент",
-      description: "Связаться с Sifat Buxgalter: +998 97 732 18 48, Telegram @Davronbekov_Bekzod. Офис: Ташкент, Янги Сергели 7/2. 7 дней в неделю.",
+      description: "Связаться с Sifat Buxgalter: +998 97 732 18 48, Telegram @Davronbekov_Bekzod. Офис: Ташкент, Яккасарай, ул. Мукими. 24/7.",
       eyebrow: "Контакты",
       h1: "Один звонок — и вы знаете, где в вашем учёте теряются деньги",
       lead: "Это не продающий звонок. Бекзод задаст два-три вопроса о вашем учёте и скажет, что проверить первым. Дальше решение — за вами.",
@@ -102,7 +102,7 @@ export const pages: Record<Locale, Record<"services" | "pricing" | "team" | "faq
       description: "Заявка принята.",
       eyebrow: "Заявка принята",
       h1: "Спасибо. Бекзод скоро перезвонит",
-      lead: "Обычно за 10 минут, максимум в течение часа. Чтобы звонок был полезным, вспомните три вещи — о них спросим.",
+      lead: "Свяжемся в течение 10 минут. Чтобы звонок был полезным, вспомните три вещи — о них спросим.",
     },
   },
 };
@@ -154,18 +154,18 @@ export const servicesRouter: Record<Locale, { title: string; lead: string; items
     title: "Qaysi biridan boshlash?",
     lead: "11 ta xizmat — lekin boshlanish nuqtasi odatda uchtadan biri.",
     items: [
-      { situation: "Buxgalterim bor, hammasi joyida koʻrinadi", answer: "Kirish tekshiruvidan boshlang. Bir necha kunda ortiqcha toʻlov va xavflar roʻyxatini olasiz — hech qanday majburiyatsiz.", id: "entry-audit" },
+      { situation: "Buxgalterim bor, hammasi joyida koʻrinadi", answer: "Ekspress-auditdan boshlang. Bir necha kunda ortiqcha toʻlov va xavflar roʻyxatini olasiz — hech qanday majburiyatsiz.", id: "entry-audit" },
       { situation: "Talabnoma keldi yoki hisob raqam bloklandi", answer: "Bu shoshilinch. Javob muddati bor — bugun qoʻngʻiroq qiling, hujjatlarni birga tayyorlaymiz.", id: "audit-defense" },
-      { situation: "Soliq koʻp chiqyapti, qonuniy kamaytirmoqchiman", answer: "70 ga yaqin imtiyozdan sizga mosini topamiz va qoʻllaymiz — tejalgan summadan foiz olmaymiz.", id: "tax-reduction" },
+      { situation: "Soliq koʻp chiqyapti, qonuniy kamaytirmoqchiman", answer: "Amaldagi imtiyozlardan sizga mosini topamiz va qoʻllaymiz — tejalgan summadan foiz olmaymiz.", id: "tax-reduction" },
     ],
   },
   ru: {
     title: "С чего начать?",
     lead: "Услуг одиннадцать — но точка входа обычно одна из трёх.",
     items: [
-      { situation: "Бухгалтер есть, всё выглядит нормально", answer: "Начните с входной проверки. За несколько дней получите список переплат и рисков — без обязательств.", id: "entry-audit" },
+      { situation: "Бухгалтер есть, всё выглядит нормально", answer: "Начните с экспресс-аудита. За несколько дней получите список переплат и рисков — без обязательств.", id: "entry-audit" },
       { situation: "Пришло требование или заблокирован счёт", answer: "Это срочно. У ответа есть срок — позвоните сегодня, документы подготовим вместе.", id: "audit-defense" },
-      { situation: "Налогов много, хочу платить меньше законно", answer: "Из ~70 льгот найдём и применим подходящие — без процента от сэкономленного.", id: "tax-reduction" },
+      { situation: "Налогов много, хочу платить меньше законно", answer: "Из действующих льгот найдём и применим подходящие — без процента от сэкономленного.", id: "tax-reduction" },
     ],
   },
 };
@@ -174,9 +174,9 @@ export const pricingIncluded: Record<Locale, { title: string; items: string[]; n
   uz: {
     title: "Narx ichida nima bor",
     items: [
-      "Toʻliq buxgalteriya va soliq hisobi — 1C va Didoxda",
+      "Toʻliq buxgalteriya va soliq hisobi — 1C da",
       "Barcha hisobotlar muddatida",
-      "Savolga javob — 10 daqiqagacha, haftada 7 kun",
+      "Savolga javob — 10 daqiqagacha, 24/7",
       "Soliq imtiyozlarini topish va qoʻllash — foizsiz",
       "Har oy ombor ↔ 1C solishtiruvi",
       "Kontragentlarni tekshirish",
@@ -184,14 +184,14 @@ export const pricingIncluded: Record<Locale, { title: string; items: string[]; n
       "Buxgalter ofisingizda — oyiga 3 marta",
       "Xatomiz sabab jarima — bizning hisobimizdan",
     ],
-    note: "Soliq tekshiruvi, hisob raqamni ochish, nizolar — autsorsing mijozlari uchun shartnoma ichida. Alohida toʻlanadigan yagona narsa — kirish tekshiruvi; shartnoma tuzilsa, uning narxi hisobga olinadi.",
+    note: "Soliq tekshiruvi, hisob raqamni ochish, nizolar — autsorsing mijozlari uchun shartnoma ichida. Alohida toʻlanadigan yagona narsa — ekspress-audit; shartnoma tuzilsa, uning narxi hisobga olinadi.",
   },
   ru: {
     title: "Что входит в цену",
     items: [
-      "Полный бухгалтерский и налоговый учёт — в 1С и Didox",
+      "Полный бухгалтерский и налоговый учёт — в 1С",
       "Все отчёты в срок",
-      "Ответ на вопрос — до 10 минут, 7 дней в неделю",
+      "Ответ на вопрос — до 10 минут, 24/7",
       "Поиск и применение налоговых льгот — без процента",
       "Ежемесячная сверка склад ↔ 1С",
       "Проверка контрагентов",
@@ -199,7 +199,7 @@ export const pricingIncluded: Record<Locale, { title: string; items: string[]; n
       "Бухгалтер у вас в офисе — 3 раза в месяц",
       "Штраф по нашей ошибке — за наш счёт",
     ],
-    note: "Налоговая проверка, разблокировка счёта, споры — для клиентов аутсорсинга в рамках договора. Единственное, что оплачивается отдельно, — входная проверка; при заключении договора её стоимость зачитывается.",
+    note: "Налоговая проверка, разблокировка счёта, споры — для клиентов аутсорсинга в рамках договора. Единственное, что оплачивается отдельно, — экспресс-аудит; при заключении договора её стоимость зачитывается.",
   },
 };
 

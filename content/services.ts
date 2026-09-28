@@ -81,7 +81,7 @@ const uzCommon = {
   priceTitle: "Narx",
   cta: "Bepul 10 daqiqalik qoʻngʻiroq",
   ctaNote:
-    "Hech qayerga borish shart emas. Bekzod 1 soat ichida, odatda 10 daqiqada qoʻngʻiroq qiladi.",
+    "Hech qayerga borish shart emas. Bekzod 10 daqiqa ichida bogʻlanadi.",
 };
 
 const ruCommon = {
@@ -92,7 +92,7 @@ const ruCommon = {
   priceTitle: "Цена",
   cta: "Бесплатный звонок на 10 минут",
   ctaNote:
-    "Никуда ехать не нужно. Бекзод перезвонит в течение часа, обычно за 10 минут.",
+    "Никуда ехать не нужно. Бекзод свяжется в течение 10 минут.",
 };
 
 export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
@@ -110,36 +110,36 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       lead:
         "Hisobot vaqtida ketyapti — bu minimum. Biz uch narsa uchun kerakmiz: 10 daqiqada javob, soliqni qonuniy kamaytirish va shartnomadagi javobgarlik — xatomiz sabab jarima chiqsa, oʻzimiz toʻlaymiz.",
       forWhom: [
-        "Yillik aylanmasi 1 mlrd soʻmdan, xodimlari 5 nafardan ortiq MChJ",
+        "Yillik aylanmasi 5 mlrd soʻmdan, xodimlari 5 nafardan ortiq MChJ",
         "Buxgalteri bor, lekin oyning oxirida qancha soliq chiqishini oldindan bilmaydigan ega",
         "Buxgalter ketyapti (dekret, nafaqa, boshqa ish) va ishni topshiradigan odam yoʻq",
-        "Import-eksport, ulgurji savdo, turizm, oʻquv markazlari",
+        "Ishlab chiqarish, xizmat koʻrsatish, ulgurji savdo, import-eksport, marketpleyslar",
       ],
       includes: [
-        "Toʻliq buxgalteriya va soliq hisobi — 1C va Didoxda",
+        "Toʻliq buxgalteriya va soliq hisobi — 1C da",
         "Barcha hisobotlarni muddatida topshirish",
         "Bank operatsiyalari, hisob-fakturalar, solishtirma dalolatnomalar",
         "Debitor va kreditor qarzlar nazorati",
         "Soliqni qonuniy kamaytirish boʻyicha maslahat — alohida foizsiz",
-        "Har oy: qancha soliq chiqdi, nega va nimaga tayyorlanish kerak",
+        "Har oy direktor uchun hisobot: qancha soliq chiqdi, nega va nimaga tayyorlanish kerak",
         "Buxgalter ofisingizda — oyiga 3 marta",
       ],
       process: [
         { title: "Qoʻngʻiroq — 10 daqiqa", text: "Bekzod hisobingiz haqida ikki-uch savol beradi va asosiy xavf qayerda yashirinishini aytadi." },
-        { title: "Kirish tekshiruvi", text: "Oxirgi davrni koʻramiz. Eski xatolarni topamiz, tuzatish rejasini beramiz. Koʻrmasdan ishni qabul qilmaymiz." },
-        { title: "Shartnoma va ishni qabul qilish", text: "Hujjatlar, 1C bazasi va kirish huquqlarini siz bilan birga olamiz. Umumiy Telegram-guruh ochamiz." },
-        { title: "Har oy", text: "Hisobotlar muddatida, ombor bilan solishtirish, sizga oylik hisobot. Haftada 7 kun aloqada." },
+        { title: "Ekspress-audit", text: "Oxirgi davrni koʻramiz. Eski xatolarni topamiz, tuzatish rejasini beramiz. Koʻrmasdan ishni qabul qilmaymiz." },
+        { title: "Shartnoma va ishni qabul qilish", text: "Hujjatlar, 1C bazasi va kirish huquqlarini siz bilan birga olamiz. Umumiy Telegram-guruh ochamiz: yozasiz — 10 daqiqa ichida javob olasiz." },
+        { title: "Har oy", text: "Hisobotlar muddatida, ombor bilan solishtirish, sizga oylik hisobot. 24/7 aloqada." },
       ],
       why: [
-        { title: "Javob — 10 daqiqagacha", text: "Haftada 7 kun, shanba ham. Shoshilinch toʻlov — 5 daqiqa." },
+        { title: "Javob — 10 daqiqagacha", text: "24/7, shanba ham. Shoshilinch toʻlov — 5 daqiqa." },
         { title: "Xato bizniki — jarima ham bizniki", text: "Bizning aybimiz bilan jarima chiqsa, oʻzimiz toʻlaymiz. Shart bitta: ombor hisobi halol." },
         { title: "Kam kompaniya olamiz", text: "Har birini oxirigacha tekshirish uchun. Bitta buxgalterda 5 ta firma — bu biz emas." },
       ],
       price:
         "Narx oylik hujjat hajmiga bogʻliq, aylanmaga emas. Tejalgan soliqdan foiz olmaymiz. Aniq raqam — birinchi qoʻngʻiroqda, hajmni eshitgandan keyin.",
       faq: [
-        { q: "Buxgalterimni ishdan boʻshatishim kerakmi?", a: "Yoʻq, avval emas. Kirish tekshiruvi buxgalteringiz ishini ham koʻrsatadi. Natijani koʻrib, oʻzingiz hal qilasiz." },
-        { q: "Hujjatlarimiz xavfsizmi?", a: "Soʻrovingiz boʻyicha NDA imzolaymiz. Faqat litsenziyali 1C va Didoxda ishlaymiz." },
+        { q: "Buxgalterimni ishdan boʻshatishim kerakmi?", a: "Yoʻq, avval emas. Ekspress-audit buxgalteringiz ishini ham koʻrsatadi. Natijani koʻrib, oʻzingiz hal qilasiz." },
+        { q: "Hujjatlarimiz xavfsizmi?", a: "Soʻrovingiz boʻyicha NDA imzolaymiz. Faqat litsenziyali 1C, himoyalangan kompyuterlar va litsenziyali antivirus bilan ishlaymiz." },
         { q: "Toshkentdan tashqarida ishlaysizlarmi?", a: "Asosan Toshkent shahri va viloyatida — chunki buxgalter oyiga 3 marta ofisingizga boradi." },
       ],
       related: ["entry-audit", "tax-reduction", "reporting"],
@@ -170,21 +170,21 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
         "Har oy sizga: qancha soliq chiqdi, nega, keyingi oyga nimaga tayyorlanish kerak",
       ],
       process: [
-        { title: "Hujjatlar yigʻiladi", text: "Didox va 1C orqali. Yetishmayotgan hujjatni muddatdan 5 kun oldin soʻraymiz, oxirgi kuni emas." },
+        { title: "Hujjatlar yigʻiladi", text: " va 1C orqali. Yetishmayotgan hujjatni muddatdan 5 kun oldin soʻraymiz, oxirgi kuni emas." },
         { title: "Hisobot tayyorlanadi va tekshiriladi", text: "Ombor qoldigʻi va kontragentlar bilan solishtiramiz. Xatoni topshirishdan oldin topamiz." },
         { title: "Siz tasdiqlaysiz — biz topshiramiz", text: "Topshirishdan oldin summani koʻrasiz. Kutilmagan soliq boʻlmaydi." },
       ],
       why: [
         { title: "Xato bizniki — jarima ham bizniki", text: "Kechikish yoki notoʻgʻri hisobot bizning aybimiz boʻlsa — jarimani oʻzimiz toʻlaymiz. Shartnomada yozilgan." },
         { title: "Oldindan aytamiz", text: "Qancha soliq chiqishini muddatdan oldin bilasiz — «toʻlang» degan xabar emas, tayyorlanish uchun vaqt." },
-        { title: "Faqat litsenziyali dasturlar", text: "1C, Didox, soliq toʻlovchining shaxsiy kabineti — hammasi rasmiy." },
+        { title: "Litsenziyali dasturlar va himoyalangan kompyuterlar", text: "1C va soliq toʻlovchining shaxsiy kabineti — rasmiy. Kompyuterlar litsenziyali antivirus bilan himoyalangan, maʼlumotlar tashqariga chiqmaydi." },
       ],
       price:
         "Hisobot topshirish alohida xizmat emas — buxgalteriya autsorsingi shartnomasiga kiradi. Narx hujjat hajmiga bogʻliq.",
       faq: [
-        { q: "Oldingi buxgalter topshirmagan hisobotlar bilan nima qilamiz?", a: "Kirish tekshiruvida topamiz, qaysilari ochiq qolganini koʻrsatamiz va tuzatish rejasini beramiz. Oldingi davr uchun javobgarlikni alohida kelishamiz." },
+        { q: "Oldingi buxgalter topshirmagan hisobotlar bilan nima qilamiz?", a: "Ekspress-auditda topamiz, qaysilari ochiq qolganini koʻrsatamiz va tuzatish rejasini beramiz. Oldingi davr uchun javobgarlikni alohida kelishamiz." },
         { q: "Hisobotni topshirishdan oldin koʻra olamanmi?", a: "Ha. Summani va nimadan chiqqanini topshirishdan oldin koʻrasiz." },
-        { q: "Dam olish kunlari hisobot muddati tugasa?", a: "Haftada 7 kun aloqadamiz. Muddat dam olish kuniga toʻgʻri kelsa, oldinroq topshiramiz." },
+        { q: "Dam olish kunlari hisobot muddati tugasa?", a: "Aloqadamiz 24/7. Muddat dam olish kuniga toʻgʻri kelsa, oldinroq topshiramiz." },
       ],
       related: ["outsourcing", "audit-defense", "entry-audit"],
     },
@@ -195,11 +195,11 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       slug: "soliqni-kamaytirish",
       title: "Soliqni qonuniy kamaytirish — Toshkent",
       description:
-        "70 ga yaqin soliq imtiyozidan sizga mosini topamiz va qoʻllaymiz. Tejalgan summadan foiz olmaymiz — bu ishimizga kiradi. MChJ uchun, Toshkent.",
+        "oʻnlab soliq imtiyozidan sizga mosini topamiz va qoʻllaymiz. Tejalgan summadan foiz olmaymiz — bu ishimizga kiradi. MChJ uchun, Toshkent.",
       eyebrow: "Soliqni qonuniy kamaytirish",
       h1: "Qoʻshningiz kamroq soliq toʻlayapti. Nega?",
       lead:
-        "Odatda javob oddiy: uning buxgalteri imtiyozni qoʻllagan, sizniki — yoʻq. Oʻzbekistonda 70 ga yaqin soliq imtiyozi bor. Qaysilari sizga mos kelishini oʻrganamiz va qoʻllaymiz — alohida foizsiz.",
+        "Odatda javob oddiy: uning buxgalteri imtiyozni qoʻllagan, sizniki — yoʻq. Oʻzbekistonda oʻnlab soliq imtiyozi bor. Qaysilari sizga mos kelishini oʻrganamiz va qoʻllaymiz — alohida foizsiz.",
       forWhom: [
         "Aylanma oʻsdi, soliq ham oʻsdi — kamaytirish yoʻlini hech kim koʻrsatmayapti",
         "Xuddi shunday firma kamroq toʻlayotganini eshitgan ega",
@@ -224,10 +224,10 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
         { title: "Birinchi boʻlib aytamiz", text: "Yangi imtiyoz chiqsa — siz Instagramdan emas, bizdan bilasiz." },
       ],
       price:
-        "Buxgalteriya autsorsingi shartnomasiga kiradi. Alohida foiz, alohida toʻlov yoʻq. Kirish tekshiruvida qaysi imtiyozlar mos kelishini oldindan aytamiz.",
+        "Buxgalteriya autsorsingi shartnomasiga kiradi. Alohida foiz, alohida toʻlov yoʻq. Ekspress-auditda qaysi imtiyozlar mos kelishini oldindan aytamiz.",
       faq: [
         { q: "Bu qonuniymi?", a: "Ha. Faqat Soliq kodeksidagi imtiyozlar va rejimlar. Yashirin aylanma, naqd sotuv bilan ishlamaymiz — bu shartnomada yozilgan." },
-        { q: "Qancha tejash mumkin?", a: "Sohaga bogʻliq. Baʼzi sohalarda (masalan, qazib olish) imtiyoz umuman yoʻq — buni oldindan aytamiz. Aniq raqam kirish tekshiruvidan keyin." },
+        { q: "Qancha tejash mumkin?", a: "Sohaga bogʻliq. Baʼzi sohalarda (masalan, qazib olish) imtiyoz umuman yoʻq — buni oldindan aytamiz. Aniq raqam ekspress-auditdan keyin." },
         { q: "Buxgalterim nega buni qilmagan?", a: "Odatda vaqti yoʻq: bir odam bir necha firmani yuritadi va yangi qonunlarni kuzatishga ulgurmaydi. Bu uning aybi emas — tizim shunaqa." },
       ],
       related: ["tax-refund", "regime", "outsourcing"],
@@ -262,7 +262,7 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       ],
       why: [
         { title: "Foizsiz", text: "Qaytarilgan summadan foiz olmaymiz." },
-        { title: "Kirish tekshiruvida topamiz", text: "Yangi mijozning oxirgi davrini tekshirganda ortiqcha toʻlov birinchi koʻriladigan narsalardan biri." },
+        { title: "Ekspress-auditda topamiz", text: "Yangi mijozning oxirgi davrini tekshirganda ortiqcha toʻlov birinchi koʻriladigan narsalardan biri." },
         { title: "Muddatni kuzatamiz", text: "Qaytarish muddati oʻtib ketsa — pul qaytmaydi. Biz oldin harakat qilamiz." },
       ],
       price:
@@ -311,7 +311,7 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       faq: [
         { q: "Rejimni yil oʻrtasida oʻzgartirish mumkinmi?", a: "Holatga bogʻliq — baʼzi oʻtishlar faqat yil boshidan, baʼzilari majburiy (chegara oshganda). Qoʻngʻiroqda aniq aytamiz." },
         { q: "QQS'ga oʻtsam, soliq koʻpaymaydimi?", a: "Har doim emas. Kontragentlaringiz QQS toʻlovchi boʻlsa, hisobga olinadigan QQS yukni kamaytiradi. Hisoblab koʻrsatamiz." },
-        { q: "Buxgalterim bu haqda gapirmagan.", a: "Koʻpincha vaqti yoʻq. Bu kirish tekshiruvida birinchi koʻriladigan savollardan biri." },
+        { q: "Buxgalterim bu haqda gapirmagan.", a: "Koʻpincha vaqti yoʻq. Bu ekspress-auditda birinchi koʻriladigan savollardan biri." },
       ],
       related: ["tax-reduction", "tax-refund", "outsourcing"],
     },
@@ -444,7 +444,7 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       price: "Buxgalteriya autsorsingi shartnomasiga kiradi. Faqat kadrlar va ish haqi — xodimlar soniga qarab, birinchi qoʻngʻiroqda.",
       faq: [
         { q: "Xodimlar ish haqini boshqalar koʻrmaydimi?", a: "Ish haqi maʼlumotlari faqat siz va bosh buxgalter oʻrtasida. Umumiy guruhga chiqmaydi." },
-        { q: "Kadrlar ishi umuman yuritilmagan boʻlsa?", a: "Kirish tekshiruvida nima yoʻqligini koʻramiz, hujjatlarni tartibga solamiz." },
+        { q: "Kadrlar ishi umuman yuritilmagan boʻlsa?", a: "Ekspress-auditda nima yoʻqligini koʻramiz, hujjatlarni tartibga solamiz." },
         { q: "Faqat kadrlar uchun ishlaysizlarmi?", a: "Ha, alohida xizmat sifatida ham boʻladi." },
       ],
       related: ["outsourcing", "reporting", "entry-audit"],
@@ -528,7 +528,7 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       faq: [
         { q: "Kontragent xavfli boʻlsa, nima qilaman?", a: "Shartnomadan oldin — boshqa yetkazib beruvchi. Hisob-faktura allaqachon boʻlsa — hujjatlarni mustahkamlash va tekshiruvga tayyorlanish rejasini beramiz." },
         { q: "Buni oʻzim tekshira olamanmi?", a: "Asosiy holatni — ha, soliq kabinetida. Lekin oʻnlab kontragentni har oy — vaqt ketadi. Buni biz qilamiz." },
-        { q: "Eski kontragentlarni ham tekshirasizlarmi?", a: "Kirish tekshiruvida — barchasini. Keyin har oy." },
+        { q: "Eski kontragentlarni ham tekshirasizlarmi?", a: "Ekspress-auditda — barchasini. Keyin har oy." },
       ],
       related: ["audit-defense", "outsourcing", "reporting"],
     },
@@ -537,10 +537,10 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       ...uzCommon,
       id: "entry-audit",
       slug: "buxgalteriya-auditi",
-      title: "Buxgalteriya auditi (kirish tekshiruvi) — Toshkent",
+      title: "Buxgalteriya auditi (ekspress-audit) — Toshkent",
       description:
         "Oxirgi davr buxgalteriyasini tekshiramiz: xatolar, ortiqcha toʻlangan soliq, qoʻllanmagan imtiyozlar, ombor farqi. Natija — aniq roʻyxat va tuzatish rejasi.",
-      eyebrow: "Kirish tekshiruvi",
+      eyebrow: "Ekspress-audit",
       h1: "Buxgalteringiz ishini birinchi marta tashqaridan koʻring",
       lead:
         "Ega buxgalter ishini baholay olmaydi — faqat boshqa buxgalter baholaydi. Biz oxirgi davrni tekshiramiz va aniq roʻyxat beramiz: qayerda xato, qayerda ortiqcha toʻlov, qayerda tekshiruv xavfi. Bu bizning har bir mijoz bilan birinchi qadamimiz.",
@@ -591,36 +591,36 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       lead:
         "Отчёты уходят вовремя — это минимум. Мы нужны для трёх вещей: ответ за 10 минут, законное снижение налогов и ответственность в договоре — штраф по нашей ошибке платим сами.",
       forWhom: [
-        "ООО с годовым оборотом от 1 млрд сум и штатом от 5 человек",
+        "ООО с годовым оборотом от 5 млрд сум и штатом от 5 человек",
         "Собственник, у которого есть бухгалтер, но нет понимания, сколько налогов выйдет в конце месяца",
         "Бухгалтер уходит (декрет, пенсия, другая работа) — и дела передать некому",
-        "ВЭД, оптовая торговля, туризм, учебные центры",
+        "Производство, услуги, оптовая торговля, импорт-экспорт, маркетплейсы",
       ],
       includes: [
-        "Полный бухгалтерский и налоговый учёт — в 1С и Didox",
+        "Полный бухгалтерский и налоговый учёт — в 1С",
         "Сдача всей отчётности в срок",
         "Банковские операции, счета-фактуры, акты сверки",
         "Контроль дебиторской и кредиторской задолженности",
         "Консультации по законному снижению налогов — без отдельного процента",
-        "Каждый месяц: сколько налогов вышло, почему и к чему готовиться",
+        "Каждый месяц отчёт директору: сколько налогов вышло, почему и к чему готовиться",
         "Бухгалтер у вас в офисе — 3 раза в месяц",
       ],
       process: [
         { title: "Звонок — 10 минут", text: "Бекзод задаст два-три вопроса о вашем учёте и скажет, где обычно прячется главный риск." },
-        { title: "Входная проверка", text: "Смотрим последний период. Находим старые ошибки, даём план исправления. Не глядя дела не берём." },
+        { title: "Экспресс-аудит", text: "Смотрим последний период. Находим старые ошибки, даём план исправления. Не глядя дела не берём." },
         { title: "Договор и приём дел", text: "Документы, базу 1С и доступы забираем вместе с вами. Открываем общую группу в Telegram." },
-        { title: "Каждый месяц", text: "Отчёты в срок, сверка со складом, отчёт вам. На связи 7 дней в неделю." },
+        { title: "Каждый месяц", text: "Отчёты в срок, сверка со складом, отчёт вам. На связи 24/7." },
       ],
       why: [
-        { title: "Ответ — до 10 минут", text: "7 дней в неделю, в субботу тоже. Срочный платёж — 5 минут." },
+        { title: "Ответ — до 10 минут", text: "24/7, в субботу тоже. Срочный платёж — 5 минут." },
         { title: "Наша ошибка — наш штраф", text: "Если штраф возник по нашей вине, платим сами. Условие одно: склад ведётся честно." },
         { title: "Берём мало компаний", text: "Чтобы проверять каждую до конца. Пять фирм на одном бухгалтере — это не про нас." },
       ],
       price:
         "Цена зависит от объёма документов в месяц, не от оборота. Процент от сэкономленных налогов не берём. Точная цифра — на первом звонке, после того как узнаем объём.",
       faq: [
-        { q: "Мне нужно увольнять своего бухгалтера?", a: "Нет, не сразу. Входная проверка покажет и работу вашего бухгалтера. Посмотрите результат и решите сами." },
-        { q: "Наши документы в безопасности?", a: "По запросу подписываем NDA. Работаем только в лицензионной 1С и Didox." },
+        { q: "Мне нужно увольнять своего бухгалтера?", a: "Нет, не сразу. Экспресс-аудит покажет и работу вашего бухгалтера. Посмотрите результат и решите сами." },
+        { q: "Наши документы в безопасности?", a: "По запросу подписываем NDA. Работаем только в лицензионной 1С, на защищённых компьютерах с лицензионным антивирусом." },
         { q: "Работаете за пределами Ташкента?", a: "В основном в Ташкенте и области — потому что бухгалтер выезжает к вам 3 раза в месяц." },
       ],
       related: ["entry-audit", "tax-reduction", "reporting"],
@@ -651,21 +651,21 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
         "Каждый месяц вам: сколько налогов вышло, почему, к чему готовиться в следующем",
       ],
       process: [
-        { title: "Собираем документы", text: "Через Didox и 1С. Недостающее запрашиваем за 5 дней до срока, а не в последний день." },
+        { title: "Собираем документы", text: "Через  и 1С. Недостающее запрашиваем за 5 дней до срока, а не в последний день." },
         { title: "Готовим и проверяем", text: "Сверяем с остатками склада и контрагентами. Ошибку находим до сдачи." },
         { title: "Вы подтверждаете — мы сдаём", text: "Сумму видите до отправки. Неожиданных налогов не бывает." },
       ],
       why: [
         { title: "Наша ошибка — наш штраф", text: "Просрочка или неверный отчёт по нашей вине — штраф платим мы. Прописано в договоре." },
         { title: "Говорим заранее", text: "Сколько выйдет налогов, знаете до срока — не «платите», а время подготовиться." },
-        { title: "Только лицензионные программы", text: "1С, Didox, личный кабинет налогоплательщика — всё официально." },
+        { title: "Лицензионное ПО и защищённые компьютеры", text: "1С и личный кабинет налогоплательщика — официально. Компьютеры защищены лицензионным антивирусом, данные не уходят наружу." },
       ],
       price:
         "Сдача отчётности — не отдельная услуга, она входит в договор аутсорсинга. Цена зависит от объёма документов.",
       faq: [
-        { q: "Что с отчётами, которые не сдал прошлый бухгалтер?", a: "Найдём на входной проверке, покажем, что осталось открытым, дадим план. Ответственность за прошлый период обсуждаем отдельно." },
+        { q: "Что с отчётами, которые не сдал прошлый бухгалтер?", a: "Найдём на экспресс-аудите, покажем, что осталось открытым, дадим план. Ответственность за прошлый период обсуждаем отдельно." },
         { q: "Могу увидеть отчёт до сдачи?", a: "Да. Сумму и из чего она сложилась видите до отправки." },
-        { q: "Срок сдачи выпадает на выходной?", a: "Мы на связи 7 дней в неделю. Если срок на выходной — сдаём раньше." },
+        { q: "Срок сдачи выпадает на выходной?", a: "Мы на связи 24/7. Если срок на выходной — сдаём раньше." },
       ],
       related: ["outsourcing", "audit-defense", "entry-audit"],
     },
@@ -676,11 +676,11 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       slug: "snizhenie-nalogov",
       title: "Законное снижение налогов для ООО — Ташкент",
       description:
-        "Из ~70 налоговых льгот находим и применяем подходящие вам. Процент от экономии не берём — это входит в работу. Для ООО, Ташкент.",
+        "Из действующих налоговых льгот находим и применяем подходящие вам. Процент от экономии не берём — это входит в работу. Для ООО, Ташкент.",
       eyebrow: "Законное снижение налогов",
       h1: "Сосед платит меньше налогов. Почему?",
       lead:
-        "Обычно ответ простой: его бухгалтер применил льготу, ваш — нет. В Узбекистане около 70 налоговых льгот. Разбираем, какие подходят вам, и применяем — без отдельного процента.",
+        "Обычно ответ простой: его бухгалтер применил льготу, ваш — нет. В Узбекистане десятки налоговых льгот. Разбираем, какие подходят вам, и применяем — без отдельного процента.",
       forWhom: [
         "Оборот вырос, налоги тоже — а законный способ платить меньше никто не показывает",
         "Собственник, который слышал, что похожая фирма платит меньше",
@@ -705,10 +705,10 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
         { title: "Сообщаем первыми", text: "Вышла новая льгота — узнаете от нас, а не из Instagram." },
       ],
       price:
-        "Входит в договор аутсорсинга. Ни отдельного процента, ни отдельной оплаты. На входной проверке заранее скажем, какие льготы подходят.",
+        "Входит в договор аутсорсинга. Ни отдельного процента, ни отдельной оплаты. На экспресс-аудите заранее скажем, какие льготы подходят.",
       faq: [
         { q: "Это законно?", a: "Да. Только льготы и режимы из Налогового кодекса. Со скрытым оборотом и наличными продажами не работаем — это в договоре." },
-        { q: "Сколько можно сэкономить?", a: "Зависит от отрасли. В некоторых (например, добыча) льгот нет вообще — скажем заранее. Точная цифра после входной проверки." },
+        { q: "Сколько можно сэкономить?", a: "Зависит от отрасли. В некоторых (например, добыча) льгот нет вообще — скажем заранее. Точная цифра после экспресс-аудита." },
         { q: "Почему мой бухгалтер этого не сделал?", a: "Обычно нет времени: один человек ведёт несколько фирм и не успевает следить за законами. Это не его вина — так устроена система." },
       ],
       related: ["tax-refund", "regime", "outsourcing"],
@@ -743,7 +743,7 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       ],
       why: [
         { title: "Без процента", text: "С возвращённой суммы процент не берём." },
-        { title: "Находим на входной проверке", text: "Переплата — одно из первого, что смотрим у нового клиента." },
+        { title: "Находим на экспресс-аудите", text: "Переплата — одно из первого, что смотрим у нового клиента." },
         { title: "Следим за сроком", text: "Истёк срок возврата — деньги не вернутся. Мы действуем раньше." },
       ],
       price:
@@ -792,7 +792,7 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       faq: [
         { q: "Можно сменить режим в середине года?", a: "Зависит от ситуации — часть переходов только с начала года, часть обязательна (при превышении порога). На звонке скажем точно." },
         { q: "Перейду на НДС — налоги не вырастут?", a: "Не всегда. Если ваши контрагенты платят НДС, входящий НДС снижает нагрузку. Посчитаем и покажем." },
-        { q: "Мой бухгалтер об этом не говорил.", a: "Часто нет времени. Это один из первых вопросов входной проверки." },
+        { q: "Мой бухгалтер об этом не говорил.", a: "Часто нет времени. Это один из первых вопросов экспресс-аудита." },
       ],
       related: ["tax-reduction", "tax-refund", "outsourcing"],
     },
@@ -925,7 +925,7 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       price: "Входит в договор аутсорсинга. Только кадры и зарплата — по числу сотрудников, на первом звонке.",
       faq: [
         { q: "Сотрудники не увидят зарплаты друг друга?", a: "Зарплатные данные — только между вами и главным бухгалтером. В общую группу не попадают." },
-        { q: "Кадровый учёт вообще не вёлся?", a: "На входной проверке смотрим, чего нет, и приводим документы в порядок." },
+        { q: "Кадровый учёт вообще не вёлся?", a: "На экспресс-аудите смотрим, чего нет, и приводим документы в порядок." },
         { q: "Работаете только по кадрам?", a: "Да, как отдельная услуга тоже." },
       ],
       related: ["outsourcing", "reporting", "entry-audit"],
@@ -1009,7 +1009,7 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       faq: [
         { q: "Контрагент рисковый — что делать?", a: "До договора — другой поставщик. Если счёт-фактура уже есть — план: укрепить документы и подготовиться к проверке." },
         { q: "Могу проверить сам?", a: "Базовый статус — да, в кабинете налогоплательщика. Но десятки контрагентов каждый месяц — это время. Это делаем мы." },
-        { q: "Старых контрагентов тоже проверяете?", a: "На входной проверке — всех. Дальше каждый месяц." },
+        { q: "Старых контрагентов тоже проверяете?", a: "На экспресс-аудите — всех. Дальше каждый месяц." },
       ],
       related: ["audit-defense", "outsourcing", "reporting"],
     },
@@ -1018,10 +1018,10 @@ export const services: Record<Locale, Record<ServiceId, ServicePage>> = {
       ...ruCommon,
       id: "entry-audit",
       slug: "audit-buhgalterii",
-      title: "Аудит бухгалтерии (входная проверка) — Ташкент",
+      title: "Аудит бухгалтерии (экспресс-аудит) — Ташкент",
       description:
         "Проверяем бухгалтерию за последний период: ошибки, переплата налогов, неприменённые льготы, расхождения со складом. Результат — список и план исправления.",
-      eyebrow: "Входная проверка",
+      eyebrow: "Экспресс-аудит",
       h1: "Впервые посмотрите на работу бухгалтера со стороны",
       lead:
         "Собственник не может оценить работу бухгалтера — только другой бухгалтер. Мы проверяем последний период и даём конкретный список: где ошибка, где переплата, где риск проверки. Это наш первый шаг с каждым клиентом.",

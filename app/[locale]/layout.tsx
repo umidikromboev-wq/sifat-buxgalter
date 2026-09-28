@@ -35,7 +35,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     image: siteUrl + "/logo.png",
     address: {
       "@type": "PostalAddress",
-      streetAddress: locale === "uz" ? "Yangi Sergeli koʻchasi, 7/2" : "ул. Янги Сергели, 7/2",
+      streetAddress: locale === "uz" ? "Yakkasaroy tumani, Muqimiy koʻchasi" : "Яккасарайский район, ул. Мукими",
       addressLocality: locale === "uz" ? "Toshkent" : "Ташкент",
       addressCountry: "UZ",
     },

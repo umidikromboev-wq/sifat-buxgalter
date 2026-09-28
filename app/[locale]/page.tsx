@@ -271,13 +271,29 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
+      {/* PROCESS */}
+      <section id="jarayon" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="eyebrow">{h.process.eyebrow}</div>
+          <h2>{h.process.h2}</h2>
+          <ol className="process five" style={{ marginTop: 28 }}>
+            {h.process.steps.map((st) => (
+              <li key={st.title}>
+                <h3>{st.title}</h3>
+                <p>{st.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       {/* TEAM */}
       <section id="jamoa" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="eyebrow">{h.team.eyebrow}</div>
           <h2>{h.team.h2}</h2>
-          <div className="grid-2" style={{ marginTop: 24 }}>
-            {h.team.people.map((p) => (
+          <div className="grid-2 team-solo" style={{ marginTop: 24 }}>
+            {h.team.people.slice(0, 1).map((p) => (
               <div className="card person" key={p.name}>
                 <div className="avatar">{p.initial}</div>
                 <div>

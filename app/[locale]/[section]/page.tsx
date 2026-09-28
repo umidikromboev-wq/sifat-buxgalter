@@ -272,7 +272,7 @@ export default async function SectionPage({ params }: Props) {
             <div className="card">
               <h3>{t.footer.office}</h3>
               <p style={{ margin: 0 }}>{t.footer.address}</p>
-              <p className="muted">{t.footer.landmark}</p>
+              {t.footer.landmark && <p className="muted">{t.footer.landmark}</p>}
               <a href={contacts.map} target="_blank" rel="noopener">
                 {t.footer.mapLink}
               </a>

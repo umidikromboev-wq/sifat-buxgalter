@@ -20,7 +20,7 @@ export default function Footer({ locale }: { locale: Locale }) {
           <div>
             <h4>{t.footer.office}</h4>
             <div>{t.footer.address}</div>
-            <div>{t.footer.landmark}</div>
+            {t.footer.landmark && <div>{t.footer.landmark}</div>}
             <a href={contacts.map} target="_blank" rel="noopener">
               {t.footer.mapLink}
             </a>

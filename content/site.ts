@@ -8,7 +8,7 @@ export const contacts = {
   telegram: "https://t.me/Davronbekov_Bekzod",
   telegramHandle: "@Davronbekov_Bekzod",
   instagram: "https://instagram.com/sifatbuxgalter",
-  map: "https://maps.app.goo.gl/pBtkJ7jbAEkg3x3g7",
+  map: "https://www.google.com/maps/search/?api=1&query=Muqimiy+ko%27chasi+Yakkasaroy+Toshkent",
 };
 
 export const clients: { name: string; file: string }[] = [
@@ -69,7 +69,7 @@ export const ui: Record<Locale, UiStrings> = {
     relatedTitle: "Bogʻliq xizmatlar",
     ctaTitle: "Bepul 10 daqiqalik qoʻngʻiroq",
     ctaText:
-      "Telefoningizni qoldiring — Bekzod 1 soat ichida, odatda 10 daqiqada qoʻngʻiroq qiladi. Hech qayerga borish shart emas: ofisda uchrashuvni faqat oʻzingiz xohlasangiz belgilaymiz.",
+      "Telefoningizni qoldiring — Bekzod 10 daqiqa ichida bogʻlanadi. Hech qayerga borish shart emas: ofisda uchrashuvni faqat oʻzingiz xohlasangiz belgilaymiz.",
     orCall: "Yoki hoziroq qoʻngʻiroq qiling",
     telegramLine: "Yozishmani afzal koʻrasizmi? Bekzodga Telegramda yozing",
     form: {
@@ -86,10 +86,10 @@ export const ui: Record<Locale, UiStrings> = {
       errorPhone: "Telefon raqamini tekshiring: +998 XX XXX XX XX",
     },
     footer: {
-      online: "Haftada 7 kun aloqadamiz",
+      online: "Aloqadamiz 24/7",
       office: "Ofis",
-      address: "Toshkent, Yangi Sergeli koʻchasi, 7/2",
-      landmark: "Moʻljal: VOLVO binosi",
+      address: "Toshkent, Yakkasaroy tumani, Muqimiy koʻchasi",
+      landmark: "",
       mapLink: "Xaritada ochish ↗",
       contact: "Aloqa",
       services: "Xizmatlar",
@@ -109,7 +109,7 @@ export const ui: Record<Locale, UiStrings> = {
     relatedTitle: "Связанные услуги",
     ctaTitle: "Бесплатный звонок на 10 минут",
     ctaText:
-      "Оставьте телефон — Бекзод перезвонит в течение часа, обычно за 10 минут. Никаких поездок: встречу в офисе назначим, только если сами захотите.",
+      "Оставьте телефон — Бекзод свяжется в течение 10 минут. Никаких поездок: встречу в офисе назначим, только если сами захотите.",
     orCall: "Или позвоните прямо сейчас",
     telegramLine: "Удобнее переписка? Напишите Бекзоду в Telegram",
     form: {
@@ -126,10 +126,10 @@ export const ui: Record<Locale, UiStrings> = {
       errorPhone: "Проверьте номер телефона: +998 XX XXX XX XX",
     },
     footer: {
-      online: "На связи 7 дней в неделю",
+      online: "На связи 24/7",
       office: "Офис",
-      address: "Ташкент, ул. Янги Сергели, 7/2",
-      landmark: "Ориентир: здание VOLVO",
+      address: "Ташкент, Яккасарайский район, ул. Мукими",
+      landmark: "",
       mapLink: "Открыть на карте ↗",
       contact: "Связь",
       services: "Услуги",
