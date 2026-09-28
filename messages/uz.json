@@ -1,0 +1,689 @@
+{
+  "meta": {
+    "title": "Toshkentda buxgalteriya autsorsingi — soliqlar, hisobotlar, shartnoma boʻyicha javobgarlik",
+    "description": "Sizda buxgalter bor. Soliq xavfi esa hamon sizniki. 10 daqiqa ichida javob beramiz — 24/7, soliqlarni qonuniy kamaytiramiz va xatolarimiz uchun shartnoma boʻyicha javob beramiz. Ishni ekspress-auditdan boshlaymiz."
+  },
+  "a11y": {
+    "skip": "Asosiy qismga oʻtish",
+    "menu": "Menyuni ochish",
+    "close": "Yopish",
+    "language": "Sayt tili",
+    "home": "Bosh sahifaga",
+    "callUs": "Qoʻngʻiroq qilish",
+    "telegram": "Telegramda yozish",
+    "theme": "Mavzuni almashtirish: yorugʻ yoki qorongʻi"
+  },
+  "nav": {
+    "menu": "Menyu",
+    "services": "Xizmatlar",
+    "promises": "Kafolatlar",
+    "pricing": "Narx",
+    "process": "Qanday boshlaymiz",
+    "faq": "Savollar",
+    "contact": "Aloqa"
+  },
+  "cta": {
+    "call": "10 daqiqalik bepul qoʻngʻiroq",
+    "callShort": "10 daqiqalik qoʻngʻiroq",
+    "telegram": "Telegramda yozing",
+    "audit": "Ekspress-auditga yozilish",
+    "callNow": "Hozir qoʻngʻiroq qilish",
+    "more": "Batafsil"
+  },
+  "hero": {
+    "badge": "10 daqiqa ichida javob beramiz · 24/7",
+    "eyebrow": "Buxgalteriya autsorsingi · Toshkent",
+    "titleA": "Sizda buxgalter bor.",
+    "titleB": "Soliq xavfi esa hamon sizniki.",
+    "l1": "<b>10 daqiqa ichida javob beramiz</b> — 24/7, shanba va yakshanba ham.",
+    "l2": "<b>Soliqlarni qonuniy kamaytiramiz</b> — tejalgan summadan foiz olmasdan.",
+    "l3": "<b>Shartnoma boʻyicha javob beramiz:</b> bizning xatomiz — bizning jarimamiz.",
+    "note": "10 daqiqa — bu savdo emas. Uchta savol beramiz va soliq xavfi qayerda ekanini aytamiz.",
+    "statLabel": "2016-yildan buxgalteriya va soliqlarni yuritamiz",
+    "scroll": "Pastga"
+  },
+  "report": {
+    "sample": "Namuna",
+    "title": "Direktor uchun hisobot",
+    "period": "Oy yakunlari",
+    "rows": [
+      {
+        "label": "Soliqlar toʻlandi",
+        "value": "Oʻz vaqtida"
+      },
+      {
+        "label": "Hisobotlar topshirildi",
+        "value": "14 / 14"
+      },
+      {
+        "label": "Xavflar bartaraf etildi",
+        "value": "2"
+      }
+    ],
+    "savingsLabel": "Qonuniy tejash",
+    "savingsHidden": "NDA ostida",
+    "chartLabel": "Soliq yuki",
+    "chartDelta": "apreldagidan past",
+    "months": [
+      "apr",
+      "may",
+      "iyun",
+      "iyul",
+      "avg",
+      "sen"
+    ],
+    "signed": "Tekshirdi: Ibrohim, bosh buxgalter",
+    "stamp": "Tekshirildi",
+    "chatTime": "Yak, 23:40",
+    "chatQuestion": "Soliqdan xabarnoma keldi. Nima qilamiz?",
+    "chatAnswer": "Koʻryapmiz. Suratini yuboring — 10 daqiqa ichida javob beramiz."
+  },
+  "triggers": {
+    "eyebrow": "Vaziyatlar",
+    "title": "Bizga qachon <em>murojaat qilishadi</em>",
+    "subtitle": "Koʻpincha biror narsa buzilganda emas, balki egasi oʻziga birinchi marta noqulay savol berganida.",
+    "items": [
+      "Hammasi joyidadek — lekin qancha ortiqcha soliq toʻlayotganingizni hech kim hisoblamagan.",
+      "Soliq idorasidan xabarnoma keldi yoki hisob raqami bloklandi.",
+      "Yaqinda soliq tekshiruvi — va u nima topishini hech kim ayta olmaydi.",
+      "Buxgalter «ertaga» deydi, savol esa bugun pul turadi.",
+      "Kompaniya oʻsdi — ombor, import, marketpleyslar, — hisob esa oʻzgarmadi.",
+      "Soliqlar toʻlanmoqda, lekin umumiy manzara yoʻq: direktor uchun tushunarli hisobot yoʻq.",
+      "Kadrlar hujjatlari va ish haqini yillar davomida hech kim tekshirmagan."
+    ],
+    "card": {
+      "eyebrow": "Uch savollik tekshiruv",
+      "title": "Bugun buxgalteringizga 3 ta savol bering",
+      "questions": [
+        "Bu yil qancha ortiqcha soliq toʻladik — va nega?",
+        "Ertaga soliq tekshiruvi kelsa, nima topadi?",
+        "Xato sizniki boʻlsa, jarimani kim toʻlaydi?"
+      ],
+      "note": "Javoblar 10 daqiqadan koʻproq vaqt olsa — gaplashaylik."
+    }
+  },
+  "compare": {
+    "eyebrow": "Taqqoslash",
+    "title": "Sizda allaqachon buxgalter bor. <em>Mana nima oʻzgaradi</em>",
+    "subtitle": "Farq koʻrinadigan oʻnta band — narx qanday hisoblanishi ham shu yerda.",
+    "colCriterion": "Nimani taqqoslaymiz",
+    "colNow": "Hozir",
+    "colUs": "Biz bilan",
+    "rows": [
+      {
+        "label": "Javob tezligi",
+        "now": "Buxgalter boʻsh boʻlganda, ish vaqtida",
+        "us": "10 daqiqa ichida, 24/7 — shanba va yakshanba ham"
+      },
+      {
+        "label": "Xato uchun kim toʻlaydi",
+        "now": "Kompaniya — jarima va penyalar",
+        "us": "Biz, agar xato bizniki boʻlsa. Bu shartnomada yozilgan"
+      },
+      {
+        "label": "Soliqlarni kamaytirish",
+        "now": "«Bu mening vazifam emas» yoki soʻrov boʻyicha",
+        "us": "Qonuniy optimallashtirish — tejalgan summadan foizsiz"
+      },
+      {
+        "label": "Direktor uchun hisobot",
+        "now": "Kamdan-kam va buxgalteriya tilida",
+        "us": "Har oy — tushunarli tilda"
+      },
+      {
+        "label": "Taʼtil va kasallik",
+        "now": "Ish toʻxtaydi",
+        "us": "Jamoa oʻrnini bosadi — muddatlar buzilmaydi"
+      },
+      {
+        "label": "Tajriba",
+        "now": "Bir kishining tajribasi",
+        "us": "Jamoa: soliqlar, kadrlar, TIF, tekshiruvlar"
+      },
+      {
+        "label": "Tekshiruvlar va nizolar",
+        "now": "Direktor oʻzi hal qiladi",
+        "us": "Kompaniyani tayyorlaymiz va soliq tekshiruvida hamrohlik qilamiz"
+      },
+      {
+        "label": "Maʼlumotlar himoyasi",
+        "now": "Bitta kompyuterga bogʻliq",
+        "us": "Litsenziyali 1C, himoyalangan kompyuterlar, litsenziyali antivirus, NDA"
+      },
+      {
+        "label": "Ishni boshlash",
+        "now": "Oʻtgan davrlarni hech kim tekshirmagan",
+        "us": "Ish boshlanishidan oldin ekspress-audit"
+      },
+      {
+        "label": "Narx mantigʻi",
+        "now": "Ish haqi + soliqlar + ish joyi + dasturlar. Xavf — sizniki",
+        "us": "Ish hajmiga qarab oylik qatʼiy summa. Xavf — bizniki"
+      }
+    ],
+    "footnote": "Aniq narxni ekspress-auditdan keyin aytamiz."
+  },
+  "impact": {
+    "eyebrow": "Manifest",
+    "manifestA": "Hisobot — bu fikr emas.",
+    "manifestB": "Jarima ham.",
+    "sub": "Shuning uchun raqamlar bilan gapiramiz.",
+    "stats": [
+      {
+        "prefix": "",
+        "value": "2016",
+        "suffix": "",
+        "label": "yildan beri buxgalteriya va soliqlarni yuritamiz"
+      },
+      {
+        "prefix": "",
+        "value": "4",
+        "suffix": "mlrd soʻmgacha",
+        "label": "yiliga — mijoz uchun qonuniy soliq tejovi"
+      },
+      {
+        "prefix": "",
+        "value": "10",
+        "suffix": "daqiqa",
+        "label": "har qanday savolga 10 daqiqa ichida javob beramiz"
+      },
+      {
+        "prefix": "",
+        "value": "24/7",
+        "suffix": "",
+        "label": "shanba va yakshanba ham"
+      }
+    ],
+    "cta": "Qancha ortiqcha toʻlayotganingizni bilish"
+  },
+  "risk": {
+    "eyebrow": "Yashirin xavf",
+    "title": "Kichik xato qanday qilib <em>jarimaga aylanadi</em>",
+    "subtitle": "Soliq idorasi topmaguncha xavf koʻrinmaydi.",
+    "steps": [
+      {
+        "title": "Bitta hujjatdagi xato",
+        "text": "Notoʻgʻri stavka, xato hisob-faktura, unutilgan hisobot. Bugun bu arzimas narsa."
+      },
+      {
+        "title": "U har oy takrorlanadi",
+        "text": "Hech kim tekshirmaydi — xato koʻpayadi, penya esa jimgina yigʻiladi."
+      },
+      {
+        "title": "Uni birinchi boʻlib soliq idorasi topadi",
+        "text": "Xabarnoma, hisob raqamining bloklanishi yoki tekshiruv. Toʻlash — kompaniya zimmasida."
+      }
+    ],
+    "fineValue": "4–5",
+    "fineUnit": "mln soʻm",
+    "fineLabel": "bitta hisobotni oʻz vaqtida topshirmaganlik uchun jarima",
+    "fineNote": "Bitta hisobot. Bitta oy. Hech qanday yomon niyatsiz.",
+    "cta": "Xavflarni soliq idorasidan oldin topish"
+  },
+  "services": {
+    "eyebrow": "Xizmatlar",
+    "title": "Nimani <em>oʻz zimmamizga olamiz</em>",
+    "subtitle": "Beshta yoʻnalish — bitta jamoa va bitta shartnoma.",
+    "items": {
+      "accounting": {
+        "title": "Buxgalteriya va hisobotlar",
+        "text": "Litsenziyali 1C dasturida toʻliq hisob, barcha hisobotlar — oʻz vaqtida, har oy — direktor uchun hisobot.",
+        "tags": [
+          "Buxgalteriya hisobi",
+          "Soliq hisobotlari",
+          "Statistika",
+          "Direktor uchun hisobot"
+        ]
+      },
+      "taxes": {
+        "title": "Soliqlar",
+        "text": "Soliqlarni hisoblash va yukni qonuniy kamaytirish: rejimlar, imtiyozlar, toʻgʻri hujjatlar. Tejalgan summadan foizsiz.",
+        "tags": [
+          "QQS",
+          "Foyda soligʻi",
+          "Imtiyozlar",
+          "Optimallashtirish"
+        ]
+      },
+      "audits": {
+        "title": "Tekshiruvlar va nizolar",
+        "text": "Soliq tekshiruviga tayyorlaymiz, xabarnomalarga javob beramiz, hisob raqamini blokdan chiqarishga yordam beramiz va pozitsiyangizni himoya qilamiz.",
+        "tags": [
+          "Soliq tekshiruvlari",
+          "Xabarnomalar",
+          "Hisob bloklanishi",
+          "Nizolar"
+        ]
+      },
+      "payroll": {
+        "title": "Kadrlar va ish haqi",
+        "text": "Ish haqi, JShDS va ijtimoiy soliq, mehnat shartnomalari va buyruqlar — kadrlar hujjatlari tekshiruvga bardosh berishi uchun.",
+        "tags": [
+          "Ish haqi",
+          "JShDS va ijtimoiy soliq",
+          "Mehnat shartnomalari",
+          "Buyruqlar"
+        ]
+      },
+      "trade": {
+        "title": "Tashqi savdo (TIF)",
+        "text": "Import va eksport: kontraktlar, bojxona hujjatlari, valyuta nazorati va importdagi QQS.",
+        "tags": [
+          "Import",
+          "Eksport",
+          "Bojxona",
+          "Valyuta nazorati"
+        ]
+      }
+    },
+    "all": {
+      "title": "Barcha xizmatlar",
+      "text": "Vaziyatingizga mos toʻplamni tanlaymiz — ekspress-auditdan boshlaymiz.",
+      "cta": "Barcha xizmatlarni koʻrish"
+    }
+  },
+  "promises": {
+    "eyebrow": "Kafolatlar",
+    "title": "<em>Shartnomaga yozadigan</em> yettita bandimiz",
+    "subtitle": "Saytdagi vaʼdalar emas — imzo va muhr bilan tasdiqlangan majburiyatlar.",
+    "items": [
+      {
+        "title": "10 daqiqa ichida javob — 24/7",
+        "text": "Shanba va yakshanba ham. Savol murakkab boʻlsa, birinchi javobdayoq hal qilish muddatini aytamiz."
+      },
+      {
+        "title": "Bizning xatomiz — bizning jarimamiz",
+        "text": "Jarima bizning xatomiz tufayli yuzaga kelsa, uni biz toʻlaymiz. «Hal qilamiz» emas — shartnoma bandi."
+      },
+      {
+        "title": "Soliqlarni optimallashtirish — foizsiz",
+        "text": "Tejalgan summadan foiz olmaymiz. Soliqlarni qonuniy kamaytirish oylik narxga kiritilgan."
+      },
+      {
+        "title": "Buxgalter oyiga 3 marta ofisingizda",
+        "text": "Hujjatlarni oladi, jamoangiz savollariga javob beradi va biznesni faqat dasturda emas, jonli koʻradi."
+      },
+      {
+        "title": "NDA — birinchi hujjatgacha",
+        "text": "Maʼlumotlaringizni koʻrishimizdan oldin maxfiylik shartnomasini imzolaymiz."
+      },
+      {
+        "title": "Litsenziyali 1C va himoyalangan kompyuterlar",
+        "text": "Litsenziyali dasturlar, himoyalangan kompyuterlar va litsenziyali antivirus. Maʼlumotlarga kirish — faqat sizning jamoangizda."
+      },
+      {
+        "title": "Ish boshlanishidan oldin ekspress-audit",
+        "text": "Masʼuliyatni olishdan oldin oʻtgan davrlarni tekshiramiz — va nima topganimizni koʻrsatamiz."
+      }
+    ],
+    "sign": "Shartnoma bilan birga imzolanadi",
+    "cta": "Shartnoma shartlarini muhokama qilish"
+  },
+  "pricing": {
+    "eyebrow": "Narx",
+    "title": "Qancha turadi — <em>va nimaga bogʻliq</em>",
+    "subtitle": "Tariflarni eʼlon qilmaymiz: aylanmasi bir xil boʻlgan ikki kompaniyada ish hajmi keskin farq qilishi mumkin.",
+    "depends": {
+      "title": "Narx nimaga bogʻliq",
+      "items": [
+        "Kiruvchi va chiquvchi hujjatlar",
+        "Operatsiyalar soni",
+        "Oylik hisobotlar",
+        "Kadrlar hujjatlari",
+        "Xodimlar soni"
+      ]
+    },
+    "excluded": {
+      "title": "Nimalar kirmaydi",
+      "items": [
+        "Kompaniyaning oʻz soliqlari, bojlari va yigʻimlari",
+        "Oʻtgan davrlar hisobini tiklash — alohida baholanadi",
+        "Bir martalik loyihalar: tugatish, qayta tashkil etish",
+        "Sud nizolari — alohida shartnoma boʻyicha"
+      ]
+    },
+    "why": {
+      "title": "Nega shtatdagi buxgalterdan qimmatroq",
+      "text": "Siz bir kishi uchun emas, jamoa va biz oʻz zimmamizga oladigan xavf uchun toʻlaysiz:",
+      "items": [
+        "Bosh buxgalter, soliq mutaxassisi, kadrlar va TIF mutaxassisi",
+        "Xatolar uchun javobgarlik — shartnomada",
+        "10 daqiqa ichida javob — 24/7",
+        "Litsenziyali 1C, himoyalangan kompyuterlar, antivirus",
+        "Taʼtil, kasallik va ishdan ketishlarsiz"
+      ]
+    },
+    "when": {
+      "title": "Aniq narxni qachon aytamiz",
+      "text": "Ekspress-auditdan keyin: hujjatlar va operatsiyalarni hisoblab, oylik qatʼiy summani aytamiz. U shartnomada yoziladi."
+    }
+  },
+  "fit": {
+    "eyebrow": "Kimlar bilan ishlaymiz",
+    "title": "Kimga mos kelamiz — <em>va kimga yoʻq</em>",
+    "yesTitle": "Mos kelamiz",
+    "yes": [
+      "Aylanmasi 5 mlrd soʻmdan, xodimlari 5 nafar va undan ortiq boʻlgan MChJlar",
+      "Ishlab chiqarish, xizmatlar, ulgurji savdo, import-eksport, marketpleyslar",
+      "Toshkent shahri va Toshkent viloyati",
+      "Qonuniy tejashni istagan biznes egalari"
+    ],
+    "noTitle": "Mos kelmaymiz",
+    "no": [
+      "Chakana savdo",
+      "Umuman soliq toʻlashni istamaganlar",
+      "Materiallarni hujjatsiz sotib oladigan qurilish kompaniyalari",
+      "Alkogol va tamaki"
+    ],
+    "note": "Mos kelishingizga ishonchingiz komil emasmi? 10 daqiqada ochiq aytamiz."
+  },
+  "process": {
+    "eyebrow": "Qanday boshlaymiz",
+    "title": "Arizadan <em>birinchi hisobotgacha</em> besh qadam",
+    "subtitle": "Uzoq muzokaralarsiz: har bir qadamda nima boʻlayotgani va nimaga ega boʻlishingiz aniq.",
+    "steps": [
+      {
+        "title": "Ariza → 10 daqiqa",
+        "text": "10 daqiqa ichida qayta qoʻngʻiroq qilamiz. Uchta savol — va xavf qayerdaligi aniq."
+      },
+      {
+        "title": "Ekspress-audit",
+        "text": "Soʻnggi davrlar boʻyicha hisobotlar, soliqlar va asosiy hujjatlarni tekshiramiz."
+      },
+      {
+        "title": "Natija va narx",
+        "text": "Topilgan xavflar va ortiqcha toʻlovlarni koʻrsatamiz, aniq narxni aytamiz."
+      },
+      {
+        "title": "Shartnoma va topshirish",
+        "text": "NDA va shartnomani imzolaymiz, hujjatlar va 1C bazasini qabul qilamiz."
+      },
+      {
+        "title": "Har oy",
+        "text": "Hisobotlar — oʻz vaqtida, soliqlar — hisoblangan, direktor uchun hisobot — sizda."
+      }
+    ],
+    "cta": "1-qadam: ariza qoldirish"
+  },
+  "expert": {
+    "eyebrow": "Hisobingiz uchun kim javob beradi",
+    "name": "Ibrohim",
+    "role": "Bosh buxgalter",
+    "intro": "Metodologiya, soliqlar va bizdan soliq idorasiga ketadigan har bir hisobot uchun javob beradi.",
+    "facts": [
+      {
+        "value": "2016",
+        "text": "yildan beri buxgalteriyada"
+      },
+      {
+        "value": "Avangard",
+        "text": "hozir — Avangard kompaniyasida bosh buxgalter"
+      },
+      {
+        "value": "4 mlrd gacha",
+        "text": "soʻm — yiliga mijozlarga qonuniy tejab bergan"
+      },
+      {
+        "value": "1 mlrd gacha",
+        "text": "soʻmlik soliq xavflarini bartaraf etgan"
+      },
+      {
+        "value": "10 000",
+        "text": "SKU — omborni 1C bilan integratsiya qilgan"
+      }
+    ],
+    "cta": "Bosh buxgalterga savol berish",
+    "photoAlt": "Ibrohim, bosh buxgalter"
+  },
+  "clients": {
+    "eyebrow": "Mijozlar",
+    "title": "Hisob va soliqlarni <em>bizga ishonib topshirishadi</em>"
+  },
+  "faq": {
+    "eyebrow": "Savollar",
+    "title": "Koʻp beriladigan <em>savollar</em>",
+    "subtitle": "Savolingizni topmadingizmi? Yozing — 10 daqiqa ichida javob beramiz.",
+    "items": [
+      {
+        "q": "Bizning buxgalterimiz bilan nima boʻladi?",
+        "a": "Buni siz hal qilasiz. Baʼzi mijozlar shtatdagi buxgalterni birlamchi hujjatlar uchun qoldiradi, soliqlar, hisobotlar va masʼuliyatni esa bizga topshiradi. Boshqalar hisobni toʻliq topshiradi. Eng yaxshi variantni ekspress-auditdan keyin taklif qilamiz."
+      },
+      {
+        "q": "Ekspress-audit nima va u qancha davom etadi?",
+        "a": "Soʻnggi davrlar boʻyicha hisobotlar, soliq hisob-kitoblari va asosiy hujjatlarni tekshiramiz hamda xavflar va ortiqcha toʻlovlarni koʻrsatamiz. Muddat hujjatlar hajmiga bogʻliq — uni birinchi qoʻngʻiroqdayoq aytamiz."
+      },
+      {
+        "q": "Qanday qilib 10 daqiqa ichida javob berasiz — hatto tunda va yakshanba kuni ham?",
+        "a": "Bizda 24/7 navbatchi mutaxassis bor, shanba va yakshanba ham. 10 daqiqa — mazmunli birinchi javobgacha boʻlgan vaqt. Savol murakkab boʻlsa, birinchi javobdayoq hal qilish muddatini aytamiz."
+      },
+      {
+        "q": "Agar siz xato qilsangiz, jarimani kim toʻlaydi?",
+        "a": "Biz. Jarima bizning xatomiz tufayli yuzaga kelgan boʻlsa, uni biz toʻlaymiz — bu shartnomaning alohida bandi."
+      },
+      {
+        "q": "Soliqlarni qanday qilib qonuniy kamaytirasiz? Tejalgan summadan foiz olasizmi?",
+        "a": "Soliq rejimini toʻgʻri tanlash, imtiyozlarni qoʻllash, toʻgʻri shartnomalar va birlamchi hujjatlar orqali — faqat soliq tekshiruviga bardosh beradigan usullar bilan. Tejalgan summadan foiz olmaymiz: optimallashtirish oylik narxga kiritilgan."
+      },
+      {
+        "q": "Maʼlumotlarimiz qanday himoyalangan?",
+        "a": "Hujjatlarni koʻrishdan oldin NDA imzolaymiz. Litsenziyali 1C dasturida, litsenziyali antivirusli himoyalangan kompyuterlarda ishlaymiz. Maʼlumotlaringizga faqat sizga biriktirilgan jamoa kira oladi."
+      },
+      {
+        "q": "Xizmatlaringiz qancha turadi?",
+        "a": "Hajmga bogʻliq: kiruvchi va chiquvchi hujjatlar, operatsiyalar, oylik hisobotlar, kadrlar hujjatlari va xodimlar soni. Aniq narxni ekspress-auditdan keyin aytamiz va shartnomada qayd etamiz."
+      },
+      {
+        "q": "Faqat Toshkentda ishlaysizmi?",
+        "a": "Toshkent shahri va Toshkent viloyatidagi kompaniyalar bilan ishlaymiz: buxgalter oyiga 3 marta ofisingizga keladi, qolgani — onlayn."
+      },
+      {
+        "q": "Xabarnoma allaqachon kelgan yoki hisob raqami bloklangan. Nima qilish kerak?",
+        "a": "Hoziroq qoʻngʻiroq qiling yoki yozing — bu shoshilinch holat. Dastlabki 10 daqiqada nima qilish kerakligini aytamiz va vaziyatni ishga olamiz."
+      }
+    ]
+  },
+  "ask": {
+    "eyebrow": "Ekspress-audit",
+    "title": "Buxgalteringiz <em>nimani eʼtibordan chetda qoldirganini</em> koʻrishga tayyormisiz?",
+    "text": "Ekspress-audit xavflar va ortiqcha toʻlovlarni soliq idorasidan oldin koʻrsatadi."
+  },
+  "lead": {
+    "eyebrow": "Ariza",
+    "title": "<em>10 daqiqalik</em> bepul qoʻngʻiroq",
+    "subtitle": "10 daqiqa ichida qayta qoʻngʻiroq qilamiz — 24/7, shanba va yakshanba ham.",
+    "stepsTitle": "Qoʻngʻiroqda nima boʻladi",
+    "notSales": "Bu savdo emas",
+    "steps": [
+      "Tinglaymiz: aylanma, xodimlar, soliq rejimi.",
+      "Asosiy soliq xavfi qayerdaligini koʻrsatamiz.",
+      "Keyingi qadamni taklif qilamiz — yoki mos kelmasligimizni ochiq aytamiz."
+    ],
+    "formTitle": "Kontaktlaringizni qoldiring",
+    "name": "Ismingiz",
+    "namePlaceholder": "Sizga qanday murojaat qilaylik",
+    "phone": "Telefon",
+    "phonePlaceholder": "+998 (90) 123-45-67",
+    "company": "Kompaniya",
+    "companyPlaceholder": "MChJ nomi",
+    "turnover": "Yillik aylanma",
+    "turnoverOptions": [
+      "5 mlrd soʻmgacha",
+      "5–20 mlrd soʻm",
+      "20–100 mlrd soʻm",
+      "100 mlrd soʻmdan ortiq"
+    ],
+    "optional": "ixtiyoriy",
+    "submit": "Menga qoʻngʻiroq qiling",
+    "sending": "Yuborilmoqda…",
+    "consent": "Tugmani bosish orqali aloqa maʼlumotlaringizni qayta ishlashga rozilik bildirasiz. Ularni uchinchi shaxslarga bermaymiz.",
+    "errors": {
+      "name": "Sizga qanday murojaat qilishimizni yozing",
+      "phone": "Raqamni tekshiring: +998 va 9 ta raqam",
+      "general": "Yuborib boʻlmadi. Bizga qoʻngʻiroq qiling yoki Telegramda yozing."
+    },
+    "phonesLabel": "Telefonlar",
+    "telegramLabel": "Telegram",
+    "officeLabel": "Ofis",
+    "address": "Toshkent, Yakkasaroy tumani, Muqimiy koʻchasi",
+    "hours": "24/7 javob beramiz, shanba va yakshanba ham",
+    "instagramLabel": "Instagram"
+  },
+  "callback": {
+    "title": "10 daqiqalik bepul qoʻngʻiroq",
+    "text": "Raqamingizni qoldiring — 10 daqiqa ichida qayta qoʻngʻiroq qilamiz. Bu savdo emas.",
+    "orTelegram": "Yozish qulayroqmi?"
+  },
+  "footer": {
+    "tagline": "Toshkentdagi MChJlar uchun buxgalteriya autsorsingi. Soliqlar, hisobotlar va masʼuliyat — shartnoma boʻyicha.",
+    "navTitle": "Boʻlimlar",
+    "servicesTitle": "Xizmatlar",
+    "contactTitle": "Aloqa",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "badges": [
+      "Litsenziyali 1C",
+      "NDA",
+      "24/7"
+    ]
+  },
+  "servicesPage": {
+    "metaTitle": "Xizmatlar — buxgalteriya, soliqlar, tekshiruvlar, kadrlar va TIF",
+    "metaDescription": "Buxgalteriya va hisobotlar, soliqlar, tekshiruvlar va nizolar, kadrlar va ish haqi, tashqi savdo. Bitta jamoa, bitta shartnoma, 10 daqiqa ichida javob — 24/7.",
+    "eyebrow": "Xizmatlar",
+    "title": "Barcha xizmatlar — <em>bitta jamoa va bitta shartnoma</em>",
+    "lead": "Vaziyatingizni tanlang — qayerdan boshlashni aytib beramiz.",
+    "routerTitle": "Nimadan boshlaymiz?",
+    "router": [
+      {
+        "key": "fine",
+        "label": "Hammasi joyidadek",
+        "title": "Ekspress-audit",
+        "text": "Ortiqcha toʻlovlar va yashirin xavflarni soliq idorasidan oldin topamiz."
+      },
+      {
+        "key": "urgent",
+        "label": "Xabarnoma keldi yoki hisob bloklandi",
+        "title": "Shoshilinch yordam",
+        "text": "Hoziroq qoʻngʻiroq qiling — 10 daqiqa ichida javob beramiz, 24/7, shanba va yakshanba ham."
+      },
+      {
+        "key": "taxes",
+        "label": "Soliqlar juda yuqori",
+        "title": "Soliqlarni kamaytirish",
+        "text": "Qonuniy optimallashtirish: rejimlar, imtiyozlar, hujjatlar. Tejalgan summadan foizsiz."
+      }
+    ],
+    "routerCta": {
+      "fine": "Ekspress-auditga yozilish",
+      "urgent": "Hozir qoʻngʻiroq qilish",
+      "taxes": "Soliqlarni kamaytirishni muhokama qilish"
+    },
+    "forWhom": "Kimlar uchun",
+    "included": "Nimalar kiradi",
+    "details": {
+      "accounting": {
+        "forWhom": "Ortiqcha shtatsiz toʻliq hisob kerak boʻlgan MChJlar uchun.",
+        "included": [
+          "Litsenziyali 1C dasturida buxgalteriya hisobi",
+          "Soliq va statistika hisobotlari oʻz vaqtida",
+          "Birlamchi hujjatlar va kontragentlar bilan hisob-kitoblarni solishtirish",
+          "Elektron hisob-fakturalar",
+          "Direktor uchun oylik hisobot"
+        ]
+      },
+      "taxes": {
+        "forWhom": "Koʻp toʻlayotgan va qonuniy ravishda kamroq toʻlashni istaganlar uchun.",
+        "included": [
+          "Soliqlarni hisoblash va toʻlash",
+          "Soliq yukini tahlil qilish",
+          "Soliq rejimi va imtiyozlarni tanlash",
+          "Shartnomalarni soliq xavflariga tekshirish",
+          "Ortiqcha toʻlovlarni qaytarish va hisobga olish"
+        ]
+      },
+      "audits": {
+        "forWhom": "Xabarnoma kelganda, hisob raqami bloklanganda yoki tekshiruv kutilayotganda.",
+        "included": [
+          "Soliq tekshiruviga tayyorgarlik",
+          "Xabarnoma va talabnomalarga javoblar",
+          "Hisob raqami bloklanganda yordam",
+          "Soliq tekshiruvida hamrohlik",
+          "Eʼtirozlar va sudgacha nizolar"
+        ]
+      },
+      "payroll": {
+        "forWhom": "Kadrlar «qanday boʻlsa shunday» yuritiladigan, 5 va undan ortiq xodimli kompaniyalar uchun.",
+        "included": [
+          "Ish haqini hisoblash",
+          "JShDS va ijtimoiy soliq",
+          "Mehnat shartnomalari va buyruqlar",
+          "Tabellar, taʼtillar, kasallik varaqalari",
+          "Kadrlar auditi"
+        ]
+      },
+      "trade": {
+        "forWhom": "Importchilar, eksportchilar va marketpleyslarda sotuvchilar uchun.",
+        "included": [
+          "Tashqi savdo kontraktlarini tekshirish",
+          "Import va eksport hisobi",
+          "Bojxona hujjatlari",
+          "Valyuta nazorati",
+          "Importdagi QQS va eksportda QQSni qaytarish"
+        ]
+      }
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Aloqa — 10 daqiqalik bepul qoʻngʻiroq",
+    "metaDescription": "Ariza qoldiring — 10 daqiqa ichida qayta qoʻngʻiroq qilamiz, 24/7. Toshkent, Yakkasaroy tumani, Muqimiy koʻchasi.",
+    "eyebrow": "Aloqa",
+    "title": "<em>10 daqiqalik</em> bepul qoʻngʻiroq",
+    "lead": "Ariza qoldiring — 10 daqiqa ichida qayta qoʻngʻiroq qilamiz, 24/7, shanba va yakshanba ham.",
+    "tenTitle": "10 daqiqada nima boʻladi",
+    "tenNote": "Bu savdo qoʻngʻirogʻi emas.",
+    "steps": [
+      {
+        "title": "Tinglaymiz",
+        "text": "Aylanma, xodimlar va soliq rejimi haqida soʻraymiz. Taqdimotlarsiz."
+      },
+      {
+        "title": "Xavfni koʻrsatamiz",
+        "text": "Hozirning oʻzida asosiy soliq xavfingiz qayerda ekanini aytamiz."
+      },
+      {
+        "title": "Qadam taklif qilamiz",
+        "text": "Ekspress-audit, shoshilinch choralar — yoki sizga mos kelmasligimizni ochiq aytamiz."
+      }
+    ],
+    "officeTitle": "Ofis",
+    "mapsYandex": "Yandex Xaritalar",
+    "mapsGoogle": "Google Maps",
+    "mapTitle": "Xarita: Sifat Buxgalter ofisi"
+  },
+  "thanks": {
+    "metaTitle": "Rahmat — 10 daqiqa ichida qoʻngʻiroq qilamiz",
+    "eyebrow": "Ariza qabul qilindi",
+    "title": "Rahmat! <em>10 daqiqa ichida qoʻngʻiroq qilamiz</em>",
+    "lead": "Raqamingizni terayotganimizda uchta faktni eslab qoling — shunda suhbat foydaliroq boʻladi:",
+    "facts": [
+      {
+        "title": "Aylanma va soliq rejimi",
+        "text": "Taxminiy yillik aylanma va rejim: QQS, aylanmadan olinadigan soliq yoki boshqa."
+      },
+      {
+        "title": "Xodimlar soni",
+        "text": "Shtatda qancha odam bor va hozir hisobni kim yuritadi."
+      },
+      {
+        "title": "Sizni eng koʻp nima bezovta qiladi",
+        "text": "Xabarnoma, tekshiruv, hisobning bloklanishi, yuqori soliqlar — yoki shunchaki tekshirib koʻrmoqchisiz."
+      }
+    ],
+    "telegram": "Telegram qulayroqmi? Bizga yozing",
+    "back": "Bosh sahifaga qaytish"
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "text": "Bunday sahifa yoʻq. Soliq xavfi esa hamon sizniki.",
+    "back": "Bosh sahifaga"
+  }
+}

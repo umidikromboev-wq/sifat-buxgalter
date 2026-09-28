@@ -1,40 +1,62 @@
-import { z } from "zod";
+/**
+ * The one place a lead leaves the browser.
+ *
+ * This site is frontend-only, so there is no API route here. Point
+ * `NEXT_PUBLIC_LEAD_ENDPOINT` at whatever receives leads — a CRM webhook, a
+ * Telegram bot, your own backend — and every form on the site posts this JSON
+ * to it. Until that variable is set, nothing is sent: the form still walks the
+ * visitor to the thank-you page, so a demo build behaves like the real one, and
+ * the console says loudly that the lead went nowhere.
+ */
+export type Lead = {
+  name: string;
+  phone: string;
+  company?: string;
+  turnover?: string;
+  source: "hero" | "form" | "modal" | "contact" | "services";
+  locale: string;
+};
 
-const PHONE_DIGITS_MIN = 9;
-const PHONE_DIGITS_MAX = 15;
+const endpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT;
 
-export const leadSchema = z.object({
-  name: z.string().trim().min(2).max(80),
-  phone: z
-    .string()
-    .trim()
-    .max(32)
-    .refine((v) => {
-      const digits = v.replace(/\D/g, "").length;
-      return digits >= PHONE_DIGITS_MIN && digits <= PHONE_DIGITS_MAX;
-    }),
-  company: z.string().trim().max(120).optional().default(""),
-  turnover: z.string().trim().max(60).optional().default(""),
-  lang: z.enum(["uz", "ru"]),
-  page: z.string().trim().max(200).optional().default(""),
-  // honeypot: живой человек поле не видит и не заполняет
-  website: z.string().max(0).optional().default(""),
-});
+export async function submitLead(lead: Lead): Promise<void> {
+  if (!endpoint) {
+    console.warn(
+      "[lead] NEXT_PUBLIC_LEAD_ENDPOINT is not set — this lead was not sent anywhere:",
+      lead,
+    );
+    return;
+  }
 
-export type Lead = z.infer<typeof leadSchema>;
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ...lead, page: window.location.href }),
+  });
 
-const esc = (s: string) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c] ?? c);
+  if (!response.ok) {
+    throw new Error(`Lead endpoint answered ${response.status}`);
+  }
+}
 
-export function formatLead(l: Lead): string {
-  return [
-    "<b>Новая заявка — Sifat Buxgalter</b>",
-    `Имя: ${esc(l.name)}`,
-    `Телефон: ${esc(l.phone)}`,
-    l.company && `Компания: ${esc(l.company)}`,
-    l.turnover && `Оборот: ${esc(l.turnover)}`,
-    `Язык сайта: ${l.lang.toUpperCase()}`,
-    l.page && `Страница: ${esc(l.page)}`,
-  ]
-    .filter(Boolean)
-    .join("\n");
+/** Uzbek numbers only: +998 and nine digits, whatever the visitor typed. */
+export function normalizePhone(value: string): string {
+  let digits = value.replace(/\D/g, "");
+  if (digits.startsWith("998")) digits = digits.slice(3);
+  return digits.slice(0, 9);
+}
+
+export function formatPhone(value: string): string {
+  const d = normalizePhone(value);
+  if (!d) return "";
+  let out = "+998 (" + d.slice(0, 2);
+  if (d.length >= 2) out += ")";
+  if (d.length > 2) out += " " + d.slice(2, 5);
+  if (d.length > 5) out += "-" + d.slice(5, 7);
+  if (d.length > 7) out += "-" + d.slice(7, 9);
+  return out;
+}
+
+export function isValidPhone(value: string): boolean {
+  return normalizePhone(value).length === 9;
 }

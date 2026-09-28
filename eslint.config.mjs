@@ -12,7 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Служебные скрипты разведки (Node CommonJS), не код сайта.
+    ".flowbite-react/**",
+    // Umid's market research (screenshots, reports, one-off scripts), not site code.
     "research/**",
   ]),
 ]);

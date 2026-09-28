@@ -1,34 +1,45 @@
-import { ru } from "./content/ru";
-import type { Content, Locale } from "./content/types";
-import { uz } from "./content/uz";
+/**
+ * Facts that are the same in every language: the brand, the phones, the
+ * Telegram handle and the office. Copy lives in `messages/*.json`; anything a
+ * visitor dials, taps or pastes into a map lives here, once.
+ */
+// The office pin from the client's Google Maps link (maps.app.goo.gl/pBtkJ7jbAEkg3x3g7).
+const office = { lat: 41.278422, lng: 69.250819 };
 
-export const SITE = {
+export const site = {
   name: "Sifat Buxgalter",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://sifat-buxgalter-site.vercel.app",
+  // Set NEXT_PUBLIC_SITE_URL in production: canonical links and hreflang use it.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  since: 2016,
   phones: [
-    { label: "+998 97 732 18 48", href: "tel:+998977321848" },
-    { label: "+998 94 647 80 45", href: "tel:+998946478045" },
+    { display: "+998 97 732 18 48", href: "tel:+998977321848" },
+    { display: "+998 94 647 80 45", href: "tel:+998946478045" },
   ],
-  telegram: "https://t.me/Davronbekov_Bekzod",
-  instagram: "https://instagram.com/sifatbuxgalter",
-  map: "https://maps.app.goo.gl/pBtkJ7jbAEkg3x3g7",
+  telegram: {
+    handle: "@Davronbekov_Bekzod",
+    href: "https://t.me/Davronbekov_Bekzod",
+  },
+  instagram: {
+    handle: "@sifatbuxgalter",
+    href: "https://www.instagram.com/sifatbuxgalter/",
+  },
+  office,
+  // Built from the coordinates rather than kept as the short link: a short
+  // link can expire or be re-pointed, and says nothing in review about where
+  // it leads.
+  maps: {
+    google: `https://www.google.com/maps/search/?api=1&query=${office.lat},${office.lng}`,
+    yandex: `https://yandex.uz/maps/?pt=${office.lng},${office.lat}&z=17&l=map`,
+    embed: `https://maps.google.com/maps?q=${office.lat},${office.lng}&z=16&output=embed`,
+  },
 } as const;
 
-export const CLIENTS = [
-  { file: "avangard", name: "Avangard" },
-  { file: "aiwa", name: "Aiwa" },
-  { file: "rollton", name: "Роллтон" },
-  { file: "klass-export", name: "Klass Export" },
-  { file: "inesis", name: "Inesis" },
-  { file: "profit-stone", name: "Profit Stone" },
-  { file: "poytaxt", name: "Poytaxt Aqua Wave" },
-  { file: "oq-tepa-dental", name: "Oq Tepa Dental" },
-  { file: "bumble", name: "Bumble" },
-  { file: "zhalyn-komir", name: "Жалын Көмір" },
-  { file: "tsg", name: "TSG" },
-  { file: "west-med", name: "West Med Group" },
-] as const;
+export type ServiceKey = "accounting" | "taxes" | "audits" | "payroll" | "trade";
 
-const CONTENT: Record<Locale, Content> = { uz, ru };
-
-export const getContent = (lang: Locale): Content => CONTENT[lang];
+export const serviceKeys: ServiceKey[] = [
+  "accounting",
+  "taxes",
+  "audits",
+  "payroll",
+  "trade",
+];
