@@ -42,7 +42,9 @@ export default async function HomePage({ params }: Props) {
         <div className="wrap hero-grid">
           <div>
             <div className="eyebrow">{h.hero.eyebrow}</div>
-            <h1>{h.hero.h1}</h1>
+            <h1>
+              {(() => { const i = h.hero.h1.indexOf(". "); return i > 0 ? (<><span className="h1-muted">{h.hero.h1.slice(0, i + 1)}</span>{h.hero.h1.slice(i + 2)}</>) : h.hero.h1; })()}
+            </h1>
             <p className="lead">{h.hero.lead}</p>
             <div className="actions">
               <a className="btn btn-primary" href="#ariza">
@@ -53,13 +55,14 @@ export default async function HomePage({ params }: Props) {
               </a>
             </div>
             <p className="note">{h.hero.note}</p>
+            <div className="hero-stat"><i>§</i><div><strong>{h.stats[0][0]}</strong><span>{h.stats[0][1]}</span></div></div>
           </div>
           <ReportCard s={h.hero.sample} locale={locale} />
         </div>
       </section>
 
       {/* TRIGGERS + 3 QUESTIONS */}
-      <section id="holatlar">
+      <section id="holatlar" className="after-hero">
         <div className="wrap">
           <div className="eyebrow">{h.triggers.eyebrow}</div>
           <h2>{h.triggers.h2}</h2>
@@ -97,9 +100,11 @@ export default async function HomePage({ params }: Props) {
       {/* COMPARE */}
       <section id="solishtiring" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="eyebrow">{h.compare.eyebrow}</div>
-          <h2>{h.compare.h2}</h2>
-          <p className="lead">{h.compare.lead}</p>
+          <div className="head3">
+            <div className="eyebrow">{h.compare.eyebrow}</div>
+            <h2>{h.compare.h2}</h2>
+            <p className="lead">{h.compare.lead}</p>
+          </div>
           <table className="compare">
             <thead>
               <tr>
@@ -158,9 +163,11 @@ export default async function HomePage({ params }: Props) {
       {/* SERVICES */}
       <section id="xizmatlar">
         <div className="wrap">
-          <div className="eyebrow">{h.services.eyebrow}</div>
-          <h2>{h.services.h2}</h2>
-          <p className="lead">{h.services.lead}</p>
+          <div className="head3">
+            <div className="eyebrow">{h.services.eyebrow}</div>
+            <h2>{h.services.h2}</h2>
+            <p className="lead">{h.services.lead}</p>
+          </div>
           <div className="grid-3" style={{ marginTop: 28 }}>
             {h.services.groups.map((g) => (
               <Link key={g.title} href={servicePath(locale, g.id)} className="card card-link">
@@ -173,7 +180,7 @@ export default async function HomePage({ params }: Props) {
                 <div className="more">{t.readMore}</div>
               </Link>
             ))}
-            <Link href={sectionPath(locale, "services")} className="card card-link" style={{ display: "grid", placeItems: "center", textAlign: "center", fontWeight: 700, fontSize: 20 }}>
+            <Link href={sectionPath(locale, "services")} className="card card-link card-dark" style={{ display: "grid", alignContent: "end", fontWeight: 600, fontSize: 22, minHeight: 200 }}>
               {h.services.hubLink}
             </Link>
           </div>
@@ -183,9 +190,11 @@ export default async function HomePage({ params }: Props) {
       {/* PROMISES */}
       <section id="majburiyatlar" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="eyebrow">{h.promises.eyebrow}</div>
-          <h2>{h.promises.h2}</h2>
-          <p className="lead">{h.promises.lead}</p>
+          <div className="head3">
+            <div className="eyebrow">{h.promises.eyebrow}</div>
+            <h2>{h.promises.h2}</h2>
+            <p className="lead">{h.promises.lead}</p>
+          </div>
           <ol className="promises">
             {h.promises.items.map((p, i) => (
               <li key={p.title}>
@@ -203,9 +212,11 @@ export default async function HomePage({ params }: Props) {
       {/* PRICING */}
       <section id="narx" style={{ background: "var(--bg-2)" }}>
         <div className="wrap">
-          <div className="eyebrow">{h.pricing.eyebrow}</div>
-          <h2>{h.pricing.h2}</h2>
-          <p className="lead">{h.pricing.intro}</p>
+          <div className="head3">
+            <div className="eyebrow">{h.pricing.eyebrow}</div>
+            <h2>{h.pricing.h2}</h2>
+            <p className="lead">{h.pricing.intro}</p>
+          </div>
           <div className="grid-4" style={{ marginTop: 28 }}>
             {h.pricing.cards.map((c) => (
               <div className="card" key={c.title}>
@@ -280,9 +291,11 @@ export default async function HomePage({ params }: Props) {
       {/* CLIENTS */}
       <section id="tajriba" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="eyebrow">{h.clients.eyebrow}</div>
-          <h2>{h.clients.h2}</h2>
-          <p className="lead">{h.clients.lead}</p>
+          <div className="head3">
+            <div className="eyebrow">{h.clients.eyebrow}</div>
+            <h2>{h.clients.h2}</h2>
+            <p className="lead">{h.clients.lead}</p>
+          </div>
           <ClientLogos />
         </div>
       </section>
