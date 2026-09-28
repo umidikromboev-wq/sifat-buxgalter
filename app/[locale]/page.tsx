@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import ClientLogos from "@/components/ClientLogos";
 import CtaSection from "@/components/CtaSection";
 import ReportCard from "@/components/ReportCard";
+import ServiceIcon from "@/components/ServiceIcon";
 import JsonLd, { faqLd } from "@/components/JsonLd";
 import { home } from "@/content/home";
 import { homePath, isLocale, sectionPath, servicePath, siteUrl } from "@/content/routes";
@@ -46,16 +47,20 @@ export default async function HomePage({ params }: Props) {
               {(() => { const i = h.hero.h1.indexOf(". "); return i > 0 ? (<><span className="h1-muted">{h.hero.h1.slice(0, i + 1)}</span>{h.hero.h1.slice(i + 2)}</>) : h.hero.h1; })()}
             </h1>
             <p className="lead">{h.hero.lead}</p>
-            <div className="actions">
-              <a className="btn btn-primary" href="#ariza">
-                {h.hero.cta}
-              </a>
-              <a className="btn btn-ghost" href={contacts.telegram} target="_blank" rel="noopener">
-                {h.hero.telegram}
-              </a>
+            <div className="hero-bottom">
+              <div className="hero-stat"><i>§</i><div><strong>{h.stats[0][0]}</strong><span>{h.stats[0][1]}</span></div></div>
+              <div className="glass">
+                <p className="note">{h.hero.note}</p>
+                <div className="actions">
+                  <a className="btn btn-primary" href="#ariza">
+                    {h.hero.cta}
+                  </a>
+                  <a className="btn btn-ghost" href={contacts.telegram} target="_blank" rel="noopener">
+                    {h.hero.telegram}
+                  </a>
+                </div>
+              </div>
             </div>
-            <p className="note">{h.hero.note}</p>
-            <div className="hero-stat"><i>§</i><div><strong>{h.stats[0][0]}</strong><span>{h.stats[0][1]}</span></div></div>
           </div>
           <ReportCard s={h.hero.sample} locale={locale} />
         </div>
@@ -178,10 +183,12 @@ export default async function HomePage({ params }: Props) {
                   ))}
                 </ul>
                 <div className="more">{t.readMore}</div>
+                <ServiceIcon id={g.id} />
               </Link>
             ))}
             <Link href={sectionPath(locale, "services")} className="card card-link card-dark" style={{ display: "grid", alignContent: "end", fontWeight: 600, fontSize: 22, minHeight: 200 }}>
               {h.services.hubLink}
+              <ServiceIcon id="all" />
             </Link>
           </div>
         </div>

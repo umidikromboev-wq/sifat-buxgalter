@@ -27,8 +27,9 @@ export default function Header({ locale }: { locale: Locale }) {
           <img src="/mark.png" alt="" width={26} height={27} /> <span>SIFAT</span>BUXGALTER
         </Link>
         <nav className="nav" aria-label="Main">
-          {links.map(([href, label]) => (
-            <Link key={href} href={href}>
+          {links.map(([href, label], i) => (
+            <Link key={href} href={href} className={i === 0 ? "nav-pill" : undefined}>
+              {i === 0 && <span className="nav-pill-dot" aria-hidden="true">≡</span>}
               {label}
             </Link>
           ))}
