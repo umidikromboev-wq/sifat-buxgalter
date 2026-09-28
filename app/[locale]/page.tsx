@@ -7,6 +7,7 @@ import ReportCard from "@/components/ReportCard";
 import ServiceIcon from "@/components/ServiceIcon";
 import JsonLd, { faqLd } from "@/components/JsonLd";
 import { home } from "@/content/home";
+import { nextMonthLabel } from "@/content/months";
 import { homePath, isLocale, sectionPath, servicePath, siteUrl } from "@/content/routes";
 import { contacts, ui } from "@/content/site";
 
@@ -42,6 +43,7 @@ export default async function HomePage({ params }: Props) {
       <section className="hero">
         <div className="wrap hero-grid">
           <div>
+            <div className="badge-live"><i /> {h.badge.replace("{month}", nextMonthLabel(locale))}</div>
             <div className="eyebrow">{h.hero.eyebrow}</div>
             <h1>
               {(() => { const i = h.hero.h1.indexOf(". "); return i > 0 ? (<><span className="h1-muted">{h.hero.h1.slice(0, i + 1)}</span>{h.hero.h1.slice(i + 2)}</>) : h.hero.h1; })()}
@@ -138,10 +140,13 @@ export default async function HomePage({ params }: Props) {
       </section>
 
       <section className="stats-band" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <p className="manifest">{h.manifest}</p>
+        </div>
         <div className="wrap stats">
           {h.stats.map(([n, l]) => (
             <div className="stat" key={n}>
-              <strong>{n}</strong>
+              {(() => { const m = n.match(/^(\d+(?:\/\d+)?)\s*(.*)$/); return m ? (<strong><b data-count={m[1]}>{m[1]}</b>{m[2] && <small>{m[2]}</small>}</strong>) : <strong>{n}</strong>; })()}
               <span>{l}</span>
             </div>
           ))}
@@ -334,6 +339,14 @@ export default async function HomePage({ params }: Props) {
               <p>{f.a}</p>
             </details>
           ))}
+        </div>
+      </section>
+
+      <section className="ask">
+        <div className="wrap">
+          <h2>{h.ask.h2}</h2>
+          <p className="lead">{h.ask.text}</p>
+          <a className="btn btn-gold" href="#ariza">{h.ask.cta}</a>
         </div>
       </section>
 

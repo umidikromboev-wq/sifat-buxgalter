@@ -22,3 +22,14 @@ export function reportPeriod(locale: Locale, now = new Date()) {
 export function fillPeriod(text: string, p: ReturnType<typeof reportPeriod>) {
   return text.replace("{month}", p.month).replace("{year}", p.year).replace("{m}", p.short);
 }
+
+/** Keyingi oy nomi (jaunlik/skarsity badge uchun): uz — "oktabrga", ru — "в октябре" */
+export function nextMonthLabel(locale: Locale, now = new Date()) {
+  const tz = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Tashkent" }));
+  const i = (tz.getMonth() + 1) % 12;
+  if (locale === "ru") {
+    const prep = ["январе", "феврале", "марте", "апреле", "мае", "июне", "июле", "августе", "сентябре", "октябре", "ноябре", "декабре"];
+    return "в " + prep[i];
+  }
+  return months.uz.full[i] + "ga";
+}

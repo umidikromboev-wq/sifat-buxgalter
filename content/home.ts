@@ -57,6 +57,9 @@ export type HomeContent = {
   faq: { eyebrow: string; h2: string; items: { q: string; a: string }[] };
   cta: { eyebrow: string };
   process: { eyebrow: string; h2: string; steps: { title: string; text: string }[] };
+  badge: string; // {month} → keyingi oy
+  manifest: string;
+  ask: { h2: string; text: string; cta: string };
 };
 
 export const home: Record<Locale, HomeContent> = {
@@ -258,6 +261,9 @@ export const home: Record<Locale, HomeContent> = {
       ],
     },
     cta: { eyebrow: "Birinchi qadam" },
+    badge: "{month} 3 ta yangi kompaniya olamiz",
+    manifest: "Hisobot — fikr emas. Jarima ham.",
+    ask: { h2: "Buxgalteringiz nimani oʻtkazib yuborganini koʻrishga tayyormisiz?", text: "10 daqiqalik qoʻngʻiroq — va siz birinchi navbatda nimani tekshirish kerakligini bilasiz.", cta: "Bepul qoʻngʻiroqqa yozilish" },
     process: {
       eyebrow: "Ish qanday boshlanadi",
       h2: "Arizadan birinchi hisobotgacha — 5 qadam",
@@ -453,6 +459,9 @@ export const home: Record<Locale, HomeContent> = {
       ],
     },
     cta: { eyebrow: "Первый шаг" },
+    badge: "{month} берём 3 новые компании",
+    manifest: "Отчёт — не мнение. Штраф — тоже.",
+    ask: { h2: "Готовы увидеть, что упустил ваш бухгалтер?", text: "Один звонок на 10 минут — и вы знаете, что проверить первым.", cta: "Записаться на бесплатный звонок" },
     process: {
       eyebrow: "Как начинается работа",
       h2: "От заявки до первого отчёта — 5 шагов",

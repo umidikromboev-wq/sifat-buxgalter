@@ -17,7 +17,29 @@ export default function Reveal() {
     // xavfsizlik: 2.5 s dan keyin koʻrinish maydonidan yuqoridagilar baribir ochiladi
     const safety = window.setTimeout(() => nodes.forEach((n) => { if (n.getBoundingClientRect().top < window.innerHeight) n.classList.add("in"); }), 2500);
     nodes.forEach((n) => io.observe(n));
-    return () => { io.disconnect(); window.clearTimeout(safety); };
+    // raqamlar count-up
+    const nums = Array.from(document.querySelectorAll<HTMLElement>("[data-count]"));
+    const cio = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        cio.unobserve(e.target);
+        const el = e.target as HTMLElement;
+        const raw = el.dataset.count || "";
+        const m = raw.match(/^(\d+)(.*)$/);
+        if (!m || raw.includes("/")) continue;
+        const target = parseInt(m[1], 10), suffix = m[2];
+        const from = target > 1000 ? target - 30 : 0;
+        const t0 = performance.now(), dur = 1200;
+        const tick = (t: number) => {
+          const k = Math.min(1, (t - t0) / dur), ease = 1 - Math.pow(1 - k, 3);
+          el.textContent = Math.round(from + (target - from) * ease) + suffix;
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+    }, { threshold: 0.4 });
+    nums.forEach((n) => cio.observe(n));
+    return () => { io.disconnect(); cio.disconnect(); window.clearTimeout(safety); };
   }, []);
   return null;
 }
