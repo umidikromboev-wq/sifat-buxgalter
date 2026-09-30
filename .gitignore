@@ -61,3 +61,4 @@ yarn-error.log*
 next-env.d.ts
 research/shots/
 research/source/zoom0923.txt
+.raw/
