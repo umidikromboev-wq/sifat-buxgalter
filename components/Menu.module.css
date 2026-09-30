@@ -1,0 +1,76 @@
+/* ---------- Меню: белая плашка по диагонали из угла кнопки ---------- */
+.root { position: relative; }
+.sheet {
+  position: absolute; top: calc(100% + 10px); z-index: 60;
+  width: min(360px, calc(100vw - 2 * var(--pad)));
+  max-height: calc(100svh - 90px); overflow: auto; overscroll-behavior: contain;
+  display: grid; gap: 2px; padding: 10px; border-radius: var(--r-panel);
+  background: #fff; color: var(--text);
+  box-shadow: 0 24px 60px -24px rgba(12, 18, 25, 0.45);
+  visibility: hidden;
+  transition: clip-path 0.55s cubic-bezier(0.65, 0, 0.35, 1), visibility 0s linear 0.55s;
+}
+/* Справа: из правого верхнего угла; слева: из левого */
+.right { right: 0; clip-path: inset(0 0 100% 100% round var(--r-panel)); }
+.left { left: 0; clip-path: inset(0 100% 100% 0 round var(--r-panel)); }
+.sheet[data-open="true"] {
+  clip-path: inset(0 0 0 0 round var(--r-panel));
+  visibility: visible;
+  transition: clip-path 0.9s var(--ease), visibility 0s;
+}
+.sheet > *, .foot > * {
+  opacity: 0; transform: translateY(10px);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out, background var(--t);
+}
+.sheet[data-open="true"] > *, .sheet[data-open="true"] .foot > * {
+  opacity: 1; transform: none;
+  transition: opacity 0.5s ease-out calc(0.18s + var(--i, 0) * 40ms), transform 0.6s var(--ease) calc(0.18s + var(--i, 0) * 40ms), background var(--t);
+}
+.sheet[data-open="true"] > .foot { transition-delay: 0s; }
+.sheet a { padding: 9px 12px; border-radius: 8px; font-size: 14px; line-height: 1.35; }
+.sheet a:hover { background: var(--bg-page); }
+.group { padding: 8px 12px 4px; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-2); }
+.rule { height: 1px; margin: 6px 12px; background: var(--line); }
+.sheet a.strong { font-size: 15px; font-weight: 500; }
+.foot { display: grid; gap: 6px; margin-top: 6px; }
+.sheet a.phone { font-weight: 600; font-variant-numeric: tabular-nums; }
+.sheet a.cta { background: var(--bg-dark); color: #fff; text-align: center; border-radius: var(--r-pill); padding: 13px 16px; }
+.sheet a.cta:hover { background: var(--bg-dark); opacity: 0.9; }
+
+/* ---------- Закреплённая шапка ---------- */
+.mark { position: absolute; left: 0; bottom: 0; width: 1px; height: 1px; pointer-events: none; }
+.bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  padding-top: env(safe-area-inset-top, 0px);
+  background: rgba(12, 18, 25, 0.72); color: #fff;
+  -webkit-backdrop-filter: blur(20px) saturate(1.4); backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 1px solid var(--line-dark);
+  transform: translateY(-100%);
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.bar[data-shown="true"] { transform: none; transition: transform 0.6s var(--ease); }
+.barIn { display: flex; align-items: center; gap: 24px; height: 64px; }
+.barPhone { margin-left: auto; font-size: 15px; }
+.barCta {
+  display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 18px; border-radius: var(--r-pill);
+  background: #fff; color: var(--text); font-size: 14px; font-weight: 500; white-space: nowrap;
+}
+.barCta svg { transition: transform var(--t); }
+.barCta:hover svg { transform: translate(2px, -2px); }
+.onMob { display: none; }
+
+@media (max-width: 900px) {
+  .barPhone { display: none; }
+  .barCta { margin-left: auto; }
+}
+@media (max-width: 760px) {
+  .onDesk, .barCta { display: none; }
+  .onMob { display: block; margin-left: auto; }
+  .barIn { height: 60px; }
+  .sheet a { font-size: 17px; padding: 13px 14px; }
+  .sheet a.strong { font-size: 17px; }
+  .group { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sheet, .sheet > *, .foot > *, .bar { transition: none !important; }
+}

@@ -1,0 +1,60 @@
+/* ---------- Эксперт ---------- */
+.person { grid-column: 3 / span 5; display: grid; align-content: start; gap: 28px; padding: 32px; }
+.personHead { display: flex; align-items: center; gap: 24px; }
+.mono {
+  display: grid; place-items: center; flex: none; width: 120px; height: 120px; border-radius: var(--r-card);
+  background: var(--accent-soft); color: var(--accent-ink); font-size: 56px; font-weight: 300; line-height: 1;
+}
+.name { font-size: 24px; font-weight: 500; line-height: 1.2; letter-spacing: -0.01em; }
+.role { margin-top: 8px; font-size: 14px; font-weight: 500; color: var(--accent-ink); }
+.bio { font-size: 15px; line-height: 1.65; color: var(--text-2); max-width: 56ch; }
+.stats { grid-column: 8 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); margin: 0; }
+.stat { padding: 26px 24px; }
+.value { font-size: clamp(40px, 1.8vw + 20px, 52px); font-weight: 300; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.value span { margin-left: 6px; font-size: 0.42em; letter-spacing: 0; color: var(--accent-ink); }
+.label { margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: var(--text-2); }
+
+/* ---------- Видео-отзывы ---------- */
+.reviews { grid-column: 3 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); padding: 0; margin: 0; list-style: none; }
+.reviewLink { position: relative; display: block; aspect-ratio: 9 / 16; max-height: 620px; width: 100%; overflow: hidden; border-radius: var(--r-card); background: var(--bg-dark); color: #fff; isolation: isolate; }
+.poster { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; opacity: 0.55; transition: transform 0.8s var(--ease); }
+.reviewLink::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(12, 18, 25, 0.1) 40%, rgba(12, 18, 25, 0.85)); }
+a.reviewLink:hover .poster { transform: scale(1.04); }
+.play {
+  position: absolute; top: 50%; left: 50%; display: grid; place-items: center; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%;
+  background: var(--glass-light); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform var(--t) var(--ease), background var(--t);
+}
+.play svg { width: 22px; height: 22px; margin-left: 3px; }
+a.reviewLink:hover .play { transform: scale(1.08); background: var(--accent); }
+.caption { position: absolute; left: 20px; right: 20px; bottom: 20px; display: grid; gap: 4px; }
+.capTitle { font-size: 16px; font-weight: 500; }
+.capSoon { font-size: 13px; color: var(--on-dark-2); }
+.isSoon .play { opacity: 0.6; }
+
+@media (max-width: 1180px) {
+  .person, .stats, .reviews { grid-column: 3 / -1; }
+}
+@media (max-width: 760px) {
+  /* Горизонтальная лента: дальние карточки не пересекают экран, поэтому видны сразу */
+  .reviews > .review { opacity: 1; transform: none; }
+  .person, .stats { grid-column: 1 / -1; }
+  .person { padding: 22px; gap: 20px; }
+  .personHead { gap: 16px; }
+  .mono { width: 88px; height: 88px; font-size: 42px; }
+  .name { font-size: 22px; }
+  .role { font-size: 15px; }
+  .bio { font-size: 16px; }
+  .stat { padding: 20px 18px; }
+  .value { font-size: 36px; }
+  .label { font-size: 14px; }
+  /* Видео листаются пальцем, соседнее выглядывает справа */
+  .reviews {
+    grid-column: 1 / -1; display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin-inline: calc(var(--pad) * -1); padding-inline: var(--pad); scroll-padding-inline: var(--pad);
+  }
+  .reviews::-webkit-scrollbar { display: none; }
+  .review { flex: 0 0 72%; scroll-snap-align: start; }
+  .capTitle { font-size: 17px; }
+  .capSoon { font-size: 14px; }
+}

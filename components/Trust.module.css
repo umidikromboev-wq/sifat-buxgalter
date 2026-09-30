@@ -1,7 +1,18 @@
-.logos { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--gap); }
-.logo { display: grid; place-items: center; aspect-ratio: 4 / 3; padding: 18px; }
-.logo img { width: 100%; max-width: 110px; height: auto; filter: grayscale(1); opacity: 0.75; transition: filter var(--t), opacity var(--t); }
-.logo:hover img { filter: none; opacity: 1; }
+/* ---------- Лента логотипов ---------- */
+.label { grid-column: 3 / -1; margin-bottom: 28px; font-size: 13px; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-2); }
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+.track { display: flex; gap: var(--gap); width: max-content; padding: 0; margin: 0; list-style: none; animation: marquee 70s linear infinite; }
+.marquee:hover .track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(calc(-50% - var(--gap) / 2)); } }
+.logo { display: grid; place-items: center; flex: none; width: 168px; height: 76px; padding: 14px 22px; border-radius: var(--r-card); background: rgba(255, 255, 255, 0.55); }
+.logo img { max-width: 100%; max-height: 42px; width: auto; height: auto; opacity: 0.85; transition: opacity var(--t); }
+.logo:hover img { opacity: 1; }
+.logoDark { background: #9b9995; padding: 6px; }
+.logoDark img { max-height: 64px; opacity: 1; }
 
 .faq { grid-column: 3 / span 8; display: grid; gap: var(--gap); }
 .qa { padding: 0; }
@@ -15,19 +26,17 @@
 .a { padding: 0 64px 22px 24px; font-size: 14px; line-height: 1.6; color: var(--text-2); max-width: 70ch; }
 
 @media (max-width: 1180px) {
-  .logos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .faq { grid-column: 1 / -1; }
 }
 @media (max-width: 760px) {
-  .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .logo { padding: 12px; }
+  .label { grid-column: 1 / -1; margin-bottom: 20px; }
+  .logo { width: 140px; height: 68px; padding: 12px 18px; }
   .q { padding: 16px; font-size: 14px; }
   .a { padding: 0 16px 18px; }
 }
 
 /* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
 @media (max-width: 760px) {
-  .logo img { max-width: 96px; }
   .q { padding: 20px; font-size: 17px; gap: 16px; }
   .a { padding: 0 20px 22px; font-size: 16px; }
 }
@@ -35,3 +44,8 @@
 /* Ответ раскрывается мягко, без прыжка */
 @keyframes answerIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
 .qa[open] > .a { animation: answerIn 0.45s var(--ease) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none; }
+  .marquee { overflow-x: auto; }
+}

@@ -94,35 +94,7 @@
 .callback svg { width: 14px; height: 14px; transition: transform var(--t) var(--ease); }
 .callback:hover svg { transform: translate(2px, -2px); }
 .mobile { display: none; }
-.menuRoot { position: relative; }
 button.glassPill { font-family: inherit; line-height: inherit; }
-/* Белая плашка раскрывается по диагонали из угла кнопки: clip-path от точки справа сверху до полного листа */
-.mobileSheet {
-  position: absolute; right: 0; top: calc(100% + 10px); z-index: 10;
-  width: min(320px, calc(100vw - 2 * var(--pad)));
-  display: grid; gap: 2px; padding: 10px; border-radius: var(--r-panel);
-  background: #fff; color: var(--text);
-  box-shadow: 0 24px 60px -24px rgba(12, 18, 25, 0.45);
-  clip-path: inset(0 0 100% 100% round var(--r-panel));
-  visibility: hidden;
-  transition: clip-path 0.55s var(--ease-draw), visibility 0s linear 0.55s;
-}
-.mobileSheet[data-open="true"] {
-  clip-path: inset(0 0 0 0 round var(--r-panel));
-  visibility: visible;
-  transition: clip-path 0.9s var(--ease), visibility 0s;
-}
-.mobileSheet a {
-  padding: 10px 12px; border-radius: 8px; font-size: 14px;
-  opacity: 0; transform: translateY(10px);
-  transition: opacity 0.2s ease-out, transform 0.2s ease-out, background var(--t);
-}
-.mobileSheet[data-open="true"] a {
-  opacity: 1; transform: none;
-  transition: opacity 0.5s ease-out calc(0.18s + var(--i) * 50ms), transform 0.6s var(--ease) calc(0.18s + var(--i) * 50ms), background var(--t);
-}
-.mobileSheet a:hover { background: var(--bg-page); }
-.mobileSheet a:last-child { margin-top: 6px; background: var(--bg-dark); color: #fff; text-align: center; border-radius: var(--r-pill); }
 
 /* ---------- Низ кадра ---------- */
 .body { align-self: end; align-items: end; padding-top: 64px; padding-bottom: calc(var(--r-sheet) + 48px); }
@@ -198,7 +170,6 @@ button.glassPill { font-family: inherit; line-height: inherit; }
 }
 @media (prefers-reduced-motion: reduce) {
   .img, .fact, .main, .panel, .header, .headerLine::after, .top::after, .h1 :global(.lc) { animation: none; }
-  .mobileSheet, .mobileSheet a { transition: none !important; }
 }
 
 /* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
@@ -218,7 +189,6 @@ button.glassPill { font-family: inherit; line-height: inherit; }
   .panelText { font-size: 15px; line-height: 1.5; margin-bottom: 18px; }
   .crumbs ol { font-size: 14px; }
   .kicker, .meta { font-size: 14px; }
-  .mobileSheet a { font-size: 17px; padding: 14px; }
 }
 @media (max-width: 760px) {
   .header { gap: 12px; }

@@ -50,6 +50,7 @@ const PATHS = {
   check: <path d="m3 7.2 2.6 2.6L11 4.4" />,
   cross: <path d="m4 4 6 6M10 4l-6 6" />,
   plus: <path d="M7 3v8M3 7h8" />,
+  play: <path d="M5 3.4v7.2L10.6 7z" />,
   doc: (
     <>
       <path d="M4 1.8h4.2L10.5 4v8.2h-6.5z" />

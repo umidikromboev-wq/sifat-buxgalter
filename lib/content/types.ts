@@ -32,7 +32,19 @@ export type Content = {
   compare: { kicker: string; h2: string; sub: string; cols: [string, string]; rows: { k: string; now: string; us: string }[]; note: string };
   benefits: { kicker: string; h2: string; sub: string; label: string; spheres: string[]; cta: string; note: string; message: string };
   fit: { kicker: string; h2: string; yesTitle: string; yes: string[]; noTitle: string; no: string[]; note: string };
-  clients: { kicker: string; h2: string; sub: string };
+  clients: { label: string };
+  price: { kicker: string; h2: string; sub: string; items: { title: string; text: string }[]; cta: string };
+  expert: {
+    kicker: string;
+    h2: string;
+    name: string;
+    role: string;
+    bio: string;
+    stats: { value: string; unit?: string; label: string }[];
+  };
+  reviews: { kicker: string; h2: string; lead: string; label: string; soon: string; play: string };
+  steps: { h2: Pair; lead: string; items: { title: string; text: string }[] };
+  report: { kicker: string; h2: string; lead: string; title: string; month: string; badge: string; rows: Pair[]; footer: string };
   faq: { kicker: string; h2: string; items: Pair[] };
   form: {
     kicker: string;

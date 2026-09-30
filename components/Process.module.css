@@ -1,0 +1,80 @@
+/* ---------- Цена ---------- */
+.price { grid-column: 3 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); }
+.priceCard { display: grid; align-content: start; gap: 10px; padding: 22px 22px 26px; }
+.priceNo { font-size: 12px; font-weight: 500; color: var(--accent-ink); font-variant-numeric: tabular-nums; margin-bottom: 18px; }
+.cardTitle { font-size: 16px; font-weight: 500; line-height: 1.3; }
+.cardText { font-size: 13px; line-height: 1.55; color: var(--text-2); }
+.priceCta { grid-column: 3 / -1; margin-top: 20px; }
+.priceCta :global(.pill) { width: min(100%, 380px); }
+
+/* ---------- Пять шагов ---------- */
+.steps { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0 var(--gap); padding-top: 30px; }
+/* Линия прочерчивается слева направо, когда появляется первый шаг */
+.steps::before {
+  content: ""; position: absolute; top: 4px; left: 0; right: 0; height: 1px; background: rgba(0, 0, 0, 0.1);
+  transform: scaleX(0); transform-origin: left; transition: transform 2.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.steps:has(> :global(.in))::before { transform: none; }
+.step { position: relative; padding-right: 24px; }
+.step::before {
+  content: ""; position: absolute; top: -30px; left: 0; width: 9px; height: 9px; border-radius: 50%; background: var(--accent);
+}
+.stepNo { display: block; font-size: 48px; font-weight: 300; line-height: 1; color: rgba(191, 167, 142, 0.6); font-variant-numeric: tabular-nums; margin-bottom: 30px; }
+.stepTitle { font-size: 17px; font-weight: 500; line-height: 1.3; margin-bottom: 12px; }
+.stepText { font-size: 14px; line-height: 1.6; color: var(--text-2); max-width: 30ch; }
+
+/* ---------- Отчёт директору ---------- */
+.report { grid-column: 3 / span 6; padding: 28px 28px 22px; }
+.reportHead { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.reportTitle { font-size: 17px; font-weight: 600; line-height: 1.25; }
+.reportMonth { margin-top: 4px; font-size: 13px; color: var(--text-2); }
+.badge { flex: none; padding: 5px 10px; border-radius: var(--r-pill); background: var(--accent-soft); color: var(--accent-ink); font-size: 12px; font-weight: 500; }
+.rows { margin: 0; }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.row dt { color: var(--text-2); }
+.row dd { margin: 0; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+/* Строки отчёта проступают по одной после листа */
+.row { opacity: 0; transform: translateY(8px); transition: opacity 0.5s ease-out, transform 0.6s var(--ease); transition-delay: calc(0.3s + var(--i) * 90ms); }
+.report:global(.in) .row { opacity: 1; transform: none; }
+.reportFoot { display: flex; align-items: center; gap: 10px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--text-2); }
+
+@media (max-width: 1180px) {
+  .price { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 48px; }
+  .steps::before { display: none; }
+  .step { border-top: 1px solid rgba(0, 0, 0, 0.1); padding-top: 26px; }
+  .step::before { top: -5px; }
+  .steps { padding-top: 0; }
+  .report { grid-column: 3 / -1; }
+}
+@media (max-width: 760px) {
+  .price, .priceCta, .report { grid-column: 1 / -1; }
+  .price { grid-template-columns: minmax(0, 1fr); }
+  .priceCard { padding: 20px 20px 24px; }
+  .priceNo { font-size: 13px; margin-bottom: 8px; }
+  .cardTitle { font-size: 19px; }
+  .cardText { font-size: 15px; }
+  .priceCta :global(.pill) { width: 100%; }
+
+
+  /* Шаги вертикально: линия слева, точки на ней */
+  .steps { grid-template-columns: minmax(0, 1fr); row-gap: 32px; padding-left: 28px; }
+  .steps::before { display: block; top: 6px; bottom: 6px; left: 4px; right: auto; width: 1px; height: auto; transform: scaleY(0); transform-origin: top; }
+  .steps:has(> :global(.in))::before { transform: none; }
+  .step { border-top: 0; padding: 0; }
+  .step::before { top: 8px; left: -28px; }
+  .stepNo { font-size: 36px; margin-bottom: 14px; }
+  .stepTitle { font-size: 19px; margin-bottom: 8px; }
+  .stepText { font-size: 15px; max-width: none; }
+
+  .report { padding: 22px 18px 18px; }
+  .reportTitle { font-size: 19px; }
+  .reportMonth { font-size: 14px; }
+  .row { flex-direction: column; gap: 4px; font-size: 15px; }
+  .row dd { text-align: left; }
+  .reportFoot { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .steps::before { transform: none; transition: none; }
+  .row { opacity: 1; transform: none; transition: none; }
+}

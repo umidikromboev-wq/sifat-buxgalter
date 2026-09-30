@@ -1,24 +1,31 @@
-import Image from "next/image";
 import type { Content } from "@/lib/content/types";
 import { CLIENTS } from "@/lib/site";
 import { Glyph } from "./ui/Glyph";
 import { SectionHead } from "./ui/Kit";
 import s from "./Trust.module.css";
 
-const LOGO_BOX = 160;
+// Тёмные плашки: у этих логотипов свой тёмный фон, белый знак на сером читается как на референсе.
+const DARK = new Set<string>(["avangard", "oq-tepa-dental"]);
 
-// Логотипы в белых ячейках одной сетки, монохром: цвет берут только при наведении.
+// Лента логотипов: монохромные знаки на светлых плашках, медленно едут влево, края растворяются.
 export function Clients({ t }: { t: Content["clients"] }) {
+  const row = (hidden: boolean) =>
+    CLIENTS.map((c) => (
+      <li key={`${c.file}-${hidden}`} className={`${s.logo}${DARK.has(c.file) ? ` ${s.logoDark}` : ""}`} aria-hidden={hidden || undefined}>
+        <img src={`/clients/mono/${c.file}.webp`} alt={c.name} width={c.w} height={c.h} loading="lazy" decoding="async" />
+      </li>
+    ));
   return (
     <section aria-labelledby="cli-h">
-      <SectionHead id="cli-h" kicker={t.kicker} title={t.h2} lead={t.sub} />
-      <div className="wrap">
-        <ul className={s.logos} data-stagger>
-          {CLIENTS.map((c) => (
-            <li key={c.file} className={`card ${s.logo}`}>
-              <Image src={`/clients/${c.file}.webp`} alt={c.name} width={LOGO_BOX} height={LOGO_BOX} sizes="(min-width: 1024px) 120px, 25vw" />
-            </li>
-          ))}
+      <div className="wrap grid12">
+        <h2 id="cli-h" className={`${s.label} reveal`}>
+          {t.label}
+        </h2>
+      </div>
+      <div className={`${s.marquee} reveal`}>
+        <ul className={s.track}>
+          {row(false)}
+          {row(true)}
         </ul>
       </div>
     </section>
