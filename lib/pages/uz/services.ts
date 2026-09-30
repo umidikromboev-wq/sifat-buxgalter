@@ -26,7 +26,7 @@ export const services: Record<string, ServicePage> = {
         "Toʻliq buxgalteriya va soliq hisobi",
         "Hisobotlarni muddatida topshirish",
         "Bank operatsiyalari va toʻlovlar, jumladan konvertatsiya va chet elga toʻlov",
-        "Didoxda hisob-faktura, solishtirma dalolatnoma, ishonchnoma",
+        "Elektron hisob-faktura, solishtirma dalolatnoma, ishonchnoma",
         "Debitor va kreditor qarzlar nazorati",
         "Bitimdan oldin kontragentni tekshirish",
         "Ish haqi hisob-kitobi va kadrlar hujjatlari",
@@ -45,17 +45,17 @@ export const services: Record<string, ServicePage> = {
     promise: {
       h2: "Shartnomaga nimalarni yozamiz",
       items: [
-        ["Javob — 10 daqiqagacha", "Haftada 7 kun aloqadamiz. Shanba kuni ish kuni qisqaroq."],
+        ["Javob — 10 daqiqagacha", "24/7 aloqadamiz, shanba va yakshanba kunlari ham."],
         ["Xato bizniki — jarima ham bizniki", "Shart bitta: ombor hisobi halol yuritilsin."],
         ["Optimallashtirish — foizsiz", "Soliqni qonuniy kamaytirish ishimiz ichida, tejalgan summadan foiz olmaymiz."],
-        ["Faqat litsenziyali dasturlar", "1C, Didox, soliq toʻlovchining shaxsiy kabineti."],
+        ["Faqat litsenziyali dasturlar", "1C va soliq toʻlovchining shaxsiy kabineti, kompyuterlarda litsenziyali antivirus."],
       ],
     },
     faq: [
       ["Autsorsing shtatdagi buxgalterdan nimasi bilan yaxshi?", "Hisob bitta odamga bogʻliq emas: dekret, kasallik yoki ishdan ketish ishni toʻxtatmaydi. Javob 10 daqiqada keladi, soliqni qonuniy kamaytirish esa xizmatga kiradi."],
-      ["Xizmat qancha turadi?", "Narx ish hajmiga bogʻliq: oyiga qancha hujjat, xaridor va operatsiya borligiga. Aylanmaning oʻzi narxni belgilamaydi. Aniq summani qoʻngʻiroq va kirish tekshiruvidan keyin aytamiz."],
-      ["Qanday korxonalar bilan ishlaysiz?", "Yillik aylanmasi 1 mlrd soʻmdan, xodimlari 5 nafardan ortiq MChJlar bilan, Toshkent va Toshkent viloyatida. Koʻpincha bular tashqi savdo, ulgurji savdo, turizm va oʻquv markazlari."],
-      ["Kimni olmaysiz?", "Faqat naqd pulda ishlaydigan biznes, alkogol va tamaki, naqdga qurilish. Hisob uchun javobgarlikni olamiz, shuning uchun faqat halol hisobni qabul qilamiz."],
+      ["Xizmat qancha turadi?", "Narx ish hajmiga bogʻliq: oyiga qancha hujjat, xaridor va operatsiya borligiga. Aylanmaning oʻzi narxni belgilamaydi. Aniq summani qoʻngʻiroq va ekspress-auditdan keyin aytamiz."],
+      ["Qanday korxonalar bilan ishlaysiz?", "Yillik aylanmasi 5 mlrd soʻmdan, xodimlari 5 nafardan ortiq MChJlar bilan, Toshkent va Toshkent viloyatida: ishlab chiqarish, xizmatlar, ulgurji savdo, import va eksport, marketpleyslar."],
+      ["Kimni olmaysiz?", "Chakana savdo, soliq toʻlashni istamaydiganlar, hujjatsiz material olib naqd pulga qurilish, alkogol va tamaki. Hisob uchun javobgarlikni olamiz, shuning uchun faqat halol hisobni qabul qilamiz."],
     ],
     related: ["shtat", "vybor", "prinyat"],
   },
@@ -92,7 +92,7 @@ export const services: Record<string, ServicePage> = {
     steps: {
       h2: "Qanday ishlaymiz",
       items: [
-        ["Raqamlarni koʻramiz", "Raqamlarsiz hech narsa vaʼda qilib boʻlmaydi. Kirish tekshiruvida haqiqiy yukni va oldingi buxgalter xatolarini koʻramiz."],
+        ["Raqamlarni koʻramiz", "Raqamlarsiz hech narsa vaʼda qilib boʻlmaydi. Ekspress-auditda haqiqiy yukni va oldingi buxgalter xatolarini koʻramiz."],
         ["Yoʻllarni tanlaymiz", "Imtiyoz koʻp, lekin aksariyati faqat maʼlum sohalarga toʻgʻri keladi. Sizga nima mos, nima mos emasligini ochiq aytamiz."],
         ["Qoʻllaymiz va hisobot beramiz", "Har oy qancha soliq chiqqani va nima oʻzgarganini koʻrsatamiz."],
       ],
@@ -137,7 +137,7 @@ export const services: Record<string, ServicePage> = {
         "Oxirgi davr hisobi — odatda yarim yildan bir yilgacha",
         "Ombor: kirim, chiqim va qoldiqlar sotilgan tovarga nisbatan",
         "Soliq deklaratsiyalari va byudjet bilan haqiqiy hisob-kitoblar",
-        "Didoxdagi birlamchi hujjatlar: hisob-fakturalar, solishtirma dalolatnomalar",
+        "Elektron birlamchi hujjatlar: hisob-fakturalar, solishtirma dalolatnomalar",
         "Kontragentlar va soliq oldidagi qarzlar",
         "1C bazasining toʻldirilganligi",
       ],
@@ -312,7 +312,7 @@ export const services: Record<string, ServicePage> = {
     },
     faq: [
       ["Faqat ish haqi va kadrlarni topshirsa boʻladimi?", "Kadrlar va ish haqini buxgalteriya bilan birga yuritamiz: shunda raqamlar mos keladi. Vazifangizni qoʻngʻiroqda muhokama qilamiz."],
-      ["Eski kadrlar hujjatlarini tiklaysizmi?", "Ha, kirish tekshiruvida nima yetishmasligini koʻramiz va tiklaymiz."],
+      ["Eski kadrlar hujjatlarini tiklaysizmi?", "Ha, ekspress-auditda nima yetishmasligini koʻramiz va tiklaymiz."],
     ],
     related: ["shtat", "lgoty"],
   },

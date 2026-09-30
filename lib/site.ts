@@ -11,7 +11,7 @@ export const SITE = {
   ],
   telegram: "https://t.me/Davronbekov_Bekzod",
   instagram: "https://instagram.com/sifatbuxgalter",
-  map: "https://maps.app.goo.gl/pBtkJ7jbAEkg3x3g7",
+  map: "https://www.google.com/maps/search/?api=1&query=Toshkent+Yakkasaroy+Muqimiy+ko%CA%BBchasi",
 } as const;
 
 export const CLIENTS = [

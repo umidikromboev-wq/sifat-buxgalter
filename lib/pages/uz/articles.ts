@@ -96,7 +96,7 @@ export const articles: Record<string, ArticlePage> = {
         ],
       },
     ],
-    takeaway: "Shuning uchun oxirgi davrni koʻrmasdan ishni olmaymiz va kirish tekshiruvida omborni solishtiramiz. Xatomiz sabab jarimani oʻzimiz toʻlaymiz — lekin faqat ombor halol yuritilsa.",
+    takeaway: "Shuning uchun oxirgi davrni koʻrmasdan ishni olmaymiz va ekspress-auditda omborni solishtiramiz. Xatomiz sabab jarimani oʻzimiz toʻlaymiz — lekin faqat ombor halol yuritilsa.",
     service: "kirish",
   },
 
@@ -219,7 +219,7 @@ export const articles: Record<string, ArticlePage> = {
           "Sizning xatoingiz sabab jarima chiqsa, kim toʻlaydi?",
           "Korxonani olishdan oldin hisobni tekshirasizmi va aynan nimani koʻrasiz?",
           "Soliqni qonuniy kamaytirish xizmatga kiradimi yoki bu alohida foizmi?",
-          "Qaysi dasturlarda ishlaysiz — litsenziyali 1C va Didoxdami?",
+          "Qaysi dasturlarda ishlaysiz — litsenziyali 1Cdami?",
           "NDA imzolaysizmi?",
           "Kimni xizmatga olmaysiz?",
         ],

@@ -99,7 +99,7 @@ export const storyUz: Story = {
     items: [
       {
         think: "Hujjatlarimni begonalarga berib boʻlmaydi.",
-        truth: "Bizda ofis bor — Yangi Sergeli, 7/2: istalgan vaqtda kelib, hisobingizni kim yuritishini koʻrishingiz mumkin. **Soʻrasangiz, maxfiylik shartnomasi (NDA) tuzamiz.** Litsenziyali 1C, Didox, soliq kabineti — hammasi rasmiy.",
+        truth: "Bizda ofis bor — Yakkasaroy tumani, Muqimiy koʻchasi: istalgan vaqtda kelib, hisobingizni kim yuritishini koʻrishingiz mumkin. **Soʻrasangiz, maxfiylik shartnomasi (NDA) tuzamiz.** Litsenziyali 1C, Didox, soliq kabineti — hammasi rasmiy.",
       },
       {
         think: "Bu men uchun qimmat.",
@@ -107,7 +107,7 @@ export const storyUz: Story = {
       },
       {
         think: "Mening hisobim chalkash, hech kim tuzatolmaydi.",
-        truth: "Aynan shuning uchun biz kirish auditidan boshlaymiz. Xatolarni topamiz, qaysini tuzatish mumkinligini va qaysi biri qancha jarimaga olib kelishi mumkinligini ochiq aytamiz. **Keyin javobgarlik bizga oʻtadi.**",
+        truth: "Aynan shuning uchun biz ekspress-auditdan boshlaymiz. Xatolarni topamiz, qaysini tuzatish mumkinligini va qaysi biri qancha jarimaga olib kelishi mumkinligini ochiq aytamiz. **Keyin javobgarlik bizga oʻtadi.**",
       },
     ],
   },
@@ -116,11 +116,11 @@ export const storyUz: Story = {
     title: "Shartnoma imzolasangiz nima olasiz",
     intro: "Hammasi bitta oylik toʻlov ichida. Qoʻshimcha foizsiz.",
     rows: [
-      { what: "Kirish auditi", detail: "Shartnomadan oldin oxirgi davrni tekshiramiz: nima bor, nima xato, nima xavfli." },
+      { what: "Ekspress-audit", detail: "Shartnomadan oldin oxirgi davrni tekshiramiz: nima bor, nima xato, nima xavfli." },
       { what: "Toʻliq buxgalteriya va soliq hisoboti", detail: "Hisobotlar muddatidan oldin, litsenziyali 1C’da." },
       { what: "Qonuniy soliq optimizatsiyasi", detail: "70 ga yaqin imtiyozdan sizga toʻgʻri keladiganlarini topamiz va qoʻllaymiz.", tag: "boshqalarda — tejalgan summaning 5–10%" },
       { what: "Bank va valyuta operatsiyalari", detail: "Toʻlovlar, konvertatsiya, import-eksport kontraktlari. Oddiy savolga — 5 daqiqa." },
-      { what: "10 daqiqada javob", detail: "Haftada 7 kun. Shanba kuni — bir soatgacha." },
+      { what: "10 daqiqada javob", detail: "24/7, shanba va yakshanba kunlari ham." },
       { what: "Oyiga 3 marta ofisingizga tashrif", detail: "Hujjatlar, ombor, savollar — joyida." },
       { what: "Oylik hisobot sizga", detail: "Qancha soliq chiqdi, nega, keyingi oy nimaga tayyorlanish kerak." },
       { what: "Maxfiylik shartnomasi", detail: "Soʻrovingiz boʻyicha." },
@@ -152,7 +152,7 @@ export const storyUz: Story = {
       { title: "Ariza qoldirasiz", text: "Ism va telefon. Bir daqiqa." },
       { title: "10 daqiqalik suhbat", text: "Bekzod bir soat ichida, odatda 10 daqiqada qoʻngʻiroq qiladi. Vaziyatni tinglab, birinchi navbatda nimani tekshirishni aytamiz." },
       { title: "Uchrashuv — xohlasangiz", text: "Ofisda yoki Zoomda, oʻzingiz vaqti keldi deb hisoblaganingizda." },
-      { title: "Kirish auditi va shartnoma", text: "Faqat shundan keyin — javobgarlik bizga oʻtadi." },
+      { title: "Ekspress-audit va shartnoma", text: "Faqat shundan keyin — javobgarlik bizga oʻtadi." },
     ],
   },
   sign: {

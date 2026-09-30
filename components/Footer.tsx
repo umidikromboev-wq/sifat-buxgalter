@@ -21,7 +21,7 @@ export function Footer({ t, lang }: { t: Content["footer"]; lang: Locale }) {
           <p className={s.dim}>{t.hours}</p>
           <p className={s.lbl}>{t.addressLabel}</p>
           <p>{t.address}</p>
-          <p className={s.dim}>{t.landmark}</p>
+          {t.landmark && <p className={s.dim}>{t.landmark}</p>}
           <a className="more" href={SITE.map} target="_blank" rel="noopener noreferrer">
             {t.mapLink}
             <Glyph name="arrow" />
