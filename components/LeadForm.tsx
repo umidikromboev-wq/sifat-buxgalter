@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import type { Content, Locale } from "@/lib/content/types";
 import { SITE } from "@/lib/site";
 import { Glyph } from "./ui/Glyph";
@@ -83,7 +83,7 @@ export function LeadForm({ t, lang }: { t: Content["form"]; lang: Locale }) {
         <input name="website" tabIndex={-1} autoComplete="off" />
       </div>
       <button className="pill" type="submit" disabled={status === "sending"}>
-        <span>{status === "sending" ? t.sending : t.submit}</span>
+        <span style={{ "--n": (status === "sending" ? t.sending : t.submit).length } as CSSProperties}>{status === "sending" ? t.sending : t.submit}</span>
         <PillDot />
       </button>
       <p className={s.msg} role="alert" aria-live="polite">

@@ -3,6 +3,7 @@ import type { Content, Locale } from "@/lib/content/types";
 import type { Crumb } from "./pages/Crumbs";
 import { Header } from "./Header";
 import { Pill } from "./ui/Kit";
+import { Letters } from "./ui/Letters";
 import s from "./Top.module.css";
 
 type Props = {
@@ -42,8 +43,8 @@ export function PageTop({ lang, nav, alt, crumbs, kicker, h1, lead, meta, img, p
             </ol>
           </nav>
           <p className={s.kicker}>{kicker}</p>
-          <h1 id="page-h" className={s.h1}>
-            {h1}
+          <h1 id="page-h" className={s.h1} aria-label={h1}>
+            <Letters text={h1} />
           </h1>
           <p className={s.lead}>{lead}</p>
           {meta && <p className={s.meta}>{meta}</p>}

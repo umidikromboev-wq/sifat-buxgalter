@@ -5,6 +5,7 @@ import { getPages } from "@/lib/pages";
 import { SITE } from "@/lib/site";
 import { LogoMark } from "./Logo";
 import { Glyph } from "./ui/Glyph";
+import { MobileMenu } from "./MobileMenu";
 import s from "./Top.module.css";
 
 // alt — адрес этой же страницы на другом языке; без него переключатель ведёт на главную.
@@ -60,22 +61,15 @@ export function Header({ lang, t, alt }: Props) {
         </a>
         <div className={s.mobile}>
           {langLink}
-          <details style={{ position: "relative" }}>
-            <summary className={s.glassPill}>
-              <Glyph name="menu" />
-              {t.menu}
-            </summary>
-            <div className={s.mobileSheet}>
-              <Link href={sectionPath(lang, "services")}>{t.servicesList}</Link>
-              {links.map((l) => (
-                <Link key={l.href} href={l.href}>
-                  {l.label}
-                </Link>
-              ))}
-              <a href={PHONE.href}>{PHONE.label}</a>
-              <a href="#ariza">{t.cta}</a>
-            </div>
-          </details>
+          <MobileMenu
+            label={t.menu}
+            items={[
+              { href: sectionPath(lang, "services"), label: t.servicesList },
+              ...links,
+              { href: PHONE.href, label: PHONE.label },
+              { href: "#ariza", label: t.cta },
+            ]}
+          />
         </div>
       </header>
     </div>

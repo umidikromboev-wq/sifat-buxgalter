@@ -1,3 +1,5 @@
+/* Линии чертежа: медленный разгон и мягкая посадка */
+.top { --ease-draw: cubic-bezier(0.65, 0, 0.35, 1); }
 /* Тёмный верх: шапка поверх кадра, чертёжная сетка, контент прижат к низу. Главная и внутренние страницы. */
 .top {
   position: relative;
@@ -9,7 +11,8 @@
   overflow: hidden;
   isolation: isolate;
 }
-.home { min-height: max(640px, 88svh); }
+/* Лист следующей секции начинается у нижнего края экрана, а не на трети кадра */
+.home { min-height: max(680px, 100svh); }
 .inner { min-height: max(520px, 68svh); }
 
 .img {
@@ -37,11 +40,11 @@
   left: calc(max(0px, (100% - var(--maxw)) / 2) + var(--pad) + (min(100%, var(--maxw)) - 2 * var(--pad) - 11 * var(--gap)) / 6 + 1.5 * var(--gap));
   width: 1px; background: var(--line-dark);
   transform-origin: top;
-  animation: drawY 1.4s var(--ease) 0.35s both;
+  animation: drawY 3.2s var(--ease-draw) 0.5s both;
 }
 @keyframes settle { from { transform: scale(1.05); } to { transform: none; } }
-@keyframes drawX { from { transform: scaleX(0); } to { transform: none; } }
-@keyframes drawY { from { transform: scaleY(0); } to { transform: none; } }
+@keyframes drawX { from { transform: scaleX(0); opacity: 0; } 25% { opacity: 1; } to { transform: none; } }
+@keyframes drawY { from { transform: scaleY(0); opacity: 0; } 25% { opacity: 1; } to { transform: none; } }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
@@ -50,7 +53,7 @@
 /* Линия под шапкой прочерчивается слева направо, как на чертеже */
 .headerLine::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--line-dark);
-  transform-origin: left; animation: drawX 1.2s var(--ease) 0.1s both;
+  transform-origin: left; animation: drawX 2.8s var(--ease-draw) 0.15s both;
 }
 .header { animation: fade 0.8s ease-out 0.15s both; }
 .header { display: flex; align-items: center; gap: 32px; height: 76px; }
@@ -91,14 +94,35 @@
 .callback svg { width: 14px; height: 14px; transition: transform var(--t) var(--ease); }
 .callback:hover svg { transform: translate(2px, -2px); }
 .mobile { display: none; }
+.menuRoot { position: relative; }
+button.glassPill { font-family: inherit; line-height: inherit; }
+/* Белая плашка раскрывается по диагонали из угла кнопки: clip-path от точки справа сверху до полного листа */
 .mobileSheet {
-  position: absolute; right: 0; top: calc(100% + 8px); z-index: 10; min-width: 240px;
-  display: grid; gap: 2px; padding: 8px; border-radius: var(--r-panel);
-  background: rgba(20, 28, 36, 0.86); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  position: absolute; right: 0; top: calc(100% + 10px); z-index: 10;
+  width: min(320px, calc(100vw - 2 * var(--pad)));
+  display: grid; gap: 2px; padding: 10px; border-radius: var(--r-panel);
+  background: #fff; color: var(--text);
+  box-shadow: 0 24px 60px -24px rgba(12, 18, 25, 0.45);
+  clip-path: inset(0 0 100% 100% round var(--r-panel));
+  visibility: hidden;
+  transition: clip-path 0.55s var(--ease-draw), visibility 0s linear 0.55s;
 }
-.mobileSheet a { padding: 10px 12px; border-radius: 8px; font-size: 14px; }
-.mobileSheet a:hover { background: var(--glass-light); }
+.mobileSheet[data-open="true"] {
+  clip-path: inset(0 0 0 0 round var(--r-panel));
+  visibility: visible;
+  transition: clip-path 0.9s var(--ease), visibility 0s;
+}
+.mobileSheet a {
+  padding: 10px 12px; border-radius: 8px; font-size: 14px;
+  opacity: 0; transform: translateY(10px);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out, background var(--t);
+}
+.mobileSheet[data-open="true"] a {
+  opacity: 1; transform: none;
+  transition: opacity 0.5s ease-out calc(0.18s + var(--i) * 50ms), transform 0.6s var(--ease) calc(0.18s + var(--i) * 50ms), background var(--t);
+}
+.mobileSheet a:hover { background: var(--bg-page); }
+.mobileSheet a:last-child { margin-top: 6px; background: var(--bg-dark); color: #fff; text-align: center; border-radius: var(--r-pill); }
 
 /* ---------- Низ кадра ---------- */
 .body { align-self: end; align-items: end; padding-top: 64px; padding-bottom: calc(var(--r-sheet) + 48px); }
@@ -112,11 +136,11 @@
 .factTitle { font-size: 18px; font-weight: 600; line-height: 1.15; margin-bottom: 8px; }
 .factText { font-size: 11px; line-height: 1.45; color: var(--on-dark-2); max-width: 22ch; }
 .main { grid-column: 3 / span 6; animation: rise 0.6s var(--ease) 0.28s both; }
-/* Две фразы заголовка проявляются по очереди: категория, потом польза */
-.h1 > span:first-child { animation: fade 0.9s ease-out 0.35s both; }
-.h1b { animation: fade 0.9s ease-out 0.6s both; }
+/* Заголовок набирается по буквам: категория, затем польза, одной волной */
+.h1 :global(.lc) { animation: letter 0.9s var(--ease) calc(0.4s + var(--i) * 26ms) both; }
+@keyframes letter { from { opacity: 0; transform: translateY(0.35em); } to { opacity: 1; transform: none; } }
 .h1 { font-size: var(--h1); font-weight: 300; line-height: 1.03; letter-spacing: -0.02em; text-wrap: balance; }
-.h1 > span:first-child { color: rgba(255, 255, 255, 0.6); }
+.h1m { color: rgba(255, 255, 255, 0.6); }
 .inner .h1 { font-size: clamp(32px, 1.8vw + 22px, 56px); }
 .lead { margin-top: 18px; font-size: 14px; line-height: 1.55; color: var(--on-dark-2); max-width: 56ch; }
 .panel {
@@ -173,7 +197,8 @@
   .panel { order: 3; width: 100%; margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .img, .fact, .main, .panel, .header, .headerLine::after, .top::after, .h1 > span { animation: none; }
+  .img, .fact, .main, .panel, .header, .headerLine::after, .top::after, .h1 :global(.lc) { animation: none; }
+  .mobileSheet, .mobileSheet a { transition: none !important; }
 }
 
 /* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
@@ -201,4 +226,8 @@
 @media (max-width: 380px) {
   .logo { font-size: 15px; gap: 8px; }
   .mobile { gap: 6px; }
+}
+
+@media (max-width: 360px) {
+  .panel { padding: 16px; }
 }

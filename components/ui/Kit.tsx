@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { Glyph, Marker } from "./Glyph";
 
 // Две стрелки в одной ячейке: при наведении первая уходит вверх-вправо, вторая прилетает снизу-слева.
@@ -18,7 +19,7 @@ export function Pill({ label, href, ink, external }: { label: string; href: stri
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
-      <span>{label}</span>
+      <span style={{ "--n": label.length } as CSSProperties}>{label}</span>
       <PillDot />
     </a>
   );

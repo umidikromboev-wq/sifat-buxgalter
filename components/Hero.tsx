@@ -3,6 +3,7 @@ import { Header } from "./Header";
 import type { Locale } from "@/lib/content/types";
 import { Glyph } from "./ui/Glyph";
 import { Pill } from "./ui/Kit";
+import { Letters, letterCount } from "./ui/Letters";
 import s from "./Top.module.css";
 
 type Props = { lang: Locale; t: Content["hero"]; nav: Content["nav"] };
@@ -32,8 +33,8 @@ export function Hero({ lang, t, nav }: Props) {
           <p className={s.factText}>{t.factText}</p>
         </div>
         <div className={s.main}>
-          <h1 id="hero-h" className={s.h1}>
-            <span>{t.h1Muted}</span> <span className={s.h1b}>{t.h1}</span>
+          <h1 id="hero-h" className={s.h1} aria-label={`${t.h1Muted} ${t.h1}`}>
+            <Letters text={t.h1Muted} className={s.h1m} /> <Letters text={t.h1} from={letterCount(t.h1Muted)} />
           </h1>
         </div>
         <div className={`glass ${s.panel}`}>

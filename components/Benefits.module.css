@@ -38,3 +38,8 @@
   .opt span { padding: 11px 16px; font-size: 15px; }
   .note { font-size: 13px; }
 }
+
+@media (max-width: 360px) {
+  .box { padding-inline: 10px; }
+  .panel { padding: 12px; }
+}

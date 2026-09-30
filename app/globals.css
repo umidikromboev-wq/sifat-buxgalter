@@ -304,6 +304,10 @@ a:hover .corner {
   transform: translate(2px, -2px);
 }
 
+/* Буквы заголовка: слово не рвётся между строк */
+.lw { display: inline-block; white-space: nowrap; }
+.lc { display: inline-block; }
+
 /* ---------- Составная пилюля: белая + бежевый круг со стрелкой ---------- */
 .pill {
   display: flex;
@@ -632,11 +636,21 @@ a:hover .corner {
   .marker { width: 14px; grid-template-columns: repeat(2, 6px); }
   .marker i { width: 6px; height: 6px; }
   .shead { margin-bottom: 28px; }
-  .pill { min-height: 56px; padding-left: 22px; font-size: 15px; }
+  /* Текст кнопки на телефоне всегда в одну строку: кегль ужимается под ширину экрана */
+  .pill { min-height: 56px; padding-left: 20px; gap: 12px; font-size: clamp(13px, 3.9vw, 15px); }
+  /* Кегль считается от ширины самой кнопки и длины подписи (--n), чтобы длинная подпись не переносилась на 320px */
+  .pill { container-type: inline-size; }
+  .pill > span { white-space: nowrap; min-width: 0; font-size: clamp(12px, calc((100cqi - 84px) / (var(--n, 22) * 0.56)), 15px); }
   .pill-dot { width: 48px; height: 48px; }
   .pill-dot svg { width: 18px; height: 18px; }
   .chip { width: 28px; height: 28px; border-radius: 7px; }
   .chip svg { width: 15px; height: 15px; }
   .more { font-size: 15px; }
   .corner { width: 16px; height: 16px; }
+}
+/* Самые узкие телефоны (320–360): кнопка и круг компактнее, подпись всё равно в одну строку */
+@media (max-width: 360px) {
+  .pill { padding-left: 14px; gap: 6px; }
+  .pill-dot { width: 38px; height: 38px; }
+  .pill > span { letter-spacing: -0.01em; font-size: clamp(11.5px, calc((100cqi - 60px) / (var(--n, 22) * 0.55)), 15px); }
 }
