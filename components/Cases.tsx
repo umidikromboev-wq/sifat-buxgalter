@@ -12,13 +12,13 @@ export function Cases({ t, lang }: { t: Content["cases"]; lang: Locale }) {
     <section aria-labelledby="cases-h">
       <SectionHead id="cases-h" kicker={t.kicker} title={t.h2} lead={t.lead} />
       <div className="wrap">
-        <ul className={s.bento}>
+        <ul className={s.bento} data-stagger>
           {t.items.map((c, i) => (
-            <li key={c.title} className={`card ${s.card} ${s[c.size]} reveal`} style={{ transitionDelay: `${i * STAGGER_MS}ms` }}>
+            <li key={c.title} className={`card ${s.card} ${s[c.size]}`}>
               <a href={c.link.kind === "services" ? servicePath(lang, c.link.id) : articlePath(lang, c.link.id)}>
                 <h3 className={s.title}>{c.title}</h3>
                 <Glyph name="arrow" className="corner" />
-                <span className={s.art} aria-hidden="true">
+                <span className={`${s.art} rise`} aria-hidden="true">
                   <span className={s.rings} />
                   <img src={`/glass/ill/${c.img}.svg`} alt="" width={600} height={400} loading="lazy" decoding="async" />
                   <span className={`chip ${s.chip}`}>
@@ -28,7 +28,7 @@ export function Cases({ t, lang }: { t: Content["cases"]; lang: Locale }) {
               </a>
             </li>
           ))}
-          <li className={`card card-dark ${s.card} ${s.dark} reveal`} style={{ transitionDelay: `${t.items.length * STAGGER_MS}ms` }}>
+          <li className={`card card-dark ${s.card} ${s.dark}`}>
             <img className={s.darkImg} src="/glass/desk.webp" alt={lang === "uz" ? "Buxgalter ish stoli, kechki ofis" : "Рабочий стол бухгалтера, вечерний офис"} width={880} height={663} loading="lazy" decoding="async" />
             <div className={s.darkBody}>
               <h3>{t.cta.title}</h3>

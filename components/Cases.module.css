@@ -30,6 +30,12 @@
   transform: translateX(-50%);
   transition: transform 0.35s var(--ease);
 }
+/* Иллюстрация поднимается чуть позже карточки */
+.card .art {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.8s ease-out calc(var(--d, 0ms) + 0.15s), transform 1s var(--ease) calc(var(--d, 0ms) + 0.15s);
+}
+.card:global(.in) .art { opacity: 1; transform: none; }
 .card > a:hover .art img { transform: translate(-50%, -4px); }
 .chip { position: absolute; right: 18px; bottom: 18px; z-index: 2; }
 /* Пунктир от объекта к чипу */

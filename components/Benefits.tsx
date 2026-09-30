@@ -14,9 +14,9 @@ export function Benefits({ t, lang }: { t: Content["benefits"]; lang: Locale }) 
   return (
     <section id="imtiyozlar" aria-labelledby="bn-h">
       <div className="wrap">
-        <div className={`card card-dark ${s.box}`}>
+        <div className={`card card-dark ${s.box} reveal`}>
           <img className={s.img} src="/glass/desk.webp" alt={lang === "uz" ? "Buxgalter ish stoli, kechki ofis" : "Рабочий стол бухгалтера, вечерний офис"} width={880} height={663} loading="lazy" decoding="async" />
-          <div className={`grid12 ${s.grid}`}>
+          <div className={`grid12 ${s.grid}`} data-stagger>
             <Marker />
             <div className={s.copy}>
               <p className="kicker">{t.kicker}</p>

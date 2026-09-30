@@ -38,7 +38,7 @@ export function ArticleView({ lang, id, page }: Props) {
             );
           })}
         </article>
-        <aside className={s.side}>
+        <aside className={s.side} data-stagger>
           <div className={`card card-dark ${s.take}`}>
             <p>{page.takeaway}</p>
             <Pill label={service.name} href={servicePath(lang, page.service)} />
@@ -52,7 +52,7 @@ export function ArticleView({ lang, id, page }: Props) {
           </Link>
         </aside>
       </div>
-      <section className="wrap grid12" aria-label={copy.ui.relatedArticles}>
+      <section className="wrap grid12" aria-label={copy.ui.relatedArticles} data-stagger>
         <LinkCard wide title={copy.ui.relatedArticles} items={others.map(([k, a]) => [articlePath(lang, k), a.name])} />
       </section>
     </>

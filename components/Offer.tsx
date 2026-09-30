@@ -20,11 +20,11 @@ export function Services({ t, lang }: { t: Content["services"]; lang: Locale }) 
     <section id="xizmatlar" aria-labelledby="sv-h">
       <SectionHead id="sv-h" kicker={t.kicker} title={t.h2} lead={t.sub} />
       <div className="wrap">
-        <ul className={s.services}>
+        <ul className={s.services} data-stagger>
           {t.groups.map((g, i) => {
             const meta = GROUPS[i];
             return (
-              <li key={g.title} className={`card reveal`} style={{ transitionDelay: `${i * 80}ms` }}>
+              <li key={g.title} className={`card`}>
                 <Link className={s.svc} href={servicePath(lang, meta.id)}>
                   <span className="chip">
                     <Glyph name={meta.icon} />
@@ -40,7 +40,7 @@ export function Services({ t, lang }: { t: Content["services"]; lang: Locale }) 
               </li>
             );
           })}
-          <li className={`card card-dark ${s.svcAll} reveal`}>
+          <li className={`card card-dark ${s.svcAll}`}>
             <p>{copy.services.lead}</p>
             <Pill label={copy.ui.allServices} href={sectionPath(lang, "services")} />
           </li>
@@ -56,15 +56,15 @@ export function Clauses({ t, cta }: { t: Content["clauses"]; cta: string }) {
     <section aria-labelledby="cl-h">
       <SectionHead id="cl-h" kicker={t.kicker} title={t.h2} />
       <div className="wrap">
-        <ol className={s.clauses}>
+        <ol className={s.clauses} data-stagger>
           {t.items.map((c, i) => (
-            <li key={c.title} className={`card ${s.clause} reveal`} style={{ transitionDelay: `${(i % 4) * 80}ms` }}>
+            <li key={c.title} className={`card ${s.clause}`}>
               <span className={`chip num ${s.par}`}>§{i + 1}</span>
               <h3 className={s.clT}>{c.title}</h3>
               <p className={s.clX}>{c.text}</p>
             </li>
           ))}
-          <li className={`card card-dark ${s.clause} ${s.clCta} reveal`}>
+          <li className={`card card-dark ${s.clause} ${s.clCta}`}>
             <p className={s.clT}>{t.sub}</p>
             <Pill label={cta} href="#ariza" />
           </li>
@@ -81,7 +81,7 @@ export function Compare({ t }: { t: Content["compare"] }) {
     <section aria-labelledby="cmp-h">
       <SectionHead id="cmp-h" kicker={t.kicker} title={t.h2} lead={t.sub} />
       <div className="wrap">
-        <div className={`card ${s.cmp}`} role="table" aria-labelledby="cmp-h">
+        <div className={`card ${s.cmp}`} role="table" aria-labelledby="cmp-h" data-stagger>
           <div className={`${s.row} ${s.headRow}`} role="row">
             <span role="columnheader" />
             <span role="columnheader">{nowLabel}</span>
@@ -90,7 +90,7 @@ export function Compare({ t }: { t: Content["compare"] }) {
             </span>
           </div>
           {t.rows.map((r) => (
-            <div key={r.k} className={`${s.row} reveal`} role="row">
+            <div key={r.k} className={`${s.row}`} role="row">
               <span role="rowheader" className={s.k}>
                 {r.k}
               </span>

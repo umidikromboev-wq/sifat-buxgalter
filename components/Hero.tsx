@@ -33,7 +33,7 @@ export function Hero({ lang, t, nav }: Props) {
         </div>
         <div className={s.main}>
           <h1 id="hero-h" className={s.h1}>
-            <span>{t.h1Muted}</span> {t.h1}
+            <span>{t.h1Muted}</span> <span className={s.h1b}>{t.h1}</span>
           </h1>
         </div>
         <div className={`glass ${s.panel}`}>

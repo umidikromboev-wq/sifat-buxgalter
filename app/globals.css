@@ -345,8 +345,28 @@ a:hover .corner {
   background: var(--accent-hover);
 }
 
-.pill:hover .pill-dot svg {
-  transform: translate(2px, -2px);
+/* Две стрелки в одной ячейке: первая уходит вверх-вправо, вторая прилетает на её место */
+.pill-dot {
+  overflow: hidden;
+}
+.pill-dot svg {
+  grid-area: 1 / 1;
+  transition: transform 0.45s var(--ease);
+}
+.pill-dot svg + svg {
+  transform: translate(-160%, 160%);
+}
+.pill:hover .pill-dot svg:first-child {
+  transform: translate(160%, -160%);
+}
+.pill:hover .pill-dot svg + svg {
+  transform: none;
+}
+.pill {
+  transition: transform 0.2s var(--ease);
+}
+.pill:active {
+  transform: scale(0.98);
 }
 
 .pill[disabled] {
@@ -420,19 +440,97 @@ a:hover .corner {
   background: var(--accent-hover);
 }
 
-/* ---------- Появление: fade + 16px, stagger задаётся инлайн ---------- */
-.reveal {
+/* ---------- Движение ----------
+   Правила ТЗ: появление fade + 16px, stagger 80ms, без отскоков, параллакса и вращений.
+   Двигаем только transform и opacity. --d (задержка в волне) ставит components/Reveal.tsx. */
+.reveal,
+[data-stagger] > * {
   opacity: 0;
   transform: translateY(16px);
   transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
+    opacity 0.7s ease-out var(--d, 0ms),
+    transform 0.9s var(--ease) var(--d, 0ms);
 }
 
-.reveal.in {
+.reveal.in,
+[data-stagger] > .in {
   opacity: 1;
   transform: none;
 }
+
+/* Чипы в карточках проявляются следом за карточкой, из 60% без перелёта */
+[data-stagger] > :not(details) .chip {
+  opacity: 0;
+  transform: scale(0.6);
+  transition:
+    opacity 0.4s ease-out calc(var(--d, 0ms) + 0.25s),
+    transform 0.6s var(--ease) calc(var(--d, 0ms) + 0.25s);
+}
+
+[data-stagger] > .in:not(details) .chip {
+  opacity: 1;
+  transform: none;
+}
+
+/* Кликабельная карточка чуть приподнимается */
+[data-stagger] > .card.in:has(> a:hover),
+[data-stagger] > a.card.in:hover {
+  transform: translateY(-3px);
+}
+
+/* Заголовок секции: маркер загорается по квадрату, строки H2 выезжают из-под маски, пояснение проявляется последним */
+.shead .marker i {
+  opacity: 0.15;
+  transition: opacity 0.5s ease-out;
+}
+.shead .marker i:nth-child(2) { transition-delay: 0.08s; }
+.shead .marker i:nth-child(3) { transition-delay: 0.16s; }
+.shead .marker i:nth-child(4) { transition-delay: 0.24s; }
+.shead.in .marker i { opacity: 1; }
+
+.shead .kicker,
+.shead .shead-lead {
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.7s ease-out 0.1s,
+    transform 0.9s var(--ease) 0.1s;
+}
+.shead .shead-lead { transition-delay: 0.35s; }
+.shead.in .kicker,
+.shead.in .shead-lead {
+  opacity: 1;
+  transform: none;
+}
+
+.ln {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+.ln > span {
+  display: block;
+  transform: translateY(110%);
+  transition: transform 1s var(--ease) calc(0.15s + var(--l, 0) * 0.09s);
+}
+.in .ln > span { transform: none; }
+
+/* Счётчик-барабан (components/ui/Odometer.tsx) */
+.odo-g { white-space: nowrap; }
+.odo {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  vertical-align: top;
+}
+.odo-col {
+  display: flex;
+  flex-direction: column;
+  transition: transform 1.6s var(--ease) calc(var(--d, 0ms) + 0.2s + var(--o, 0) * 0.05s);
+}
+.odo-col > span { height: 1em; line-height: 1; }
+.in .odo-col { transform: translateY(var(--y)); }
 
 .sr-only {
   position: absolute;
@@ -504,10 +602,18 @@ a:hover .corner {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal {
+  .reveal,
+  [data-stagger] > *,
+  [data-stagger] > * .chip,
+  .shead .kicker,
+  .shead .shead-lead,
+  .ln > span,
+  .rise {
     opacity: 1;
     transform: none;
   }
+  .shead .marker i { opacity: 1; }
+  .odo-col { transform: translateY(var(--y)); }
 }
 
 /* Секции внутри одного листа идут стопкой через воздух, без разделителей */

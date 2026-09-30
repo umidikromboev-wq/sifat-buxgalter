@@ -31,3 +31,7 @@
   .q { padding: 20px; font-size: 17px; gap: 16px; }
   .a { padding: 0 20px 22px; font-size: 16px; }
 }
+
+/* Ответ раскрывается мягко, без прыжка */
+@keyframes answerIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.qa[open] > .a { animation: answerIn 0.45s var(--ease) both; }

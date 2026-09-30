@@ -14,9 +14,9 @@ export function HubView({ lang, kind }: { lang: Locale; kind: Kind }) {
       : Object.entries(articles).map(([id, p]) => ({ id, name: p.h1, text: p.description, href: articlePath(lang, id) }));
   return (
     <section className="wrap" aria-label={kind}>
-      <ol className={s.hub}>
+      <ol className={s.hub} data-stagger>
         {rows.map((r, i) => (
-          <li key={r.id} className="card reveal" style={{ transitionDelay: `${(i % 3) * 80}ms` }}>
+          <li key={r.id} className="card">
             <Link href={r.href} className={s.hubItem}>
               <span className={`chip num ${s.n}`}>{i + 1}</span>
               <Glyph name="arrow" className="corner" />

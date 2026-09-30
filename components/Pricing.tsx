@@ -8,8 +8,8 @@ export function Fit({ t }: { t: Content["fit"] }) {
   return (
     <section aria-labelledby="fit-h">
       <SectionHead id="fit-h" kicker={t.kicker} title={t.h2} lead={t.note} />
-      <div className={`wrap grid12`}>
-        <div className={`card ${s.yes} reveal`}>
+      <div className="wrap grid12" data-stagger>
+        <div className={`card ${s.yes}`}>
           <h3 className={s.t}>{t.yesTitle}</h3>
           <ul className={s.list}>
             {t.yes.map((y) => (
@@ -22,7 +22,7 @@ export function Fit({ t }: { t: Content["fit"] }) {
             ))}
           </ul>
         </div>
-        <div className={`card card-dark ${s.no} reveal`}>
+        <div className={`card card-dark ${s.no}`}>
           <h3 className={s.t}>{t.noTitle}</h3>
           <ul className={s.list}>
             {t.no.map((n) => (

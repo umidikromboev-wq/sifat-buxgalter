@@ -8,7 +8,7 @@ import s from "./LeadForm.module.css";
 export function Contact({ t, lang }: { t: Content["form"]; lang: Locale }) {
   return (
     <section id="ariza" aria-labelledby="form-h">
-      <div className="wrap grid12">
+      <div className="wrap grid12" data-stagger>
         <Marker />
         <div className={s.copy}>
           <p className="kicker">{t.kicker}</p>

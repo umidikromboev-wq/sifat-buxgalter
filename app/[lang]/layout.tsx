@@ -4,6 +4,10 @@ import { HtmlLang, Reveal } from "@/components/Reveal";
 import { isLocale, LOCALES } from "@/lib/content/types";
 import { getContent, SITE } from "@/lib/site";
 
+// Без JS всё, что ждёт .in, сразу стоит на месте
+const NOSCRIPT_CSS =
+  ".reveal,[data-stagger]>*,[data-stagger]>* .chip,.shead .kicker,.shead .shead-lead,.ln>span,.rise{opacity:1!important;transform:none!important}.shead .marker i{opacity:1!important}.odo-col{transform:translateY(var(--y))!important}";
+
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -40,7 +44,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
       <HtmlLang lang={lang} />
       <Reveal />
       <noscript>
-        <style>{".reveal{opacity:1!important;transform:none!important}"}</style>
+        <style>{NOSCRIPT_CSS}</style>
       </noscript>
       {children}
     </>

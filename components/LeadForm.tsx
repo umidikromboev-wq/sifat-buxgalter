@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Content, Locale } from "@/lib/content/types";
 import { SITE } from "@/lib/site";
 import { Glyph } from "./ui/Glyph";
+import { PillDot } from "./ui/Kit";
 import s from "./LeadForm.module.css";
 
 type Status = "idle" | "sending" | "ok" | "err" | "invalid";
@@ -83,9 +84,7 @@ export function LeadForm({ t, lang }: { t: Content["form"]; lang: Locale }) {
       </div>
       <button className="pill" type="submit" disabled={status === "sending"}>
         <span>{status === "sending" ? t.sending : t.submit}</span>
-        <span className="pill-dot">
-          <Glyph name="arrow" />
-        </span>
+        <PillDot />
       </button>
       <p className={s.msg} role="alert" aria-live="polite">
         {status === "invalid" && t.invalid}

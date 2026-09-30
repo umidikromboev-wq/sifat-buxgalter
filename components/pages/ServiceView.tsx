@@ -17,9 +17,9 @@ export function ServiceView({ lang, id, page }: Props) {
       <section aria-labelledby="sv-when">
         <SectionHead id="sv-when" kicker={copy.ui.when} title={page.when.h2} />
         <div className="wrap">
-          <ul className={s.ticks}>
+          <ul className={s.ticks} data-stagger>
             {page.when.items.map((it, i) => (
-              <li key={it} className="card reveal" style={{ transitionDelay: `${(i % 3) * 80}ms` }}>
+              <li key={it} className="card">
                 <span className="chip">
                   <Glyph name="check" />
                 </span>
@@ -32,7 +32,7 @@ export function ServiceView({ lang, id, page }: Props) {
 
       <section aria-labelledby="sv-inc">
         <SectionHead id="sv-inc" title={page.includes.h2} />
-        <div className="wrap grid12">
+        <div className="wrap grid12" data-stagger>
           <ul className={`card ${s.ledger}`}>
             {page.includes.items.map((it) => (
               <li key={it}>
@@ -47,9 +47,9 @@ export function ServiceView({ lang, id, page }: Props) {
       <section aria-labelledby="sv-steps">
         <SectionHead id="sv-steps" title={page.steps.h2} />
         <div className="wrap">
-          <ol className={s.steps}>
+          <ol className={s.steps} data-stagger>
             {page.steps.items.map(([t, x], i) => (
-              <li key={t} className="card reveal" style={{ transitionDelay: `${i * 80}ms` }}>
+              <li key={t} className="card">
                 <span className="chip num">{i + 1}</span>
                 <h3 className={s.cardT}>{t}</h3>
                 <p className={s.cardX}>{x}</p>
@@ -62,9 +62,9 @@ export function ServiceView({ lang, id, page }: Props) {
       <section aria-labelledby="sv-prom">
         <SectionHead id="sv-prom" title={page.promise.h2} />
         <div className="wrap">
-          <ol className={`${s.steps} ${s.promise}`} style={{ "--cols": page.promise.items.length + 1 } as React.CSSProperties}>
+          <ol data-stagger className={`${s.steps} ${s.promise}`} style={{ "--cols": page.promise.items.length + 1 } as React.CSSProperties}>
             {page.promise.items.map(([t, x], i) => (
-              <li key={t} className="card reveal" style={{ transitionDelay: `${i * 80}ms` }}>
+              <li key={t} className="card">
                 <span className={`num ${s.par}`}>§ {i + 1}</span>
                 <h3 className={s.cardT}>{t}</h3>
                 <p className={s.cardX}>{x}</p>
@@ -81,7 +81,7 @@ export function ServiceView({ lang, id, page }: Props) {
       <section aria-labelledby="sv-faq">
         <SectionHead id="sv-faq" title={copy.ui.faq} />
         <div className="wrap grid12">
-          <div className={s.faq}>
+          <div className={s.faq} data-stagger>
             {page.faq.map(([q, a]) => (
               <details key={q} className="card">
                 <summary>
@@ -97,7 +97,7 @@ export function ServiceView({ lang, id, page }: Props) {
         </div>
       </section>
 
-      <section className="wrap grid12" aria-label={copy.ui.relatedArticles}>
+      <section className="wrap grid12" aria-label={copy.ui.relatedArticles} data-stagger>
         <LinkCard title={copy.ui.relatedArticles} items={page.related.map((a) => [articlePath(lang, a), articles[a].name])} />
         <LinkCard title={copy.ui.relatedServices} items={others.map(([k, o]) => [servicePath(lang, k), o.name])} />
       </section>
