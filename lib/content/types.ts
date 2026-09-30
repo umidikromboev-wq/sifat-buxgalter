@@ -1,3 +1,5 @@
+import type { GlyphName } from "@/components/ui/Glyph";
+
 export const LOCALES = ["uz", "ru"] as const;
 export type Locale = (typeof LOCALES)[number];
 
@@ -7,18 +9,23 @@ type Pair = readonly [string, string];
 
 export type Content = {
   meta: { title: string; description: string };
-  nav: { services: string; faq: string; cta: string; langLabel: string };
+  nav: { services: string; servicesList: string; faq: string; contacts: string; cta: string; callback: string; menu: string; langLabel: string };
   hero: {
-    kicker: string;
+    factTitle: Pair;
+    factText: string;
+    h1Muted: string;
     h1: string;
-    sub: string;
+    panelTitle: string;
+    panelText: string;
     cta: string;
-    ctaAlt: string;
-    note: string;
-    sheet: { tag: string; title: string; rows: Pair[]; foot: Pair[]; stamp: string };
-    facts: Pair[];
   };
-  triggers: { kicker: string; h2: string; items: string[]; lead: string };
+  cases: {
+    kicker: string;
+    h2: Pair;
+    lead: string;
+    items: Case[];
+    cta: { title: string; text: string; cta: string };
+  };
   risk: { kicker: string; h2: string; lead: string; steps: string[]; total: string; totalLabel: string; answer: string };
   services: { kicker: string; h2: string; sub: string; groups: { title: string; items: string[] }[] };
   clauses: { kicker: string; h2: string; sub: string; items: { title: string; text: string }[] };
@@ -46,4 +53,13 @@ export type Content = {
     orTelegram: string;
   };
   footer: { addressLabel: string; address: string; landmark: string; mapLink: string; contacts: string; hours: string; rights: string };
+};
+
+// Карточка бенто «Когда к нам приходят»: ведёт на страницу услуги или статьи.
+export type Case = {
+  title: string;
+  img: string; // public/glass/ill/<img>.svg
+  icon: GlyphName;
+  link: { kind: "services" | "articles"; id: string };
+  size: "narrow" | "tall" | "wide";
 };

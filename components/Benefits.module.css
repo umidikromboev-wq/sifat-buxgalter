@@ -1,88 +1,32 @@
-.sec {
-  background: var(--paper-2);
-  border-block: 1px solid var(--line);
+/* Одна тёмная карточка на всю ширину: кадр стола, слева заголовок, справа стекло с выбором сферы. */
+.box { position: relative; overflow: hidden; isolation: isolate; padding: 48px 32px; }
+.img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+.box::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(12, 18, 25, 0.92) 0%, rgba(12, 18, 25, 0.6) 60%, rgba(12, 18, 25, 0.4)); }
+.grid { align-items: end; }
+.box :global(.marker) { align-self: start; margin-top: 30px; }
+.box :global(.kicker) { color: var(--on-dark-2); }
+.copy { grid-column: 3 / span 5; align-self: start; }
+.sub { margin-top: 18px; font-size: 14px; line-height: 1.55; color: var(--on-dark-2); max-width: 46ch; }
+.panel { grid-column: 8 / span 5; display: grid; gap: 18px; padding: 24px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
+.chips legend { width: 100%; margin-bottom: 12px; font-size: 12px; color: var(--on-dark-2); }
+.opt { position: relative; cursor: pointer; }
+.opt input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.opt span {
+  display: inline-block; padding: 8px 14px; border-radius: var(--r-pill); font-size: 13px;
+  background: var(--glass-light); border: 1px solid rgba(255, 255, 255, 0.12); transition: background var(--t), color var(--t);
 }
-
-.grid {
-  display: grid;
-  gap: clamp(1.75rem, 1.2rem + 2vw, 3rem);
-  align-items: start;
+.opt input:checked + span { background: #fff; color: var(--text); }
+.opt input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.note { font-size: 11px; line-height: 1.5; color: var(--on-dark-2); }
+@media (max-width: 1180px) {
+  .copy { grid-column: 3 / -1; }
+  .panel { grid-column: 3 / -1; margin-top: 28px; }
 }
-
-@media (min-width: 900px) {
-  .grid {
-    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
-  }
+@media (max-width: 900px) {
+  .copy, .panel { grid-column: 1 / -1; }
 }
-
-.h {
-  max-width: 18ch;
-}
-
-.card {
-  background: var(--sheet);
-  border: 1px solid var(--ink);
-  padding: clamp(1.25rem, 1rem + 1.2vw, 2rem);
-}
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.chips legend {
-  width: 100%;
-  margin-bottom: 0.9rem;
-  font-size: var(--small);
-  color: var(--muted);
-}
-
-.chip input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.chip span {
-  display: inline-block;
-  padding: 0.5rem 0.85rem;
-  border: 1px solid var(--line);
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: border-color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease);
-}
-
-.chip span:hover {
-  border-color: var(--ink);
-}
-
-.chip input:checked + span {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: var(--paper);
-}
-
-.chip input:focus-visible + span {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
-}
-
-.cta {
-  width: 100%;
-  margin-top: 1.5rem;
-  justify-content: center;
-}
-
-.note {
-  margin-top: 1rem;
-  font-size: var(--small);
-  color: var(--dim);
-}
-
-.chip {
-  position: relative;
+@media (max-width: 760px) {
+  .box { padding: 28px 16px 16px; }
+  .panel { padding: 18px; }
 }

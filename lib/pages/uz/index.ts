@@ -31,7 +31,7 @@ export const uz: PagesBundle = {
       relatedServices: "Boshqa xizmatlar",
       minutes: "daqiqa oʻqish",
       ctaTitle: "Bepul 10 daqiqalik qoʻngʻiroq",
-      ctaText: "Vaziyatingizni aytib bering — Bekzod qoʻngʻiroq qilib, nimadan boshlashni aytadi.",
+      ctaText: "Vaziyatingizni aytib bering, Bekzod qoʻngʻiroq qilib, nimadan boshlashni aytadi.",
       ctaBtn: "Ariza qoldirish",
       allServices: "Barcha xizmatlar",
       allArticles: "Barcha maqolalar",

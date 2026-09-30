@@ -3,6 +3,10 @@
 
 
 
+## 2026-09-30 — glass: весь сайт в системе «glass + beige»
+Сделано: главная /uz и /ru, хабы, 7 услуг, 5 статей, форма, подвал переведены на Geologica, сетку 12 кол., листы 40/24, белые карточки, стекло, пилюли ↗. Общие детали: ui/Glyph.tsx, ui/Kit.tsx (Pill, SectionHead), PageTop (верх внутренних страниц), Top.module.css. Разбор стиля: DESIGN.md. Удалены components/glass, chrome.css, page.module.css, Hero.module.css. Превью sifat-glass.vercel.app, site-qa чисто (/uz и страница услуги).
+Решения: живой concordia-consulting.ru этого стиля не содержит (Tilda, капс), всё выведено из ТЗ Умида. Бенто «Когда к нам приходят» стало первой секцией вместо старых «триггеров». Reveal перезапускается по смене пути (раньше при переходе по Link карточки оставались невидимыми).
+Осталось: [ ] «да» Умида → решить, переносить ли в main [ ] длинные тире в старых текстах контента
 ## 2026-09-30 — glass: иконки из набора Умида
 Сделано: ~/Downloads/Sifat buxgalter/icons → иллюстрации карточек public/glass/ill/*.svg (вместо 3D webp Higgsfield, удалены), контуры ui + chips перенесены в components/glass/icons.tsx (сетка 14, currentColor). Прод-превью sifat-glass.vercel.app, site-qa чисто.
 Решения: logo-mark из набора не взят, оставлен настоящий знак клиента (components/Logo.tsx).

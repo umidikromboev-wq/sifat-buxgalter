@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Clauses, Compare, Services } from "@/components/Offer";
 import { Benefits } from "@/components/Benefits";
 import { Fit } from "@/components/Pricing";
-import { Risk, Triggers } from "@/components/Problem";
+import { Cases } from "@/components/Cases";
+import { Risk } from "@/components/Problem";
 import { Clients, Faq } from "@/components/Trust";
 import { isLocale } from "@/lib/content/types";
 import { getContent, SITE } from "@/lib/site";
@@ -40,19 +40,26 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
       <a className="skip" href="#main">
         {lang === "uz" ? "Asosiy qismga oʻtish" : "К основному содержанию"}
       </a>
-      <Header lang={lang} t={t.nav} />
       <main id="main">
-        <Hero t={t.hero} />
-        <Triggers t={t.triggers} />
-        <Risk t={t.risk} />
-        <Services t={t.services} lang={lang} />
-        <Clauses t={t.clauses} />
-        <Compare t={t.compare} />
-        <Benefits t={t.benefits} />
-        <Fit t={t.fit} />
-        <Clients t={t.clients} />
-        <Faq t={t.faq} />
-        <Contact t={t.form} lang={lang} />
+        <Hero lang={lang} t={t.hero} nav={t.nav} />
+        <div className="sheet">
+          <Cases lang={lang} t={t.cases} />
+        </div>
+        <div className="sheet sheet-dark">
+          <Risk t={t.risk} />
+        </div>
+        <div className="sheet stack">
+          <Services t={t.services} lang={lang} />
+          <Clauses t={t.clauses} cta={t.nav.cta} />
+          <Compare t={t.compare} />
+          <Benefits t={t.benefits} lang={lang} />
+          <Fit t={t.fit} />
+          <Clients t={t.clients} />
+          <Faq t={t.faq} />
+        </div>
+        <div className="sheet sheet-dark">
+          <Contact t={t.form} lang={lang} />
+        </div>
       </main>
       <Footer t={t.footer} lang={lang} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />

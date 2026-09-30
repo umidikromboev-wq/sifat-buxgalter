@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import { PageTop } from "@/components/PageTop";
 import { HubView } from "@/components/pages/HubView";
 import { isLocale, type Locale } from "@/lib/content/types";
 import { alternates, getPages, kindBySeg, sectionParams, type Kind } from "@/lib/pages";
@@ -51,10 +51,23 @@ export default async function SectionPage({ params }: PageProps<"/[lang]/[sectio
       <a className="skip" href="#main">
         {lang === "uz" ? "Asosiy qismga oʻtish" : "К основному содержанию"}
       </a>
-      <Header lang={lang} t={t.nav} alt={alt[other]} />
       <main id="main">
-        <HubView lang={lang} kind={kind} crumbs={crumbs} />
-        <Contact t={t.form} lang={lang} />
+        <PageTop
+          lang={lang}
+          nav={t.nav}
+          alt={alt[other]}
+          crumbs={crumbs}
+          kicker={copy[kind].kicker}
+          h1={copy[kind].h1}
+          lead={copy[kind].lead}
+          img={kind === "services" ? "hero" : "desk"}
+        />
+        <div className="sheet">
+          <HubView lang={lang} kind={kind} />
+        </div>
+        <div className="sheet sheet-dark">
+          <Contact t={t.form} lang={lang} />
+        </div>
       </main>
       <Footer t={t.footer} lang={lang} />
       <script

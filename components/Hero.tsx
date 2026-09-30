@@ -1,102 +1,47 @@
 import type { Content } from "@/lib/content/types";
-import { SITE } from "@/lib/site";
-import s from "./Hero.module.css";
+import { Header } from "./Header";
+import type { Locale } from "@/lib/content/types";
+import { Glyph } from "./ui/Glyph";
+import { Pill } from "./ui/Kit";
+import s from "./Top.module.css";
 
-// Первый экран показывает State B — месяц, в котором всё сдано и требований ноль, а не «процесс работы».
-export function Hero({ t }: { t: Content["hero"] }) {
+type Props = { lang: Locale; t: Content["hero"]; nav: Content["nav"] };
+
+// Кадр показывает мир клиента: деловой центр, где сидят его офисы. Текст лежит на тёмном низе кадра.
+export function Hero({ lang, t, nav }: Props) {
   return (
-    <section className={s.hero} aria-labelledby="hero-h">
-      <div className={`wrap ${s.grid}`}>
-        <div className={s.copy}>
-          <p className="kicker">{t.kicker}</p>
-          <h1 id="hero-h" className={s.h1}>
-            {t.h1}
-          </h1>
-          <p className={s.sub}>{t.sub}</p>
-          <div className={s.ctas}>
-            <a className="btn btn-ink" href="#ariza">
-              {t.cta}
-            </a>
-            <a className="btn btn-line" href={SITE.telegram} target="_blank" rel="noopener noreferrer">
-              {t.ctaAlt}
-            </a>
-          </div>
-          <p className={s.note}>{t.note}</p>
+    <section className={`${s.top} ${s.home}`} aria-labelledby="hero-h">
+      <img
+        className={s.img}
+        src="/glass/hero.webp"
+        alt={lang === "uz" ? "Toshkentdagi biznes-markaz, quyosh botishi" : "Деловой центр в Ташкенте на закате"}
+        width={1344}
+        height={752}
+        fetchPriority="high"
+      />
+      <Header lang={lang} t={nav} />
+      <div className={`wrap grid12 ${s.body}`}>
+        <div className={s.fact}>
+          <span className={s.factIcon}>
+            <Glyph name="shield" />
+          </span>
+          <p className={s.factTitle}>
+            {t.factTitle[0]} <br />
+            {t.factTitle[1]}
+          </p>
+          <p className={s.factText}>{t.factText}</p>
         </div>
-        <Sheet t={t.sheet} />
-      </div>
-      <div className="wrap">
-        <dl className={s.facts}>
-          {t.facts.map(([k, v]) => (
-            <div key={v} className={s.fact}>
-              <dt className={`${s.factK} num`}>{k}</dt>
-              <dd className={s.factV}>{v}</dd>
-            </div>
-          ))}
-        </dl>
+        <div className={s.main}>
+          <h1 id="hero-h" className={s.h1}>
+            <span>{t.h1Muted}</span> {t.h1}
+          </h1>
+        </div>
+        <div className={`glass ${s.panel}`}>
+          <p className={s.panelTitle}>{t.panelTitle}</p>
+          <p className={s.panelText}>{t.panelText}</p>
+          <Pill label={t.cta} href="#ariza" />
+        </div>
       </div>
     </section>
-  );
-}
-
-function Sheet({ t }: { t: Content["hero"]["sheet"] }) {
-  return (
-    <figure className={s.sheet} aria-label={`${t.tag}: ${t.title}`}>
-      <div className={s.sheetTop}>
-        <span className={s.sheetTitle}>{t.title}</span>
-        <span className={s.tag}>{t.tag}</span>
-      </div>
-      <ul className={s.rows}>
-        {t.rows.map(([label, status], i) => (
-          <li key={label} className={s.row} style={{ "--i": i } as React.CSSProperties}>
-            <span>{label}</span>
-            <span className={s.dots} aria-hidden="true" />
-            <span className={s.status}>
-              <Check />
-              {status}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <dl className={s.sheetFoot}>
-        {t.foot.map(([k, v]) => (
-          <div key={k}>
-            <dt>{k}</dt>
-            <dd className="num">{v}</dd>
-          </div>
-        ))}
-      </dl>
-      <Stamp text={t.stamp} />
-    </figure>
-  );
-}
-
-function Check() {
-  return (
-    <svg viewBox="0 0 16 16" className={s.check} aria-hidden="true">
-      <path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-// Печать — знак «проверено»: фирменное золото работает там, где у бухгалтерии оно и живёт.
-function Stamp({ text }: { text: string }) {
-  return (
-    <svg className={s.stamp} viewBox="0 0 200 200" aria-hidden="true">
-      <defs>
-        <path id="stamp-ring" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0" />
-      </defs>
-      <circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" strokeWidth="3" />
-      <circle cx="100" cy="100" r="56" fill="none" stroke="currentColor" strokeWidth="1.5" />
-      <text fontSize="15" fontWeight="700" letterSpacing="3.2" fill="currentColor">
-        <textPath href="#stamp-ring">{text + text}</textPath>
-      </text>
-      <g transform="translate(76 76) scale(0.42)" fill="currentColor">
-        <polygon points="25,2 82,2 77,54 13,54" />
-        <polygon points="84,26 112,26 106,54 77,54" />
-        <polygon points="8,65 38,65 32,95 2,95" />
-        <polygon points="48,65 101,65 90,118 34,118" />
-      </g>
-    </svg>
   );
 }

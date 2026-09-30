@@ -1,6 +1,4 @@
 // Знак перерисован в SVG с logo_v5.png клиента: исходник 500px, знак в нём ~120px — растр мылился.
-type Props = { className?: string; title?: string };
-
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 114 120" aria-hidden="true" focusable="false">
@@ -17,17 +15,5 @@ export function LogoMark({ className }: { className?: string }) {
         <polygon points="48,65 101,65 90,118 34,118" />
       </g>
     </svg>
-  );
-}
-
-export function Logo({ className, title = "Sifat Buxgalter" }: Props) {
-  return (
-    <span className={className} style={{ display: "inline-flex", alignItems: "center", gap: "0.6rem" }}>
-      <LogoMark className="logo-mark" />
-      <span className="logo-word" aria-label={title}>
-        <span>SIFAT</span>
-        <span>BUXGALTER</span>
-      </span>
-    </span>
   );
 }

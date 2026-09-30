@@ -3,9 +3,13 @@
 import { useState } from "react";
 import type { Content, Locale } from "@/lib/content/types";
 import { SITE } from "@/lib/site";
+import { Glyph } from "./ui/Glyph";
 import s from "./LeadForm.module.css";
 
 type Status = "idle" | "sending" | "ok" | "err" | "invalid";
+
+const MIN_NAME = 2;
+const MIN_PHONE_DIGITS = 9;
 
 export function LeadForm({ t, lang }: { t: Content["form"]; lang: Locale }) {
   const [status, setStatus] = useState<Status>("idle");
@@ -22,7 +26,7 @@ export function LeadForm({ t, lang }: { t: Content["form"]; lang: Locale }) {
       lang,
       page: window.location.pathname,
     };
-    if (payload.name.trim().length < 2 || payload.phone.replace(/\D/g, "").length < 9) {
+    if (payload.name.trim().length < MIN_NAME || payload.phone.replace(/\D/g, "").length < MIN_PHONE_DIGITS) {
       setStatus("invalid");
       return;
     }
@@ -41,17 +45,20 @@ export function LeadForm({ t, lang }: { t: Content["form"]; lang: Locale }) {
 
   if (status === "ok") {
     return (
-      <div className={s.done} role="status">
+      <div className={`glass ${s.done}`} role="status">
+        <span className="chip">
+          <Glyph name="check" />
+        </span>
         <p className={s.doneT}>{t.ok}</p>
       </div>
     );
   }
 
   return (
-    <form className={s.form} onSubmit={onSubmit} noValidate>
+    <form className={`glass ${s.form}`} onSubmit={onSubmit} noValidate>
       <label className={s.field}>
         <span>{t.name}</span>
-        <input name="name" autoComplete="name" required minLength={2} maxLength={80} />
+        <input name="name" autoComplete="name" required minLength={MIN_NAME} maxLength={80} />
       </label>
       <label className={s.field}>
         <span>{t.phone}</span>
@@ -74,8 +81,11 @@ export function LeadForm({ t, lang }: { t: Content["form"]; lang: Locale }) {
       <div className={s.hp} aria-hidden="true">
         <input name="website" tabIndex={-1} autoComplete="off" />
       </div>
-      <button className={`btn btn-gold ${s.submit}`} type="submit" disabled={status === "sending"}>
-        {status === "sending" ? t.sending : t.submit}
+      <button className="pill" type="submit" disabled={status === "sending"}>
+        <span>{status === "sending" ? t.sending : t.submit}</span>
+        <span className="pill-dot">
+          <Glyph name="arrow" />
+        </span>
       </button>
       <p className={s.msg} role="alert" aria-live="polite">
         {status === "invalid" && t.invalid}

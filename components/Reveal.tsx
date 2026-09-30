@@ -1,11 +1,14 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 // Один наблюдатель на страницу: .reveal получает .in при входе в экран. Без обработчика скролла.
+// Путь в зависимостях: layout живёт между переходами, новые .reveal надо подхватить заново.
 export function Reveal() {
+  const path = usePathname();
   useEffect(() => {
-    const els = document.querySelectorAll<HTMLElement>(".reveal");
+    const els = document.querySelectorAll<HTMLElement>(".reveal:not(.in)");
     if (!("IntersectionObserver" in window)) {
       els.forEach((el) => el.classList.add("in"));
       return;
@@ -23,7 +26,7 @@ export function Reveal() {
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, []);
+  }, [path]);
   return null;
 }
 

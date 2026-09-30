@@ -1,34 +1,22 @@
 import Image from "next/image";
 import type { Content } from "@/lib/content/types";
 import { CLIENTS } from "@/lib/site";
+import { Glyph } from "./ui/Glyph";
+import { SectionHead } from "./ui/Kit";
 import s from "./Trust.module.css";
 
 const LOGO_BOX = 160;
 
+// Логотипы в белых ячейках одной сетки, монохром: цвет берут только при наведении.
 export function Clients({ t }: { t: Content["clients"] }) {
   return (
-    <section className={`section ${s.clientsSec}`} aria-labelledby="cli-h">
+    <section aria-labelledby="cli-h">
+      <SectionHead id="cli-h" kicker={t.kicker} title={t.h2} lead={t.sub} />
       <div className="wrap">
-        <div className={s.cliHead}>
-          <div>
-            <p className="kicker">{t.kicker}</p>
-            <h2 id="cli-h" className="h2">
-              {t.h2}
-            </h2>
-          </div>
-          <p className={s.cliSub}>{t.sub}</p>
-        </div>
         <ul className={s.logos}>
           {CLIENTS.map((c) => (
-            <li key={c.file} className={s.logo}>
-              <Image
-                src={`/clients/${c.file}.webp`}
-                alt={c.name}
-                width={LOGO_BOX}
-                height={LOGO_BOX}
-                sizes="(min-width: 1024px) 160px, 30vw"
-                loading="eager"
-              />
+            <li key={c.file} className={`card ${s.logo}`}>
+              <Image src={`/clients/${c.file}.webp`} alt={c.name} width={LOGO_BOX} height={LOGO_BOX} sizes="(min-width: 1024px) 120px, 25vw" />
             </li>
           ))}
         </ul>
@@ -39,18 +27,18 @@ export function Clients({ t }: { t: Content["clients"] }) {
 
 export function Faq({ t }: { t: Content["faq"] }) {
   return (
-    <section id="savollar" className="section" aria-labelledby="faq-h">
-      <div className={`wrap ${s.faqGrid}`}>
-        <div>
-          <p className="kicker">{t.kicker}</p>
-          <h2 id="faq-h" className="h2">
-            {t.h2}
-          </h2>
-        </div>
+    <section id="savollar" aria-labelledby="faq-h">
+      <SectionHead id="faq-h" kicker={t.kicker} title={t.h2} />
+      <div className="wrap grid12">
         <div className={s.faq}>
           {t.items.map(([q, a]) => (
-            <details key={q} className={s.qa}>
-              <summary className={s.q}>{q}</summary>
+            <details key={q} className={`card ${s.qa}`}>
+              <summary className={s.q}>
+                <span>{q}</span>
+                <span className="chip">
+                  <Glyph name="plus" />
+                </span>
+              </summary>
               <p className={s.a}>{a}</p>
             </details>
           ))}

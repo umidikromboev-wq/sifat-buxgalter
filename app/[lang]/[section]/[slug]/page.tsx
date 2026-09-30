@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import { PageTop } from "@/components/PageTop";
 import { ArticleView } from "@/components/pages/ArticleView";
 import { ServiceView } from "@/components/pages/ServiceView";
 import { isLocale, type Locale } from "@/lib/content/types";
@@ -42,6 +42,9 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/[section]/
   );
 }
 
+const formatDate = (iso: string, lang: Locale) =>
+  new Intl.DateTimeFormat(lang === "uz" ? "uz-Latn-UZ" : "ru-RU", { day: "numeric", month: "long", year: "numeric" }).format(new Date(iso));
+
 export default async function DetailPage({ params }: PageProps<"/[lang]/[section]/[slug]">) {
   const { lang: rawLang, section, slug } = await params;
   const r = resolve(rawLang, section, slug);
@@ -67,14 +70,37 @@ export default async function DetailPage({ params }: PageProps<"/[lang]/[section
       <a className="skip" href="#main">
         {lang === "uz" ? "Asosiy qismga oʻtish" : "К основному содержанию"}
       </a>
-      <Header lang={lang} t={t.nav} alt={alt[other]} />
       <main id="main">
-        {found.kind === "services" ? (
-          <ServiceView lang={lang} id={found.id} page={found.page} crumbs={crumbs} />
-        ) : (
-          <ArticleView lang={lang} id={found.id} page={found.page} crumbs={crumbs} />
-        )}
-        <Contact t={t.form} lang={lang} />
+        <PageTop
+          lang={lang}
+          nav={t.nav}
+          alt={alt[other]}
+          crumbs={crumbs}
+          kicker={copy[found.kind].kicker}
+          h1={found.page.h1}
+          lead={found.page.lead}
+          img={found.kind === "services" ? "hero" : "desk"}
+          {...(found.kind === "services"
+            ? { panel: { title: copy.ui.ctaTitle, text: copy.ui.ctaText, cta: copy.ui.ctaBtn } }
+            : {
+                meta: (
+                  <>
+                    {copy.ui.updated} <time dateTime={found.page.published}>{formatDate(found.page.published, lang)}</time> · {found.page.minutes}{" "}
+                    {copy.ui.minutes}
+                  </>
+                ),
+              })}
+        />
+        <div className="sheet stack">
+          {found.kind === "services" ? (
+            <ServiceView lang={lang} id={found.id} page={found.page} />
+          ) : (
+            <ArticleView lang={lang} id={found.id} page={found.page} />
+          )}
+        </div>
+        <div className="sheet sheet-dark">
+          <Contact t={t.form} lang={lang} />
+        </div>
       </main>
       <Footer t={t.footer} lang={lang} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(ld) }} />

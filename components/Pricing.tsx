@@ -1,37 +1,39 @@
 import type { Content } from "@/lib/content/types";
+import { Glyph } from "./ui/Glyph";
+import { SectionHead } from "./ui/Kit";
 import s from "./Pricing.module.css";
 
-
+// Кого берём и кого нет: светлая карточка «да» и тёмная «нет» — одна тёмная точка на секцию.
 export function Fit({ t }: { t: Content["fit"] }) {
   return (
-    <section className={`section ${s.fitSec}`} aria-labelledby="fit-h">
-      <div className="wrap">
-        <p className="kicker">{t.kicker}</p>
-        <h2 id="fit-h" className="h2">
-          {t.h2}
-        </h2>
-        <div className={s.fit}>
-          <div>
-            <h3 className={s.fitT}>{t.yesTitle}</h3>
-            <ul className={s.fitL}>
-              {t.yes.map((y) => (
-                <li key={y} className={s.yes}>
-                  {y}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className={s.fitT}>{t.noTitle}</h3>
-            <ul className={s.fitL}>
-              {t.no.map((n) => (
-                <li key={n} className={s.no}>
-                  {n}
-                </li>
-              ))}
-            </ul>
-            <p className={s.fitNote}>{t.note}</p>
-          </div>
+    <section aria-labelledby="fit-h">
+      <SectionHead id="fit-h" kicker={t.kicker} title={t.h2} lead={t.note} />
+      <div className={`wrap grid12`}>
+        <div className={`card ${s.yes} reveal`}>
+          <h3 className={s.t}>{t.yesTitle}</h3>
+          <ul className={s.list}>
+            {t.yes.map((y) => (
+              <li key={y}>
+                <span className="chip">
+                  <Glyph name="check" />
+                </span>
+                {y}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={`card card-dark ${s.no} reveal`}>
+          <h3 className={s.t}>{t.noTitle}</h3>
+          <ul className={s.list}>
+            {t.no.map((n) => (
+              <li key={n}>
+                <span className={s.x}>
+                  <Glyph name="cross" />
+                </span>
+                {n}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

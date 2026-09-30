@@ -1,204 +1,45 @@
-/* Форма живёт на тёмном блоке заявки */
-.section {
-  background: var(--ink);
-  color: var(--paper);
-}
+.copy { grid-column: 3 / span 4; }
+.sub { margin-top: 18px; font-size: 14px; line-height: 1.55; color: var(--on-dark-2); max-width: 44ch; }
+.callL { margin-top: 40px; font-size: 12px; color: var(--on-dark-2); }
+.call { margin-top: 12px; display: grid; gap: 10px; }
+.phone { display: inline-flex; align-items: center; gap: 12px; font-size: 17px; font-weight: 500; }
+.phone svg { width: 16px; height: 16px; color: var(--accent); }
+.phone:hover { color: var(--accent-soft); }
 
-.grid {
-  display: grid;
-  gap: 3rem;
-}
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-    gap: 5rem;
-  }
-}
-
-.kicker {
-  color: color-mix(in srgb, var(--paper) 60%, transparent);
-}
-
-.kicker::before {
-  background: var(--gold-lit);
-}
-
-.sub {
-  margin-top: 1.25rem;
-  color: color-mix(in srgb, var(--paper) 75%, transparent);
-  max-width: 44ch;
-}
-
-.call {
-  margin-top: 2.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid color-mix(in srgb, var(--paper) 20%, transparent);
-}
-
-.callL {
-  font-size: var(--small);
-  color: color-mix(in srgb, var(--paper) 60%, transparent);
-}
-
-.phone {
-  display: inline-block;
-  margin-top: 0.4rem;
-  font-family: var(--serif);
-  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem);
-  color: var(--gold-lit);
-  text-decoration: none;
-}
-
-.phone:hover {
-  color: var(--paper);
-}
-
-.form {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.field {
-  display: grid;
-  gap: 0.4rem;
-  font-size: var(--small);
-  color: color-mix(in srgb, var(--paper) 70%, transparent);
-}
-
+.formCol { grid-column: 8 / span 5; }
+.form { display: grid; gap: 14px; padding: 28px; }
+.field { display: grid; gap: 6px; font-size: 12px; color: var(--on-dark-2); }
 .field input {
-  min-height: 54px;
-  padding: 0 0.1rem;
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--paper) 35%, transparent);
-  color: var(--paper);
-  font: 500 1.1rem var(--sans);
-  border-radius: 0;
-  transition: border-color var(--t-fast) var(--ease);
+  height: 48px; padding: 0 16px; border-radius: var(--r-card); border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06); color: #fff; font-size: 15px; transition: border-color var(--t), background var(--t);
 }
-
-.field input:focus {
-  outline: none;
-  border-bottom-color: var(--gold-lit);
-}
-
-.field input:focus-visible {
-  outline: none;
-  box-shadow: 0 2px 0 var(--gold-lit);
-}
-
-.radios {
-  border: 0;
-  padding: 0;
-  margin: 0.5rem 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.radios legend {
-  font-size: var(--small);
-  color: color-mix(in srgb, var(--paper) 70%, transparent);
-  margin-bottom: 0.6rem;
-}
-
-.radio {
-  position: relative;
-  cursor: pointer;
-}
-
-.radio input {
-  position: absolute;
-  opacity: 0;
-  inset: 0;
-}
-
+.field input::placeholder { color: rgba(255, 255, 255, 0.35); }
+.field input:focus { outline: none; border-color: var(--accent); background: rgba(255, 255, 255, 0.1); }
+.radios { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 6px; padding: 0; border: 0; }
+.radios legend { width: 100%; margin-bottom: 10px; font-size: 12px; color: var(--on-dark-2); }
+.radio { position: relative; cursor: pointer; }
+.radio input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
 .radio span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: 0 1rem;
-  border: 1px solid color-mix(in srgb, var(--paper) 30%, transparent);
-  border-radius: var(--r-pill);
-  font-size: 0.92rem;
-  transition:
-    background-color var(--t-fast) var(--ease),
-    color var(--t-fast) var(--ease);
+  display: inline-block; padding: 8px 14px; border-radius: var(--r-pill); font-size: 13px;
+  background: var(--glass-light); border: 1px solid rgba(255, 255, 255, 0.12); transition: background var(--t), color var(--t);
 }
+.radio input:checked + span { background: #fff; color: var(--text); }
+.radio input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.msg { min-height: 1em; font-size: 13px; color: var(--accent-soft); }
+.msg a { text-decoration: underline; }
+.privacy { font-size: 11px; line-height: 1.5; color: var(--on-dark-2); }
+.done { display: grid; gap: 16px; padding: 32px 28px; }
+.doneT { font-size: 20px; font-weight: 300; line-height: 1.3; }
 
-.radio input:checked + span {
-  background: var(--paper);
-  color: var(--ink);
-  border-color: var(--paper);
+@media (max-width: 1180px) {
+  .copy { grid-column: 3 / span 5; }
+  .formCol { grid-column: 8 / -1; }
 }
-
-.radio input:focus-visible + span {
-  outline: 2px solid var(--gold-lit);
-  outline-offset: 2px;
+@media (max-width: 900px) {
+  .copy, .formCol { grid-column: 1 / -1; }
+  .formCol { margin-top: 32px; }
 }
-
-.hp {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.tg {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-top: 1.4rem;
-  min-height: 44px;
-  padding: 0.55rem 1.1rem;
-  border: 1px solid currentColor;
-  border-radius: 999px;
-  color: inherit;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 150ms ease, color 150ms ease;
-}
-.tg:hover {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--paper);
-}
-.tg:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
-}
-
-.submit {
-  margin-top: 0.75rem;
-  width: 100%;
-}
-
-.msg {
-  min-height: 1.4em;
-  color: var(--gold-lit);
-  font-size: 0.95rem;
-}
-
-.msg a {
-  color: var(--paper);
-}
-
-.privacy {
-  font-size: var(--small);
-  color: color-mix(in srgb, var(--paper) 50%, transparent);
-}
-
-.done {
-  padding: 2rem;
-  border: 1px solid var(--gold-lit);
-}
-
-.doneT {
-  font-family: var(--serif);
-  font-size: var(--h3);
+@media (max-width: 760px) {
+  .form { padding: 18px; }
 }
