@@ -210,8 +210,8 @@
     radial-gradient(circle, #fff 0 28%, #f8f7f5 39%, #fbfaf9 49.6%, transparent 50%);
 }
 .art img {
-  position: absolute; left: 50%; bottom: 2%; width: auto; height: 96%; max-width: none;
-  transform: translateX(-50%); mix-blend-mode: multiply;
+  position: absolute; left: 50%; bottom: 10%; width: 86%; height: auto; max-width: none; max-height: 84%; object-fit: contain;
+  transform: translateX(-50%);
   transition: transform 0.35s var(--ease);
 }
 .card > a:hover .art img { transform: translate(-50%, -4px); }

@@ -89,7 +89,7 @@ function Cases() {
               <Glyph name="arrow" className={s.cardArrow} />
               <span className={s.art} aria-hidden="true">
                 <span className={s.rings} />
-                <img src={`/glass/icon-${c.img}.webp`} alt="" width={640} height={640} loading="lazy" decoding="async" />
+                <img src={`/glass/ill/${c.img}.svg`} alt="" width={600} height={400} loading="lazy" decoding="async" />
                 <span className={s.chip}><Glyph name={c.icon} /></span>
               </span>
             </a>

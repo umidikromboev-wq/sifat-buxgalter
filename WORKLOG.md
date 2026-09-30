@@ -2,6 +2,10 @@
 
 
 
+
+## 2026-09-30 — glass: иконки из набора Умида
+Сделано: ~/Downloads/Sifat buxgalter/icons → иллюстрации карточек public/glass/ill/*.svg (вместо 3D webp Higgsfield, удалены), контуры ui + chips перенесены в components/glass/icons.tsx (сетка 14, currentColor). Прод-превью sifat-glass.vercel.app, site-qa чисто.
+Решения: logo-mark из набора не взят, оставлен настоящий знак клиента (components/Logo.tsx).
 ## 2026-09-30 — ветка glass: первые два экрана «glass + beige», превью sifat-glass.vercel.app
 Сделано: worktree ~/Downloads/Проекты/sifat-glass, ветка glass (запушена). Главная / = components/glass/GlassHome (RU): герой на фото + стеклянная плашка, «Когда к нам приходят» бенто 7 карточек + тёмная CTA «экспресс-аудит». Иконки и фото: Higgsfield gpt_image_2_5 → public/glass/*.webp. Отдельный Vercel-проект sifat-glass (prj_83x2urIfRcSMivQApDdAkZPvoKsn), деплой CLI --archive=tgz. site-qa 320/768/1440 чисто.
 Решения: прод sifat-buxgalter-site и main не тронуты; noindex на превью. Экспресс-аудит не назван бесплатным, бесплатен только звонок 10 мин.

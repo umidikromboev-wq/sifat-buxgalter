@@ -19,7 +19,7 @@ export const HERO = {
 } as const;
 
 export type Icon = "calc" | "handoff" | "letter" | "lock" | "eye" | "growth" | "law";
-export type Case = { title: string; img: number; icon: Icon; href: string; size: "narrow" | "tall" | "wide" };
+export type Case = { title: string; img: string; icon: Icon; href: string; size: "narrow" | "tall" | "wide" };
 
 export const CASES_HEAD = {
   kicker: "Когда к нам приходят",
@@ -28,13 +28,13 @@ export const CASES_HEAD = {
 } as const;
 
 export const CASES: Case[] = [
-  { title: "Всё выглядит нормально, но сколько налогов вы переплачиваете, никто не считал", img: 1, icon: "calc", href: "/ru/uslugi/nalogovoe-konsultirovanie", size: "narrow" },
-  { title: "Бухгалтер уходит: декрет, пенсия, другая работа, и дела передать некому", img: 2, icon: "handoff", href: "/ru/stati/kak-prinyat-dela-u-buhgaltera", size: "narrow" },
-  { title: "Пришло требование из налоговой или назначен налоговый аудит", img: 3, icon: "letter", href: "/ru/uslugi/nalogovye-proverki", size: "tall" },
-  { title: "Банк заблокировал расчётный счёт", img: 4, icon: "lock", href: "/ru/uslugi/razblokirovka-scheta", size: "narrow" },
-  { title: "Вы не видите, что делает бухгалтер: отчёта нет, ответа на вопрос ждёте часами", img: 5, icon: "eye", href: "/ru/uslugi/autsorsing-buhgalterii", size: "wide" },
-  { title: "Оборот вырос, налоги тоже, а законный способ платить меньше никто не показывает", img: 6, icon: "growth", href: "/ru/stati/zakonnoe-snizhenie-nalogov", size: "wide" },
-  { title: "Нет времени следить за новыми законами", img: 7, icon: "law", href: "/ru/uslugi/autsorsing-buhgalterii", size: "wide" },
+  { title: "Всё выглядит нормально, но сколько налогов вы переплачиваете, никто не считал", img: "overpayment", icon: "calc", href: "/ru/uslugi/nalogovoe-konsultirovanie", size: "narrow" },
+  { title: "Бухгалтер уходит: декрет, пенсия, другая работа, и дела передать некому", img: "accountant-leaves", icon: "handoff", href: "/ru/stati/kak-prinyat-dela-u-buhgaltera", size: "narrow" },
+  { title: "Пришло требование из налоговой или назначен налоговый аудит", img: "tax-request", icon: "letter", href: "/ru/uslugi/nalogovye-proverki", size: "tall" },
+  { title: "Банк заблокировал расчётный счёт", img: "account-blocked", icon: "lock", href: "/ru/uslugi/razblokirovka-scheta", size: "narrow" },
+  { title: "Вы не видите, что делает бухгалтер: отчёта нет, ответа на вопрос ждёте часами", img: "no-transparency", icon: "eye", href: "/ru/uslugi/autsorsing-buhgalterii", size: "wide" },
+  { title: "Оборот вырос, налоги тоже, а законный способ платить меньше никто не показывает", img: "turnover-growth", icon: "growth", href: "/ru/stati/zakonnoe-snizhenie-nalogov", size: "wide" },
+  { title: "Нет времени следить за новыми законами", img: "new-laws", icon: "law", href: "/ru/uslugi/autsorsing-buhgalterii", size: "wide" },
 ];
 
 export const CTA_CARD = {

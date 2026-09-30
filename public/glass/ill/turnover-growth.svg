@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="240" viewBox="0 0 170 120"><defs><linearGradient id="paper" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EDE7DF"/></linearGradient>
+  <linearGradient id="paper2" x1="0" y1="0" x2=".2" y2="1"><stop offset="0" stop-color="#F7F3EE"/><stop offset="1" stop-color="#E2D9CE"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D2BDA6"/><stop offset="1" stop-color="#AE9479"/></linearGradient></defs>
+            <ellipse cx="62" cy="104" rx="30" ry="9" fill="#E3DACF"/>
+            <rect x="32" y="84" width="60" height="20" fill="#EDE6DD"/>
+            <ellipse cx="62" cy="84" rx="30" ry="9" fill="#F7F3EE"/>
+            <rect x="32" y="66" width="60" height="18" fill="#EDE6DD"/>
+            <ellipse cx="62" cy="66" rx="30" ry="9" fill="#fff"/>
+            <ellipse cx="116" cy="104" rx="26" ry="8" fill="#C8B29B"/>
+            <rect x="90" y="54" width="52" height="50" fill="url(#gold)"/>
+            <ellipse cx="116" cy="54" rx="26" ry="8" fill="#DCCAB6"/>
+            <path d="M104 32l12-14 12 14" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+          </svg>

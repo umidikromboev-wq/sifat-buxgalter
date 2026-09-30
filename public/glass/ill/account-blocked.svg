@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="240" viewBox="0 0 170 120"><defs><linearGradient id="paper" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EDE7DF"/></linearGradient>
+  <linearGradient id="paper2" x1="0" y1="0" x2=".2" y2="1"><stop offset="0" stop-color="#F7F3EE"/><stop offset="1" stop-color="#E2D9CE"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D2BDA6"/><stop offset="1" stop-color="#AE9479"/></linearGradient></defs>
+            <rect x="18" y="30" width="124" height="80" rx="10" fill="url(#paper2)" transform="rotate(-8 80 70)"/>
+            <rect x="26" y="34" width="124" height="80" rx="10" fill="url(#paper)"/>
+            <rect x="26" y="50" width="124" height="12" fill="#E8E0D6"/>
+            <rect x="40" y="80" width="40" height="6" rx="3" fill="#EAE3DA"/>
+            <rect x="40" y="92" width="24" height="6" rx="3" fill="#F0EBE4"/>
+            <path d="M112 64v-8a12 12 0 0 1 24 0v8" fill="none" stroke="#C9B7A3" stroke-width="5"/>
+            <rect x="104" y="64" width="40" height="32" rx="7" fill="url(#gold)"/>
+            <circle cx="124" cy="78" r="3.5" fill="#fff" fill-opacity=".8"/>
+          </svg>

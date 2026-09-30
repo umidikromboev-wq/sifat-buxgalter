@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 300 200"><defs><linearGradient id="paper" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EDE7DF"/></linearGradient>
+  <linearGradient id="paper2" x1="0" y1="0" x2=".2" y2="1"><stop offset="0" stop-color="#F7F3EE"/><stop offset="1" stop-color="#E2D9CE"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D2BDA6"/><stop offset="1" stop-color="#AE9479"/></linearGradient></defs>
+            <rect x="40" y="22" width="190" height="160" rx="12" fill="url(#paper2)" transform="rotate(-6 135 102)"/>
+            <rect x="62" y="14" width="190" height="168" rx="12" fill="url(#paper)"/>
+            <rect x="82" y="38" width="80" height="6" rx="3" fill="#E6DED4"/>
+            <rect x="82" y="52" width="50" height="6" rx="3" fill="#EFE9E2"/>
+            <rect x="84" y="118" width="22" height="46" rx="4" fill="#ECE5DC"/>
+            <rect x="114" y="100" width="22" height="64" rx="4" fill="#E6DDD2"/>
+            <rect x="144" y="84" width="22" height="80" rx="4" fill="#E0D5C8"/>
+            <rect x="174" y="70" width="22" height="94" rx="4" fill="url(#gold)"/>
+            <rect x="174" y="70" width="22" height="30" rx="4" fill="#fff" opacity=".35"/>
+            <circle cx="222" cy="136" r="34" fill="#fff" fill-opacity=".55" stroke="#fff" stroke-width="8"/>
+            <circle cx="222" cy="136" r="34" fill="none" stroke="#E4D9CC" stroke-width="1"/>
+            <rect x="244" y="160" width="14" height="40" rx="7" fill="url(#gold)" transform="rotate(-42 251 180)"/>
+          </svg>
