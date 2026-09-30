@@ -1,6 +1,12 @@
 # Sifat Buxgalter — рабочий журнал
 
 
+
+## 2026-09-30 — ветка glass: первые два экрана «glass + beige», превью sifat-glass.vercel.app
+Сделано: worktree ~/Downloads/Проекты/sifat-glass, ветка glass (запушена). Главная / = components/glass/GlassHome (RU): герой на фото + стеклянная плашка, «Когда к нам приходят» бенто 7 карточек + тёмная CTA «экспресс-аудит». Иконки и фото: Higgsfield gpt_image_2_5 → public/glass/*.webp. Отдельный Vercel-проект sifat-glass (prj_83x2urIfRcSMivQApDdAkZPvoKsn), деплой CLI --archive=tgz. site-qa 320/768/1440 чисто.
+Решения: прод sifat-buxgalter-site и main не тронуты; noindex на превью. Экспресс-аудит не назван бесплатным, бесплатен только звонок 10 мин.
+Грабли: проект, созданный `vercel project add`, без пресета фреймворка → вся сборка 404. Лечится PATCH framework=nextjs и повторным деплоем.
+Осталось: [ ] «да» Умида на направление [ ] UZ-версия экранов [ ] остальные экраны в этой системе
 ## 2026-09-27 — сайт: убран «главный бухгалтер с 2016 года»
 Грабли: пуш b29d294 не запустил автодеплой → `vercel --prod` вручную (nh3cbx4us). Частый опрос curl (≈60 запросов) → Vercel Security Checkpoint 403 только для нашего IP (check-host: 200 из 5 стран). Опрашивать через `vercel curl --deployment`, не боевой URL. Attack mode выключен (был не включён).
 Сделано: meta description, hero sub, факт «2016» на первом экране (→ «0% с экономии на налогах»), лид услуги аутсорсинга, подпись и абзац письма (story) — RU+UZ. Имя Иброхима в подписи письма оставлено.

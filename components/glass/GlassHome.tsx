@@ -51,7 +51,7 @@ function Header() {
 function Hero() {
   return (
     <section className={s.hero} aria-labelledby="hero-h">
-      <img className={s.heroImg} src="/glass/hero.webp" alt="" width={1344} height={752} fetchPriority="high" />
+      <img className={s.heroImg} src="/glass/hero.webp" alt="Деловой центр в Ташкенте на закате" width={1344} height={752} fetchPriority="high" />
       <Header />
       <div className={s.heroBody}>
         <div className={s.fact}>
@@ -96,7 +96,7 @@ function Cases() {
           </li>
         ))}
         <li className={`${s.card} ${s.dark} reveal`} style={{ transitionDelay: `${CASES.length * STAGGER_MS}ms` }}>
-          <img className={s.darkImg} src="/glass/desk.webp" alt="" width={880} height={663} loading="lazy" decoding="async" />
+          <img className={s.darkImg} src="/glass/desk.webp" alt="Рабочий стол бухгалтера вечером" width={880} height={663} loading="lazy" decoding="async" />
           <div className={s.darkBody}>
             <h3>{CTA_CARD.title}</h3>
             <p>{CTA_CARD.text}</p>
