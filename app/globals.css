@@ -514,3 +514,23 @@ a:hover .corner {
 .stack > * + * {
   margin-top: var(--sec);
 }
+
+/* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
+@media (max-width: 760px) {
+  :root { --h1: clamp(32px, 10vw, 40px); --h2: clamp(27px, 8.2vw, 32px); }
+  body { font-size: 16px; }
+  .kicker { font-size: 14px; margin-bottom: 12px; }
+  .h2 { font-weight: 300; line-height: 1.08; }
+  .shead-lead { font-size: 16px; line-height: 1.5; padding-top: 12px; }
+  .lead { font-size: 16px; }
+  .marker { width: 14px; grid-template-columns: repeat(2, 6px); }
+  .marker i { width: 6px; height: 6px; }
+  .shead { margin-bottom: 28px; }
+  .pill { min-height: 56px; padding-left: 22px; font-size: 15px; }
+  .pill-dot { width: 48px; height: 48px; }
+  .pill-dot svg { width: 18px; height: 18px; }
+  .chip { width: 28px; height: 28px; border-radius: 7px; }
+  .chip svg { width: 15px; height: 15px; }
+  .more { font-size: 15px; }
+  .corner { width: 16px; height: 16px; }
+}

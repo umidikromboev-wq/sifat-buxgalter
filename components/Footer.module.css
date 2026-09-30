@@ -21,3 +21,12 @@
 @media (max-width: 760px) {
   .col, .col:last-child { grid-column: 1 / -1; margin-top: 16px; }
 }
+
+/* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
+@media (max-width: 760px) {
+  .ftr { font-size: 16px; }
+  .logo { font-size: 18px; }
+  .lbl { font-size: 14px; }
+  .col ul { gap: 12px; }
+  .base { font-size: 13px; }
+}

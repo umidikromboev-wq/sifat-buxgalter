@@ -48,3 +48,18 @@
   .row { grid-template-columns: minmax(0, 1fr); gap: 10px; }
   .now::before, .us::before { content: attr(data-label); grid-column: 1 / -1; font-size: 11px; color: var(--text-2); }
 }
+
+/* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
+@media (max-width: 760px) {
+  .svc, .clause { padding: 22px; gap: 14px; }
+  .svcT { font-size: 21px; margin-top: 8px; }
+  .svcL { font-size: 16px; gap: 10px; }
+  .svcAll { padding: 22px; gap: 28px; }
+  .svcAll p, .clCta .clT { font-size: 22px; }
+  .par { font-size: 13px; }
+  .clT { font-size: 19px; }
+  .clX { font-size: 15px; line-height: 1.55; }
+  .k { font-size: 17px; }
+  .now, .us { font-size: 15px; }
+  .now::before, .us::before { font-size: 13px; }
+}

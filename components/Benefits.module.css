@@ -30,3 +30,11 @@
   .box { padding: 28px 16px 16px; }
   .panel { padding: 18px; }
 }
+
+/* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
+@media (max-width: 760px) {
+  .sub { font-size: 16px; }
+  .chips legend { font-size: 14px; }
+  .opt span { padding: 11px 16px; font-size: 15px; }
+  .note { font-size: 13px; }
+}

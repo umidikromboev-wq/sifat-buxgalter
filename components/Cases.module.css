@@ -61,3 +61,17 @@
   .bento { grid-auto-rows: 210px; }
   .wide .art, .tall .art { left: 30%; }
 }
+
+/* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
+@media (max-width: 760px) {
+  .bento { grid-template-columns: minmax(0, 1fr); grid-auto-rows: 320px; }
+  .bento > .card:nth-child(n) { grid-column: 1 / -1; }
+  .title { font-size: 19px; line-height: 1.3; padding: 22px 48px 0 22px; max-width: 24ch; }
+  .card .art, .bento > .card:nth-child(4) .art, .wide .art, .tall .art { left: 0; height: 60%; }
+  .art img { width: 78%; max-height: 88%; }
+  .chip { right: 20px; bottom: 20px; }
+  .card :global(.corner) { top: 22px; right: 22px; }
+  .darkBody { padding: 22px; gap: 12px; }
+  .darkBody h3 { font-size: 21px; font-weight: 400; }
+  .darkBody p { font-size: 15px; line-height: 1.5; }
+}

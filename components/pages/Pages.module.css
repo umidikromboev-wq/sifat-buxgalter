@@ -86,3 +86,23 @@
   .faq summary { padding: 16px; font-size: 14px; }
   .faq details p { padding: 0 16px 18px; }
 }
+
+/* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
+@media (max-width: 760px) {
+  .hubItem, .steps > li, .ticks li { padding: 22px; }
+  .n { font-size: 13px; }
+  .hubT { font-size: 21px; }
+  .hubX, .cardX { font-size: 15px; }
+  .hubCta p, .ctaCard p, .take p { font-size: 21px; }
+  .ticks li { font-size: 16px; grid-template-columns: 28px 1fr; }
+  .ledger li { font-size: 16px; }
+  .cardT { font-size: 19px; }
+  .par { font-size: 14px; }
+  .faq summary { padding: 20px; font-size: 17px; }
+  .faq details p { padding: 0 20px 22px; font-size: 16px; }
+  .linkT { font-size: 15px; }
+  .linkCard a { font-size: 16px; padding-block: 14px; }
+  .prose { font-size: 17px; }
+  .prose h2 { font-size: 26px; }
+  .sideCta { font-size: 16px; }
+}

@@ -3,6 +3,7 @@
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr;
+  grid-template-columns: minmax(0, 1fr);
   color: var(--on-dark);
   background: var(--bg-dark);
   overflow: hidden;
@@ -159,4 +160,31 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .img, .fact, .main, .panel { animation: none; }
+}
+
+/* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
+@media (max-width: 760px) {
+  .logo { font-size: 17px; }
+  .phone { font-size: 18px; }
+  .body { gap: 28px; }
+  .h1 { line-height: 1.02; }
+  .inner .h1 { font-size: clamp(30px, 9vw, 36px); }
+  .lead { font-size: 16px; }
+  .fact { grid-template-columns: 32px 1fr; }
+  .factIcon { width: 32px; height: 32px; }
+  .factTitle { font-size: 20px; }
+  .factText { font-size: 14px; }
+  .panel { padding: 22px; }
+  .panelTitle { font-size: 20px; }
+  .panelText { font-size: 15px; line-height: 1.5; margin-bottom: 18px; }
+  .crumbs ol { font-size: 14px; }
+  .kicker, .meta { font-size: 14px; }
+  .mobileSheet a { font-size: 17px; padding: 14px; }
+}
+@media (max-width: 760px) {
+  .header { gap: 12px; }
+}
+@media (max-width: 380px) {
+  .logo { font-size: 15px; gap: 8px; }
+  .mobile { gap: 6px; }
 }

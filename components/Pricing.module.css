@@ -14,3 +14,10 @@
   .yes, .no { grid-column: 1 / -1; padding: 20px; }
   .list li { font-size: 14px; }
 }
+
+/* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
+@media (max-width: 760px) {
+  .t { font-size: 15px; }
+  .list li { font-size: 16px; grid-template-columns: 28px 1fr; }
+  .x { width: 28px; height: 28px; }
+}
