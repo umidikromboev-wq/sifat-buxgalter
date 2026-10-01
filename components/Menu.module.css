@@ -33,6 +33,9 @@
 .rule { height: 1px; margin: 6px 12px; background: var(--line); }
 .sheet a.strong { font-size: 15px; font-weight: 500; }
 .foot { display: grid; gap: 6px; margin-top: 6px; }
+.langRow { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 6px 4px 6px 12px; font-size: 13px; color: var(--text-2); }
+.sheet .langRow a { padding: 0 8px; font-size: inherit; }
+.sheet .langRow a:hover { background: none; }
 .sheet a.phone { font-weight: 600; font-variant-numeric: tabular-nums; }
 .sheet a.cta { background: var(--bg-dark); color: #fff; text-align: center; border-radius: var(--r-pill); padding: 13px 16px; }
 .sheet a.cta:hover { background: var(--bg-dark); opacity: 0.9; }

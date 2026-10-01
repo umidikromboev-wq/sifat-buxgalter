@@ -3,11 +3,12 @@
 import { useEffect, useId, useRef, useState, type CSSProperties } from "react";
 import { usePathname } from "next/navigation";
 import { Glyph } from "./ui/Glyph";
+import { LangSwitch, type LangItem } from "./LangSwitch";
 import top from "./Top.module.css";
 import s from "./Menu.module.css";
 
 type Item = { href: string; label: string };
-export type MenuData = { label: string; servicesTitle: string; services: Item[]; links: Item[]; phone: Item; cta: Item };
+export type MenuData = { label: string; servicesTitle: string; services: Item[]; links: Item[]; phone: Item; cta: Item; langs: LangItem[]; langLabel: string };
 type Props = { data: MenuData; align?: "left" | "right" };
 
 // Белая плашка раскрывается из угла кнопки по диагонали, пункты поднимаются следом.
@@ -55,6 +56,10 @@ export function SiteMenu({ data, align = "right" }: Props) {
         <span className={s.rule} aria-hidden="true" />
         {data.links.map((it) => link(it, s.strong))}
         <div className={s.foot}>
+          <div className={s.langRow} style={{ "--i": k++ } as CSSProperties}>
+            <span>{data.langLabel}</span>
+            <LangSwitch items={data.langs} label={data.langLabel} tone="light" />
+          </div>
           {link(data.phone, s.phone)}
           {link(data.cta, s.cta)}
         </div>

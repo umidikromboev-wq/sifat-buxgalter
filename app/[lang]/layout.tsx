@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ChatWidget } from "@/components/chat/ChatWidget";
 import { HtmlLang, Reveal } from "@/components/Reveal";
 import { isLocale, LOCALES } from "@/lib/content/types";
 import { getContent, SITE } from "@/lib/site";
@@ -47,6 +48,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
         <style>{NOSCRIPT_CSS}</style>
       </noscript>
       {children}
+      <ChatWidget lang={lang} />
     </>
   );
 }

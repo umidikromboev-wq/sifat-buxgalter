@@ -5,6 +5,7 @@ import { getPages } from "@/lib/pages";
 import { SITE } from "@/lib/site";
 import { LogoMark } from "./Logo";
 import { Glyph } from "./ui/Glyph";
+import { LangSwitch, langItems } from "./LangSwitch";
 import { SiteMenu, type MenuData } from "./SiteMenu";
 import { Sticky } from "./Sticky";
 import m from "./Menu.module.css";
@@ -18,7 +19,6 @@ const PHONE_CODE = PHONE.label.slice(0, 7);
 const PHONE_NUM = PHONE.label.slice(8);
 
 export function Header({ lang, t, alt }: Props) {
-  const other: Locale = lang === "uz" ? "ru" : "uz";
   const { copy, services } = getPages(lang);
   const links = [
     { href: sectionPath(lang, "articles"), label: copy.articles.kicker },
@@ -32,12 +32,10 @@ export function Header({ lang, t, alt }: Props) {
     links: [{ href: sectionPath(lang, "services"), label: t.servicesList }, ...links],
     phone: { href: PHONE.href, label: PHONE.label },
     cta: { href: "#ariza", label: t.cta },
+    langs: langItems(lang, alt),
+    langLabel: t.langLabel,
   };
-  const langLink = (
-    <Link className={`${s.glassPill} ${s.lang}`} href={alt ?? `/${other}`} hrefLang={other} aria-label={`${t.langLabel}: ${other.toUpperCase()}`}>
-      {other.toUpperCase()}
-    </Link>
-  );
+  const langLink = <LangSwitch items={menu.langs} label={t.langLabel} />;
   const logo = (
     <Link className={s.logo} href={`/${lang}`} aria-label="Sifat Buxgalter">
       <LogoMark className={s.logoMark} />
@@ -70,7 +68,7 @@ export function Header({ lang, t, alt }: Props) {
           {t.callback} <Glyph name="arrow" />
         </a>
         <div className={s.mobile}>
-          {langLink}
+          <span className={s.langMob}>{langLink}</span>
           <SiteMenu data={menu} />
         </div>
       </header>

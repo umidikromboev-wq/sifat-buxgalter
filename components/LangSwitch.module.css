@@ -1,0 +1,15 @@
+.root { display: inline-flex; gap: 2px; padding: 3px; border-radius: var(--r-pill); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; }
+.root > * { display: inline-grid; place-items: center; min-width: 34px; height: 28px; padding: 0 8px; border-radius: var(--r-pill); transition: background var(--t), color var(--t); }
+.dark {
+  background: var(--glass-light); border: 1px solid rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); color: rgba(255, 255, 255, 0.7);
+}
+.dark .on { background: #fff; color: var(--text); }
+.dark a:hover { color: #fff; background: rgba(255, 255, 255, 0.14); }
+.light { background: var(--bg-page); color: var(--text-2); }
+.light .on { background: var(--bg-dark); color: #fff; }
+.light a:hover { color: var(--text); }
+@media (max-width: 760px) {
+  .light { font-size: 14px; }
+  .light > * { min-width: 48px; height: 40px; }
+}
