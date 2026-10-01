@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 // lang корня — узбекский (основной рынок); для /ru HtmlLang правит атрибут на клиенте.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="uz" className={geologica.variable}>
+    <html lang="uz" className={geologica.variable} data-scroll-behavior="smooth">
       <body>{children}</body>
     </html>
   );
