@@ -8,6 +8,8 @@ import { Glyph } from "../ui/Glyph";
 import { useChat } from "./useChat";
 import s from "./ChatWidget.module.css";
 
+const SHEET_MQ = "(max-width: 760px)";
+
 function Avatar({ name, size }: { name: string; size: "s" | "m" }) {
   return (
     <span className={`${s.avatar} ${size === "s" ? s.avS : s.avM}`}>
@@ -27,6 +29,7 @@ export function ChatWidget({ lang }: { lang: Locale }) {
   const chat = useChat(lang, isOpen);
   const id = useId();
   const list = useRef<HTMLDivElement>(null);
+  const panel = useRef<HTMLElement>(null);
   const input = useRef<HTMLTextAreaElement>(null);
 
 
@@ -45,10 +48,31 @@ export function ChatWidget({ lang }: { lang: Locale }) {
 
   useEffect(() => {
     if (!isOpen) return;
-    input.current?.focus({ preventScroll: true });
+    // На телефоне фокус сразу поднял бы клавиатуру и закрыл полэкрана: фокусируем только с мышью.
+    if (matchMedia("(pointer: fine)").matches) input.current?.focus({ preventScroll: true });
+    // Шторка на телефоне: страница под ней не прокручивается.
+    const isSheet = matchMedia(SHEET_MQ).matches;
+    // Клавиатура уменьшает видимую область: подгоняем окно под неё, иначе поле ввода уходит под клавиатуру.
+    const vv = window.visualViewport;
+    const fit = () => {
+      if (!vv || !panel.current) return;
+      panel.current.style.setProperty("--vvh", `${vv.height}px`);
+      panel.current.style.setProperty("--vvt", `${vv.offsetTop}px`);
+    };
+    if (isSheet) {
+      document.documentElement.style.overflow = "hidden";
+      fit();
+      vv?.addEventListener("resize", fit);
+      vv?.addEventListener("scroll", fit);
+    }
     const onKey = (e: globalThis.KeyboardEvent) => e.key === "Escape" && toggleRef.current(false);
     document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      if (isSheet) document.documentElement.style.overflow = "";
+      vv?.removeEventListener("resize", fit);
+      vv?.removeEventListener("scroll", fit);
+    };
   }, [isOpen]);
 
   const submit = (e?: FormEvent) => {
@@ -68,7 +92,7 @@ export function ChatWidget({ lang }: { lang: Locale }) {
 
   return (
     <div className={s.root}>
-      <section id={id} className={s.panel} data-open={isOpen} role="dialog" aria-label={`${t.name}, ${t.role}`} inert={!isOpen}>
+      <section ref={panel} id={id} className={s.panel} data-open={isOpen} role="dialog" aria-label={`${t.name}, ${t.role}`} inert={!isOpen}>
         <header className={s.head}>
           <Avatar name={t.name} size="m" />
           <div className={s.who}>
@@ -88,6 +112,15 @@ export function ChatWidget({ lang }: { lang: Locale }) {
               {m.text}
             </p>
           ))}
+          {!chat.hasVisitorMsg && chat.pending.length === 0 && (
+            <div className={s.quick}>
+              {t.quick.map((q) => (
+                <button key={q} type="button" onClick={() => chat.send(q)}>
+                  {q}
+                </button>
+              ))}
+            </div>
+          )}
           {chat.pending.map((p, i) => (
             <p key={`p${i}`} className={`${s.msg} ${s.me} ${s.sending}`}>
               {p}

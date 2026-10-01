@@ -1,11 +1,12 @@
 import type { Locale } from "@/lib/content/types";
 
-// Фото менеджера: положить в public/team/ и вписать путь. Пока пусто, в кружке монограмма.
-export const MANAGER = { photo: "", w: 160, h: 160 };
+// Фото менеджера (public/team). Пустая строка = монограмма вместо фото.
+export const MANAGER = { photo: "/team/bekzod.webp", w: 192, h: 192 };
 
 export const CHAT_COPY = {
   uz: {
     launcher: "Savol bering",
+    quick: ["Xizmatlaringiz narxi qancha?", "Hisob raqamimni toʻxtatib qoʻyishdi", "Soliqdan talabnoma keldi"],
     name: "Bekzod",
     role: "Sifat Buxgalter menejeri",
     status: "10 daqiqa ichida javob beramiz",
@@ -22,6 +23,7 @@ export const CHAT_COPY = {
   },
   ru: {
     launcher: "Задать вопрос",
+    quick: ["Сколько стоят ваши услуги?", "Заблокировали счёт", "Пришло требование из налоговой"],
     name: "Бекзод",
     role: "менеджер Sifat Buxgalter",
     status: "Отвечаем в течение 10 минут",
@@ -36,6 +38,6 @@ export const CHAT_COPY = {
     open: "Открыть чат",
     close: "Закрыть чат",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<Locale, Record<string, string | string[]>>;
 
 export type ChatCopy = (typeof CHAT_COPY)[Locale];
