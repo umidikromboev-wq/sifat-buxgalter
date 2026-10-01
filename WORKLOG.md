@@ -8,7 +8,8 @@
 
 **Сделано:** бот @sifat_buxgalter_leads_bot (токен ~/.claude/secrets/sifat-leads-bot.env), группа «Sifat Buxgalter · Заявки» chat_id -5321063401 (Умид + бот). Таблица «Sifat Buxgalter: заявки с сайта» id 1q9YV18m29-JVlJvMRnOjyae-PilVgT7mFz7CIZLtDGQ. Apps Script «Sifat Buxgalter заявки» (код _tools/lead-sheet.gs). /api/lead: таблица и TG параллельно, 502 только если упали оба. Env на Vercel sifat-glass: TG_BOT_TOKEN, TG_CHAT_ID, SHEETS_SECRET. Тест: telegram:true.
 **Грабли:** вставлять секрет в редактор Apps Script через браузер нельзя (блок авто-режима) → скрипт без секрета, проверка включится, если задать свойство SECRET.
-**Осталось:** [ ] Умид: разрешение OAuth для скрипта → развернуть веб-приложение (доступ «Все») → SHEETS_WEBHOOK_URL в Vercel [ ] env в прод-проекте sifat-buxgalter-site при мерже [ ] добавить Бекзода в группу
+**Таблица включена:** OAuth дал Умид, веб-приложение развёрнуто (доступ «Все»), адрес /exec в ~/.claude/secrets/sifat-leads-bot.env и в Vercel SHEETS_WEBHOOK_URL. Тест с превью: delivered {telegram:true, sheet:true}, «+998» в телефоне сохранён. Часовой пояс таблицы GMT-8 → Ташкент. Тестовые строки удалены.
+**Осталось:** [ ] env в прод-проекте sifat-buxgalter-site при мерже [ ] добавить Бекзода в группу (ждёт «да») [ ] по желанию: свойство SECRET в скрипте
 
 ## 2026-10-01 — UZ-тексты переписаны разговорно
 
