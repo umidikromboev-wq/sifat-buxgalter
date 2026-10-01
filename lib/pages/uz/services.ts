@@ -219,12 +219,12 @@ export const services: Record<string, ServicePage> = {
 
   blok: {
     slug: "hisob-raqamini-blokdan-chiqarish",
-    title: "Soliq toʻxtatgan hisob raqamini ochtirish",
+    title: "Bloklangan hisob raqamini ochtirish: soliq toʻxtatgan boʻlsa",
     description:
-      "Soliq kelishmovchiligi sabab bank hisob raqamingizni bloklaganmi? Sababini aniqlaymiz, hujjat va tushuntirishlarni tayyorlaymiz, blokni tezroq olib tashlaymiz.",
+      "Soliq bilan kelishmovchilik tufayli hisob raqamingiz bloklandimi? Sababini topamiz, hujjat va tushuntirishlarni tayyorlaymiz, blokni tezroq olib tashlatamiz.",
     name: "Hisob raqamini ochish",
-    h1: "Bloklangan hisob raqamini ochish",
-    lead: "Bloklangan hisob raqami hammasini toʻxtatadi: ish haqi, yetkazib beruvchilarga toʻlov, import. Soliq bilan qaysi kelishmovchilik sabab boʻlganini aniqlaymiz, uni hujjat va tushuntirishlar bilan yopamiz va blokni olib tashlashga erishamiz.",
+    h1: "Hisob raqamingiz toʻxtatildimi? Ochtirib beramiz",
+    lead: "Hisob raqami toʻxtasa, hamma narsa toʻxtaydi: oylik, yetkazib beruvchilarga toʻlov, import. Soliq bilan qaysi kelishmovchilik sabab boʻlganini topamiz, hujjat va tushuntirishlar bilan yopamiz va blokni olib tashlatamiz.",
     when: {
       h2: "Qachon shunday boʻladi",
       items: [
@@ -262,7 +262,7 @@ export const services: Record<string, ServicePage> = {
     },
     faq: [
       ["Blok qancha vaqtda olib tashlanadi?", "Sababga va kelishmovchilikni qanchalik tez yopish mumkinligiga bogʻliq. Aniq muddatni tahlildan keyin aytamiz."],
-      ["Hisob bloklanganda shoshilinch toʻlov qilsa boʻladimi?", "Bu bloklash turiga bogʻliq. Vaziyatingizni koʻrib, qanday variantlar borligini aytamiz."],
+      ["Hisob bloklanganda shoshilinch toʻlov qilsa boʻladimi?", "Bu qanday toʻxtatilganiga bogʻliq. Vaziyatingizni koʻrib, qanday variantlar borligini aytamiz."],
     ],
     related: ["vybor", "shtat"],
   },
