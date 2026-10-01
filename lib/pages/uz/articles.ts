@@ -9,44 +9,44 @@ export const articles: Record<string, ArticlePage> = {
     slug: "buxgalterdan-ishni-qabul-qilish",
     title: "Buxgalter ketyapti: ishni yoʻqotishsiz qanday qabul qilish",
     description:
-      "Tadbirkor uchun cheklist: ketayotgan buxgalterdan nimalarni olish kerak — 1C bazasi, kirish huquqlari, hujjatlar — va uning hisobi uchun javob berishdan oldin nimani tekshirish kerak.",
+      "Tadbirkor uchun cheklist: ketayotgan buxgalterdan nimalarni olish kerak (1C bazasi, kirish huquqlari, hujjatlar) va uning hisobi uchun javob berishdan oldin nimani tekshirish kerak.",
     name: "Buxgalterdan ishni qabul qilish",
     h1: "Buxgalter ketyapti: ishni qabul qilib, uning xatolarini meros qilib olmaslik",
-    lead: "Dekret, nafaqa, kasallik, boshqa ish — shtatdagi buxgalterda bu ertami-kechmi boʻladi. Eng xavfli vaqt — u ketgandan keyingi birinchi haftalar: kirish huquqlari bitta odamda, baza yarim toʻldirilgan, hisobot muddatlarini esa hech kim surmagan.",
+    lead: "Dekret, pensiya, kasallik, boshqa ish: shtatdagi buxgalter ertami-kechmi ketadi. Eng xavfli payt u ketgandan keyingi birinchi haftalar: parollar bitta odamda, baza chala toʻldirilgan, hisobot muddati esa hech kimni kutmaydi.",
     published: PUBLISHED,
     minutes: 5,
     body: [
       {
-        h2: "Nega ishni topshirish — asosiy xavf",
+        h2: "Nega aynan ishni topshirish eng xavfli payt",
         p: [
           "Buxgalter ishlab turganda koʻp narsa uning xotirasida turadi: qaysi toʻlovlar hali kiritilmagan, kim bilan solishtirilmagan, ombordagi qaysi qoldiqlar «keyin toʻgʻrilanadi». U ketganda bu bilim ham u bilan ketadi.",
-          "Ibrohim bir marta ketayotgan buxgalterdan hisobni qabul qilgan — 1C bazasi oxirigacha toʻldirilmagan, operatsiyalarning bir qismi «jarayonda» qolib ketgan edi. Bunday dumlar keyin chiqadi, koʻpincha — tekshiruvda.",
+          "Ibrohim bir safar ketayotgan buxgalterdan hisobni qabul qilib olgan: 1C bazasi chala toʻldirilgan, operatsiyalarning bir qismi «jarayonda» qolib ketgan edi. Bunday chala ishlar keyin chiqadi, koʻpincha tekshiruvda.",
         ],
       },
       {
         h2: "Oxirgi ish kunigacha nimalarni olish kerak",
         p: ["Roʻyxat tuzing va buxgalter hali joyida ekan, har bir bandni u bilan birga belgilang:"],
         list: [
-          "1C (yoki boshqa dastur) bazasi — dolzarb nusxasi",
+          "1C (yoki boshqa dastur) bazasining oxirgi nusxasi",
           "Kirish huquqlari: soliq toʻlovchining shaxsiy kabineti, Didox, bank-mijoz, elektron kalitlar",
           "Yaqin oylar uchun hisobotlar roʻyxati va muddatlari",
           "Asosiy kontragentlar va soliq bilan solishtirma dalolatnomalar",
           "Yopilmagan masalalar: soliq talabnomalari, nizolar, toʻlanmagan hisoblar",
           "Kadrlar hujjatlari: buyruqlar, mehnat shartnomalari va daftarchalari",
-          "Ombor qoldiqlari — hisob boʻyicha va haqiqatda",
+          "Ombor qoldiqlari: hisobda qancha va haqiqatda qancha",
         ],
       },
       {
         h2: "Darhol nimani tekshirish kerak",
         p: [
-          "Hujjatlarni olishning oʻzi yetmaydi — ular qanday holatda ekanini tushunish kerak. Shaxsiy kabinetdagi byudjet bilan hisob-kitoblarni 1C koʻrsatgani bilan solishtiring. Ombordagi hisob qoldiqlarini haqiqiysi bilan taqqoslang. Sotilgan hamma narsa hisobdan oʻtganini tekshiring.",
-          "Farq boʻlsa, uni hozir — aniqlashtirilgan hisobot bilan tuzatish mumkin boʻlgan paytda topgan maʼqul, tekshiruv topganda emas.",
+          "Hujjatlarni olishning oʻzi yetmaydi, ular qanday holatda ekanini ham bilish kerak. Shaxsiy kabinetdagi byudjet bilan hisob-kitoblarni 1C koʻrsatgani bilan solishtiring. Ombordagi hisob qoldiqlarini haqiqiysi bilan taqqoslang. Sotilgan hamma narsa hisobdan oʻtganini tekshiring.",
+          "Farq boʻlsa, uni hozir topgan maʼqul: hali aniqlashtirilgan hisobot bilan tuzatsa boʻladi. Tekshiruv topsa, kech boʻladi.",
         ],
       },
       {
         h2: "Bu takrorlanmasligi uchun",
         p: [
-          "Hisob bitta odamga bogʻliq boʻlmasligi kerak. Autsorsing kompaniyasida dekret ham, nafaqa ham yoʻq: xodim almashsa, ish jamoa ichida qoladi, kirish huquqlari esa kompaniya va sizda boʻladi.",
+          "Hisob bitta odamga bogʻliq boʻlmasligi kerak. Autsorsing kompaniyasida dekret ham, pensiya ham yoʻq: xodim almashsa, ish jamoa ichida qoladi, kirish huquqlari esa kompaniya va sizda boʻladi.",
         ],
       },
     ],
@@ -59,7 +59,7 @@ export const articles: Record<string, ArticlePage> = {
     title: "Ombor Excelda: yashirin soliq xavfi",
     description:
       "Nega Excelda ombor va cheksiz sotuv yillar davomida koʻrinmaydi, uchinchi yili esa qoʻshimcha hisob-kitob va jarimaga aylanadi. Hisob misoli va hozirdanoq nimani tekshirish kerak.",
-    name: "Ombor Excelda — yashirin xavf",
+    name: "Ombor Excelda: yashirin xavf",
     h1: "Ombor Excelda va cheksiz sotuv: hisobotda koʻrinmaydigan xavf",
     lead: "Hisobotlar vaqtida topshirilgan, jarima yoʻq, buxgalter xotirjam. Ombor esa Excelda yuritiladi, tovarning bir qismi rasmiy cheksiz ketadi. Hisobotda bu koʻrinmaydi, shuning uchun bu xavf eng qimmati.",
     published: PUBLISHED,
@@ -68,7 +68,7 @@ export const articles: Record<string, ArticlePage> = {
       {
         h2: "Bu qanday koʻrinadi",
         p: [
-          "Tovar keladi, sotiladi, qoldiqlar jadvalda hisoblanadi. 1Cga operatsiyalarning bir qismi tushmaydi: qayerdadir rasmiy kirim yoʻq, qayerdadir sotuv cheksiz oʻtgan. Hisobot esa topshiriladi — shunchaki toʻliq boʻlmagan maʼlumot asosida.",
+          "Tovar keladi, sotiladi, qoldiqlar jadvalda hisoblanadi. 1Cga operatsiyalarning bir qismi tushmaydi: qayerdadir rasmiy kirim yoʻq, qayerdadir sotuv cheksiz oʻtgan. Hisobot esa topshirilaveradi, faqat chala maʼlumot asosida.",
         ],
       },
       {
@@ -96,7 +96,7 @@ export const articles: Record<string, ArticlePage> = {
         ],
       },
     ],
-    takeaway: "Shuning uchun oxirgi davrni koʻrmasdan ishni olmaymiz va ekspress-auditda omborni solishtiramiz. Xatomiz sabab jarimani oʻzimiz toʻlaymiz — lekin faqat ombor halol yuritilsa.",
+    takeaway: "Shuning uchun oxirgi davrni koʻrmasdan ishni olmaymiz va ekspress-auditda omborni solishtiramiz. Xato bizdan boʻlsa, jarimani oʻzimiz toʻlaymiz, lekin faqat ombor halol yuritilgan boʻlsa.",
     service: "kirish",
   },
 
@@ -107,39 +107,39 @@ export const articles: Record<string, ArticlePage> = {
       "MChJ uchun shtatdagi buxgalter va buxgalteriya autsorsingini halol taqqoslash: javob tezligi, xavflar, qonunlar, soliqlar va xatolar uchun javobgarlik.",
     name: "Shtatdagi buxgalter yoki autsorsing",
     h1: "Shtatdagi buxgalter yoki autsorsing: halol taqqoslash",
-    lead: "Koʻp tadbirkorlar yillar davomida bitta buxgalter bilan ishlaydi — bu normal. Lekin tobora koʻproq savol yangraydi: «Menga shtatdagi buxgalter nima kerak, autsorsingga bergan yaxshi emasmi?» Tadbirkor uchun muhim mezonlar boʻyicha koʻrib chiqamiz.",
+    lead: "Koʻp tadbirkorlar yillab bitta buxgalter bilan ishlaydi, bunda yomon narsa yoʻq. Lekin borgan sari koʻproq shunday savol eshitamiz: «Menga shtatdagi buxgalter nima kerak, autsorsingga bergan yaxshi emasmi?» Tadbirkor uchun muhim mezonlar boʻyicha koʻrib chiqamiz.",
     published: PUBLISHED,
     minutes: 5,
     body: [
       {
         h2: "Javob tezligi",
         p: [
-          "Shtatdagi buxgalter yaqinroqdek tuyuladi: qoʻshni xonada oʻtiradi. Lekin amalda unga baribir Telegramda yozishadi, u esa boʻshaganda javob beradi. Hujjatlar allaqachon Didox va 1Cda, qogʻoz koʻtarib yurish shart emas — demak, yonida oʻtirish ham shart emas.",
-          "Muhimi boshqa: savoldan javobgacha qancha vaqt oʻtadi. Toʻlovni bank yopilgunicha oʻtkazish kerak boʻlsa, toʻrt soatdan keyingi javob — yoʻqotilgan kun.",
+          "Shtatdagi buxgalter yaqinroqdek tuyuladi: qoʻshni xonada oʻtiradi. Lekin amalda unga baribir Telegramda yozishadi, u esa boʻshaganda javob beradi. Hujjatlar allaqachon Didox va 1Cda, qogʻoz koʻtarib yurish shart emas. Demak, yoningizda oʻtirishi ham shart emas.",
+          "Muhimi boshqa: savoldan javobgacha qancha vaqt oʻtadi. Toʻlovni bank yopilgunicha oʻtkazish kerak boʻlsa, toʻrt soatdan keyin kelgan javob bir kunni boy berish degani.",
         ],
       },
       {
         h2: "Bitta odamga bogʻliqlik",
         p: [
-          "Dekret, nafaqa, kasallik, oilaviy sabablar — shtatdagi buxgalterda bu ertami-kechmi boʻladi va hisob yarim yoʻlda toʻxtaydi. Autsorsing kompaniyasida ish bitta odamga bogʻliq emas.",
+          "Dekret, pensiya, kasallik, oilaviy sabablar: shtatdagi buxgalter ertami-kechmi ketadi, hisob esa yarim yoʻlda qoladi. Autsorsing kompaniyasida ish bitta odamga bogʻliq emas.",
         ],
       },
       {
         h2: "Yangi qonunlar va imtiyozlar",
         p: [
-          "Qoidalar tez-tez oʻzgaradi, yangi nizomlar eʼlondan bir necha kun oʻtib chiqadi. Joriy ish bilan band shtatdagi buxgalter ularni har doim ham kuzatmaydi. Tadbirkor imtiyoz haqida Instagramdan bilib qoladi — va buxgalter nega indamadi, deb soʻraydi.",
+          "Qoidalar tez-tez oʻzgaradi, yangi nizomlar eʼlondan bir necha kun oʻtib chiqadi. Joriy ish bilan band shtatdagi buxgalter ularni har doim ham kuzatmaydi. Tadbirkor imtiyoz haqida Instagramdan bilib qoladi va «buxgalter nega indamadi?» deb hayron boʻladi.",
         ],
       },
       {
         h2: "Soliqni qonuniy kamaytirish",
         p: [
-          "Buxgalterning vazifasi — hisobotni vaqtida topshirish va jarima olmaslik. Kamroq toʻlash yoʻllarini izlash odatda uning vazifasiga kirmaydi. Yaxshi autsorsing kompaniyasi buni xizmat qismiga aylantiradi.",
+          "Buxgalterning vazifasi hisobotni vaqtida topshirish va jarimaga yoʻl qoʻymaslik. Kamroq toʻlash yoʻllarini izlash odatda uning vazifasiga kirmaydi. Yaxshi autsorsing kompaniyasi buni xizmat qismiga aylantiradi.",
         ],
       },
       {
         h2: "Xatolar uchun javobgarlik",
         p: [
-          "Shtatdagi buxgalter xato qilsa, jarimani korxona toʻlaydi. Autsorsing kompaniyasi bilan shartnomada javobgarlikni yozib qoʻyish mumkin: xato bizniki — jarima ham bizniki.",
+          "Shtatdagi buxgalter xato qilsa, jarimani korxona toʻlaydi. Autsorsing kompaniyasi bilan shartnomada javobgarlikni yozib qoʻyish mumkin: xato bizdan boʻlsa, jarima ham bizdan.",
         ],
       },
       {
@@ -155,12 +155,12 @@ export const articles: Record<string, ArticlePage> = {
 
   lgoty: {
     slug: "soliqni-qonuniy-kamaytirish",
-    title: "Nega qoʻshni kamroq soliq toʻlaydi — va bu qonuniymi",
+    title: "Nega tanishingiz kamroq soliq toʻlaydi va bu qonuniymi",
     description:
       "Nega oʻxshash korxonalarda soliq yuki har xil: imtiyozlar, rejimlar, ortiqcha toʻlov. Biznesingizga nima mosligini qanday bilish va nega buning uchun foiz toʻlash shart emas.",
     name: "Soliqni qonuniy kamaytirish",
-    h1: "«Qoʻshnim kamroq toʻlaydi»: soliqni qanday qonuniy kamaytirish mumkin",
-    lead: "Tadbirkorlarning eng koʻp beradigan savollaridan biri: «Qoʻshnimning biznesi xuddi meniki, lekin u kamroq soliq toʻlaydi. Balki buxgalterim nimanidir notoʻgʻri qilayotgandir?» Baʼzan — ha. Farq qayerdan kelishini koʻrib chiqamiz.",
+    h1: "«Tanishim kamroq toʻlaydi»: soliqni qanday qilib qonuniy kamaytirsa boʻladi",
+    lead: "Tadbirkorlarning eng koʻp beradigan savollaridan biri: «Tanishimning biznesi xuddi menikiga oʻxshaydi, lekin u kamroq soliq toʻlaydi. Balki buxgalterim nimanidir notoʻgʻri qilayotgandir?» Baʼzan shunday boʻladi. Farq qayerdan kelishini koʻrib chiqamiz.",
     published: PUBLISHED,
     minutes: 4,
     body: [
@@ -171,26 +171,26 @@ export const articles: Record<string, ArticlePage> = {
           "Soliqqa tortish tizimlari har xil",
           "Biri imtiyozlardan foydalanadi, boshqasi ular haqida bilmaydi",
           "Birida hech kim qaytarmagan ortiqcha toʻlov bor",
-          "Biri yangi soliqlar qoʻshiladigan aylanma chegaralarini kuzatadi, boshqasi — yoʻq",
+          "Biri yangi soliq qoʻshiladigan aylanma chegarasini kuzatib boradi, boshqasi kuzatmaydi",
         ],
       },
       {
         h2: "Imtiyoz koʻp, lekin hammaga emas",
         p: [
-          "Soliqni kamaytiradigan amaldagi imtiyozlar — yetmishga yaqin. Lekin deyarli har biri soha yoki shartga bogʻlangan: masalan, quyosh panellarini oʻrnatish yoki maʼlum toifadagi fuqarolarni ishga olish. Aksariyati korxonalarning faqat bir qismiga mos keladi.",
+          "Soliqni kamaytiradigan amaldagi imtiyozlar yetmishga yaqin. Lekin deyarli har biri soha yoki shartga bogʻlangan: masalan, quyosh panellarini oʻrnatish yoki maʼlum toifadagi fuqarolarni ishga olish. Aksariyati korxonalarning faqat bir qismiga mos keladi.",
           "Imtiyoz umuman boʻlmasligi ham mumkin: qazib oluvchi korxonalarda ular deyarli yoʻq. Halol maslahatchi buni ochiq aytadi.",
         ],
       },
       {
         h2: "Nega buxgalter indamaydi",
         p: [
-          "Buxgalterning odatiy vazifasi — hisobotni vaqtida topshirish va jarima olmaslik. Kamroq toʻlash yoʻlini izlash — odatda hech kim talab qilmaydigan qoʻshimcha ish. Shuning uchun baʼzi kompaniyalar buning uchun tejalgan summadan alohida foiz — 5–10% oladi.",
+          "Buxgalterning odatdagi vazifasi hisobotni vaqtida topshirish va jarimaga yoʻl qoʻymaslik. Kamroq toʻlash yoʻlini izlash esa odatda hech kim talab qilmaydigan qoʻshimcha ish. Shuning uchun baʼzi kompaniyalar buning uchun tejalgan summadan alohida 5–10% oladi.",
         ],
       },
       {
         h2: "Sizga nima mosligini qanday bilish mumkin",
         p: [
-          "Birinchi kuni javob berib boʻlmaydi — raqamlarni koʻrish kerak: soha, aylanma, xarajatlar tuzilmasi, shtat. Tekshiruvdan keyin qaysi yoʻllar qoʻllanishi mumkin, qaysilari yoʻq va bu qancha berishini aytish mumkin.",
+          "Birinchi kuniyoq javob berib boʻlmaydi, avval raqamlarni koʻrish kerak: soha, aylanma, xarajatlar tuzilmasi, shtat. Tekshiruvdan keyin qaysi yoʻllar qoʻllanishi mumkin, qaysilari yoʻq va bu qancha berishini aytish mumkin.",
         ],
       },
     ],
@@ -215,11 +215,11 @@ export const articles: Record<string, ArticlePage> = {
         p: [],
         list: [
           "Hisobimni shaxsan kim yuritadi va unda yana nechta korxona bor?",
-          "Savolga necha daqiqada javob berasiz — va bu shartnomada yozilganmi?",
+          "Savolga necha daqiqada javob berasiz va bu shartnomada yozilganmi?",
           "Sizning xatoingiz sabab jarima chiqsa, kim toʻlaydi?",
           "Korxonani olishdan oldin hisobni tekshirasizmi va aynan nimani koʻrasiz?",
           "Soliqni qonuniy kamaytirish xizmatga kiradimi yoki bu alohida foizmi?",
-          "Qaysi dasturlarda ishlaysiz — litsenziyali 1Cdami?",
+          "Qaysi dasturlarda ishlaysiz, 1C litsenziyalimi?",
           "NDA imzolaysizmi?",
           "Kimni xizmatga olmaysiz?",
         ],
@@ -227,14 +227,14 @@ export const articles: Record<string, ArticlePage> = {
       {
         h2: "Javoblarda nimaga qarash kerak",
         p: [
-          "«1 mln dan» va «5 mln dan» narxlar bejiz farq qilmaydi. Buxgalter oʻnlab firmani yuritsa, har birini tekshirishga vaqti yoʻq — faqat hisobot topshirishga ulguradi. Past narxda daromad qilish uchun koʻproq korxona olish kerak.",
-          "Kompaniya kimgadir rad javobini berishga tayyor boʻlsa — bu yaxshi belgi. Hisob uchun javobgarlikni oladigan kompaniya faqat naqdda ishlaydigan biznesni qabul qila olmaydi.",
+          "«1 mln dan» va «5 mln dan» narxlar bejiz farq qilmaydi. Buxgalter oʻnlab firmani yuritsa, har birini tekshirishga vaqti yetmaydi, faqat hisobot topshirishga ulguradi. Past narxda daromad qilish uchun koʻproq korxona olish kerak.",
+          "Kompaniya kimgadir «yoʻq» deyishga tayyor boʻlsa, bu yaxshi belgi. Hisob uchun javobgarlikni oladigan kompaniya faqat naqdda ishlaydigan biznesni qabul qila olmaydi.",
         ],
       },
       {
         h2: "Yuzma-yuz uchrashgan yaxshi",
         p: [
-          "Telefonda va Zoomda koʻp narsa koʻrinmaydi. Ofisdagi uchrashuvda kim bilan ishlashingizni tushunish va hisobingiz haqida savol berish osonroq — kompaniyaga pul va hujjatlarni ishonib topshirishdan oldin.",
+          "Telefonda va Zoomda koʻp narsa koʻrinmaydi. Ofisdagi uchrashuvda kim bilan ishlashingizni tushunish va hisobingiz haqida savol berish osonroq. Pul va hujjatlarni ishonib topshirishdan oldin buni qilib olgan maʼqul.",
         ],
       },
     ],

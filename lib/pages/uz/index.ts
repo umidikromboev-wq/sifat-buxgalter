@@ -8,10 +8,10 @@ export const uz: PagesBundle = {
       seg: "xizmatlar",
       title: "Toshkentda MChJ uchun buxgalteriya xizmatlari",
       description:
-        "Buxgalteriya autsorsingi, soliq maslahati, hisobni tiklash, soliq tekshiruvlari, hisob raqamini ochish, kadrlar va tashqi savdo — bitta shartnomada.",
+        "Buxgalteriya autsorsingi, soliq maslahati, hisobni tiklash, soliq tekshiruvlari, hisob raqamini ochish, kadrlar va tashqi savdo: hammasi bitta shartnomada.",
       kicker: "Xizmatlar",
       h1: "MChJ uchun buxgalteriya xizmatlari",
-      lead: "Tadbirkorga kerak boʻlgan hamma narsa — bitta shartnomada. Vazifangizni tanlang, uni qanday hal qilishimizni aytib beramiz.",
+      lead: "Tadbirkorga kerak boʻladigan hamma narsa bitta shartnomada. Vazifangizni tanlang, qanday hal qilishimizni aytib beramiz.",
     },
     articles: {
       seg: "maqolalar",
@@ -20,7 +20,7 @@ export const uz: PagesBundle = {
         "MChJ egalari uchun buxgalteriya oddiy tilda: buxgalterdan ishni qanday qabul qilish, soliqni qonuniy kamaytirish va jarimaga tushmaslik.",
       kicker: "Maqolalar",
       h1: "Buxgalteriya oddiy tilda",
-      lead: "Tadbirkorlar bizga eng koʻp beradigan savollarga javob beramiz.",
+      lead: "Tadbirkorlar bizdan eng koʻp soʻraydigan savollarga javoblar.",
     },
     ui: {
       home: "Bosh sahifa",

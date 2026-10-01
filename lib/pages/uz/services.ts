@@ -1,19 +1,19 @@
 import type { ServicePage } from "../types";
 
-// Faqat Ibrohim bilan intervyu, xizmatlar PDF va 23.09 Zoom faktlari. Narx yozilmaydi — Umid qarori 25.09.
+// Faqat Ibrohim bilan intervyu, xizmatlar PDF va 23.09 Zoom faktlari. Narx yozilmaydi: Umid qarori 25.09.
 export const services: Record<string, ServicePage> = {
   autsorsing: {
     slug: "buxgalteriya-autsorsingi",
-    title: "MChJ uchun buxgalteriya autsorsingi — Toshkent",
+    title: "MChJ uchun buxgalteriya autsorsingi, Toshkent",
     description:
       "MChJ buxgalteriya va soliq hisobini toʻliq yuritamiz: hisobotlar muddatida, 10 daqiqada javob, buxgalter ofisingizda oyiga 3 marta. Xatomiz sabab jarimani oʻzimiz toʻlaymiz.",
     name: "Buxgalteriya autsorsingi",
-    h1: "MChJ uchun buxgalteriya autsorsingi — Toshkent",
+    h1: "MChJ uchun buxgalteriya autsorsingi, Toshkent",
     lead: "Korxonangiz hisobini toʻliq olamiz: birlamchi hujjatlar, soliqlar, hisobotlar, bank, ish haqi. Savolingizga 10 daqiqada javob va har oy hisobot olasiz. Xatolarimiz uchun shartnoma boʻyicha javob beramiz.",
     when: {
       h2: "Qachon autsorsingga oʻtishadi",
       items: [
-        "Shtatdagi buxgalter ketyapti — dekretga, nafaqaga yoki boshqa ishga",
+        "Shtatdagi buxgalter ketyapti: dekretga, pensiyaga yoki boshqa ishga",
         "Buxgalter bir necha soatdan keyin javob beradi, toʻlov esa bugun kerak",
         "Soliq nega bunchalik chiqayotganini va ortiqcha toʻlamayotganingizni bilmaysiz",
         "Aylanma oʻsyapti, u bilan birga yangi soliq va majburiyatlar qoʻshilyapti",
@@ -37,7 +37,7 @@ export const services: Record<string, ServicePage> = {
       h2: "Ishni qanday boshlaymiz",
       items: [
         ["10 daqiqalik qoʻngʻiroq", "Bekzod hisobingiz va omboringiz haqida bir necha savol beradi va asosiy xavf odatda qayerda yashirinishini aytadi."],
-        ["Kirish tekshiruvi", "Oxirgi davrni koʻramiz — odatda yarim yildan bir yilgacha. Javobgarlik bizga oʻtadi, shuning uchun oʻtgan xatolarni soliq emas, biz topishimiz kerak."],
+        ["Kirish tekshiruvi", "Oxirgi davrni koʻrib chiqamiz, odatda yarim yildan bir yilgacha. Javobgarlik bizga oʻtadi, shuning uchun eski xatolarni soliqdan oldin oʻzimiz topishimiz kerak."],
         ["Shartnoma", "Ishlar roʻyxati, javob muddati va shartni yozamiz: xatomiz sabab jarimani oʻzimiz toʻlaymiz."],
         ["Hisobni yuritish", "Umumiy Telegram-guruh, buxgalter ofisingizda oyiga 3 marta, har oy hisobot."],
       ],
@@ -45,9 +45,9 @@ export const services: Record<string, ServicePage> = {
     promise: {
       h2: "Shartnomaga nimalarni yozamiz",
       items: [
-        ["Javob — 10 daqiqagacha", "24/7 aloqadamiz, shanba va yakshanba kunlari ham."],
-        ["Xato bizniki — jarima ham bizniki", "Shart bitta: ombor hisobi halol yuritilsin."],
-        ["Optimallashtirish — foizsiz", "Soliqni qonuniy kamaytirish ishimiz ichida, tejalgan summadan foiz olmaymiz."],
+        ["10 daqiqada javob", "Kecha-yu kunduz aloqadamiz, shanba-yakshanba ham."],
+        ["Xato bizdan boʻlsa, jarima ham bizdan", "Bitta shartimiz bor: ombor halol yuritilsin."],
+        ["Soliqni kamaytirish uchun foiz olmaymiz", "Soliqni qonuniy kamaytirish ishimizga kiradi, tejalgan puldan foiz soʻramaymiz."],
         ["Faqat litsenziyali dasturlar", "1C va soliq toʻlovchining shaxsiy kabineti, kompyuterlarda litsenziyali antivirus."],
       ],
     },
@@ -64,10 +64,10 @@ export const services: Record<string, ServicePage> = {
     slug: "soliq-maslahati",
     title: "Soliq maslahati va soliqni qonuniy kamaytirish",
     description:
-      "Kamroq toʻlashning qonuniy yoʻllarini topamiz: imtiyozlar, soliq rejimini oʻzgartirish, ortiqcha toʻlovni qaytarish. Tejalgan summadan foiz olmaymiz — bu xizmatga kiradi.",
+      "Kamroq toʻlashning qonuniy yoʻllarini topamiz: imtiyozlar, soliq rejimini oʻzgartirish, ortiqcha toʻlovni qaytarish. Tejalgan puldan foiz olmaymiz, bu xizmat narxiga kiradi.",
     name: "Soliq maslahati",
-    h1: "Soliq maslahati: kamroq toʻlash — qonuniy",
-    lead: "«Xuddi shunday biznesi bor qoʻshnim kamroq toʻlayapti» — tadbirkorlarning eng koʻp beradigan savoli. Amaldagi imtiyoz va rejimlardan aynan sizning korxonangizga qaysilari toʻgʻri kelishini aniqlaymiz va qoʻllaymiz. Soliqni qonuniy kamaytirish xizmatga kiradi, alohida foiz olmaymiz.",
+    h1: "Soliq maslahati: kamroq toʻlang, lekin qonuniy",
+    lead: "«Tanishimning biznesi xuddi menikiga oʻxshaydi, lekin u kamroq toʻlaydi. Qanday qilib?» Tadbirkorlardan eng koʻp eshitadigan savolimiz shu. Amaldagi imtiyoz va rejimlardan aynan sizning korxonangizga qaysilari toʻgʻri kelishini aniqlaymiz va qoʻllaymiz. Soliqni qonuniy kamaytirish xizmatga kiradi, alohida foiz olmaymiz.",
     when: {
       h2: "Qachon kerak boʻladi",
       items: [
@@ -82,7 +82,7 @@ export const services: Record<string, ServicePage> = {
       h2: "Nima qilamiz",
       items: [
         "Soliq yukini tahlil qilamiz: nima toʻlayapsiz, nega va qayerda ortiqcha",
-        "Sohangizga mos imtiyozlarni tanlaymiz — faqat sizga toʻgʻri keladiganlarini qoʻllaymiz",
+        "Sohangizga mos imtiyozlarni saralab, faqat sizga toʻgʻri keladiganlarini qoʻllaymiz",
         "Soliqqa tortish tizimini biznes ehtiyojiga qarab oʻzgartiramiz",
         "Kutilmagan qoʻshimcha hisob-kitob boʻlmasligi uchun soliq xavflarini oldindan aniqlaymiz",
         "Ortiqcha toʻlangan soliqlarni qaytaramiz",
@@ -100,15 +100,15 @@ export const services: Record<string, ServicePage> = {
     promise: {
       h2: "Farqimiz",
       items: [
-        ["Tejalgan summadan foiz yoʻq", "Koʻpchilik tejalgan summaning 5–10% ini oladi. Bizda bu xizmat ichida — soliqni 10 mln ga kamaytiramizmi yoki 100 mln ga."],
+        ["Tejalgan summadan foiz yoʻq", "Koʻpchilik tejalgan summaning 5–10% ini oladi. Bizda bu xizmatga kiradi: soliqni 10 mln ga kamaytiramizmi, 100 mln gami, farqi yoʻq."],
         ["Faqat qonuniy yoʻllar", "Sohangiz uchun imtiyoz boʻlmasa, shuni aytamiz. Sxema taklif qilmaymiz."],
-        ["Yangi qonunlar — birinchi boʻlib", "Oʻzgarishlar tez-tez chiqadi. Qoʻshningizdan eshitishingizdan oldin aytamiz."],
+        ["Yangi qonunlardan birinchi boʻlib xabar beramiz", "Oʻzgarishlar tez-tez chiqadi. Tanishlaringizdan eshitishingizdan oldin oʻzimiz aytamiz."],
       ],
     },
     faq: [
       ["Har qanday biznesning soligʻini kamaytirsa boʻladimi?", "Yoʻq. Imtiyozlar sohaga bogʻliq. Masalan, qazib oluvchi korxonalarda imtiyoz deyarli yoʻq. Sizga nima mosligini kirish tekshiruvidan keyin aytamiz."],
       ["Qancha tejash mumkin?", "Birinchi kuni summani aytib boʻlmaydi, avval raqamlarni koʻrish kerak. Taklif qilganimiz hammasi qonuniy va aynan sizning korxonangizga mos boʻladi."],
-      ["Xizmatsiz faqat maslahat olsa boʻladimi?", "Qoʻngʻiroq qiling — vazifangizni muhokama qilamiz. Optimallashtirish hisobni har oy koʻrib turganimizda eng yaxshi ishlaydi."],
+      ["Xizmatsiz faqat maslahat olsa boʻladimi?", "Qoʻngʻiroq qiling, vazifangizni gaplashib olamiz. Optimallashtirish hisobni har oy koʻrib turganimizda eng yaxshi ishlaydi."],
     ],
     related: ["lgoty", "shtat"],
   },
@@ -134,7 +134,7 @@ export const services: Record<string, ServicePage> = {
     includes: {
       h2: "Nimani tekshiramiz",
       items: [
-        "Oxirgi davr hisobi — odatda yarim yildan bir yilgacha",
+        "Oxirgi davr hisobi, odatda yarim yildan bir yilgacha",
         "Ombor: kirim, chiqim va qoldiqlar sotilgan tovarga nisbatan",
         "Soliq deklaratsiyalari va byudjet bilan haqiqiy hisob-kitoblar",
         "Elektron birlamchi hujjatlar: hisob-fakturalar, solishtirma dalolatnomalar",
@@ -159,7 +159,7 @@ export const services: Record<string, ServicePage> = {
       ],
     },
     faq: [
-      ["Qaysi davrni tekshirasiz?", "Odatda oxirgi bir yil yoki yil oʻrtasidan bugungacha boʻlgan davr. Uch yillik chuqur audit — alohida ish."],
+      ["Qaysi davrni tekshirasiz?", "Odatda oxirgi bir yil yoki yil oʻrtasidan bugungacha boʻlgan davr. Uch yillik chuqur audit alohida ish hisoblanadi."],
       ["Oldingi buxgalter xatolari nima boʻladi?", "Ularni koʻrsatamiz va tuzatish rejasini beramiz. Oʻtgan davr uchun javobgarlikni tekshiruvdan keyin alohida kelishamiz."],
       ["Tekshiruv qancha vaqt oladi?", "Hujjatlar hajmi va 1C holatiga bogʻliq. Muddatni bazani birinchi koʻrganimizdan keyin aytamiz."],
     ],
@@ -173,7 +173,7 @@ export const services: Record<string, ServicePage> = {
       "Kameral va sayyor tekshiruvlar uchun hujjat tayyorlaymiz, soliq dalolatnomalariga eʼtiroz yozamiz va korxonani davlat organlari oldida himoya qilamiz.",
     name: "Soliq tekshiruvlari",
     h1: "Soliq tekshiruvlarida hamrohlik",
-    lead: "Talabnoma yoki tekshiruv dalolatnomasi keldi — vaqt sizga qarshi ishlaydi. Hujjatlarni yigʻamiz, korxona pozitsiyasini tushuntiramiz va dalolatnomaga eʼtiroz tayyorlaymiz. Xizmatdagi mijozlarimizda esa ishni tekshiruvgacha yetkazmaslikka harakat qilamiz: xavfni oldindan topamiz.",
+    lead: "Talabnoma yoki tekshiruv dalolatnomasi keldimi, endi har bir kun hisobda. Hujjatlarni yigʻamiz, korxona pozitsiyasini tushuntiramiz va dalolatnomaga eʼtiroz tayyorlaymiz. Xizmatdagi mijozlarimizda esa ishni tekshiruvgacha yetkazmaslikka harakat qilamiz: xavfni oldindan topamiz.",
     when: {
       h2: "Qachon murojaat qilishadi",
       items: [
@@ -197,14 +197,14 @@ export const services: Record<string, ServicePage> = {
       h2: "Qanday ishlaymiz",
       items: [
         ["Talabnoma yoki dalolatnomani tahlil qilamiz", "Aynan nima soʻralyapti, qaysi davr uchun va qanday summalar."],
-        ["Pozitsiyani yigʻamiz", "Hujjatlar, hisob-kitoblar, tushuntirishlar — javob birinchi martadayoq toʻliq boʻlishi uchun."],
-        ["Oxirigacha hamrohlik qilamiz", "Qoʻshimcha savollarga javob beramiz, xulosalarga rozi boʻlmasak — eʼtiroz tayyorlaymiz."],
+        ["Pozitsiyani yigʻamiz", "Hujjatlar, hisob-kitoblar, tushuntirishlar: javob birinchi martadayoq toʻliq boʻlsin."],
+        ["Oxirigacha hamrohlik qilamiz", "Qoʻshimcha savollarga javob beramiz, xulosaga rozi boʻlmasak, eʼtiroz yozamiz."],
       ],
     },
     promise: {
       h2: "Xavfni qanday oldindan kamaytirish mumkin",
       items: [
-        ["Farqsiz ombor", "Eng qimmat xato — Excelda ombor va cheksiz sotuv. Uchinchi yili tekshiruv oldingi ikki yilni koʻtarishi mumkin."],
+        ["Farqsiz ombor", "Eng qimmatga tushadigan xato: ombor Excelda, sotuv cheksiz. Uchinchi yili tekshiruv oldingi ikki yilni koʻtarishi mumkin."],
         ["Kontragentlar nazoratda", "Hamkorlarni talabnomadan keyin emas, bitimdan oldin tekshiramiz."],
         ["Xavfni erta aniqlash", "Muammoni dalolatnomaga tushishidan oldin hisobda koʻramiz."],
       ],
@@ -219,7 +219,7 @@ export const services: Record<string, ServicePage> = {
 
   blok: {
     slug: "hisob-raqamini-blokdan-chiqarish",
-    title: "Bloklangan hisob raqamini ochish — soliq kelishmovchiligida",
+    title: "Soliq toʻxtatgan hisob raqamini ochtirish",
     description:
       "Soliq kelishmovchiligi sabab bank hisob raqamingizni bloklaganmi? Sababini aniqlaymiz, hujjat va tushuntirishlarni tayyorlaymiz, blokni tezroq olib tashlaymiz.",
     name: "Hisob raqamini ochish",
@@ -255,8 +255,8 @@ export const services: Record<string, ServicePage> = {
     promise: {
       h2: "Nega xizmatdagi mijozlarda bunday boʻlmaydi",
       items: [
-        ["Hisobotlar — muddatida", "Topshirish va toʻlov muddatlarini nazorat qilamiz."],
-        ["Javob — 10 daqiqada", "Talabnoma va xatlar javobsiz qolmaydi."],
+        ["Hisobotlar muddatida", "Topshirish va toʻlov muddatlarini kuzatib boramiz."],
+        ["10 daqiqada javob", "Talabnoma va xatlar javobsiz qolmaydi."],
         ["Oylik hisobot", "Qancha va qachon toʻlash kerakligini oldindan bilasiz."],
       ],
     },
@@ -271,10 +271,10 @@ export const services: Record<string, ServicePage> = {
     slug: "kadrlar-hisobi-va-ish-haqi",
     title: "MChJ uchun kadrlar hisobi va ish haqi hisob-kitobi",
     description:
-      "Kadrlar buyruqlari, mehnat shartnomalari va daftarchalari, ish haqi, aliment va ushlanmalar hisob-kitobi — aniq va kechikishsiz, buxgalteriya xizmati doirasida.",
+      "Kadrlar buyruqlari, mehnat shartnomalari va daftarchalari, ish haqi, aliment va ushlanmalarni aniq va kechiktirmasdan hisoblaymiz. Bularning hammasi buxgalteriya xizmatiga kiradi.",
     name: "Kadrlar va ish haqi",
     h1: "Kadrlar hisobi va ish haqi hisob-kitobi",
-    lead: "Ishga qabul, boʻshatish, oʻtkazish, taʼtil — har biri buyruq talab qiladi, har bir ish haqi esa soliq va ushlanmalarning aniq hisobini. Kadrlar hisobi va ish haqini buxgalteriya bilan birga yuritamiz, shunda raqamlar hamma joyda mos keladi.",
+    lead: "Ishga olish, boʻshatish, boshqa lavozimga oʻtkazish, taʼtil: har biriga buyruq kerak, har bir oylikka esa soliq va ushlanmalarning aniq hisobi. Kadrlar hisobi va ish haqini buxgalteriya bilan birga yuritamiz, shunda raqamlar hamma joyda mos keladi.",
     when: {
       h2: "Qachon kerak boʻladi",
       items: [
@@ -299,7 +299,7 @@ export const services: Record<string, ServicePage> = {
       items: [
         ["Kadrlar hujjatlarini tekshiramiz", "Nima bor, nima yetishmaydi va nimani tiklash kerak."],
         ["Tartibga keltiramiz", "Yetishmayotgan buyruq va shartnomalarni rasmiylashtiramiz."],
-        ["Har oy yuritamiz", "Tabel, ish haqi, soliqlar va hisobotlar — buxgalteriya bilan bir joyda."],
+        ["Har oy yuritamiz", "Tabel, ish haqi, soliqlar va hisobotlar buxgalteriya bilan bir joyda yuritiladi."],
       ],
     },
     promise: {
@@ -321,7 +321,7 @@ export const services: Record<string, ServicePage> = {
     slug: "tashqi-savdo-buxgalteriyasi",
     title: "Tashqi savdo buxgalteriyasi: import, eksport, valyuta toʻlovlari",
     description:
-      "Import va eksport shartnomalarini roʻyxatdan oʻtkazamiz, chet elga toʻlov va konvertatsiyani oʻtkazamiz, TIF hisobini yuritamiz. Chet ellik taʼsischilar uchun — soʻrov boʻyicha NDA.",
+      "Import va eksport shartnomalarini roʻyxatdan oʻtkazamiz, chet elga toʻlov va konvertatsiyani oʻtkazamiz, TIF hisobini yuritamiz. Chet ellik taʼsischilar soʻrasa, NDA imzolaymiz.",
     name: "Tashqi savdo buxgalteriyasi",
     h1: "Import va eksport uchun buxgalteriya",
     lead: "Tashqi savdoda buxgalter tez kerak: roʻyxatdan oʻtmagan shartnomasiz bank toʻlovni chiqarmaydi, kechikish esa pulga tushadi. Shartnomalarni roʻyxatdan oʻtkazamiz, konvertatsiya va chet elga toʻlovlarni oʻtkazamiz, tashqi savdo hisobini butun buxgalteriya bilan birga yuritamiz.",
@@ -347,8 +347,8 @@ export const services: Record<string, ServicePage> = {
     steps: {
       h2: "Qanday ishlaymiz",
       items: [
-        ["Umumiy Telegram-guruh", "Nimani toʻlash kerakligini yozasiz — biz tayyorlaymiz va oʻtkazamiz."],
-        ["Shoshilinch toʻlovlar", "Odatiy operatsiya — konvertatsiya yoki toʻlov — taxminan 5 daqiqa oladi."],
+        ["Umumiy Telegram-guruh", "Nimani toʻlash kerakligini yozasiz, qolganini oʻzimiz tayyorlab, oʻtkazib beramiz."],
+        ["Shoshilinch toʻlovlar", "Oddiy konvertatsiya yoki toʻlov taxminan 5 daqiqada bitadi."],
         ["Shartnomalar nazorati", "Har bir shartnoma boʻyicha pul va tovar harakati mos kelishini kuzatamiz."],
       ],
     },
