@@ -4,6 +4,12 @@
 
 
 
+## 2026-10-01 — заявки: Telegram-бот + Google Sheets
+
+**Сделано:** бот @sifat_buxgalter_leads_bot (токен ~/.claude/secrets/sifat-leads-bot.env), группа «Sifat Buxgalter · Заявки» chat_id -5321063401 (Умид + бот). Таблица «Sifat Buxgalter: заявки с сайта» id 1q9YV18m29-JVlJvMRnOjyae-PilVgT7mFz7CIZLtDGQ. Apps Script «Sifat Buxgalter заявки» (код _tools/lead-sheet.gs). /api/lead: таблица и TG параллельно, 502 только если упали оба. Env на Vercel sifat-glass: TG_BOT_TOKEN, TG_CHAT_ID, SHEETS_SECRET. Тест: telegram:true.
+**Грабли:** вставлять секрет в редактор Apps Script через браузер нельзя (блок авто-режима) → скрипт без секрета, проверка включится, если задать свойство SECRET.
+**Осталось:** [ ] Умид: разрешение OAuth для скрипта → развернуть веб-приложение (доступ «Все») → SHEETS_WEBHOOK_URL в Vercel [ ] env в прод-проекте sifat-buxgalter-site при мерже [ ] добавить Бекзода в группу
+
 ## 2026-10-01 — UZ-тексты переписаны разговорно
 
 **Сделано:** lib/content/uz.ts, story/uz.ts, pages/uz/{services,articles,index}.ts: смысловая транскреация вместо кальки, 0 длинных тире (было ~90). Корпус: bestaudit, legalact, aaafin, buxgalteria.uz, yaran, glotr (scratchpad/uzc). Tahrirchi /spell: главная + письмо чисто, кроме «kechayu» → «kecha-yu». Превью sifat-glass.vercel.app/uz, автоприёмка чисто.

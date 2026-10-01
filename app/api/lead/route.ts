@@ -1,4 +1,5 @@
 import { formatLead, leadSchema } from "@/lib/lead";
+import { pushToSheet } from "@/lib/sheet";
 
 const WINDOW_MS = 10 * 60 * 1000;
 const MAX_PER_WINDOW = 5;
@@ -41,15 +42,25 @@ export async function POST(req: Request) {
     return Response.json({ ok: true });
   }
 
-  const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ chat_id: chatId, text: formatLead(parsed.data), parse_mode: "HTML" }),
-  });
-
-  if (!res.ok) {
-    console.error("[lead] Telegram ответил", res.status, await res.text());
-    return Response.json({ ok: false, error: "telegram" }, { status: 502 });
+  // Таблица и Telegram параллельно: заявка не теряется, если один из каналов лёг.
+  const [sheet, telegram] = await Promise.all([pushToSheet(parsed.data, ip), sendTelegram(token, chatId, formatLead(parsed.data))]);
+  if (!telegram && !sheet) {
+    return Response.json({ ok: false, error: "delivery" }, { status: 502 });
   }
-  return Response.json({ ok: true });
+  return Response.json({ ok: true, delivered: { telegram, sheet } });
+}
+
+async function sendTelegram(token: string, chatId: string, text: string): Promise<boolean> {
+  try {
+    const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: chatId, text, parse_mode: "HTML" }),
+    });
+    if (!res.ok) console.error("[lead] Telegram ответил", res.status, await res.text());
+    return res.ok;
+  } catch (err) {
+    console.error("[lead] Telegram недоступен", err);
+    return false;
+  }
 }
