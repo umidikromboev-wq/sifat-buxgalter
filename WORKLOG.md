@@ -1,5 +1,12 @@
 # Sifat Buxgalter — рабочий журнал
 
+## 2026-10-01 — glass перенесён в main и на прод
+
+**Сделано:** merge -s ours origin/main в glass (d76ecc4), glass → main. Прод https://sifat-buxgalter-site.vercel.app = версия glass (CLI `vercel --prod --archive=tgz`). Env скопированы из sifat-glass в прод (production): TG_BOT_TOKEN, TG_CHAT_ID, SHEETS_*, KV_REST_API_*, TG_WEBHOOK_SECRET. Вебхук бота → прод /api/chat/tg. site-qa /uz: чисто.
+**Решения:** версия Василы v2 (влита в main 28.09 Абдурахмоном, на прод не выходила) не потеряна: ветка origin/vasila-v2.
+**Грабли:** env на preview через CLI не добавились (нужна ветка), прод не затронут. Чат на sifat-glass больше не получает ответы (вебхук один).
+**Осталось:** [ ] домен [ ] Метрика + GA4 с целями [ ] Search Console / Вебмастер [ ] Бекзод в группу
+
 ## 2026-10-01 — презентация проекта для клиента
 
 **Сделано:** deck/ (build.py + deck.css → deck.html → pdf.mjs → Sifat-Buxgalter-otchet.pdf), 19 полос 1920×1080 в стиле сайта, реальные скрины shots/ (3 версии, секции, мобилка, 47 первых экранов конкурентов). PDF ушёл в «Избранное» TG.
