@@ -8,16 +8,16 @@ import s from "./Top.module.css";
 
 type Props = { lang: Locale; t: Content["hero"]; nav: Content["nav"] };
 
-// Кадр показывает мир клиента: деловой центр, где сидят его офисы. Текст лежит на тёмном низе кадра.
+// Key visual: знак Sifat из матового стекла (стекло + бежевый, как весь сайт). Знак справа, текст на тёмной левой части.
 export function Hero({ lang, t, nav }: Props) {
   return (
     <section className={`${s.top} ${s.home}`} aria-labelledby="hero-h">
       <img
         className={s.img}
-        src="/glass/hero.webp"
-        alt={lang === "uz" ? "Toshkentdagi biznes-markaz, quyosh botishi" : "Деловой центр в Ташкенте на закате"}
-        width={1344}
-        height={752}
+        src="/glass/kv.webp"
+        alt={lang === "uz" ? "Sifat Buxgalter belgisi, xira shishadan" : "Знак Sifat Buxgalter из матового стекла"}
+        width={1920}
+        height={1072}
         fetchPriority="high"
       />
       <Header lang={lang} t={nav} />
