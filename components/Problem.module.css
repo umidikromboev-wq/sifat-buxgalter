@@ -1,11 +1,29 @@
-.total { grid-column: 3 / span 4; display: grid; align-content: end; gap: 14px; padding: 28px; min-height: 280px; }
-.totalN { font-size: clamp(40px, 3.4vw + 12px, 72px); font-weight: 300; line-height: 1; letter-spacing: -0.03em; }
+/* Слева калькулятор на две строки, справа шаги и ответ прижаты кверху */
+.grid { grid-template-rows: auto 1fr; }
+.calc { grid-column: 3 / span 5; grid-row: span 2; display: grid; align-content: start; gap: 18px; padding: 28px; }
+.calcT { font-size: 17px; font-weight: 500; }
+.sliders { display: grid; gap: 16px; }
+.slider { display: grid; gap: 8px; cursor: pointer; }
+.slTop { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--on-dark-2); }
+.slTop output { color: #fff; font-weight: 500; font-variant-numeric: tabular-nums; }
+.slider input { width: 100%; accent-color: var(--accent); height: 28px; margin: 0; }
+.hidden { font-size: 13px; color: var(--on-dark-2); }
+.hidden b { color: #fff; font-weight: 500; }
+.rows { margin: 0; display: grid; }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 11px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 14px; }
+.row dt { display: grid; gap: 2px; }
+.row dt small { font-size: 11px; color: var(--on-dark-2); }
+.row dd { margin: 0; font-weight: 500; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.rowTotal { border-top-color: rgba(255, 255, 255, 0.3); padding-top: 14px; }
+.rowTotal dt { font-weight: 500; }
+.rowTotal dd { font-size: clamp(28px, 2vw + 12px, 40px); font-weight: 300; letter-spacing: -0.02em; }
+.rowTotal dd span { font-size: 14px; color: var(--on-dark-2); letter-spacing: 0; }
 .totalL { font-size: 12px; line-height: 1.5; color: var(--on-dark-2); max-width: 36ch; }
-.chain { grid-column: 7 / span 6; display: grid; gap: var(--gap); }
+.chain { grid-column: 8 / span 5; display: grid; align-content: start; gap: var(--gap); }
 .step { display: flex; align-items: center; gap: 16px; padding: 22px 24px; font-size: 15px; line-height: 1.4; }
 .n { font-size: 12px; font-weight: 600; }
 .answer {
-  grid-column: 3 / span 8; margin-top: 40px;
+  grid-column: 8 / span 5; margin-top: 16px; align-self: start;
   display: grid; grid-template-columns: 28px 1fr; gap: 16px;
   font-size: 15px; line-height: 1.55; color: rgba(255, 255, 255, 0.8); max-width: 72ch;
 }
@@ -15,21 +33,24 @@
 }
 .answerIcon svg { width: 15px; height: 15px; }
 @media (max-width: 1180px) {
-  .total { grid-column: 1 / span 5; }
-  .chain { grid-column: 6 / -1; }
+  .calc { grid-column: 1 / span 7; }
+  .chain, .answer { grid-column: 8 / -1; }
   .answer { grid-column: 1 / -1; }
 }
 @media (max-width: 760px) {
-  .total, .chain { grid-column: 1 / -1; }
-  .total { min-height: 0; padding: 22px; }
+  .grid { grid-template-rows: none; }
+  .calc, .chain, .answer { grid-column: 1 / -1; }
+  .calc { grid-row: auto; }
+  .calc { padding: 20px; }
   .step { padding: 18px; font-size: 14px; }
   .answer { margin-top: 28px; font-size: 14px; }
 }
 
 /* Телефон: размеры сверены с debritour.ru (текст 16, карточки 18–20, H2 ~32) */
 @media (max-width: 760px) {
-  .total { padding: 24px; }
-  .totalN { font-size: 48px; }
+  .slTop { font-size: 15px; }
+  .row { font-size: 16px; }
+  .row dt small { font-size: 13px; }
   .totalL { font-size: 14px; }
   .step { padding: 20px; font-size: 17px; gap: 16px; }
   .n { font-size: 13px; }

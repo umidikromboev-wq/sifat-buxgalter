@@ -19,6 +19,7 @@ export function Footer({ t, lang }: { t: Content["footer"]; lang: Locale }) {
             <span>Sifat Buxgalter</span>
           </Link>
           <p className={s.dim}>{t.hours}</p>
+          <p className={s.visit}>{t.visit}</p>
           <p className={s.lbl}>{t.addressLabel}</p>
           <p>{t.address}</p>
           {t.landmark && <p className={s.dim}>{t.landmark}</p>}

@@ -61,7 +61,7 @@ export const articles: Record<string, ArticlePage> = {
       "Nega Excelda ombor va cheksiz sotuv yillar davomida koʻrinmaydi, uchinchi yili esa qoʻshimcha hisob-kitob va jarimaga aylanadi. Hisob misoli va hozirdanoq nimani tekshirish kerak.",
     name: "Ombor Excelda — yashirin xavf",
     h1: "Ombor Excelda va cheksiz sotuv: hisobotda koʻrinmaydigan xavf",
-    lead: "Hisobotlar vaqtida topshirilgan, jarima yoʻq, buxgalter xotirjam. Ombor esa Excelda yuritiladi, tovarning bir qismi rasmiy cheksiz ketadi. Birinchi ikki yil hech narsa boʻlmaydi — shuning uchun bu xavf eng qimmati.",
+    lead: "Hisobotlar vaqtida topshirilgan, jarima yoʻq, buxgalter xotirjam. Ombor esa Excelda yuritiladi, tovarning bir qismi rasmiy cheksiz ketadi. Hisobotda bu koʻrinmaydi, shuning uchun bu xavf eng qimmati.",
     published: PUBLISHED,
     minutes: 4,
     body: [
@@ -81,7 +81,7 @@ export const articles: Record<string, ArticlePage> = {
       {
         h2: "Hisob-kitob misoli",
         p: [
-          "Ikki yil ichida 10 mlrd soʻm aylanmasi hisobdan oʻtmagan korxonani olaylik. Bunday holatda qoʻshimcha hisob-kitob va jarima yashirilgan aylanmaning 20% ini tashkil qilsa, bu 2 mlrd soʻm.",
+          "Ikki yil ichida 10 mlrd soʻm tushumi hisobdan oʻtmagan korxonani olaylik. SK 223-moddasi boʻyicha jarima yashirilgan bazaning 20%, bu 2 mlrd soʻm. Ustiga 258-modda boʻyicha 12% QQS (1,2 mlrd) va 337-modda boʻyicha 15% foyda soligʻi hisoblanadi: foyda tushumning 20% boʻlsa, bu 0,3 mlrd. Toʻlanmagan soliqqa 110-modda boʻyicha penya qoʻshiladi, har bir kechikkan kun uchun MB stavkasining 1/300 qismi: taxminan 0,26 mlrd. Jami taxminan 3,8 mlrd soʻm.",
           "Bu misol, meʼyor emas: haqiqiy summa qoidabuzarlik turiga bogʻliq. Lekin raqamlar tartibi ombor hisobini «tejash» nega eng qimmat qaror ekanini koʻrsatadi.",
         ],
       },

@@ -65,7 +65,7 @@ export const storyUz: Story = {
         text: "Tekshiruv oldingi ikki yilni koʻtaradi. Hujjat bilan ombor mos kelmaydi. Endi buni toʻgʻrilab boʻlmaydi — faqat toʻlash mumkin.",
       },
     ],
-    sumLabel: "Hisob-kitob misoli: ikki yilda 10 mlrd yashirilgan aylanma × 20%",
+    sumLabel: "Faqat SK 223-moddasi boʻyicha jarima: 10 mlrd yashirilgan tushumning 20%. Soliq va penya ustiga",
     sum: "2 000 000 000",
     sumNote: "soʻm",
     outro: "Bu raqamni oʻylab topmadim — tekshiruvlarda shunday hisoblanadi. Va eng yomoni: **birinchi ikki yil davomida buxgalteringiz sizga «hammasi joyida» deb aytgan boʻladi.** U yolgʻon gapirmagan. U shunchaki tekshirishga ulgurmagan.",

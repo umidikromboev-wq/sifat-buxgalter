@@ -7,7 +7,7 @@ import { Marker } from "./ui/Glyph";
 import { Pill } from "./ui/Kit";
 import s from "./Benefits.module.css";
 
-// Лид-магнит для тех, кто не готов звонить: сфера → готовое сообщение в Telegram Бекзоду.
+// Лид-магнит: пять льгот со статьями НК прямо на сайте как образец, остальные под сферу — сообщением в Telegram Бекзоду.
 export function Benefits({ t, lang }: { t: Content["benefits"]; lang: Locale }) {
   const [sphere, setSphere] = useState(t.spheres[0]);
   const href = `${SITE.telegram}?text=${encodeURIComponent(t.message.replace("{s}", sphere))}`;
@@ -24,10 +24,34 @@ export function Benefits({ t, lang }: { t: Content["benefits"]; lang: Locale }) 
                 {t.h2}
               </h2>
               <p className={s.sub}>{t.sub}</p>
+              <table className={s.sample}>
+                <caption>{t.sampleTitle}</caption>
+                <thead>
+                  <tr>
+                    {t.cols.map((c) => (
+                      <th key={c} scope="col">
+                        {c}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {t.sample.map((b) => (
+                    <tr key={b.law}>
+                      <th scope="row">{b.what}</th>
+                      <td className={s.law}>{b.law}</td>
+                      <td>{b.who}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
             <div className={`glass ${s.panel}`}>
               <fieldset className={s.chips}>
-                <legend>{t.label}</legend>
+                <legend>
+                  <b>{t.restTitle}</b>
+                  {t.label}
+                </legend>
                 {t.spheres.map((o) => (
                   <label key={o} className={s.opt}>
                     <input type="radio" name="sphere" value={o} checked={sphere === o} onChange={() => setSphere(o)} />

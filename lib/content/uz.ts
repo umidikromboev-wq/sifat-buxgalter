@@ -38,14 +38,9 @@ export const uz: Content = {
   risk: {
     kicker: "Yashirin xavf",
     h2: "Eng qimmat xato hisobotda koʻrinmaydi",
-    lead: "Koʻp korxonalarda ombor hisobi Excelda yuritiladi, sotuvning bir qismi rasmiy cheksiz oʻtadi. Birinchi ikki yil hech narsa boʻlmaydi.",
-    steps: [
-      "Ombor Excelda, sotuvning bir qismi cheksiz",
-      "Uchinchi yili tekshiruv keladi va oldingi ikki yilni koʻtaradi",
-      "Soliq va jarima qoʻshimcha hisoblanadi — bizning misolda yashirilgan aylanmaning 20%",
-    ],
-    total: "2 000 000 000",
-    totalLabel: "soʻm — hisob-kitob misoli: ikki yilda 10 mlrd soʻm yashirilgan aylanma × 20%",
+    lead: "Koʻp korxonalarda ombor hisobi Excelda yuritiladi, sotuvning bir qismi rasmiy cheksiz oʻtadi. Hisobotda bu koʻrinmaydi.",
+    steps: ["Ombor Excelda, sotuvning bir qismi cheksiz", "Soliq organi davr tugaganidan keyin uch yilgacha tekshirishga haqli (SK 88-modda)", "Yashirilgan tushumga soliq hisoblanadi va 20% jarima solinadi (SK 223-modda), ustiga penya"],
+    calc: {"title": "Xavfingizni hisoblang", "turnover": "Yillik aylanma", "share": "Cheksiz sotuv ulushi", "years": "Tekshiruv necha yilni koʻtaradi", "bln": "mlrd", "mln": "mln", "yearsUnit": ["yil", "yil", "yil"], "hidden": "Yashirilgan tushum:", "rows": {"fine": "Tushumni yashirganlik uchun jarima", "vat": "Qoʻshimcha QQS 12%", "profit": "Foyda soligʻi 15%", "peni": "Kechiktirish uchun penya"}, "laws": {"fine": "SK 223-modda: yashirilgan tushumning 20%", "vat": "SK 258-modda", "profit": "SK 337-modda, foyda tushumning 20% boʻlsa", "peni": "SK 110-modda: kuniga MB stavkasining (14%) 1/300 qismi"}, "total": "Jami toʻlov", "sum": "soʻm", "note": "Taxminiy hisob, soliq xulosasi emas. Hujjatlaringiz boʻyicha aniq summani ekspress-auditda hisoblaymiz."},
     answer:
       "Haqiqiy summa qoidabuzarlikka bogʻliq va uni oldindan hisoblash mumkin. Shuning uchun mijozni qabul qilishdan oldin oxirgi davrni tekshiramiz. Javobgarlik bizga oʻtadi — demak, xavfni avval oʻzimiz koʻrishimiz kerak.",
   },
@@ -94,6 +89,7 @@ export const uz: Content = {
     ],
   },
   clauses: {
+    chat: {"title": "Sifat × kompaniyangiz", "members": "4 aʼzo", "client": "Direktor", "us": "Sifat Buxgalter", "messages": [{"from": "client", "text": "Soliqdan avgust oyi QQS boʻyicha talabnoma keldi. Nima qilamiz?", "time": "21:14"}, {"from": "us", "text": "Koʻrdik. Bu yetkazib beruvchining hisob-fakturasidagi farq. Soliqqa javobni tushlikkacha tayyorlaymiz, sizdan hech narsa kerak emas.", "time": "21:19"}, {"from": "client", "text": "Rahmat, tushundim", "time": "21:20"}], "typing": "yozmoqda…", "gap": "5 daqiqa", "caption": "Mijoz bilan umumiy guruh shunday koʻrinadi. Yozishma misoli, ismlar yashirilgan."},
     kicker: "Majburiyatlar",
     h2: "Shartnomaga nimalarni yozamiz",
     sub: "Nomimiz Sifat. Shartnomada sifatni oʻlchasa boʻladigan raqamlar bilan yozamiz.",
@@ -126,12 +122,16 @@ export const uz: Content = {
   },
   benefits: {
     kicker: "Soliq imtiyozlari",
-    h2: "70 ga yaqin imtiyozdan qaysilari sizning kompaniyangizga toʻgʻri keladi",
-    sub: "Hozircha qoʻngʻiroq qilishga tayyor emasmisiz? Sohangizni tanlang — unga toʻgʻri keladigan imtiyozlarni Telegramga yuboramiz. Qoʻngʻiroqsiz va hech qanday majburiyatsiz.",
+    h2: "70 ga yaqin soliq imtiyozi. Mana ulardan beshtasi",
+    sub: "Har biri Soliq kodeksi moddasi bilan. Sohangizga mos qolgan ~65 tasini Telegramga yuboramiz, qoʻngʻiroqsiz va majburiyatsiz.",
+    sampleTitle: "Roʻyxatdan beshta imtiyoz",
+    cols: ["Imtiyoz", "SK moddasi", "Kim uchun"],
+    sample: [{"what": "Tovar eksportida QQS 0%", "law": "260-modda", "who": "Eksport"}, {"what": "Taʼlim xizmatlari QQSdan ozod", "law": "243-modda, 10-band", "who": "Oʻquv markazlari"}, {"what": "Ijtimoiy sohada foyda soligʻi 0%", "law": "337-modda, 4-band; 59-modda", "who": "Taʼlim, litsenziyali tibbiyot, sport"}, {"what": "Investitsiya chegirmasi: yangi uskuna qiymatining 20%", "law": "308-modda", "who": "Ishlab chiqarish"}, {"what": "Oʻzbekistonda analogi yoʻq texnologik uskunani QQSsiz olib kirish (roʻyxat boʻyicha)", "law": "246-modda, 6-band", "who": "Ishlab chiqarish, import"}],
+    restTitle: "Sohangizga mos qolgan ~65 tasi",
     label: "Kompaniyangiz sohasi",
     spheres: ["Import va eksport", "Ulgurji savdo", "Turizm", "Oʻquv markazi", "Ishlab chiqarish", "Xizmatlar", "Boshqa"],
     cta: "Roʻyxatni Telegramda olish",
-    note: "70 ga yaqin soliq imtiyozi — bosh buxgalterimiz hisobi. Ularning hammasi ham hammaga toʻgʻri kelmaydi: har bir sohaga oʻzinikilari mos keladi, ayrim sohalarda esa imtiyoz umuman yoʻq — buni ham ochiq aytamiz.",
+    note: "70 ga yaqin imtiyoz: bosh buxgalterimiz hisobi. Har birining oʻz shartlari bor, shuning uchun mosligini hujjatlaringiz boʻyicha tekshiramiz. Ayrim sohalarda imtiyoz umuman yoʻq, buni ham ochiq aytamiz.",
     message: "Assalomu alaykum! Kompaniyamiz sohasi: {s}. Bizga qaysi soliq imtiyozlari toʻgʻri kelishini yuborib bera olasizmi?",
   },
   fit: {
@@ -241,6 +241,7 @@ export const uz: Content = {
     orTelegram: "Yozishmani afzal koʻrasizmi? Bekzodga Telegramda yozing",
   },
   footer: {
+    visit: "Bizga kelishingiz shart emas: buxgalter oyiga 3 marta oʻzi keladi. Ofisga esa xohlasangiz.",
     addressLabel: "Ofis",
     address: "Toshkent, Yakkasaroy tumani, Muqimiy koʻchasi",
     landmark: "",

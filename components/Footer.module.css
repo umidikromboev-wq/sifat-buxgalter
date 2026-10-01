@@ -30,3 +30,6 @@
   .col ul { gap: 12px; }
   .base { font-size: 13px; }
 }
+
+/* «Ехать не надо»: офис на юге города, поэтому сначала говорим, что приезжаем сами */
+.visit { max-width: 34ch; margin-block: 4px 8px; line-height: 1.5; }

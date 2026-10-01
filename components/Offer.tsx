@@ -3,6 +3,7 @@ import type { Content, Locale } from "@/lib/content/types";
 import { getPages, sectionPath, servicePath } from "@/lib/pages";
 import { Glyph, type GlyphName } from "./ui/Glyph";
 import { Pill, SectionHead } from "./ui/Kit";
+import { TgChat } from "./TgChat";
 import s from "./Offer.module.css";
 
 // Группы услуг на главной по порядку ведут на свои посадочные страницы (lib/pages).
@@ -58,10 +59,11 @@ export function Clauses({ t, cta }: { t: Content["clauses"]; cta: string }) {
       <div className="wrap">
         <ol className={s.clauses} data-stagger>
           {t.items.map((c, i) => (
-            <li key={c.title} className={`card ${s.clause}`}>
+            <li key={c.title} className={`card ${s.clause} ${i === 0 ? s.clWide : ""}`}>
               <span className={`chip num ${s.par}`}>§{i + 1}</span>
               <h3 className={s.clT}>{c.title}</h3>
               <p className={s.clX}>{c.text}</p>
+              {i === 0 && <TgChat t={t.chat} />}
             </li>
           ))}
           <li className={`card card-dark ${s.clause} ${s.clCta}`}>

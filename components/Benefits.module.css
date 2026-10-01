@@ -5,9 +5,17 @@
 .grid { align-items: end; }
 .box :global(.marker) { align-self: start; margin-top: 30px; }
 .box :global(.kicker) { color: var(--on-dark-2); }
-.copy { grid-column: 3 / span 5; align-self: start; }
+.copy { grid-column: 3 / span 5; align-self: start; min-width: 0; }
+.sample { width: 100%; margin-top: 28px; border-collapse: collapse; font-size: 13px; line-height: 1.4; }
+.sample caption { text-align: left; margin-bottom: 10px; font-size: 12px; color: var(--on-dark-2); }
+.sample thead th { font-size: 11px; font-weight: 400; color: var(--on-dark-2); text-align: left; padding: 0 12px 8px 0; }
+.sample tbody th, .sample td { padding: 11px 12px 11px 0; border-top: 1px solid rgba(255, 255, 255, 0.12); text-align: left; vertical-align: top; }
+.sample tbody th { font-weight: 500; }
+.sample td { color: var(--on-dark-2); }
+.sample td.law { color: #fff; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.chips legend b { display: block; margin-bottom: 4px; font-size: 15px; font-weight: 500; color: #fff; }
 .sub { margin-top: 18px; font-size: 14px; line-height: 1.55; color: var(--on-dark-2); max-width: 46ch; }
-.panel { grid-column: 8 / span 5; display: grid; gap: 18px; padding: 24px; }
+.panel { grid-column: 8 / span 5; align-self: end; display: grid; gap: 18px; padding: 24px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
 .chips legend { width: 100%; margin-bottom: 12px; font-size: 12px; color: var(--on-dark-2); }
 .opt { position: relative; cursor: pointer; }
@@ -36,6 +44,13 @@
   .sub { font-size: 16px; }
   .chips legend { font-size: 14px; }
   .opt span { padding: 11px 16px; font-size: 15px; }
+  .sample { font-size: 15px; }
+  .sample caption { font-size: 14px; }
+  .sample thead { display: none; }
+  .sample tr { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 12px 0; border-top: 1px solid rgba(255, 255, 255, 0.12); }
+  .sample tbody th, .sample td { padding: 0; border: 0; }
+  .sample td:last-child { grid-column: 1 / -1; font-size: 14px; }
+  .chips legend b { font-size: 17px; }
   .note { font-size: 13px; }
 }
 

@@ -26,11 +26,24 @@ export type Content = {
     items: Case[];
     cta: { title: string; text: string; cta: string };
   };
-  risk: { kicker: string; h2: string; lead: string; steps: string[]; total: string; totalLabel: string; answer: string };
+  risk: { kicker: string; h2: string; lead: string; steps: string[]; calc: RiskCalc; answer: string };
   services: { kicker: string; h2: string; sub: string; groups: { title: string; items: string[] }[] };
-  clauses: { kicker: string; h2: string; sub: string; items: { title: string; text: string }[] };
+  clauses: { kicker: string; h2: string; sub: string; items: { title: string; text: string }[]; chat: Chat };
   compare: { kicker: string; h2: string; sub: string; cols: [string, string]; rows: { k: string; now: string; us: string }[]; note: string };
-  benefits: { kicker: string; h2: string; sub: string; label: string; spheres: string[]; cta: string; note: string; message: string };
+  benefits: {
+    kicker: string;
+    h2: string;
+    sub: string;
+    sampleTitle: string;
+    cols: [string, string, string];
+    sample: { what: string; law: string; who: string }[];
+    restTitle: string;
+    label: string;
+    spheres: string[];
+    cta: string;
+    note: string;
+    message: string;
+  };
   fit: { kicker: string; h2: string; yesTitle: string; yes: string[]; noTitle: string; no: string[]; note: string };
   clients: { label: string };
   price: { kicker: string; h2: string; sub: string; items: { title: string; text: string }[]; cta: string };
@@ -64,7 +77,8 @@ export type Content = {
     orCall: string;
     orTelegram: string;
   };
-  footer: { addressLabel: string; address: string; landmark: string; mapLink: string; contacts: string; hours: string; rights: string };
+  footer: {
+    visit: string; addressLabel: string; address: string; landmark: string; mapLink: string; contacts: string; hours: string; rights: string };
 };
 
 // Карточка бенто «Когда к нам приходят»: ведёт на страницу услуги или статьи.
@@ -74,4 +88,33 @@ export type Case = {
   icon: GlyphName;
   link: { kind: "services" | "articles"; id: string };
   size: "narrow" | "tall" | "wide";
+};
+
+// Калькулятор риска: три ползунка, разбивка по статьям НК. Ставки и допущения — в lib/riskCalc.ts.
+export type RiskCalc = {
+  title: string;
+  turnover: string;
+  share: string;
+  years: string;
+  bln: string;
+  mln: string;
+  yearsUnit: [string, string, string];
+  hidden: string;
+  rows: { fine: string; vat: string; profit: string; peni: string };
+  laws: { fine: string; vat: string; profit: string; peni: string };
+  total: string;
+  sum: string;
+  note: string;
+};
+
+// Нарисованный чат Telegram-группы: пример переписки, имена скрыты.
+export type Chat = {
+  title: string;
+  members: string;
+  client: string;
+  us: string;
+  messages: { from: "client" | "us"; text: string; time: string }[];
+  typing: string;
+  gap: string;
+  caption: string;
 };
