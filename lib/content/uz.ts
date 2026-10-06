@@ -216,10 +216,15 @@ export const uz: Content = {
   reviews: {
     kicker: "Fikrlar",
     h2: "Mijozlarimiz oʻzlari aytib beradi",
-    lead: "Uchta qisqa video: bizgacha qanday edi va nima oʻzgardi.",
+    lead: "Biz bilan yillab ishlayotgan kompaniya rahbarlari buxgalteriyada nima oʻzgarganini aytib berishadi.",
     label: "Mijoz fikri",
-    soon: "Video tez orada",
     play: "Videoni koʻrish",
+    items: [
+      { name: "Marat Tojiboyev", role: "boshqaruvchi, Westmed Group", quote: "Besh yilda buxgalteriya ancha tizimlashdi" },
+      { name: "Dmitriy Aleksandrovich", role: "rahbar, Klimat Haus", quote: "Hammasi oʻz vaqtida va eng muhimi, toʻgʻri" },
+      { name: "Safar Oqil", role: "top-menejer, Klass Export", quote: "Shu vaqt ichida soliqdan birorta muammo boʻlmadi" },
+      { name: "Ravshan", role: "rahbar, Inova", quote: "Toʻrt yildan beri birgamiz: hammasi oʻz vaqtida" },
+    ],
   },
   steps: {
     h2: ["Arizadan birinchi hisobotgacha", "5 ta qadam"],

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useId, useLayoutEffect, useRef, useState, useSyncExternalStore, type CSSProperties } from "react";
 import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
 import { Glyph } from "./ui/Glyph";
@@ -14,19 +14,20 @@ type Props = { data: MenuData; align?: "left" | "right" };
 
 const SHEET_GAP = 10;
 const SCROLL_CLOSE_PX = 40;
+const noopSubscribe = () => () => {};
 
 // Белая плашка раскрывается из угла кнопки по диагонали, пункты поднимаются следом.
 // Одно меню на все экраны: на компьютере открывается влево-вниз от кнопки, на телефоне вправо.
 export function SiteMenu({ data, align = "right" }: Props) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  // true только в браузере: портал в body нельзя отрисовать на сервере
+  const isMounted = useSyncExternalStore(noopSubscribe, () => true, () => false);
   const [place, setPlace] = useState<CSSProperties>({});
   const root = useRef<HTMLDivElement>(null);
   const sheet = useRef<HTMLElement>(null);
   const id = useId();
   const pathname = usePathname();
 
-  useEffect(() => setIsMounted(true), []);
   useEffect(() => setIsOpen(false), [pathname]);
 
   // Плашка живёт в body, иначе её обрезает тёмный верх страницы (overflow: hidden).

@@ -55,7 +55,7 @@ export type Content = {
     bio: string;
     stats: { value: string; unit?: string; label: string }[];
   };
-  reviews: { kicker: string; h2: string; lead: string; label: string; soon: string; play: string };
+  reviews: { kicker: string; h2: string; lead: string; label: string; play: string; items: { name: string; role: string; quote: string }[] };
   steps: { h2: Pair; lead: string; items: { title: string; text: string }[] };
   report: { kicker: string; h2: string; lead: string; title: string; month: string; badge: string; rows: Pair[]; footer: string };
   faq: { kicker: string; h2: string; items: Pair[] };

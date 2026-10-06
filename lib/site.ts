@@ -30,10 +30,13 @@ export const CLIENTS = [
 ] as const;
 
 // Видео-отзывы: ссылку вставить в url, пока пусто, карточка показывает «скоро» и не кликается.
-export const REVIEWS: { url: string; poster: string; w: number; h: number; pos: string }[] = [
-  { url: "", poster: "/glass/desk.webp", w: 880, h: 663, pos: "30% 50%" },
-  { url: "", poster: "/glass/hero.webp", w: 1344, h: 752, pos: "50% 40%" },
-  { url: "", poster: "/glass/desk.webp", w: 880, h: 663, pos: "75% 50%" },
+// Видео-отзывы клиентов (public/reviews). round = кружок из Telegram: белые углы прячем кругом.
+export type Review = { video: string; poster: string; w: number; h: number; isRound: boolean };
+export const REVIEWS: Review[] = [
+  { video: "/reviews/review-02.mp4", poster: "/reviews/review-02.webp", w: 540, h: 960, isRound: false },
+  { video: "/reviews/review-01.mp4", poster: "/reviews/review-01.webp", w: 400, h: 400, isRound: true },
+  { video: "/reviews/review-04.mp4", poster: "/reviews/review-04.webp", w: 464, h: 848, isRound: false },
+  { video: "/reviews/review-03.mp4", poster: "/reviews/review-03.webp", w: 400, h: 400, isRound: true },
 ];
 
 const CONTENT: Record<Locale, Content> = { uz, ru };
