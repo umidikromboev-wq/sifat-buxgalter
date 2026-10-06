@@ -1,5 +1,9 @@
 # Sifat Buxgalter — рабочий журнал
 
+## 2026-10-06 — новое фото менеджера в чате
+
+**Сделано:** public/team/bekzod.webp заменён фото из Telegram (кроп лица 420→192, WebP q86). Путь в lib/chat/copy.ts не менялся.
+
 ## 2026-10-01 — glass перенесён в main и на прод
 
 **Сделано:** merge -s ours origin/main в glass (d76ecc4), glass → main. Прод https://sifat-buxgalter-site.vercel.app = версия glass (CLI `vercel --prod --archive=tgz`). Env скопированы из sifat-glass в прод (production): TG_BOT_TOKEN, TG_CHAT_ID, SHEETS_*, KV_REST_API_*, TG_WEBHOOK_SECRET. Вебхук бота → прод /api/chat/tg. site-qa /uz: чисто.
